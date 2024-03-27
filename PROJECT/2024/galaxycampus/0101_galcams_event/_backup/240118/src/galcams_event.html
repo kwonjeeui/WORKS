@@ -1,0 +1,83 @@
+@@include('../../../../../s-common/inc/header_ebiz_230707.html')
+<!-- @@include('../../../../../s-common/inc/header_ebiz_230707_local.html') -->
+
+<!-- split galcams_event_1.txt -->
+<link rel="stylesheet" href="./css/galcams_event.css" inline>
+
+<!-- 옴니태킹 페이지트래킹 -->
+<script type="text/javascript">
+	digitalData.page.pathIndicator.depth_1 = "galaxycampus";
+	digitalData.page.pathIndicator.depth_2 = "eventlist";
+	digitalData.page.pathIndicator.depth_3 = "gcseventhub";
+</script>
+
+<!-- event popup tem -->
+<tiles:putattribute name="tooltip"><div id="tooltipArea_Event3791"></div></tiles:putattribute>
+<tiles:putattribute name="popup"><div id="popupArea_Event3791"></div></tiles:putattribute>
+<input type="hidden" id="openPop" data-st-path="/event/galaxycampus/">
+
+<main class="sec_project_wrap galcams_event" id="galcams_event">
+
+	@@include('./split-html/kv.html')
+	<!--// sec_kv -->
+
+	@@include('./split-html/nav.html')
+	<!--// sec_nav -->
+	
+	@@include('./split-html/intro.html')
+	<!--// sec_intro -->
+
+	<section class="sec_event-wrap"></section>
+	<!--// sec_event -->
+	
+	<!-- @@include('./split-html/exam.html') -->
+	<!--// sec_exam -->
+		
+	@@include('./split-html/raffle.html')
+	<!--// sec_raffle -->
+
+	@@include('./split-html/newsignup.html')
+	<!--// sec_newsignup -->
+
+	<!-- @@include('./split-html/recommend.html') -->
+	<!-- //sec_recommend -->
+
+	<!-- @@include('./split-html/galaxy.html') -->
+	<!--// sec_galaxy -->
+
+	@@include('./split-html/notice.html')
+	<!-- //sec_notice -->
+
+</main>
+
+<script type="text/javascript">
+	// 쿠키오븐 회원가입 버튼
+	function fnCallPopForCookieOven() {
+		var options2 = {
+			url: "/event/galaxycampus/xhr/member/getSession",
+			type: "POST",
+			done: function(data) {
+				var session = JSON.parse(data);
+				if(session.gcsMbrNo == 0 || session.mbrNo == 0) {
+					location.href = '/event/galaxycampus/member/indexLogin?returnUrl='+encodeURIComponent('/event/galaxycampus/member/loginDocumentEmailCheck'+window.location.search);
+				}else{
+					makeAlert('이미 갤캠스 회원이십니다.');
+					return;
+					}
+			}
+		}
+		ajax.call(options2);
+	}
+</script>
+
+<script src="./js/galcams_event.min.js" inline></script>
+<script src="./js/isqa.min.js" inline></script>
+<!-- lozad 적용 시 주석 해제 후 사용-->
+<script type="text/javascript" src="https://www.samsung.com/sec/static/_script/lozad.min.js"></script>
+<!-- 응모팝업 무한로딩 걸릴 시 주석 해제하고 사용  --> 
+<!-- <script src="/sec/static/_script/jquery.form.min.js"></script> -->
+<!-- 응모팝업  내 우편번호 검색 기능 있을때 주석 해제 후 사용 -->
+<!-- <script type="text/javascript" src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js" charset="utf-8"></script> -->
+<!-- split stop -->
+
+@@include('../../../../../s-common/inc/footer_ebiz_230707.html')

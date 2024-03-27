@@ -1,0 +1,13 @@
+.pt_ai_recipe {
+    .sec_content {
+        color: green;   
+    }
+}
+
+@media screen and (max-width:768px) {
+    .pt_ai_recipe {
+        .sec_content {
+            
+        }
+    }
+}

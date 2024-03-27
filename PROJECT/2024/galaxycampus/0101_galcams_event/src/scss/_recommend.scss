@@ -1,0 +1,67 @@
+.galcams_event {
+    .sec_recommend {
+        @include vw-pc(height, 966); @include vw-pc(padding, 120 0 76); background: transparent linear-gradient(121deg, #DCFAF7 0%, #BBD1EF 100%) 0% 0% no-repeat padding-box;
+
+        .pt_wrapper{display: flex; justify-content: space-between; flex-wrap: wrap; margin: 0 auto; @include vw-pc(width,1320); }
+        
+        .pt_title-box { @include vw-pc(margin, 0 0 26); 
+            &__tag{display: inline-block; @include vw-pc(margin-bottom, 34); @include vw-pc(padding, 0 29); @include vw-pc(height, 40); @include vw-pc(border-radius, 20);  @include vw-pc(font-size, 26); @include vw-pc(line-height, 40); @include vw-pc(letter-spacing, -0.9); color: #fff; background-color: #6C3BF8;}
+            &__sub{@include vw-pc(margin-bottom, 8); @include vw-pc(font-size, 28); @include vw-pc(line-height, 36);  font-weight: 700; @include vw-pc(letter-spacing, -1.4); color: #6C3BF8;}
+            &__main{@include vw-pc(margin-bottom, 25); @include vw-pc(font-size, 60); font-weight: 700; @include vw-pc(letter-spacing, -3); @include vw-pc(line-height,79);}
+            &__desc{@include vw-pc(margin-bottom, 23); @include vw-pc(font-size, 26); @include vw-pc(line-height, 40); @include vw-pc(letter-spacing, -0.65);}
+            &__date{@include vw-pc(font-size, 20); @include vw-pc(line-height, 40); @include vw-pc(letter-spacing, -0.65);}
+        }
+
+        .pt_character{ width: 50%;
+            &__img{margin: 0 auto; @include vw-pc(width, 606);}
+        }
+        
+        .pt_recommend{display: flex; position: relative; @include vw-pc(margin-top, -120);
+            &::after{content: ""; display:block; position: absolute; @include vw-pc(top, -40); @include vw-pc(right, -80); @include vw-pc(width, 135); @include vw-pc(height, 135); background: url("../../is/images/2310/gce_recommend_smile_obj.png") no-repeat; @include vw-pc(background-size, 135 135);}
+            &__coupon-img{@include vw-pc(width, 236);}
+            &__item{position: relative;
+                &:first-child{@include vw-pc(margin-right, 24);}
+            }
+            &__txt{position: absolute; width: 100%; @include vw-pc(top, 131); @include vw-pc(font-size, 18); @include vw-pc(line-height, 16); font-weight: 700; @include vw-pc(letter-spacing, -0.45); text-align: center;}
+        }
+        .pt_btn-wrap{width: 50%; position: relative; @include vw-pc(margin-bottom,50);}
+        .pt_anchor {position: relative; display: inline-block; @include vw-pc(margin-bottom,20); left: 50%; transform: translate(-50%); @include vw-pc(font-size, 16); @include vw-pc(line-height, 20); @include vw-pc(letter-spacing, -.8);}
+        .pt_recommend-btn{display: block; @include vw-pc(margin, 0 auto 27); @include vw-pc(width, 233); @include vw-pc(height, 56); @include vw-pc(font-size, 18); @include vw-pc(line-height, 56); @include vw-pc(border-radius, 40); text-align: center;}
+        .pt_description {@include vw-pc(margin-bottom, 10); @include vw-pc(font-size, 16); @include vw-pc(line-height, 26); @include vw-pc(letter-spacing, -.4); color: #666; text-align: center;}
+    }
+}
+
+@media screen and (max-width: 768px) { 
+    .galcams_event {
+        .sec_recommend {
+            @include vw-mo(height, 1997); position: relative; @include vw-mo(padding, 100 0 130);
+            .pt_wrapper{display: block;}
+
+            .pt_title-box { @include vw-mo(margin, 0 0 45); text-align: center;
+                &__tag{@include vw-mo(margin-bottom, 44); @include vw-mo(padding, 0 42); @include vw-mo(height, 55); @include vw-mo(border-radius, 37);  @include vw-mo(font-size, 32); @include vw-mo(line-height, 55); @include vw-mo(letter-spacing, 0);}
+                &__sub{@include vw-mo(margin-bottom, 22); @include vw-mo(font-size, 38); @include vw-mo(line-height, 44); @include vw-mo(letter-spacing, -1.9);}
+                &__main{@include vw-mo(margin-bottom, 42); @include vw-mo(font-size, 62);@include vw-mo(letter-spacing, -1.55);}
+                &__desc{@include vw-mo(margin-bottom, 22); @include vw-mo(font-size, 28); @include vw-mo(line-height, 40); @include vw-mo(letter-spacing, -1.4);}
+                &__date{@include vw-mo(font-size, 28); @include vw-mo(line-height, 40); @include vw-mo(letter-spacing, -1.4);}
+            }
+
+            .pt_character{ width: 100%; @include vw-mo(margin-bottom,72);
+                &__img{margin: 0 auto; @include vw-mo(width, 669);}
+            }
+
+            .pt_recommend{justify-content: center; margin: 0;
+                &::after{@include vw-mo(top, -36); @include vw-mo(right, -30); @include vw-mo(width, 135); @include vw-mo(height, 135); background: url("../../is/images/2310/gce_recommend_smile_obj.png") no-repeat; @include vw-mo(background-size, 135 135);}
+                &__coupon-img{@include vw-mo(width, 324);}
+                &__item{
+                    &:first-child{@include vw-mo(margin-right, 24);}
+                }
+                &__txt{@include vw-mo(top, 240); @include vw-mo(font-size, 28); @include vw-mo(line-height, 22); @include vw-mo(letter-spacing, -0.7);}
+            }
+
+            .pt_btn-wrap{width: 100%; @include vw-mo(margin-bottom,34);}
+            .pt_recommend-btn{display: block; @include vw-mo(margin, 66 auto 30); @include vw-mo(width, 274); @include vw-mo(height, 71); @include vw-mo(font-size, 26); @include vw-mo(line-height, 71); @include vw-mo(border-radius, 36);}
+            .pt_description {@include vw-mo(margin-bottom, 30); @include vw-mo(font-size, 20); @include vw-mo(line-height, 29); letter-spacing: -.055em; text-align: center;}
+            .pt_anchor {@include vw-mo(margin-bottom,40);@include vw-mo(font-size, 26); @include vw-mo(line-height, 40); @include vw-mo(letter-spacing, -1.3);}
+        }
+    }
+}

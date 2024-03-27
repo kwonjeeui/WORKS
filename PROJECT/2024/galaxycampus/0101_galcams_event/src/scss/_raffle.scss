@@ -1,0 +1,197 @@
+$main_color : #6C3BF8;
+
+.galcams_event {
+    .sec_raffle { 
+        @include vw-pc(height, 1994); background-color: #F8F8F8; overflow: hidden;
+        .inner_1440 {
+            position: relative;
+            &::before {position: absolute; @include vw-pc(top, 99); @include vw-pc(left, -50); display: block; content: ''; @include vw-pc(width, 257); @include vw-pc(height, 254); background: url(../../is/images/raffle/gce_bg_obj01_pc.png) no-repeat; @include vw-pc(background-size, 257 254);}
+            &::after {position: absolute; @include vw-pc(top, 247); @include vw-pc(right, -60); display: block; content: ''; @include vw-pc(width, 472); @include vw-pc(height, 215); background: url(../../is/images/raffle/gce_bg_obj02_pc.png) no-repeat; @include vw-pc(background-size, 472 215);}
+        }
+        .pt_title-box {
+            @include vw-pc(padding, 160 0 55); text-align: center;
+
+            &__tag {display: inline-block; @include vw-pc(width, 160); @include vw-pc(height, 40); @include vw-pc(border-radius, 20); @include vw-pc(font-size, 26); @include vw-pc(line-height, 40); color: #fff; background-color: $main_color; font-weight: 700; @include vw-pc(margin-bottom, 30);}
+            &__sub {@include vw-pc(margin-bottom, 30); @include vw-pc(font-size, 28); @include vw-pc(line-height, 36); font-weight: 700; color: $main_color;}
+            &__main {@include vw-pc(font-size, 56); @include vw-pc(margin-bottom, 30); @include vw-pc(letter-spacing, -2.8);}
+            &__desc {@include vw-pc(font-size, 26); @include vw-pc(line-height, 47);}
+        }
+
+        .pt_info {
+            @include vw-pc(margin-bottom, 76);
+            &__list {display: flex; justify-content: center; align-items: center;}
+            &__title,
+            &__desc {@include vw-pc(font-size, 20); @include vw-pc(line-height, 38); @include vw-pc(letter-spacing, -1);}
+            &__title {
+                position: relative; @include vw-pc(margin, 0 15 0 5); font-weight: 700;
+                &::after {content: ''; position: absolute; top: 50%; @include vw-pc(right, -8); transform: translateY(-50%); @include vw-pc(width, 2); @include vw-pc(height, 15); background-color: #000;}
+            }
+        }
+        .pt_check__btn{position: relative; left: 50%; transform: translate(-50%); @include vw-pc(margin-bottom, 78); @include vw-pc(padding-left, 6); @include vw-pc(width, 278); @include vw-pc(height, 56); @include vw-pc(border-radius, 28); @include vw-pc(font-size, 20); @include vw-pc(line-height, 56); font-weight: 700; @include vw-pc(letter-spacing, -1);  text-align: center;}
+
+        .pt_slide-tit{
+            display: flex; justify-content: center; align-items: center; @include vw-pc(margin-bottom, 53);
+            &--newbie{@include vw-pc(margin-bottom, 23); }
+            &__img {display: inline-block; @include vw-pc(margin-right, 3); @include vw-pc(width, 39); @include vw-pc(height, 37); background: url(../../is/images/raffle/gce_raffle_star_pc_v2.png) repeat; @include vw-pc(background-size, 39 37);}
+            &__txt{@include vw-pc(margin-left, 4); @include vw-pc(font-size, 31); font-weight: 700; @include vw-pc(letter-spacing, -0.78); @include vw-pc(line-height, 41); text-align: center}
+        }
+        
+        .pt_raffle-slider{overflow: visible; @include vw-pc(padding-bottom, 126); @include vw-pc(width, 1320);}
+        .pt_raffle-box { position: relative;
+            &__item {
+                @include vw-pc(width, 648); @include vw-pc(margin-right, 24);
+                &:last-child{@include vw-pc(margin-right, 0);}
+            }
+            &__btn {
+                position: absolute; @include vw-pc(bottom, -26); left: 50%; transform: translateX(-50%); @include vw-pc(width, 200); @include vw-pc(height, 56); @include vw-pc(border, 3 solid #000); @include vw-pc(border-radius, 32); @include vw-pc(font-size, 26); @include vw-pc(line-height, 56); font-weight: 700; color: #000; background: #fff;
+                &:hover {color: #fff; background: #000;}
+            }
+            &__tag{z-index: 1; display: flex; justify-content: center; align-items: center; position: absolute; top:0; left: 0; @include vw-pc(width,72); @include vw-pc(height,72); @include vw-pc(border, 4 solid #6C3BF8); border-radius: 50%; background-color: #fff; @include vw-pc(font-size,20); @include vw-pc(line-height,24); font-weight:700; @include vw-pc(letter-spacing,-.4); color: #6C3BF8; text-align: center; }
+        }
+        .pt_raffle-txt{display: flex; flex-direction: column; justify-content: space-between; position: absolute; @include vw-pc(top,30); @include vw-pc(left,88); @include vw-pc(height,168);
+            &__tit{@include vw-pc(margin-bottom,12); @include vw-pc(font-size,25); @include vw-pc(line-height,28); @include vw-pc(letter-spacing,0);}
+            &__name{@include vw-pc(font-size,22); @include vw-pc(line-height,28); @include vw-pc(letter-spacing,0); font-weight: 700;}
+            &__price-box{display: flex; @include vw-pc(gap,51);}
+            &__price{@include vw-pc(font-size,26); @include vw-pc(line-height,30); letter-spacing: -0.025em; text-decoration: line-through;}
+            &__zero{@include vw-pc(font-size,30); @include vw-pc(line-height,30); @include vw-pc(letter-spacing,-.75); text-decoration: none;}
+        }
+        .swiper-pagination-bullets{@include vw-pc(bottom, 60);}
+        .swiper-pagination-bullet {@include vw-pc(width, 150); @include vw-pc(height, 8); @include vw-pc(border-radius,4); background: #ddd; opacity: 1;}
+        .swiper-pagination-bullet-active {background: #000;}
+
+        .pt_share-box {
+            display: flex; justify-content: center; @include vw-pc(margin-bottom, 106);
+            &__btn {
+                display: inline-block; @include vw-pc(width, 233); @include vw-pc(height, 56); @include vw-pc(border-radius, 32); @include vw-pc(font-size, 18); @include vw-pc(line-height, 52); font-weight: 700; text-align: center; @include vw-pc(margin, 0 12);
+                &--black {color: #fff; background: #000; @include vw-pc(border, 3 solid #000);}
+                &--kakao {
+                    position: relative; color: #000; background: #FFEB3B; @include vw-pc(border, 3 solid #FFEB3B); @include vw-pc(padding-left, 32);
+                    &::after {position: absolute; @include vw-pc(top, 13); @include vw-pc(left, 18); display: block; content: ''; @include vw-pc(width, 33); @include vw-pc(height, 30); background: url(../../is/images/raffle/gce_ico_kakao_pc.png) no-repeat; @include vw-pc(background-size, 33 30);}
+                    &:hover {color: #000; background: #FFEB3B; @include vw-pc(border, 3 solid #FFEB3B);}
+                }
+            }
+        }
+        
+        .pt_notice-box {
+            &__desc {@include vw-pc(font-size, 16); @include vw-pc(line-height, 26); color: #666; text-align: center;}
+            &__btn {
+                position: relative; display: inline-block; left: 50%; transform: translateX(-50%); @include vw-pc(margin, 40 0 83);  @include vw-pc(font-size, 16); @include vw-pc(line-height, 20); @include vw-pc(letter-spacing, -.8); @include vw-pc(width, 98);
+                &::after {position: absolute; @include vw-pc(top, 3); right: 0; transform: rotate(45deg);}
+            }
+        }
+
+        .pt_desc {
+            @include vw-pc(font-size, 19); @include vw-pc(line-height, 30); letter-spacing: -.055em; color: #432D2D; text-align: center; @include vw-pc(margin-bottom, 50);
+            &--purple {color: #8D52C8;}
+        }
+    }
+
+    .pt_dim-box {position: absolute; @include vw-pc(top, 675); left: 50%; transform: translateX(-50%); width: 100%; @include vw-pc(height, 1015); background-color: rgba(0,0,0,0.6); z-index: 2;}
+
+    .pt_dim{
+        position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); @include vw-pc(width, 950); @include vw-pc(height, 180); @include vw-pc(padding, 42 0); z-index: 2; @include vw-pc(border, 2 solid #fff); background-color: rgba(0,0,0,0.4);
+        &__text{@include vw-pc(font-size, 36); @include vw-pc(line-height, 46); font-weight: 700; @include vw-pc(letter-spacing, -1.08); text-align: center; color: #fff; }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .galcams_event {
+        .sec_raffle {
+            @include vw-mo(height, 2361);
+            .inner_1440 {
+                position: relative;
+                &::before {position: absolute; @include vw-mo(top, 0); @include vw-mo(left, 20); display: block; content: ''; @include vw-mo(width, 131); @include vw-mo(height, 130); background: url(../../is/images/raffle/gce_bg_obj01_mo.png) no-repeat; @include vw-mo(background-size, 131 130);}
+                &::after {position: absolute; @include vw-mo(top, 275); @include vw-mo(right, 10); display: block; content: ''; @include vw-mo(width, 140); @include vw-mo(height, 182); background: url(../../is/images/raffle/gce_bg_obj02_mo.png) no-repeat; @include vw-mo(background-size, 140 182);}
+            }    
+            .pt_title-box {
+                @include vw-mo(padding, 110 0 50);
+                &__tag {display: inline-block; @include vw-mo(width, 212); @include vw-mo(height, 55); @include vw-mo(border-radius, 27.5); @include vw-mo(font-size, 32); @include vw-mo(line-height, 55); color: #fff; background-color: $main_color; font-weight: 700; @include vw-mo(margin-bottom, 30);}
+                &__sub {@include vw-mo(font-size, 38); @include vw-mo(line-height, 48); @include vw-mo(margin-bottom, 23); font-weight: 700; color: $main_color;}
+                &__main {@include vw-mo(font-size, 62); @include vw-mo(line-height, 72); @include vw-mo(margin-bottom, 40); @include vw-mo(letter-spacing, -2.8);}
+                &__desc {@include vw-mo(font-size, 28); @include vw-mo(line-height, 42);}
+            }
+
+            .pt_info {
+                @include vw-mo(margin-bottom, 63);
+                &__list {display: flex; justify-content: center; align-items: center;}
+                &__title,
+                &__desc {@include vw-mo(font-size, 28); @include vw-mo(line-height, 42); @include vw-mo(letter-spacing, -1);}
+                &__title {
+                    position: relative; @include vw-mo(margin, 0 15 0 5); font-weight: 700;
+                    &::after {content: ''; position: absolute; top: 50%; @include vw-mo(right, -8); transform: translateY(-50%); @include vw-mo(width, 2); @include vw-mo(height, 20); background-color: #000;}
+                }
+            }
+            
+            .pt_check__btn{@include vw-mo(margin-bottom, 96); @include vw-mo(padding-left, 6); @include vw-mo(width, 403); @include vw-mo(height, 70); @include vw-mo(border-radius, 35); @include vw-mo(font-size, 32); @include vw-mo(line-height, 34); @include vw-mo(letter-spacing, -1.6); @include vw-mo(border-bottom, 1 solid #6C3BF8);}
+
+
+            .pt_slide-tit{@include vw-mo(margin-bottom, 50);
+                &--newbie{@include vw-mo(margin-bottom, 20);}
+                &--two{@include vw-mo(padding-top, 0);}
+                &__img {@include vw-mo(margin-right, 3); @include vw-mo(width, 23); @include vw-mo(height, 22); background: url(../../is/images/raffle/gce_raffle_star_mo.png) repeat; @include vw-mo(background-size, 23 22);}
+                &__txt{@include vw-mo(margin-left, 3); @include vw-mo(font-size, 28); font-weight: 700; @include vw-mo(letter-spacing, -0.7); @include vw-mo(line-height, 37);}
+            }
+            
+            .pt_raffle-slider {
+                @include vw-mo(width, 624); @include vw-mo(padding-bottom, 174);
+            }
+            .pt_raffle-box {
+                display: flex; justify-content: flex-start; 
+                &__item {@include vw-mo(width, 440); @include vw-mo(margin-right, 24);
+                    &:last-child{@include vw-mo(margin-right, 0);}
+                }
+                &__btn {
+                    position: absolute; @include vw-mo(bottom, -26); left: 50%; transform: translateX(-50%); @include vw-mo(width, 190); @include vw-mo(height, 56); @include vw-mo(border, 3 solid #000); @include vw-mo(border-radius, 32); @include vw-mo(font-size, 28); @include vw-mo(line-height, 56); font-weight: 700; color: #000; background: #fff;
+                    &:hover {color: #fff; background: #000;}
+                }
+                &__tag {position: absolute; @include vw-mo(top,-48); @include vw-mo(width,97); @include vw-mo(height,97); @include vw-mo(border, 4 solid #6C3BF8);  @include vw-mo(font-size,28); @include vw-mo(line-height,34); font-weight:700; @include vw-mo(letter-spacing,-.2); color: #6C3BF8; text-align: center; }
+            }
+
+            .pt_raffle-txt{ 
+                position: absolute; @include vw-mo(top,60); @include vw-mo(left, 34); @include vw-mo(height,204);
+
+                &__tit{@include vw-mo(margin-bottom,6); @include vw-mo(font-size,26); @include vw-mo(line-height,30); @include vw-mo(letter-spacing,0);}
+                &__name{@include vw-mo(font-size,24); @include vw-mo(line-height,30); @include vw-mo(letter-spacing,0);}
+                &__price-box{@include vw-mo(gap,50);}
+                &__price{@include vw-mo(font-size,26); @include vw-mo(line-height,30); letter-spacing: -0.025em; text-decoration: line-through;}
+                &__zero{@include vw-mo(font-size,30); @include vw-mo(line-height,30); @include vw-mo(letter-spacing,-.75); text-decoration: none;}
+            }
+
+            .pt_share-box {
+                @include vw-mo(margin-bottom, 106);
+                &__btn {
+                    display: inline-block; @include vw-mo(width, 300); @include vw-mo(height, 70); @include vw-mo(border-radius, 34); @include vw-mo(font-size, 28); @include vw-mo(line-height, 64); font-weight: 700; text-align: center; @include vw-mo(margin, 0 12);
+                    &--black {color: #fff; background: #000; @include vw-mo(border, 3 solid #000);}
+                    &--kakao {
+                        color: #000; background: #FFEB3B; @include vw-mo(border, 3 solid #FFEB3B); @include vw-mo(padding-left, 40);;
+                        &::after {position: absolute; @include vw-mo(top, 12); @include vw-mo(left, 15); display: block; content: ''; @include vw-mo(width, 51); @include vw-mo(height, 46); background: url(../../is/images/raffle/gce_ico_kakao_mo.png) no-repeat; @include vw-mo(background-size, 51 46);}
+                        &:hover {color: #000; background: #FFEB3B; @include vw-mo(border, 3 solid #FFEB3B);}
+                    }
+                }
+            }
+            .pt_notice-box {
+                &__desc {@include vw-mo(font-size, 20); @include vw-mo(line-height, 30);}
+                &__btn {
+                    @include vw-mo(width, 150); @include vw-mo(margin, 40 0 50);  @include vw-mo(font-size, 26); @include vw-mo(line-height, 40); @include vw-mo(letter-spacing, -.8);
+                    &::after {position: absolute; @include vw-mo(top, 13); right: 0; transform: rotate(45deg);}
+                }
+            }
+
+            .swiper-pagination-bullets{@include vw-mo(bottom,68);}
+            .swiper-pagination-bullet {@include vw-mo(width, 50); @include vw-mo(height, 6); @include vw-mo(border-radius, 4);}
+
+            .pt_desc {
+                @include vw-mo(font-size, 19); @include vw-mo(line-height, 30); letter-spacing: -.055em; color: #432D2D; text-align: center; @include vw-mo(margin-bottom, 30);
+                &--purple {color: #8D52C8;}
+            }
+
+
+            .pt_dim-box {@include vw-mo(top, 720);  left: 0; transform: translateX(0); @include vw-mo(height, 1100); @include vw-mo(border-radius, 0); }
+            
+            .pt_dim{
+                @include vw-mo(width, 670); @include vw-mo(height, 250); @include vw-mo(padding, 23 0);  white-space: nowrap; @include vw-mo(border, 2 solid #fff);
+                &__text{@include vw-mo(font-size, 38); @include vw-mo(line-height, 50); @include vw-mo(letter-spacing, -3);}
+            }
+        }
+    }
+}

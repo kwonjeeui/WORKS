@@ -1,0 +1,33 @@
+.benefitzone {
+    .sec_special_banner {@include vw-pc(height, 330); background: url("../../is/images/bfz_special_banner_bg_pc_v4.png") no-repeat center / cover;
+        .inner_1440 {
+            .pt_banner {position: absolute; @include vw-pc(top, 33); @include vw-pc(left, 142);
+                &__headline {@include vw-pc(margin-bottom, 10); @include vw-pc(font-size, 30); @include vw-pc(line-height, 36);}
+                &__desc {@include vw-pc(margin-bottom, 15); @include vw-pc(font-size, 24); @include vw-pc(line-height, 30); @include vw-pc(letter-spacing, -0.6); font-weight: 700;
+                    &.en {@include vw-pc(letter-spacing, -0.6);}
+                }
+                &__date {@include vw-pc(margin-bottom, 10); @include vw-pc(font-size, 20); @include vw-pc(line-height, 25); font-weight: 700;}
+                &__btn {@include vw-pc(margin-bottom, 38); @include vw-pc(width, 139); @include vw-pc(height, 48); @include vw-pc(border-radius, 30); @include vw-pc(font-size, 18); @include vw-pc(letter-spacing, -.45);}
+                &__noti {@include vw-pc(font-size, 14); @include vw-pc(line-height, 17); @include vw-pc(letter-spacing, -.7); color: #888888;}
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .benefitzone {
+        .sec_special_banner {@include vw-mo(height, 559); background: url("../../is/images/bfz_special_banner_bg_mo_v4.png") no-repeat center / cover;
+            .inner_1440 { 
+                .pt_banner { @include vw-mo(top, 50); @include vw-mo(left, 40); width: 100%;
+                    &__headline {@include vw-mo(margin-bottom, 10); @include vw-mo(font-size, 55); @include vw-mo(line-height, 60);}
+                    &__desc {@include vw-mo(margin-bottom, 33); @include vw-mo(font-size, 34); @include vw-mo(line-height, 44); @include vw-mo(letter-spacing, -.85);
+                        .en {@include vw-mo(letter-spacing, -.85);}
+                    }
+                    &__date {@include vw-mo(margin-bottom, 66); @include vw-mo(font-size, 28); @include vw-mo(line-height, 34);}
+                    &__btn {@include vw-mo(margin-bottom, 36);  @include vw-mo(width, 193); @include vw-mo(height, 60); @include vw-mo(border-radius, 40); @include vw-mo(font-size, 24); @include vw-mo(letter-spacing, -1.2);}
+                    &__noti {@include vw-mo(margin-left, 10); @include vw-mo(font-size, 18); @include vw-mo(line-height, 26); @include vw-mo(letter-spacing, -.45); @include vw-mo(text-indent, -10);}
+                }
+            }
+        }
+    }
+}

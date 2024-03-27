@@ -1,0 +1,44 @@
+.benefitzone {
+    .sec_samsung_banner {
+        .pt_ssc_benefit {
+            @include vw-pc(margin, 80 auto 0); @include vw-pc(max-width, 1024);
+            &__txt {
+                position: absolute; @include vw-pc(top, 27); @include vw-pc(left, 56); text-align: left;
+                &--title {@include vw-pc(font-size, 28); @include vw-pc(line-height, 31);}
+                &--desc {@include vw-pc(font-size, 22); @include vw-pc(line-height, 31); font-weight: 500;}
+                &--link {display: inline-block; @include vw-pc(margin-top, 12); @include vw-pc(font-size, 18); @include vw-pc(line-height, 23); font-weight: 400; border-bottom: 1px solid #000; letter-spacing: -.025em;}
+                &--list {
+                    @include vw-pc(margin-top, 15); 
+                    li {
+                        position: relative; @include vw-pc(padding, 0 0 0 14); @include vw-pc(font-size, 16); @include vw-pc(line-height, 24); font-weight: 400; color: #45434B;
+                        &::before {content: ''; position: absolute; left: 0; @include vw-pc(top, 9); @include vw-pc(width, 4); @include vw-pc(height, 4); border-radius: 50%; background-color:#45434B;}
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .benefitzone {
+        .sec_samsung_banner {
+            .pt_ssc_benefit {
+                @include vw-mo(margin, 100 auto 0); @include vw-mo(max-width, 672);
+
+                &__txt {
+                    @include vw-mo(top, 28); @include vw-mo(left, 30);
+                    &--title {@include vw-mo(font-size, 32); @include vw-mo(line-height, 36);}
+                    &--desc {@include vw-mo(font-size, 24); @include vw-mo(line-height, 32);}
+                    &--link {@include vw-mo(margin-top, 11); @include vw-mo(font-size, 20); @include vw-mo(line-height, 26);}
+                    &--list {
+                        @include vw-mo(margin-top, 14); 
+                        li {
+                            position: relative; @include vw-mo(padding, 0 0 0 14); @include vw-mo(font-size, 18); @include vw-mo(line-height, 26);
+                            &::before {@include vw-mo(top, 9); @include vw-pc(width, 5); @include vw-pc(height, 5);}
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

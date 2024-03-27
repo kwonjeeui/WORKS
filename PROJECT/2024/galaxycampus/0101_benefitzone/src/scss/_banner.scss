@@ -1,0 +1,49 @@
+.benefitzone {
+    .sec_banner {@include vw-pc(padding-top,80);
+        .pt_hana{@include vw-pc(border-radius, 20); background-color: #BDABF8; overflow: hidden;}
+        .pt_banner {position: relative; width: 100%; 
+            &__img {@include vw-pc(width,1200);}
+            &__noti-btn{@include vw-pc(font-size,18); @include vw-pc(line-height,23); letter-spacing: -0.05em;}
+        }
+        .pt_txt {
+            position: absolute; @include vw-pc(top, 31); @include vw-pc(left, 46); text-align: left;
+            &__eyebrow {@include vw-pc(font-size, 24); @include vw-pc(line-height, 40); font-weight: 700;}
+            &__main {@include vw-pc(margin-bottom, 13); @include vw-pc(font-size, 34); @include vw-pc(line-height, 39);}
+            &__date {@include vw-pc(margin-bottom,13); @include vw-pc(font-size, 18); @include vw-pc(line-height, 23);}
+            &__point{display: inline-block; @include vw-pc(padding,0 2); @include vw-pc(border-radius,6); background-color: #FFF048;}
+        }
+        
+        .pt_noti{background-color: #000;
+            &__list{@include vw-pc(padding,33 40);}
+            &__item{position: relative; @include vw-pc(padding-left,10); @include vw-pc(font-size,16); @include vw-pc(line-height,28); color: #fff; 
+                &::before{content: ""; position: absolute; left: 0; @include vw-pc(top,12); @include vw-pc(width,4); @include vw-pc(height,4); border-radius: 50%; background-color: #fff;}
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) { 
+    .benefitzone {
+        .sec_banner { @include vw-mo(padding-top,80);
+            .pt_hana{margin: 0 auto; @include vw-mo(width,672); @include vw-mo(border-radius, 20);}
+            .pt_banner {
+                &__img {@include vw-mo(width,672);}
+                &__noti-btn{@include vw-mo(font-size,20); @include vw-mo(line-height,26);}
+            }
+            .pt_txt {
+                position: absolute; @include vw-mo(top, 23); @include vw-mo(left, 26);
+                &__eyebrow {@include vw-mo(font-size, 26); @include vw-mo(line-height, 32); font-weight: 700;}
+                &__main {@include vw-mo(margin-bottom, 9); @include vw-mo(font-size, 30); @include vw-mo(line-height, 36);}
+                &__date {@include vw-mo(margin-bottom,10); @include vw-mo(font-size, 22); @include vw-mo(line-height, 29);}
+                &__point{@include vw-mo(padding,0 2); @include vw-mo(border-radius,6);}
+            }
+            
+            .pt_noti{
+                &__list{@include vw-mo(padding,27 0 27 30);}
+                &__item{@include vw-mo(padding-left,10); @include vw-mo(font-size,22); @include vw-mo(line-height,38);
+                    &::before{@include vw-mo(top,16); transform: translateY(0); @include vw-pc(width,5); @include vw-pc(height,5);} 
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,74 @@
+body.scroll-up .pt_battle_ground .sec_nav .pt_nav[sticky] {top: 80px;}
+.pt_battle_ground {
+    .sec_nav {@include vw-pc(height, 86);
+        .pt_nav {background-color: #000;
+            &[sticky] {display: block; position: fixed; top: 0; left: 50%; transform: translateX(-50%); @include vw-pc(width, 1920); animation: navFade 0.3s; z-index: 100;}
+        }
+        .pt_nav{
+            &__list {display: flex; justify-content: center; align-items: center; @include vw-pc(gap, 190); @include vw-pc(width, 1320); @include vw-pc(height, 86); margin: 0 auto; @include vw-pc(padding, 0 80);}
+            &__item {margin: 0 auto;}
+            &__item--hidden {@include vw-pc(width, 152);}
+            &__item01 {@include vw-pc(width, 148);}
+            &__item02 {@include vw-pc(width, 190);}
+            &__item03 {@include vw-pc(width, 156);}
+            &__btn{
+                display: flex; align-items: center; @include vw-pc(height, 86);
+                &--hidden::after{content: ''; display: inline-block; @include vw-pc(width, 152); @include vw-pc(height, 46); background: url(../../is/images/nav/bg_nav_hidden_off_pc.png) no-repeat center/contain; background-size: 100% 100%;}
+                &--01::after{content: ''; display: inline-block; @include vw-pc(width, 148); @include vw-pc(height, 46); background: url(../../is/images/nav/bg_nav_01_off_pc.png) no-repeat center/contain; background-size: 100% 100%;}
+                &--02::after{content: ''; display: inline-block; @include vw-pc(width, 190); @include vw-pc(height, 46); background: url(../../is/images/nav/bg_nav_02_off_pc_v1.png) no-repeat center/contain; background-size: 100% 100%;}
+                &--03::after{content: ''; display: inline-block; @include vw-pc(width, 156); @include vw-pc(height, 46); background: url(../../is/images/nav/bg_nav_03_off_pc.png) no-repeat center/contain; background-size: 100% 100%;}
+            }
+            &__btn{
+                &--hidden.active::after{content: ''; display: inline-block; @include vw-pc(width, 152); @include vw-pc(height, 46); background: url(../../is/images/nav/bg_nav_hidden_on_pc.png) no-repeat center/contain; background-size: 100% 100%;}
+                &--01.active::after{content: ''; display: inline-block; @include vw-pc(width, 148); @include vw-pc(height, 46); background: url(../../is/images/nav/bg_nav_01_on_pc.png) no-repeat center/contain; background-size: 100% 100%;}
+                &--02.active::after{content: ''; display: inline-block; @include vw-pc(width, 190); @include vw-pc(height, 46); background: url(../../is/images/nav/bg_nav_02_on_pc_v1.png) no-repeat center/contain; background-size: 100% 100%;}
+                &--03.active::after{content: ''; display: inline-block; @include vw-pc(width, 156); @include vw-pc(height, 46); background: url(../../is/images/nav/bg_nav_03_on_pc.png) no-repeat center/contain; background-size: 100% 100%;}
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1280px) {
+    body.scroll-up .pt_battle_ground .sec_nav .pt_nav[sticky] {top: 55px;}
+}
+
+@media screen and (max-width: 768px) {
+    body.scroll-up .pt_battle_ground .sec_nav .pt_nav[sticky] {top: 55px;}
+    .pt_battle_ground {
+        .sec_nav {@include vw-mo(height, 98); @include vw-mo(max-width, 720);
+            .pt_nav {
+                &[sticky] {@include vw-mo(width, 720);}
+            }
+            .pt_nav{
+                &__list {flex-wrap: wrap; @include vw-mo(gap, 0); @include vw-mo(width, 720); @include vw-mo(height, 196); padding: 0;}
+                &__item {@include vw-mo(width, 360); @include vw-mo(height, 98);}
+                &__btn{
+                    display: flex; justify-content: center; align-items: center; @include vw-mo(height, 98);
+                    &--hidden {@include vw-mo(border-bottom, 1 solid #343434); @include vw-mo(border-right, 1 solid #343434);}
+                    &--01 {@include vw-mo(border-bottom, 1 solid #343434);}
+                    &--02 {@include vw-mo(border-right, 1 solid #343434);}
+                    &--hidden::after{content: ''; display: inline-block; @include vw-mo(width, 166); @include vw-mo(height, 54); background: url(../../is/images/nav/bg_nav_hidden_off_mo.png) no-repeat center/contain; background-size: 100% 100%;}
+                    &--01::after{content: ''; display: inline-block; @include vw-mo(width, 204); @include vw-mo(height, 54); background: url(../../is/images/nav/bg_nav_01_off_mo.png) no-repeat center/contain; background-size: 100% 100%;}
+                    &--02::after{content: ''; display: inline-block; @include vw-mo(width, 208); @include vw-mo(height, 54); background: url(../../is/images/nav/bg_nav_02_off_mo.png) no-repeat center/contain; background-size: 100% 100%;}
+                    &--03::after{content: ''; display: inline-block; @include vw-mo(width, 170); @include vw-mo(height, 54); background: url(../../is/images/nav/bg_nav_03_off_mo.png) no-repeat center/contain; background-size: 100% 100%;}
+                }
+                &__btn{
+                    &--hidden.active::after{content: ''; display: inline-block; @include vw-mo(width, 166); @include vw-mo(height, 54); background: url(../../is/images/nav/bg_nav_hidden_on_mo.png) no-repeat center/contain; background-size: 100% 100%;}
+                    &--01.active::after{content: ''; display: inline-block; @include vw-mo(width, 204); @include vw-mo(height, 54); background: url(../../is/images/nav/bg_nav_01_on_mo.png) no-repeat center/contain; background-size: 100% 100%;}
+                    &--02.active::after{content: ''; display: inline-block; @include vw-mo(width, 208); @include vw-mo(height, 54); background: url(../../is/images/nav/bg_nav_02_on_mo.png) no-repeat center/contain; background-size: 100% 100%;}
+                    &--03.active::after{content: ''; display: inline-block; @include vw-mo(width, 170); @include vw-mo(height, 54); background: url(../../is/images/nav/bg_nav_03_on_mo.png) no-repeat center/contain; background-size: 100% 100%;}
+                }
+            }
+        }
+    }
+}
+
+@keyframes navFade {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity : 1;
+    }
+}

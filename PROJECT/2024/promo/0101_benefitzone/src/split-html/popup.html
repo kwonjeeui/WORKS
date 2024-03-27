@@ -1,0 +1,590 @@
+<style>
+    .ins-preview-wrapper .popup_box {z-index: 1000;}
+</style>
+
+<div class="ins-preview-wrapper">
+    <div class="popup_box" id="popup_content" tabindex="0">
+        <div class="innr">
+            <!-- 웹 접근성 타이틀 -->
+            <div class="blind">
+                <p>카드 청구 할인 안내 팝업</p>
+            </div>
+            <!-- 앵커 다운 탭 메뉴 -->
+            <section class="_tab">
+                <ul>
+                    <li class="on">
+                        <a class="cta_tab" href="#sale" data-target="#sale">
+                            <b>삼성카드 금액대별 <br>결제일할인</b>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="cta_tab" href="#point" data-target="#point">
+                            <b>삼성전자 멤버십 <br>다다익선 포인트</b>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="cta_tab" href="#instalment" data-target="#instalment">
+                            <b>카드사별 <br>무이자 할부</b>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+            <!-- 안내 컨텐츠 -->
+            <div class="_info">
+                <div class="tab_ara">
+                    <!-- 할인 안내 -->
+                    <section class="_box" id="sale">
+                        <h2>삼성카드 금액대별 결제일할인 안내</h2>
+                        <p>삼성닷컴에서 제품 구매 시 금액대별로 결제일할인(청구할인)을 받으실 수 있습니다.</p>
+                        <dl class="_dsc">
+                            <div class="_tbl">
+                                <dt><em>100</em>만원↑</dt>
+                                <dd><em>6</em>만원</dd>
+                            </div>
+                            <div class="_tbl">
+                                <dt><em>200</em>만원↑</dt>
+                                <dd><em>10</em>만원</dd>
+                            </div>
+                            <div class="_tbl">
+                                <dt><em>300</em>만원↑</dt>
+                                <dd><em>13</em>만원</dd>
+                            </div>
+                            <div class="_tbl">
+                                <dt><em>400</em>만원↑</dt>
+                                <dd><em>19</em>만원</dd>
+                            </div>
+                            <div class="_tbl">
+                                <dt><em>500</em>만원↑</dt>
+                                <dd><em>30</em>만원</dd>
+                            </div>
+                            <div class="_tbl">
+                                <dt><em>700</em>만원↑</dt>
+                                <dd><em>38</em>만원</dd>
+                            </div>
+                            <div class="_tbl">
+                                <dt><em>1</em>천만원↑</dt>
+                                <dd><em>50</em>만원</dd>
+                            </div>
+                            <div class="_tbl">
+                                <dt><em>1</em>천<em>5</em>백만원↑</dt>
+                                <dd><em>70</em>만원</dd>
+                            </div>
+                            <div class="_tbl">
+                                <dt><em>2</em>천만원↑</dt>
+                                <dd><em>90</em>만원</dd>
+                            </div>
+                        </dl>
+                        <!-- <div class="card_banner">
+                            <img src="https://images.samsung.com/kdp/_pub/insdr/card_benefit_img.jpg" alt="" draggable="false">
+                            <div class="blind">
+                                <p>행사기간 직전 6개월 삼성카드 무실적회원은</p>
+                                <strong>디지털프라자 BENEFIT 삼성카드로 건별 100만원 이상 결제 시 10% 캐시백!</strong>
+                                <p>(1인 1회, 총 캐시백 한도 12만원)</p>
+                                <p>디지털프라자 BENEFIT 삼성카드</p>
+                            </div>
+                            <a href="https://www.samsungcard.com/personal/event/ing/UHPPBE1403M0.jsp?cms_id=3584037" class="btn_detail" target="_blank" title="자세히 보기 (새 창으로 열림)">자세히 보기</a>
+                        </div> -->
+    
+                    </section>
+                    <!-- 포인트 안내 -->
+                    <section class="_box" id="point">
+                        <h2>삼성전자 멤버십 포인트 적립 안내</h2>
+                        <table class="card_tbl point">
+                            <caption>삼성전자 멤버십 포인트 적립 안내 구분, 포인트적립 표</caption>
+                            <colgroup>
+                                <col width="22%">
+                                <col width="auto">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="col">구분</th>
+                                    <th scope="col">포인트 적립</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">스마트<br>패키지<br>포인트</th>
+                                    <td class="td0">
+                                        <!-- <dl class="_dsc">
+                                            <div class="_tbl">
+                                                <dt>2개</dt>
+                                                <dd><em>10</em>만P</dd>
+                                            </div>
+                                            <div class="_tbl">
+                                                <dt>3개</dt>
+                                                <dd><em>15</em>만P</dd>
+                                            </div>
+                                            <div class="_tbl">
+                                                <dt>4개</dt>
+                                                <dd><em>20</em>만P</dd>
+                                            </div>
+                                            <div class="_tbl">
+                                                <dt>5개</dt>
+                                                <dd><em>50</em>만P</dd>
+                                            </div>
+                                            <div class="_tbl">
+                                                <dt>6개</dt>
+                                                <dd><em>60</em>만P</dd>
+                                            </div>
+                                            <div class="_tbl">
+                                                <dt>7개</dt>
+                                                <dd><em>70</em>만P</dd>
+                                            </div>
+                                            <div class="_tbl">
+                                                <dt>8개</dt>
+                                                <dd><em>120</em>만P</dd>
+                                            </div>
+                                            <div class="_tbl">
+                                                <dt>9개</dt>
+                                                <dd><em>135</em>만P</dd>
+                                            </div>
+                                            <div class="_tbl">
+                                                <dt>10개</dt>
+                                                <dd><em>150</em>만P</dd>
+                                            </div>
+                                            <div class="_tbl">
+                                                <dt>11개</dt>
+                                                <dd><em>220</em>만P</dd>
+                                            </div>
+                                            <div class="_tbl">
+                                                <dt>12개</dt>
+                                                <dd><em>240</em>만P</dd>
+                                            </div>
+                                            <div class="_tbl">
+                                                <dt>13개</dt>
+                                                <dd><em>260</em>만P</dd>
+                                            </div>
+                                            <div class="_tbl">
+                                                <dt>14개</dt>
+                                                <dd><em>280</em>만P</dd>
+                                            </div>
+                                            <div class="_tbl">
+                                                <dt>15개</dt>
+                                                <dd><em>300</em>만P</dd>
+                                            </div>
+                                            <div class="_tbl">
+                                                <dt>16개</dt>
+                                                <dd><em>330</em>만P</dd>
+                                            </div>
+                                            <div class="_tbl">
+                                                <dt></dt>
+                                                <dd></dd>
+                                            </div>
+                                        </dl>
+                                        <div class="pt_noti">
+                                            <p class="pt_noti_tit">행사모델 중 2개 품목 이상 구매 시 적립</p>
+                                            <p class="pt_noti_txt">
+                                                <strong>* 대상 제품군 : </strong><span>QLED TV / Lifestyle TV / 모니터 / 오디오 / 냉장고 / 냉동고 / 와인 / 김치냉장고 / 정수기 / 세탁기 or 건조기 / 의류청정기 / 신발관리기 / 전기레인지 / 식기세척기 / 오븐 / 후드 / 에어컨 / 공기청정기 / 청소기 (제트) / 로봇 청소기 (제트 봇)</span>
+                                            </p>
+                                        </div> -->
+                                        <table class="point_table">
+                                            <caption>스마트 패키지 포인트 표</caption>
+                                            <colgroup>
+                                                <col width="50%">
+                                                <col width="auto">
+                                            </colgroup>
+                                            <thead class="point_table__header">
+                                                <tr>
+                                                    <th scope="col" colspan="2">모델별 혜택</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody class="point_table__body">
+                                                <tr>
+                                                    <th class="point_table__title" scope="col">초프리미엄</th>
+                                                    <th class="point_table__desc"><span class="en">40</span> 만</th>
+                                                </tr>
+                                                <tr>
+                                                    <th class="point_table__title" scope="col">프리미엄</th>
+                                                    <th class="point_table__desc"><span class="en">20</span> 만</th>
+                                                </tr>
+                                                <tr>
+                                                    <th class="point_table__title" scope="col">Hero</th>
+                                                    <th class="point_table__desc"><span class="en">10</span> 만</th>
+                                                </tr>
+                                                <tr>
+                                                    <th class="point_table__title" scope="col">스탠다드</th>
+                                                    <th class="point_table__desc"><span class="en">5</span> 만</th>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <table class="point_table">
+                                            <caption>품목수별 혜택</caption>
+                                            <colgroup>
+                                                <col width="50%">
+                                                <col width="auto">
+                                            </colgroup>
+                                            <thead class="point_table__header">
+                                                <tr>
+                                                    <th scope="col" colspan="2">품목수별 혜택</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody class="point_table__body">
+                                                <tr>
+                                                    <th class="point_table__title" scope="col">5~9 개 품목</th>
+                                                    <th class="point_table__desc"><span class="en">20</span> 만</th>
+                                                </tr>
+                                                <tr>
+                                                    <th class="point_table__title" scope="col">10~14 개 품목</th>
+                                                    <th class="point_table__desc"><span class="en">50</span> 만</th>
+                                                </tr>
+                                                <tr>
+                                                    <th class="point_table__title" scope="col">15 개 품목 ↑</th>
+                                                    <th class="point_table__desc"><span class="en">100</span> 만</th>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+                                        <div class="pt_noti">
+                                            <p class="pt_noti_tit">※ 스마트 패키지 (초프리미엄, 프리미엄, HERO, 스탠다드) 행사모델 구매 건 한정</p>
+                                            <p class="pt_noti_txt">
+                                                <strong>※ 품목수별 혜택 대상 :</strong>
+                                                <span>TV / 모니터 / 오디오 / 냉장고 / 김치냉장고 / 정수기 / 오븐 / <br class="pt_m_hide">
+                                                    식기세척기 / 전기레인지 / 후드 / 건조기  / 의류청정기 / 신발관리기 / <br class="pt_m_hide">
+                                                    공기청정기 / 청소기 (제트) / 로봇 청소기 (제트 봇) / 에어컨 <br class="pt_m_hide">
+                                                    (품목수별 혜택과 모델별 혜택은 대상모델 동일)</span>
+                                            </p>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">기본 포인트</th>
+                                    <td class="pt_noti">
+                                        <span>구매금액의 0.1% 적립</span>
+                                        <p>적립 대상 : 삼성전자 멤버십 지정 스토어 및 삼성 닷컴에서 구매한<br>삼성전자 멤버십 고객</p>
+                                        <p>※ 당사가 직접 공급한 제품, 월간 적립한도 60,000포인트</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">제품별 포인트</th>
+                                    <td class="pt_noti">
+                                        <span>행사별 지정금액 추가적립</span>
+                                        <p>적립 대상 : 해당 조건에 해당하는 구매 고객</p>
+                                    <p>※ 매달 행사내용에 따라 포인트 유형이 달라집니다.<br>지정 스토어 및 삼성닷컴에서 행사 내용과 조건을 확인해주세요.</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                    <!-- 할부 안내 -->
+                    <section class="_box" id="instalment">
+                        <p class="_txt">삼성닷컴 회원이라면 이자부담 ZERO</p>
+                        <h2>카드사별 무이자 할부 안내</h2>
+                        <p class="_txt2">행사 기간 : 2023.04.01 ~ 2023.04.30</p>
+                        <ul class="_card">
+                            <!-- <li>
+                                <a class="_img" href="#card_01">
+                                    <img src="https://images.samsung.com/kdp/_pub/insdr/card_logo_01.png" alt="삼성카드">
+                                </a>
+                            </li> -->
+                            <li>
+                                <a class="_img" href="#card_02">
+                                    <img src="https://images.samsung.com/kdp/_pub/insdr/card_logo_02.png" alt="신한카드">
+                                </a>
+                            </li>
+                            <li>
+                                <a class="_img" href="#card_03">
+                                    <img src="https://images.samsung.com/kdp/_pub/insdr/card_logo_03.png" alt="하나카드">
+                                </a>
+                            </li>
+                            <li>
+                                <a class="_img" href="#card_04">
+                                    <img src="https://images.samsung.com/kdp/_pub/insdr/card_logo_04.png" alt="현대카드">
+                                </a>
+                            </li>
+                            <li>
+                                <a class="_img" href="#card_05">
+                                    <img src="https://images.samsung.com/kdp/_pub/insdr/card_logo_05.png" alt="BC카드">
+                                </a>
+                            </li>
+                            <li>
+                                <a class="_img" href="#card_06">
+                                    <img src="https://images.samsung.com/kdp/_pub/insdr/card_logo_06.png" alt="KB국민카드">
+                                </a>
+                            </li>
+                            <li>
+                                <a class="_img" href="#card_07">
+                                    <img src="https://images.samsung.com/kdp/_pub/insdr/card_logo_07.png" alt="NH농협카드">
+                                </a>
+                            </li>
+                            <li>
+                                <a class="_img" href="#card_08">
+                                    <img src="https://images.samsung.com/kdp/event/sec/2023/sec_benefit/card_logo_08_v2.png" alt="롯데카드">
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="pt_table_wrap">
+                            <table class="card_tbl instalment">
+                                <caption>카드사별 무이자 할부, 부분 무이자 할부 혜택 표</caption>
+                                <colgroup>
+                                    <col width="18%">
+                                    <col width="20%">
+                                    <col width="12%">
+                                    <col width="*">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th>카드사</th>
+                                        <th>구분</th>
+                                        <th>할부</th>
+                                        <th>혜택내용</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- <tr id="card_01">
+                                        <td rowspan="4">삼성카드</td>
+                                        <td>무이자 <br class="m_show">할부</td>
+                                        <td class="_bg">2~3 <br class="m_show">개월</td>
+                                        <td>기업(개인사업자)카드, 기프트, <br class="m_show">체크카드 제외 <br>홈쇼핑 업종 무이자 제외 <br>모빌리언스 명의로 청구되는 가맹점에 한함</td>
+                                    </tr>
+                                    <tr>
+                                        <td rowspan="3">부분 무이자 <br class="m_show">할부</td>
+                                        <td class="_bg">6 <br class="m_show">개월</td>
+                                        <td>1~3회차 수수료 고객 부담 <br>(별도 신청 없이 이용 가능)</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="_bg">10 <br class="m_show">개월</td>
+                                        <td>1~4회차 수수료 고객부담 <br>(별도 신청없이 이용 가능)</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="_bg">12 <br class="m_show">개월</td>
+                                        <td>1~5회차 수수료 고객부담 <br>(별도 신청없이 이용 가능)</td>
+                                    </tr> -->
+                                    <tr id="card_02">
+                                        <td rowspan="3">신한카드</td>
+                                        <td>무이자 <br class="m_show">할부</td>
+                                        <td class="_bg">2~3 <br class="m_show">개월</td>
+                                        <td>가족카드포함,체크/기업(개인사업자)/신한비씨카드 및 선불/기프트 카드 제외 <br>모빌리언스 명의로 청구되는 가맹점에 한함</td>
+                                    </tr>
+                                    <tr>
+                                        <td rowspan="2">부분 무이자 <br class="m_show">할부</td>
+                                        <td class="_bg">10 <br class="m_show">개월</td>
+                                        <td>1~4회차 수수료 고객부담 <br>(별도 신청없이 이용 가능)</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="_bg">12 <br class="m_show">개월</td>
+                                        <td>1~5회차 수수료 고객부담 <br>(별도 신청없이 이용 가능)</td>
+                                    </tr>
+                                    <tr id="card_03">
+                                        <td rowspan="4">하나카드</td>
+                                        <td>무이자 <br class="m_show">할부</td>
+                                        <td class="_bg">2~3 <br class="m_show">개월</td>
+                                        <td>법인/체크/선불/기프트/<br>하나bc/토스/우체국 제외 <br>모빌리언스 명의로 청구되는 가맹점에 한함</td>
+                                    </tr>
+                                    <tr>
+                                        <td rowspan="3">부분 무이자 <br class="m_show">할부</td>
+                                        <td class="_bg">6 <br class="m_show">개월</td>
+                                        <td>1~3회차 수수료 고객부담 <br>(별도 신청없이 이용가능)</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="_bg">10 <br class="m_show">개월</td>
+                                        <td>1~4회차 수수료 고객부담 <br>(별도 신청없이 이용 가능)</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="_bg">12 <br class="m_show">개월</td>
+                                        <td>1~5회차 수수료 고객부담 <br>(별도 신청없이 이용 가능)</td>
+                                    </tr>
+                                    <tr id="card_04">
+                                        <td>현대카드</td>
+                                        <td>무이자 <br class="m_show">할부</td>
+                                        <td class="_bg">2~3 <br class="m_show">개월</td>
+                                        <td>1만원 이상 할부 결제 <br>(B2B, 제약업종은 2~3개월 무이자가능) <br>모빌리언스 명의로 청구되는 가맹점에 한함</td>
+                                    </tr>
+                                    <tr id="card_05">
+                                        <td rowspan="5">BC카드</td>
+                                        <td>무이자 <br class="m_show">할부</td>
+                                        <td class="_bg">2~6 <br class="m_show">개월</td>
+                                        <td>우리카드, 씨티카드 포함 <br>(법인, 개인사업자 제외) <br>모빌리언스 명의로 청구되는 가맹점에 한함</td>
+                                    </tr>
+                                    <tr>
+                                        <td rowspan="4">부분 무이자 <br class="m_show">할부 <br>*APP,ARS <br class="m_show">사전 신청 <br>(1899-5772)</td>
+                                        <td class="_bg">8~10 <br class="m_show">개월</td>
+                                        <td>1~2회차 수수료 고객부담 <br>(사전신청 고객에 한함)</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="_bg">11~12 <br class="m_show">개월</td>
+                                        <td>1~3회차 수수료 고객부담 <br>(사전신청 고객에 한함)</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="_bg">10 <br class="m_show">개월</td>
+                                        <td>1~3회차 수수료 고객부담 <br>(별도 신청없이 이용가능)</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="_bg">12 <br class="m_show">개월</td>
+                                        <td>1~4회차 수수료 고객부담 <br>(별도 신청없이 이용가능)</td>
+                                    </tr>
+                                    <tr id="card_06">
+                                        <td rowspan="4">KB국민카드</td>
+                                        <td>무이자 <br class="m_show">할부</td>
+                                        <td class="_bg">2~3 <br class="m_show">개월</td>
+                                        <td>KB국민체크/기업(법인 및 개인 사업자)/비씨카드 및 선불카드 제외 <br>모빌리언스 명의로 청구되는 가맹점에 한함</td>
+                                    </tr>
+                                    <tr>
+                                        <td rowspan="3">부분 무이자 <br class="m_show">할부</td>
+                                        <td class="_bg">6 <br class="m_show">개월</td>
+                                        <td>1~3회차 수수료 고객 부담 <br>(별도 신청 없이 이용 가능)</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="_bg">10 <br class="m_show">개월</td>
+                                        <td>1~4회차 수수료 고객 부담 <br>(별도 신청 없이 이용 가능)</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="_bg">12 <br class="m_show">개월</td>
+                                        <td>1~5회차 수수료 고객 부담 <br>(별도 신청 없이 이용 가능)</td>
+                                    </tr>
+                                    <tr id="card_07">
+                                        <td rowspan="5">NH농협카드</td>
+                                        <td>무이자 <br class="m_show">할부</td>
+                                        <td class="_bg">2~4 <br class="m_show">개월</td>
+                                        <td>기업(개인사업자)카드, 기프트, <br class="m_show">체크카드 제외 <br>홈쇼핑 업종 무이자 제외 <br>모빌리언스 명의로 청구되는 가맹점에 한함</td>
+                                    </tr>
+                                    <tr>
+                                        <td rowspan="4">부분 무이자 <br class="m_show">할부 <br>*ARS <br class="m_show">사전 신청 <br>(1644-2009)</td>
+                                        <td rowspan="2" class="_bg">2~12 <br class="m_show">개월</td>
+                                        <td>[30만원 이상, 100만원 미만 결제 시] <br>2~3개월 : 무이자 <br>4~6개월 : 1회차 고객 부담 <br>7~10개월 : 1~2회차 고객 부담 <br>11~12개월 : 1~3회차 고객 부담 <br>(사전 신청 고객에 한함)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>[100만원 이상 결제 시] <br>2~3개월 : 무이자 <br>4~6개월 : 무이자 <br>7~10개월 : 1~2회차 고객 부담 <br>11~12개월 : 1~3회차 고객 부담 <br>(사전 신청 고객에 한함)</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="_bg">5~6 <br class="m_show">개월</td>
+                                        <td>1~2회차 수수료 고객부담 <br>(별도 신청 없이 이용 가능)</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="_bg">7~10 <br class="m_show">개월</td>
+                                        <td>1~3회차 수수료 고객부담 <br>(별도 신청없이 이용 가능)</td>
+                                    </tr>
+                                    <tr id="card_08">
+                                        <td>롯데카드</td>
+                                        <td>무이자 <br class="m_show">할부</td>
+                                        <td class="_bg">2~3 <br class="m_show">개월</td>
+                                        <td>기업(개인사업자)카드, 기프트, 체크카드 제외 <br>홈쇼핑 업종 무이자 제외 <br>모빌리언스 명의로 청구되는 가맹점에 한함</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+                </div>
+    
+                <!-- 유의사항 -->
+                <div class="notice">
+                    <button class="_btn on" title="공통 팝업 내 '유의사항' 클릭 시 닫혀짐" data-omni-type="microsite" data-omni="sec:eventList:benefitzone:viewmore_benefit_notice">유의 사항 접기</button>
+                    <div class="_cont">
+                        <div>
+                            <strong>[삼성카드 금액대별 결제일할인(청구할인) 유의사항]</strong>
+                            <ul>
+                                <li>* 삼성카드 결제금액대별 결제일할인은 삼성개인신용카드 보유 회원에 한해 월 1회 혜택이 제공됩니다.</li>
+                                <li>* 삼성카드 결제금액대별 결제일할인은 삼성닷컴(갤럭시 캠퍼스 스토어 및 삼성스토어 커뮤니티몰(CMmall) 포함)에서 매달 첫 번째로 결제한 금액 기준으로 혜택이 제공됩니다.</li>
+                                <li>* 할인쿠폰/포인트(삼성전자 포인트, U포인트 등) 사용 등을 제외한 최종 결제금액이 100만원 이상인 경우에 한해 혜택을 받을 수 있습니다.
+                                    <div class="pt_table_box">
+                                        <div class="pt_scale">
+                                            <dl>
+                                                <dt><em>100</em>만원↑</dt>
+                                                <dd><em>6</em>만원</dd>
+                                            </dl>
+                                            <dl>
+                                                <dt><em>200</em>만원↑</dt>
+                                                <dd><em>10</em>만원</dd>
+                                            </dl>
+                                            <dl>
+                                                <dt><em>300</em>만원↑</dt>
+                                                <dd><em>13</em>만원</dd>
+                                            </dl>
+                                            <dl>
+                                                <dt><em>400</em>만원↑</dt>
+                                                <dd><em>19</em>만원</dd>
+                                            </dl>
+                                            <dl>
+                                                <dt><em>500</em>만원↑</dt>
+                                                <dd><em>30</em>만원</dd>
+                                            </dl>
+                                            <dl>
+                                                <dt><em>700</em>만원↑</dt>
+                                                <dd><em>38</em>만원</dd>
+                                            </dl>
+                                            <dl>
+                                                <dt><em>1</em>천만원↑</dt>
+                                                <dd><em>50</em>만원</dd>
+                                            </dl>
+                                            <dl>
+                                                <dt><em>1</em>천<em>5</em>백만원↑</dt>
+                                                <dd><em>70</em>만원</dd>
+                                            </dl>
+                                            <dl>
+                                                <dt><em>2</em>천만원↑</dt>
+                                                <dd><em>90</em>만원</dd>
+                                            </dl>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>* 삼성카드 포인트 및 마일리지 적립 등 카드 혜택과 중복 적용되지 않습니다. (디지털프라자 BENEFIT 삼성카드, 삼성 모바일 플러스카드는 중복 적용)</li>
+                                <li>* 결제일할인 금액은 회원님의 카드 결제 대금에서 자동 차감됩니다.</li>
+                                <li>* 삼성카드 결제금액대별 결제일할인이 적용된 결제건을 취소한 경우, 할인횟수는 해당 결제건의 매출취소전표가 삼성카드에 접수된 후에 복원됩니다.<br>이에, 결제건 취소 전에 결제일할인 적용 대상인 상품을 결제하면 결제시점의 잔여 할인횟수에 따라 할인 혜택이 100% 제공되지 않을 수 있습니다.</li>
+                                <li>* 삼성닷컴(갤럭시 캠퍼스 스토어 및 삼성스토어 커뮤니티몰(CMmall) 포함)의 다른 결제일할인 행사와 중복 적용되지 않습니다.</li>
+                                <li>* 삼성카드 결제금액대별 결제일할인 혜택의 경우, e식품관 결제건은 제외됩니다.</li>
+                                <li>* 법인/체크/선불/충전/기프트카드는 제외됩니다.</li>
+                                <li>* 카드사 및 제휴사의 사정으로 사전 안내 없이 변경/중단될 수 있습니다.</li>
+                                <li>* 금융상품 이용 전 상품설명서, 홈페이지, 약관을 통해 이용조건을 확인해 주시기 바랍니다.</li>
+                                <li>* 금융소비자는 해당 상품 또는 서비스에 대하여 설명을 받을 권리가 있습니다.</li>
+                                <li>* 신용카드 발급이 부적정한 경우(개인신용평점 낮음 등) 카드 발급이 제한될 수 있습니다.</li>
+                                <li>* 카드 이용대금과 이에 수반되는 모든 수수료를 지정된 대금 결제일에 상환합니다.</li>
+                                <li>* <b>상환 능력에 비해 신용카드 사용액이 과도할 경우 귀하의 개인신용평점이 하락할 수 있습니다.</b></li>
+                                <li>* <b>개인신용평점 하락 시 금융거래 관련된 불이익이 발생할 수 있습니다.</b></li>
+                                <li>* <b>일정 기간 원리금을 연체할 경우, 모든 원리금을 변제할 의무가 발생할 수 있습니다.</b></li>
+                                <li>* 준법심의필 I3151-23-629 ( 2023.02.14 ~ 2024.02.13 )</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <strong>[삼성전자 멤버십 다다익선 포인트 유의사항]</strong>
+                            <ul>
+                                <li>* 다다익선 포인트 혜택은 다다익선 대상 모델에 한정됩니다. 구매 전 다다익선 대상 모델을 꼭 확인해주세요. <a href="https://www.samsung.com/sec/event/SuperSale2/?anc=buymore" target="_blank" class="pt_link" data-omni-type="microsite" data-omni="sec:eventList:benefitzone:goto_model" title="대상모델 확인하기 새창으로 열림">대상모델 확인하기</a></li>
+                                <li>* 다다익선 포인트는 중복 적용이 불가합니다.</li>
+                                <li>* 다다익선 대상 모델 중 2~4개 구매 시 제품별 5만P, 5개 이상 구매 시 제품별 10만P 등 구매 제품 수에 따라 기본포인트가 차등 지급됩니다.</li>
+                                <li>* 동일 품목 2대 이상 구매한 경우, 1개 품목으로 간주되어 포인트 지급 대상에서 제외됩니다.<br>품목 분류기준은 아래와 같습니다.<br>
+                                QLED TV / Lifestyle TV / 모니터 / 오디오 / 냉장고 / 냉동고 / 와인 / 김치냉장고 / 정수기 / 세탁기 or 건조기 / 의류청정기 / 신발관리기 / 전기레인지 / 식기세척기 / 오븐 / 후드 / 에어컨 / 공기청정기 / 청소기 (제트) / 로봇 청소기 (제트 봇)</li>
+                                <li>* 본 혜택은 삼성카드 금액대별 결제일 할인과 별개의 혜택입니다.</li>
+                                <li>* 2개 품목 이상을 장바구니에 함께 담아 동시 주문/결제 완료 시 지급됩니다.</li>
+                                <li>* 2개 품목 이상을 동시 주문/결제한 경우 부분 취소는 불가하며 전체 취소 후 재 주문하셔야 합니다.</li>
+                                <li>* 기존 보유하신 삼성전자 멤버십 포인트 사용은 단일 모델 1개 구매 시에만 가능합니다.</li>
+                                <li>* 삼성전자 포인트의 유효기간은 적립일로부터 2년이며, 일부 포인트의 유효기간은 다를 수 있습니다.</li>
+                                <li>* 구매 취소/반품 시 제공받은 혜택(사은품, 포인트, 캐시백 등)은 반납하여야 합니다.</li>
+                                <li>* 구매 제품 포인트는 제품 배송완료 3일 이후 적립 예정입니다.</li>
+    
+                            </ul>
+                        </div>
+                        <div>
+                            <strong>[카드사별 무이자 할부 유의사항]</strong>
+                            <ul>
+                                <li>* 23년 4월부터 삼성카드는 업종 무이자 할부가 중단되었습니다.</li>
+                                <li>* 씨티 카드는 카드사 정책상 무이자 정책 적용이 불가합니다.</li>
+                                <li>* 우리BC/ 씨티 BC 카드는 BC카드사의 무이자 정책 적용됩니다.</li>
+                                <li>* NH농협/ BC카드 ARS 부분무이자 신청시 고객 유리한 조건으로 우선 적용됩니다.</li>
+                                <li>* 부분 무이자 ARS 사전신청 번호 NH농협 : 1644-2009 / BC카드 :1899-5772</li>
+                                <li>* 무이자 제외 업종 : 제약, 등록금, 도시가스 등 (단, 현대카드는 B2B, 제약업종은 2~3개월 무이자가능)</li>
+                                <li>* 홈쇼핑 업종 무이자 제외 카드사 : 롯데, 삼성, 농협</li>
+                                <li>* 삼성카드의 경우 병, 의원 전용가맹점(키오스크)에 대해 2~5개월 무이자할부를 지원합니다.</li>
+                                <li>* 하나카드의 경우 환금성업종 가맹점은 제외됩니다. (충전, 웹하드, 게임)</li>
+                                <li>* 기존 상점 부담의 무이자 행사 종료 신청 후 적용 가능합니다.</li>
+                                <li>* 개인사업자/법인/체크/선불/기프트/하이브리드/은행계열 카드의 경우 무이자 할부 행사에서 제외됩니다.</li>
+                                <li>* 상점부담 무이자/특별제휴/오프라인 가맹점 등 일부 가맹점은 제외됩니다.</li>
+                                <li>* 무이자 할부 행사는 '모빌리언스'명의로 청구되는 가맹점에 한합니다.</li>
+                                <li>* 자세한 사항은 각 카드사 홈페이지를 참조바랍니다.</li>
+                                <li>* 무이자 할부 결제 시 포인트, 마일리지는 적립되지 않습니다.</li>
+                                <li>* ARS 무이자 할부는 해당 카드사 ARS 번호로 사전 신청을 하신 경우에 한하여 무이자 혜택이 적용됩니다.<br>(ARS 부분 무이자 할부 포함)</li>
+                                <li>* 상기 부분 무이자 할부는 5만원 이상 결제 시 자동 적용되며, 결제창에는 무이자 표시가 되지 않을 수 있습니다.</li>
+                                <li>* 법인(기업)/ 체크/선불/기프트/ 은행계열카드(BC마크가 없는 NON BC카드 불가)제외 됩니다.</li>
+                                <li>* 고객 부담 수수료는 해당 카드사로 문의 바랍니다.</li>
+                                <li>* 본 행사는 카드사 사정에 따라 일부 내용이 변경 또는 중단될 수 있습니다.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <button class="cta_cls btn_popup_close" data-role="closeModal" data-target="#popup_content">
+            <img src="https://images.samsung.com/kdp/_pub/insdr/popup_close.png" alt="팝업 창 닫기">
+            <span class="blind">닫기</span>
+        </button>
+    </div>
+</div>
+

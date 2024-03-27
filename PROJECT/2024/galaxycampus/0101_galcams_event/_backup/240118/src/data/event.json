@@ -1,0 +1,78 @@
+{
+	"result":[
+		{
+			"alt": "어AI스트 프리뷰어", 
+			"id":"01", 
+			"name": "assistpreviewer", 
+			"type": "event", 
+			"theme": "", 
+			"navName" : "o",
+			"title": "S24 어AI스트 프리뷰어", 
+			"navTitle": "<span class='en'>S24</span> 어AI스트 프리뷰어", 
+			"desc": "매일매일 갤럭시 S24 AI 퀴즈 풀고 <br>배달의민족 모바일 상품권 받자!", 
+			"omni": "goto_ngcs-assistpreviewer", 
+			"imgVer": "_v1",
+			"evtTitle": "경험해 봐! <br class='m_hide'><span class='en'>Galaxy S24</span><br class='m_show'> 어AI스트 프리뷰어 ", 
+			"evtSub":"매일 오전 10시! 7일동안 하나씩 공개되는 퀴즈를 풀면 <br>총 3,840명에게 배달의민족 모바일 상품권을 드립니다!",
+			"evtDate": "2024.01.18 ~ 2024.01.24", 
+			"evtUrl":"https://www.samsungebiz.com/event/galaxycampus/S24previewer", 
+			"evtAlt":"갤럭시 S24 어AI스트 프리뷰어", 
+			"evtDataRole":"noti_assistpreviewer",
+			"evtBtnOmni":"button_ngcs-assistpreviewer", 
+			"evtNotiOmni":"goto_ngcs-assistpreviewer-notice", 
+			"evtImgVer": "_v2"
+		},
+		{
+			"alt": "갤럭시 S24 어AI스트 리뷰어", 
+			"id":"02", 
+			"name": "assistreviewer", 
+			"type": "event", 
+			"theme": "", 
+			"navName" : "o",
+			"title": "S24 어AI스트 리뷰어", 
+			"navTitle": "<span class='en'>S24</span> 어AI스트 리뷰어", 
+			"desc": "우수 리뷰어 선정 시 <br>장학금 50만원 증정!", 
+			"omni": "goto_ngcs-assistreviewer", 
+			"imgVer": "_v1",
+			"evtTitle": "도전해 봐! <br class='m_hide'><span class='en'>Galaxy S24</span><br class='m_show'> 어AI스트 리뷰어 ", 
+			"evtSub":"SNS 미션 완료 시 네이버페이 최대 5만 P 쿠폰 증정, <br>우수 리뷰어에게는 장학금 50만원까지! 지금 바로 지원하세요!",
+			"evtDate": "2024.01.18 ~ 2024.01.25", 
+			"evtUrl":"https://www.samsungebiz.com/event/galaxycampus/S24Reviewer", 
+			"evtAlt":"갤럭시 S24 어AI스트 리뷰어", 
+			"evtDataRole":"noti_assistreviewer",
+			"evtBtnOmni":"button_ngcs-assistreviewer", 
+			"evtNotiOmni":"goto_ngcs-assistreviewer-notice", 
+			"evtImgVer": "_v2"
+		},
+		{
+			"alt": "틴틴팅클과 함께하는 갤캠스 단독 굿즈 받으러 가자!", 
+			"id":"03", 
+			"name": "Tabs9FE", 
+			"type": "event", 
+			"theme": "", 
+			"navName" : "o",
+			"title": "갤럭시 탭 S9 FE I FE+", 
+			"navTitle": "갤럭시 탭 S9 FE I FE+", 
+			"desc": "틴틴팅클과 함께하는 갤캠스 <br/>단독 굿즈 받으러 가자!", 
+			"omni": "goto_ngcs-Tabs9FE", 
+			"imgVer": "",
+			"evtTitle": "갤럭시 탭 S9 FE I FE+ 등장! <br>틴틴팅클 템플릿 받아가세요", 
+			"evtSub":"갤럭시 캠퍼스와 틴틴팅클의 운명같은 만남! <br>오직 갤캠러에게만 주는 갤탭 전용 템플릿 받아가세요!",
+			"evtDate": "2024.01.03 ~ 2024.01.31", 
+			"evtUrl":"https://www.samsungebiz.com/event/galaxycampus/TabS9FElaunching/", 
+			"evtAlt":"갤럭시 탭 S9 FE I FE+", 
+			"evtDataRole":"noti_Tabs9FE",
+			"evtBtnOmni":"button_ngcs-Tabs9FE", 
+			"evtNotiOmni":"goto_ngcs-Tabs9FE-notice", 
+			"evtImgVer": "_v3"
+		},
+		{
+			"id":"04", "name": "raffle", "type": "raffle", "theme": "black", "navName" : "",
+			"title": "0원! 래플 이벤트", "desc":"2성, 3성 회원을 위한<br>특별한 래플 당첨 기회!", "omni": "goto_ngcs-raffle",  "imgVer": ""
+		},
+		{
+			"id":"05", "name": "newsignup", "type": "newsignup", "theme": "black", "navName" : "",
+			"title": "신규 가입 이벤트", "navTitle": "", "desc":"신규 가입자라면 누구나!<br> 네이버페이 3천 P 쿠폰 증정", "omni": "goto_ngcs-newbie", "imgVer": "_v1"
+		}
+	 ]
+}

@@ -1,0 +1,55 @@
+.grande {
+    .sec_nav {
+        @include vw-pc(height, 70); z-index: 10;
+
+        .pt_nav_sticky {background-color: #fff;}
+        .pt_nav_sticky.pt_fixed {position: fixed; top: 0; left: 50%; transform: translateX(-50%); width: 100%; z-index: 11;}
+
+        .pt_nav {
+            margin: 0 auto; box-shadow: 0px 1px 3px #00000016;
+
+            .pt_nav_title {@include vw-pc(font-size, 22);}
+            .pt_mo_swiper { @include vw-pc(width, 1320);}
+            .pt_nav_list {
+                display: flex; justify-content: center; align-items: center;
+
+                .pt_nav_item {height: 100%; width:auto;}
+                .pt_nav_item::after {content: ''; display: block; position: absolute; top: 50%; right: 0; transform: translateY(-50%); @include vw-pc(width, 1); @include vw-pc(height, 20); background-color: #DEDEDE;}
+                .pt_nav_item:last-child::after {display: none;}
+                .pt_nav_btn {
+                    display: flex; align-items: center; @include vw-pc(height, 70); @include vw-pc(margin, 0 50); @include vw-pc(font-size, 22); @include vw-pc(letter-spacing, -1); font-weight: 700; color: #888; text-align: center;
+                    &.on {color: #000; @include vw-pc(border-bottom, 2 solid #000);}
+
+                    .pt_nav_txt {@include vw-pc(line-height,26);}
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .grande {
+        .sec_nav {
+            @include vw-mo(height, 96);
+
+            .pt_nav {
+                width: 100%; height: 100%;
+                .pt_text__center {text-align: center;}
+                .pt_nav_title {display: none;}
+                .pt_mo_swiper {width: 100%; height: 100%;}
+                .pt_nav_list {
+                    justify-content: flex-start; width: 100%; gap: 0;
+
+                    .pt_nav_item {position: relative;}
+                    .pt_nav_item::after {@include vw-mo(width, 2); @include vw-mo(height, 20);}
+                    .pt_nav_btn {
+                        display: flex; justify-content: center; @include vw-mo(height, 96); @include vw-mo(margin, 0 20); @include vw-mo(font-size, 24); @include vw-mo(letter-spacing, -1); text-align: center; color: #888;
+                        &.on {color: #000; @include vw-mo(border-bottom, 4 solid #000);}
+
+                        .pt_nav_txt {@include vw-mo(line-height,32);}
+                    }
+                }
+            }
+        }
+    }
+}

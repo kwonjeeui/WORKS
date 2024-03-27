@@ -1,0 +1,36 @@
+.grande {
+    .sec_about{
+        @include vw-pc(padding,60 0 90); background-color: #F2F2F2;
+        .pt_about {
+            &__title {@include vw-pc(font-size,42); @include vw-pc(margin-bottom,30); text-align: center;}
+            &__list {display: flex; justify-content: center; @include vw-pc(gap,17); @include vw-pc(width,1320); margin:0 auto;}
+            &__item {}
+            &__box {display: block;}
+            &__thumb {display: block; @include vw-pc(width,317); @include vw-pc(height,317); @include vw-pc(margin-bottom,25); @include vw-pc(border-radius,20);}
+            &__txt {@include vw-pc(font-size,24); @include vw-pc(line-height,31); font-weight: 700; text-align: center;}
+        }
+    }
+    
+}
+
+@media screen and (max-width: 768px) {
+    .grande {
+        .sec_about{
+            @include vw-mo(padding,80 0 90);
+            .pt_about {
+                &__title {@include vw-mo(font-size,44); @include vw-mo(margin-bottom,40);}
+                &__list {flex-wrap:wrap; @include vw-mo(gap,10); @include vw-mo(width,640);}
+                &__thumb {@include vw-mo(width,315); @include vw-mo(height,315); @include vw-mo(margin-bottom,25); @include vw-mo(border-radius,20);}
+                &__txt {@include vw-mo(font-size,28); @include vw-mo(line-height,40); }
+                &__item-03 {@include vw-mo(margin-top,30);}
+                &__item-04 {@include vw-mo(margin-top,30);}
+            }
+        }
+        .pt_modal_wrap {}
+        .pod_modal{@include vw-mo(height,640);
+        }
+        .btn_close{z-index: 103; top:auto; @include vw-mo(bottom,-110); @include vw-mo(width,80); @include vw-mo(height,80);
+            img {@include vw-mo(width,30); @include vw-mo(height,30);}
+        }
+    }
+}

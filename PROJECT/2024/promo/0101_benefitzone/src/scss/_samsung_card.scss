@@ -1,0 +1,191 @@
+.benefitzone {
+    .sec_samsung_card {@include vw-pc(padding, 120 0 80); background: #e6edfd;
+        .pt_common_txt_box {@include vw-pc(margin-bottom, 45);
+            .pt_subject,
+            .pt_subject::after {background-color: #5267B3;}
+        }
+        // s: 230503 Belle aria-table 적용될때 사용
+        // .pt_contents {position: relative; @include vw-pc(margin-bottom, 50);
+        //     &:before {content: ''; display: block; position: absolute; @include vw-pc(left, 218); @include vw-pc(bottom, -60); z-index: 2; @include vw-pc(width, 280); @include vw-pc(height, 212); background: url('../../is/images/bfz_samsung_card_icon_pc.png') no-repeat center / cover;}
+        //     .pt_table {
+        //         position: relative; @include vw-pc(width, 633); margin: auto; @include vw-pc(padding, 20 0 22); background: #fff; @include vw-pc(border-radius, 10); text-align: center; @include vw-pc(box-shadow, 0 5 18 0 rgba(140, 147, 159, 0.3));
+        //         &::after {content: ''; position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 1px; height: 100%; background: #e6edfd;}
+        //         li {display: flex; width: 100%; @include vw-pc(margin-bottom, 1);}
+        //         li:last-child {margin-bottom: 0;}
+        //         li h4,
+        //         li p {width: 50%; @include vw-pc(font-size, 15); @include vw-pc(line-height, 28); font-weight: 700; letter-spacing: -0.025em;}
+        //         li .pt_num {display: inline-block; @include vw-pc(font-size, 23); vertical-align: baseline; text-align: right;}
+        //         li h4 .pt_num {@include vw-pc(width, 53);}
+        //         li p .pt_num {@include vw-pc(width, 27);}
+        //         li .pt_text {display: inline-block; @include vw-pc(height, 32);}
+        //         // 구매금액, 할인 금액
+        //         li.pt_tit {@include vw-pc(margin-bottom, 15);}
+        //         li.pt_tit h4,
+        //         li.pt_tit p {display: flex; justify-content: center; align-items: center; @include vw-pc(width, 153); @include vw-pc(height, 33); margin: auto; color: #fff; @include vw-pc(font-size, 19); @include vw-pc(border-radius, 17);}
+        //         li.pt_tit h4 {background: #7d8d9b;}
+        //         li.pt_tit p {background: #6d87c2;}
+        //         // 최대
+        //         li.pt_max p {position: relative; color: #6d87c2; font-weight: 700;}
+        //         li.pt_max p::after {content: ''; position: absolute; top: 50%; transform: translateY(-50%); @include vw-pc(left, 84); @include vw-pc(width, 128); @include vw-pc(height, 48); background: url('../../is/images/bfz_samsung_card_max_icon_pc.png') no-repeat center / cover;}
+        //     }
+        // }
+        // e: 230503 Belle aria-table 적용될때 사용
+
+        .pt_contents {position: relative; @include vw-pc(margin-bottom, 50);
+            &:before {content: ''; display: block; position: absolute; @include vw-pc(left, 213); @include vw-pc(bottom, -44); z-index: 2; @include vw-pc(width, 280); @include vw-pc(height, 212); background: url('../../is/images/bfz_samsung_card_icon_pc.png') no-repeat center / cover;}
+            // &::after {content: ''; position: absolute; @include vw-pc(top, 148); @include vw-pc(left, 786); @include vw-pc(width, 150); @include vw-pc(height, 199); background: url('../../is/images/bfz_samsung_card_ssf_pc_v2.png') no-repeat center / cover;}
+            .pt_table {
+                position: relative; @include vw-pc(width, 632); margin: auto; @include vw-pc(padding, 20 0 22); background: #fff; @include vw-pc(border-radius, 10); text-align: center; @include vw-pc(box-shadow, 0 5 18 0 rgba(140, 147, 159, 0.3));
+                table {width: 100%;}
+                thead tr, tbody tr {display: flex; width: 100%; @include vw-pc(margin-bottom, 1);}
+                tbody:last-child {margin-bottom: 0;}
+                th, tr > * {@include vw-pc(width, 315); @include vw-pc(font-size, 15); @include vw-pc(line-height, 28); font-weight: 700; letter-spacing: -0.025em;}
+                tr .pt_num {display: inline-block; @include vw-pc(font-size, 23); vertical-align: baseline; text-align: right;}
+                tr .pt_buying_price .pt_num {@include vw-pc(width, 53);}
+                tr .pt_sale_price.pt_num {@include vw-pc(width, 27);}
+                tr .pt_text {display: inline-block; @include vw-pc(height, 32);}
+                // 구매금액, 할인 금액
+                thead.pt_tit {
+                    tr {@include vw-pc(margin-bottom, 15);}
+                    th {
+                        display: flex; justify-content: center; align-items: center; @include vw-pc(width, 153); @include vw-pc(height, 33); @include vw-pc(margin, 0 82); color: #fff; @include vw-pc(font-size, 19); @include vw-pc(line-height, 33); @include vw-pc(border-radius, 17);
+                        &:nth-child(1) {background: #7d8d9b;}
+                        &:nth-child(2) {background: #5267B3;}
+                        &:nth-child(3) {background: #58A3A9; @include vw-pc(width, 272); @include vw-pc(margin, 0 20);}
+                        &::after {content: ''; position: absolute; @include vw-pc(bottom, 0); width: 1px; @include vw-pc(height, 387); background: #e6edfd;}
+                        &:nth-child(1)::after {@include vw-pc(left, 315);}
+                        &:nth-child(2)::after {@include vw-pc(left, 631);}
+                        &:nth-child(3)::after {display: none;}
+                    }
+                }
+                // 삼세페
+                tr .pt_table_desc {position: relative;}
+                tr .pt_table_desc .pt_desc_txt {position: absolute; left: 0; @include vw-pc(top, 104); @include vw-pc(width, 315); @include vw-pc(font-size, 18); @include vw-pc(line-height, 24); @include vw-pc(letter-spacing, -.25);}
+
+                // 최대
+                tr.pt_max .pt_sale_price{position: relative; color: #6d87c2; font-weight: 700;}
+                tr.pt_max .pt_sale_price::after {content: ''; position: absolute; top: 50%; transform: translateY(-50%); @include vw-pc(left, 84); @include vw-pc(width, 128); @include vw-pc(height, 48); background: url('../../is/images/bfz_samsung_card_max_icon_pc.png') no-repeat center / cover;}
+
+                // 삼세페
+                // tr.pt_max .pt_ssf_price {position: relative; color: #58A3A9; font-weight: 700;}
+                // tr.pt_max .pt_ssf_price::before {content: ''; position: absolute; @include vw-pc(bottom, 18); @include vw-pc(left, -90); @include vw-pc(width, 157); @include vw-pc(height, 199); background: url('../../is/images/bfz_samsung_card_ssf_pc.png') no-repeat center / cover;}
+                // tr.pt_max .pt_ssf_price::after {content: ''; position: absolute; top: 50%; transform: translateY(-50%); @include vw-pc(left, 87); @include vw-pc(width, 110); @include vw-pc(height, 48); background: url('../../is/images/bfz_samsung_card_ssf_icon_pc.png') no-repeat center / cover;}
+            }
+        }
+    }
+
+    .sec_samsung_card_more{background: #d7e2fb;
+        .pt_flex {display: flex;
+            .pt_item {position: relative;
+                .pt_txt_box {position: absolute; @include vw-pc(top, 34);}
+                .pt_txt_box .pt_tit {@include vw-pc(margin-bottom, 12); @include vw-pc(font-size, 24); @include vw-pc(line-height, 32); letter-spacing: -0.025em; font-weight: 700;}
+                .pt_txt_box .pt_tit * {vertical-align: baseline}
+                .pt_txt_box .pt_tit .pt_color {color: #3069e9;}
+                .pt_txt_box .pt_tit .pt_gray {@include vw-pc(font-size, 22); letter-spacing: -0.075em; color: rgba(0,0,0,0.6); font-weight: 400;}
+                .pt_txt_box .pt_card_btn {border-bottom: 1px solid #000; @include vw-pc(font-size, 22); @include vw-pc(line-height, 25); letter-spacing: -0.05em; font-weight: 400;}
+            }
+            .pt_item1 {
+                .pt_txt_box {@include vw-pc(left, 350);}
+            }
+            .pt_item2 {
+                .pt_txt_box {@include vw-pc(left, 180);}
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .benefitzone {
+        .sec_samsung_card {@include vw-mo(padding, 245 0 125); z-index: 5;
+            .pt_common_txt_box {@include vw-mo(margin-bottom, 50);}
+            // s: 230503 Belle aria-table 적용될때 사용
+            // .pt_contents {
+            //     @include vw-mo(margin-bottom, 49);
+            //     &:before {bottom: auto; @include vw-mo(left, 26); @include vw-mo(top, -305); @include vw-mo(width, 166); @include vw-mo(height, 125); background-image: url('../../is/images/bfz_samsung_card_icon_mo.png');}
+            //     .pt_table {
+            //         @include vw-mo(width, 673); margin: auto; @include vw-mo(padding, 40 0 32); @include vw-mo(border-radius, 14); @include vw-mo(box-shadow, 0 5 18 0 rgba(140, 147, 159, 0.3));
+            //         li {@include vw-mo(margin-bottom, 4);}
+            //         li:last-child {margin-bottom: 0;}
+            //         li h4,
+            //         li p {@include vw-mo(font-size, 26); @include vw-mo(line-height, 50); letter-spacing: -0.025em;}
+            //         li .pt_num {@include vw-mo(font-size, 42);}
+            //         li h4 .pt_num {@include vw-mo(width, 97);}
+            //         li p .pt_num {@include vw-mo(width, 49);}
+            //         li .pt_text {@include vw-mo(height, 57);}
+            //         // 구매금액, 할인 금액
+            //         li.pt_tit {@include vw-mo(margin-bottom, 25);}
+            //         li.pt_tit h4,
+            //         li.pt_tit p {@include vw-mo(width, 231); @include vw-mo(height, 61); margin: auto; @include vw-mo(font-size, 34); @include vw-mo(border-radius, 30);}
+            //         // 최대
+            //         li.pt_max p::after {@include vw-mo(left, 50); @include vw-mo(width, 210); @include vw-mo(height, 79); background-image: url('../../is/images/bfz_samsung_card_max_icon_mo.png');}
+            //     }
+            // }
+            // e: 230503 Belle aria-table 적용될때 사용
+            .pt_contents {
+                @include vw-mo(margin-bottom, 37);
+                &::after {@include vw-mo(top, 280); @include vw-mo(left, 590); @include vw-mo(width, 102); @include vw-mo(height, 303); background: url('../../is/images/bfz_samsung_card_ssf_mo.png') no-repeat center / cover;}
+                &:before {bottom: auto; @include vw-mo(left, 26); @include vw-mo(top, -377); @include vw-mo(width, 166); @include vw-mo(height, 125); background-image: url('../../is/images/bfz_samsung_card_icon_mo.png');}
+                .pt_table {
+                    @include vw-mo(width, 673); margin: auto; @include vw-mo(padding, 50 0); @include vw-mo(border-radius, 14); @include vw-mo(box-shadow, 0 5 18 0 rgba(140, 147, 159, 0.3));
+                    thead tr, tbody tr {@include vw-mo(margin-bottom, 4);}
+                    tbody:last-child {margin-bottom: 0;}
+                    th, tr > * {width: 50%; @include vw-mo(font-size, 26); @include vw-mo(line-height, 50); letter-spacing: -0.025em;}
+                    tr .pt_num {@include vw-mo(font-size, 42);}
+                    tr .pt_buying_price .pt_num {@include vw-mo(width, 97);}
+                    tr .pt_sale_price .pt_num {@include vw-mo(width, 49);}
+                    tr .pt_text {@include vw-mo(height, 57);}
+                    // 구매금액, 할인 금액
+                    thead.pt_tit {
+                        tr {@include vw-mo(margin-bottom, 25);}
+                        th {
+                            bottom: 0; @include vw-mo(width, 231); @include vw-mo(height, 61); margin: auto; @include vw-mo(font-size, 34); @include vw-mo(line-height, 61); @include vw-mo(border-radius, 30);
+                            &::after {@include vw-mo(height, 707);}
+                            &:nth-child(1)::after {@include vw-mo(left, 336);}
+                            &:nth-child(2)::after {display: none;}
+                        }
+                    }
+                    // 최대
+                    tr.pt_max .pt_sale_price::after {@include vw-mo(left, 50); @include vw-mo(width, 210); @include vw-mo(height, 79); background-image: url('../../is/images/bfz_samsung_card_max_icon_mo.png');}
+                    
+                    // 삼세페
+                    // tr.pt_max .pt_ssf_price::before {display: none;}
+                    // tr.pt_max .pt_ssf_price::after {content: ''; @include vw-mo(left, 50); @include vw-mo(width, 210); @include vw-mo(height, 79); background: url('../../is/images/bfz_samsung_card_ssf_icon_mo.png') no-repeat center / cover;}
+                }
+                .pt_ssf.pt_table {
+                    &:before {content: ''; display: block; position: absolute; left: 50%; transform: translateX(-50%); @include vw-mo(top, -78); z-index: 2; @include vw-mo(width, 40); @include vw-mo(height, 114); background: url('../../is/images/bfz_samsung_card_ssf_arrow_mo.png') no-repeat center / cover;}
+                    @include vw-mo(margin-top, 32);
+                    .pt_title_box {
+                        .pt_title_txt {@include vw-mo(margin, 0 auto 27); @include vw-mo(width, 549); @include vw-mo(height, 63); @include vw-mo(border-radius, 31); background: #58A3A9; color: #fff; @include vw-mo(font-size, 38); @include vw-mo(line-height, 63); font-weight: 700; text-align: center;}
+                        .pt_desc_txt {@include vw-mo(font-size, 28); @include vw-mo(line-height, 36); text-align: center;}
+                    }
+
+                    thead.pt_tit {
+                        th {
+                            &::after {@include vw-mo(bottom, 14); @include vw-mo(height, 525);}
+                        }
+                    }
+
+                }
+            }
+        }
+        
+        .sec_samsung_card_more{z-index: 5;
+            .pt_flex {display: block; @include vw-mo(width, 673); margin: auto; 
+                .pt_item {
+                    .pt_txt_box {@include vw-mo(top, 25);}
+                    .pt_txt_box .pt_tit {@include vw-mo(margin-bottom, 22); @include vw-mo(font-size, 26); @include vw-mo(line-height, 30); letter-spacing: -0.04em;}
+                    .pt_txt_box .pt_tit .m_show {display: inline-block !important;}
+                    .pt_txt_box .pt_tit .pt_gray {display: block; @include vw-mo(margin-top, 6); @include vw-mo(font-size, 24); letter-spacing: -0.05em;}
+                    .pt_txt_box .pt_card_btn {@include vw-mo(font-size, 24); @include vw-mo(line-height, 30); letter-spacing: -0.025em;}
+                }
+                .pt_item1 {position: relative;
+                    &::after {content: ''; display: block; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 83%; @include vw-mo(height, 2); background: #b4c8f5;}
+                    .pt_txt_box {@include vw-mo(left, 228);}
+                }
+                .pt_item2 {
+                    .pt_txt_box {@include vw-mo(left, 228);}
+                }
+            }
+        }
+    }
+}

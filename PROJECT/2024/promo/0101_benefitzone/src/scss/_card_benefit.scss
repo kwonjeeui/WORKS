@@ -1,0 +1,100 @@
+.benefitzone {
+    .sec_card_benefit {@include vw-pc(padding, 120 0); z-index: 2;
+        .pt_common_txt_box {@include vw-pc(margin-bottom, 42);
+            .pt_subject,
+            .pt_subject::after {background-color: #5c8fcf;}
+            .pt_title {@include vw-pc(margin-bottom, 21);}
+            .pt_des {@include vw-pc(font-size, 20);}
+        }
+
+        .pt_contents {@include vw-pc(width, 1024); margin: auto;
+            .pt_table {
+                .pt_tit {color: #5c8fcf; @include vw-pc(font-size, 28); @include vw-pc(line-height, 27); letter-spacing: -0.025em; text-align: center;}
+            }
+            .pt_table_top {position: relative; @include vw-pc(width, 716); @include vw-pc(margin, 0 auto 70); @include vw-pc(padding, 29 60); @include vw-pc(border, 6 solid #d9e5f4); @include vw-pc(border-radius, 20);
+                &::after {content: ''; display: block; position: absolute; @include vw-pc(right, -250); @include vw-pc(bottom, -70); z-index: 2; @include vw-pc(width, 289); @include vw-pc(height, 181); background: url('../../is/images/bfz_card_benefit_icon_pc.png') no-repeat center / cover;}
+                .pt_tit {@include vw-pc(margin-bottom, 30);}
+                .pt_list {
+                    li {display: flex; justify-content: space-between; align-items: center; @include vw-pc(padding, 26 0 24); border-bottom: 1px solid #d6d6d6;}
+                    li:first-child {padding-top: 0;}
+                    li:last-child {padding-bottom: 0; border-bottom: 0;}
+                    li strong {display: block; @include vw-pc(font-size, 18); @include vw-pc(line-height, 24); font-weight: 400; letter-spacing: -0.025em;}
+                    li span {display: block; color: #5c8fcf; @include vw-pc(font-size, 28); @include vw-pc(line-height, 28); font-weight: 700; letter-spacing: -0.025em;}
+                }
+            }
+            .pt_table_bottom {@include vw-pc(margin-bottom, 51); @include vw-pc(padding, 23 30 28); @include vw-pc(border-radius, 20); background-color: #f4f8fc; 
+                .pt_tit {@include vw-pc(margin-bottom, 40);}
+                .pt_info{
+                    position: relative; display: flex; margin: 0 auto; @include vw-pc(width, 878);
+                    &::after {content: ''; display: block; position: absolute; top: 50%; transform: translateY(-50%); left:50%; width: 1px; height: 100%; background: rgba(0,0,0,0.2);}
+                }
+                .pt_list{width: 50%;
+                    li{
+                        display: flex; @include vw-pc(font-size, 18); @include vw-pc(line-height, 32); @include vw-pc(letter-spacing, -0.4);
+                        span{@include vw-pc(margin-right, 58); @include vw-pc(width, 122);}
+                        .pt_color{@include vw-pc(font-size,16); font-weight: 700; @include vw-pc(letter-spacing,-0.4); color:#5B96D6;}
+                    }
+                    .pt_bc {@include vw-pc(margin-bottom, 18); @include vw-pc(line-height, 22); @include vw-pc(padding-top, 5);}
+                    .pt_nh {@include vw-pc(margin-bottom, 18); @include vw-pc(line-height, 22); @include vw-pc(padding-top, 5);}
+                }
+                .pt_list_first{@include vw-pc(margin-right, 95);}
+                .pt_list_second{
+                    li{@include vw-pc(line-height, 32);
+                        span{@include vw-pc(margin-right, 47); @include vw-pc(width, 127);}
+                    }                    
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .benefitzone {
+        .sec_card_benefit {@include vw-mo(padding, 195 0 120); @include vw-mo(margin-top, 0); z-index: 4; background-color: #fff;
+            .pt_common_txt_box {@include vw-mo(margin-bottom, 48);
+                .pt_title {@include vw-mo(margin-bottom, 20);}
+                .pt_des {@include vw-mo(font-size, 28);}
+            }
+        
+            .pt_contents {@include vw-mo(width, 673);
+                .pt_table {
+                    .pt_tit {@include vw-mo(font-size, 30); @include vw-mo(line-height, 27); letter-spacing: -0.025em;}
+                }
+                .pt_table_top {width: 100%; @include vw-mo(margin-bottom, 48); @include vw-mo(padding, 32 50); @include vw-mo(border, 6 solid #d9e5f4); @include vw-mo(border-radius, 20);
+                    &::after {bottom: auto; @include vw-mo(right, 10); @include vw-mo(top, -284); @include vw-mo(width, 169); @include vw-mo(height, 106); background-image: url('../../is/images/bfz_card_benefit_icon_mo.png');}
+                    .pt_tit {@include vw-mo(margin-bottom, 36);}
+                    .pt_list {
+                        li {@include vw-mo(padding, 31 0 32);}
+                        li:first-child {padding-top: 0;}
+                        li:last-child {padding-bottom: 0;}
+                        li strong {@include vw-mo(font-size, 28); @include vw-mo(line-height, 34); letter-spacing: -0.025em;}
+                        li span {@include vw-mo(font-size, 36); @include vw-mo(line-height, 30); letter-spacing: -0.025em;}
+                    }
+                }
+                .pt_table_bottom {@include vw-mo(margin-bottom, 48); @include vw-mo(padding, 30 40 30 58); @include vw-mo(border-radius, 20);
+                    .pt_tit {@include vw-mo(margin-bottom, 36);}
+                    .pt_info{
+                        flex-wrap: wrap; @include vw-mo(width, 570);
+                        &::after {@include vw-mo(top, 135); left: 50%; transform: translateX(-50%); width: 100%; height: 1px;}
+                    }
+                    .pt_list{width: 100%;
+                        li{
+                            @include vw-mo(font-size, 24); @include vw-mo(line-height, 34); @include vw-mo(letter-spacing, -0.4);
+                            span{@include vw-mo(margin-right, 47); @include vw-mo(width, 175);}
+                            .pt_color{@include vw-mo(font-size,20); @include vw-mo(letter-spacing,-0.4);}
+                        }
+                        .pt_bc {@include vw-mo(margin-bottom, 18); @include vw-mo(line-height, 22); @include vw-mo(padding-top, 6);}
+                        .pt_nh {@include vw-mo(margin-bottom, 18); @include vw-mo(line-height, 22); @include vw-mo(padding-top, 6);}
+                    }
+                    .pt_list_first{@include vw-mo(margin-right, 0); @include vw-mo(margin-bottom, 36);}
+                    .pt_list_second{
+                        li{@include vw-mo(line-height, 34);
+                            span{@include vw-mo(margin-right, 47); @include vw-mo(width, 175);}
+                        }
+                        
+                    }
+                }
+            }
+        }
+    }
+}

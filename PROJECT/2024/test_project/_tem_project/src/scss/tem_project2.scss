@@ -1,0 +1,25 @@
+@import '../../../../../../scss_global/scss-common2';
+@import 'bs_reset2';
+@import 'sec_kv';
+@import 'sec_notice';
+// @import 'isqa'; //omni, title, title 확인시
+
+.tem_project {
+
+    //주컬러코드
+    .pt_font-white {color: #fff !important;}
+    .pt_font-black {color: #000 !important;}
+    .pt_font-blue {color: #007aff !important;}
+
+    .sec_kv {
+        h1 {}
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .tem_project {
+        .sec_kv {
+            h1 {}
+        }
+    }
+}

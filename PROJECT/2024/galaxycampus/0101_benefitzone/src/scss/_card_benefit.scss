@@ -1,0 +1,95 @@
+.benefitzone {
+    .sec_card_benefit {@include vw-pc(padding, 80 0 80); z-index: 2;
+        .pt_common_txt_box {@include vw-pc(margin-bottom, 42);
+            .pt_subject {
+                &.pt_bg-image.pt_add-bg {
+                    display: block; @include vw-pc(font-size, 30); @include vw-pc(line-height, 48); @include vw-pc(width, 181); @include vw-pc(height, 62); background: url('../../is/images/bfz_card_benefit_tit_bg_pc.png') center/contain no-repeat;
+                }
+            }
+            .pt_subject::after {display: none;}
+            .pt_title {@include vw-pc(margin-bottom, 21);}
+            .pt_des {@include vw-pc(font-size, 20);}
+        }
+
+        .pt_contents {@include vw-pc(width, 1024); margin: auto;
+            .pt_table {
+                .pt_tit {color: #4BA1FF; @include vw-pc(font-size, 28); @include vw-pc(line-height, 27); letter-spacing: -0.025em; text-align: center;}
+            }
+            .pt_table_top {position: relative; @include vw-pc(width, 716); @include vw-pc(margin, 0 auto 70); @include vw-pc(padding, 29 60); @include vw-pc(border, 6 solid #7CB9FC80); @include vw-pc(border-radius, 20);
+                &::after {content: ''; display: block; position: absolute; @include vw-pc(right, 670); @include vw-pc(bottom, -37); z-index: 2; @include vw-pc(width, 228); @include vw-pc(height, 333); background: url('../../is/images/bfz_card_benefit_icon_pc.png') no-repeat center / cover;}
+                .pt_tit {@include vw-pc(margin-bottom, 40);}
+                .pt_list {
+                    li {display: flex; justify-content: space-between; align-items: center; @include vw-pc(padding, 26 0 24); border-bottom: 1px solid #5C8FCF;}
+                    li:first-child {padding-top: 0;}
+                    li:last-child {padding-bottom: 0; border-bottom: 0;}
+                    li strong {display: block; @include vw-pc(font-size, 18); @include vw-pc(line-height, 24); font-weight: 400; letter-spacing: -0.025em;}
+                    li span {display: block; color: #4BA1FF; @include vw-pc(font-size, 28); @include vw-pc(line-height, 28); font-weight: 700; letter-spacing: -0.025em;}
+                }
+            }
+            .pt_table_bottom {@include vw-pc(margin-bottom, 51); @include vw-pc(padding, 23 30 28); @include vw-pc(border-radius, 20); background-color: #f4f8fc; 
+                .pt_tit {@include vw-pc(margin-bottom, 40);}
+                .pt_list {display: flex; flex-wrap: wrap; position: relative;
+                    &::after {content: ''; display: block; position: absolute; top: 50%; transform: translateY(-50%); left:50%; width: 1px; height: 100%; background: rgba(0,0,0,0.2);}
+                    li {display: flex; align-items: flex-start; width: 50%; @include vw-pc(margin-bottom, 14);}
+                    // li:nth-last-child(-n+2) {margin-bottom: 0;}
+                    li strong {display: block; @include vw-pc(font-size, 18); font-weight: 400; letter-spacing: -0.04em;}
+                    li:nth-child(odd) strong {@include vw-pc(width, 200); @include vw-pc(padding-left, 13);}
+                    li:nth-child(even) strong {@include vw-pc(width, 240); @include vw-pc(padding-left, 82);}
+                    li span {display: block; @include vw-pc(font-size, 18); font-weight: 700; letter-spacing: -0.04em;}
+                    li span .pt_color {color: #5c8fcf; @include vw-pc(font-size, 16);}
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .benefitzone {
+        .sec_card_benefit {@include vw-mo(padding, 100 0 120); z-index: 4; background-color: #fff;
+            .pt_common_txt_box {@include vw-mo(margin-bottom, 48);
+                .pt_title {@include vw-mo(margin-bottom, 20);}
+                .pt_des {@include vw-mo(font-size, 28);}
+                .pt_subject {
+                    &.pt_bg-image.pt_add-bg {
+                        display: block; @include vw-mo(font-size, 28); @include vw-mo(line-height, 46); @include vw-mo(width, 166); @include vw-mo(height, 59); background: url('../../is/images/bfz_card_benefit_tit_bg_mo.png') center/contain no-repeat;
+                    }
+                }
+            }
+        
+            .pt_contents {@include vw-mo(width, 673);
+                .pt_table {
+                    .pt_tit {@include vw-mo(font-size, 30); @include vw-mo(line-height, 27); letter-spacing: -0.025em;}
+                }
+                .pt_table_top {width: 100%; @include vw-mo(margin-bottom, 48); @include vw-mo(padding, 32 50); @include vw-mo(border, 6 solid #d9e5f4); @include vw-mo(border-radius, 20);
+                    &::after {bottom: auto; @include vw-mo(right, 505); @include vw-mo(top, -382); @include vw-mo(width, 135); @include vw-mo(height, 199); background-image: url('../../is/images/bfz_card_benefit_icon_mo.png');}
+                    .pt_tit {@include vw-mo(margin-bottom, 36);}
+                    .pt_list {
+                        li {@include vw-mo(padding, 31 0 32);}
+                        li:first-child {padding-top: 0;}
+                        li:last-child {padding-bottom: 0;}
+                        li strong {@include vw-mo(font-size, 28); @include vw-mo(line-height, 34); letter-spacing: -0.025em;}
+                        li span {width: auto; @include vw-mo(font-size, 36); @include vw-mo(line-height, 30); letter-spacing: -0.025em;}
+                    }
+                }
+                .pt_table_bottom {@include vw-mo(margin-bottom, 48); @include vw-mo(padding, 30 40 30 58);
+                    .pt_tit {@include vw-mo(margin-bottom, 36);}
+                    .pt_list {
+                        &::after {@include vw-mo(top, 140); left: 50%; transform: translateX(-50%); width: 100%; height: 1px;}
+                        li {width: 100%; @include vw-mo(margin-bottom, 10);}
+                        li.pt_hn {order: 1;}
+                        li.pt_kb {order: 2;}
+                        li.pt_bc {order: 3; @include vw-mo(margin-bottom, 50);}
+                        li.pt_sh {order: 4;}
+                        li.pt_ss {order: 5;}
+                        li.pt_nh {order: 6;}
+                        li strong {@include vw-mo(font-size, 24); @include vw-mo(line-height, 24); letter-spacing: -0.04em;}
+                        li:nth-child(odd) strong,
+                        li:nth-child(even) strong {@include vw-mo(width, 220); padding-left: 0;}
+                        li span {@include vw-mo(font-size, 24); @include vw-mo(line-height, 24); letter-spacing: -0.04em;}
+                        li span .pt_color {display: block; @include vw-mo(margin-top, 3); @include vw-mo(font-size, 20);}
+                    }
+                }
+            }
+        }
+    }
+}

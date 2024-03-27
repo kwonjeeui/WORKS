@@ -1,0 +1,20 @@
+@import '../../../../../../scss_global/scss-common2';
+@import 'bs_reset';
+@import 'kv';
+@import 'nav';
+@import 'information';
+@import 'event_01';
+@import 'event_02';
+@import 'challenge';
+@import 'share';
+@import 'notice';
+
+.pt_battle_ground {
+
+}
+
+@media screen and (max-width: 768px) {
+    .pt_battle_ground {
+
+    }
+}

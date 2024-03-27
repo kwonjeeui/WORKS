@@ -1,0 +1,227 @@
+.pt_ai_recipe {
+    .sec_content {
+        background-color: #D4EEBD;
+        &.pt_bg-image.pt_add-bg {background-image: url('../../is/images/content/ar_content_bg_pc.jpg'); @include vw-pc(height, 2830); @include vw-pc(background-size, 1920 2847); background-repeat: no-repeat; background-position: center top;}
+        .pt_con{
+            @include vw-pc(width, 1320); margin: 0 auto; @include vw-pc(padding, 120 0);
+            .pt_tit{
+                width: 100%; @include vw-pc(margin, 0 auto 54); text-align: center;
+                &__main {@include vw-pc(width, 546); @include vw-pc(height, 126); @include vw-pc(margin, 0 auto 17);}
+                &__desc {
+                    @include vw-pc(font-size, 30); @include vw-pc(line-height, 40); letter-spacing: -.05em;
+                    // .pt_font_weight{font-weight: 400 !important;}
+                }
+            }
+
+            // 참여 방법, 참여 혜택 공통 타이틀 부분
+            .pt_how, .pt_benefit{
+                &__tit--box {
+                    position: relative; width: 100%; @include vw-pc(margin, 0 auto 60); text-align: center;
+                    &::before {content: ''; position: absolute; top: 50%; transform: translateY(-50%); @include vw-pc(left, 0); @include vw-pc(width, 560); @include vw-pc(height, 1); background-color: #4CB06E;}
+                    &::after {content: ''; position: absolute; top: 50%; transform: translateY(-50%); @include vw-pc(right, 0); @include vw-pc(width, 560); @include vw-pc(height, 1); background-color: #4CB06E;}
+                }
+                &__tit {@include vw-pc(font-size, 34); font-weight: 700; @include vw-pc(line-height, 44);}
+            }
+
+            // 참여 방법
+            .pt_how{
+                @include vw-pc(margin-bottom, 114);
+                // 스와이퍼기능 부분
+                &__con--box {overflow: visible; @include vw-pc(margin-bottom, 90);}
+                &__item {
+                    @include vw-pc(width, 500); @include vw-pc(height, 535); @include vw-pc(padding-top, 40); @include vw-pc(margin-right, 24); background-color: #fff; @include vw-pc(border-radius, 20); @include vw-pc(box-shadow, 0 10 0 -2 #7EAF55 ); text-align: center;
+                    &:last-child{margin-right: 0}
+                    &--04 .pt_how__step::after{content: ''; position: absolute; @include vw-pc(top, -47); right: 0; @include vw-pc(width, 172); @include vw-pc(height, 172); background: url(../../is/images/content/ar_content_step_icon_pc.png) no-repeat center/contain; background-size: 100%, 100%;}
+                }
+                &__step {@include vw-pc(width, 120); @include vw-pc(height, 40); @include vw-pc(margin, 0 auto 21); background-color: #4BB06E; @include vw-pc(border-radius, 50); color: #fff; @include vw-pc(font-size, 24); @include vw-pc(line-height, 40); text-align: center;}
+                &__text {@include vw-pc(margin-bottom, 27); @include vw-pc(font-size, 24); @include vw-pc(line-height, 34); font-weight: 700;}
+                &__img {
+                    @include vw-pc(width, 380); @include vw-pc(height, 240); @include vw-pc(margin, 0 auto 19);
+                    >img{@include vw-pc(border-radius, 20);}
+                }
+                &__desc {@include vw-pc(font-size, 14); @include vw-pc(line-height, 24);}
+
+                &__pagination { @include vw-pc(bottom, -52);
+                    .swiper-pagination-bullet { @include vw-pc(width, 12); @include vw-pc(height, 12); @include vw-pc(border, 3 solid #000); @include vw-pc(margin, 0 10); background: transparent; opacity: 1; }
+                    .swiper-pagination-bullet-active { background: #000; }
+                }
+
+                // SNS 콘테스트 응모하기, BONUS 콘테스트 참여하기 CTA
+                &__btn--box{display: flex; justify-content: center; @include vw-pc(gap, 24); @include vw-pc(margin-bottom, 40);}
+                &__btn{@include vw-pc(width, 262); @include vw-pc(height, 50); @include vw-pc(border-radius, 25); @include vw-pc(font-size, 18);}
+
+                // 해시태그
+                &__hash--list {display: flex; justify-content: space-between; align-items: center;}
+                &__hash--item01 {@include vw-pc(width, 828);}
+                &__hash--item02 {@include vw-pc(width, 451);}
+                &__hash--box {display: flex; justify-content: flex-start; align-items: center; @include vw-pc(height, 66); margin: 0 auto; background-color: #fff; @include vw-pc(border-radius, 10);}
+                &__hash--tit {display: flex; justify-content: center; align-items: center; @include vw-pc(width, 163); @include vw-pc(height, 66); @include vw-pc(border-radius, 10); background-color: #4BB06E; color: #fff; @include vw-pc(font-size, 20); font-weight: 700; letter-spacing: -.025em; text-align: center;}
+                &__hash--tit02 {@include vw-pc(width, 264);}
+                &__hash--text--box {display: flex; align-items: center; @include vw-pc(padding-left, 30);}
+                &__hash--text {@include vw-pc(font-size, 20); letter-spacing: -.025em;}
+                &__hash--btn {@include vw-pc(margin-left, 47); @include vw-pc(padding-bottom, 2); @include vw-pc(border-bottom, 1 solid #000); @include vw-pc(font-size, 15); font-weight: 700; letter-spacing: -.025em;}
+                
+                // 응모하기 버튼 영역 분기처리
+                &__chkwrap {
+                    position: relative; @include vw-pc(height, 90);
+                    .pt_how__btn--box {position: absolute; top: 0; left: 50%; transform: translateX(-50%);}
+                }
+            }
+
+            // 참여 혜택
+            .pt_benefit{
+                // 기본 혜택, 추가 혜택 타이틀 및 아이브로우 공통
+                &__normal--tit, &__add--tit {@include vw-pc(margin-bottom, 48); @include vw-pc(font-size, 30); font-weight: 700; @include vw-pc(line-height, 40); text-align: center;}
+                &__normal--eyebrow, &__add--eyebrow {position: relative; @include vw-pc(margin-bottom, 28); @include vw-pc(font-size, 24); @include vw-pc(line-height, 34); letter-spacing: -.025em; font-weight: 700;}
+                
+                &__normal--yellowborder01, &__normal--yellowborder02, &__add--yellowborder03, &__add--yellowborder04, &__add--yellowborder05{z-index: 5; position: relative; display: inline-block;}
+                &__normal--yellowborder01::before, &__normal--yellowborder02::before, &__add--yellowborder03::before, &__add--yellowborder04::before, &__add--yellowborder05::before{z-index: -1; content: ''; display: inline-block; position: absolute; top: 50%; transform: translateY(-50%); @include vw-pc(left, -2); @include vw-pc(height, 27); background-color: #FFCD27;}
+                &__normal--yellowborder01::after, &__normal--yellowborder02::after, &__add--yellowborder03::after, &__add--yellowborder04::after, &__add--yellowborder05::after{z-index: -1; content: ''; display: inline-block; position: absolute; top: 50%; transform: translateY(-50%); @include vw-pc(right, -4); @include vw-pc(width, 6); @include vw-pc(height, 27); background-color: #FF9D00;}
+                &__normal--yellowborder01::before{@include vw-pc(width, 134);}
+                &__normal--yellowborder02::before{@include vw-pc(width, 168);}
+                &__add--yellowborder03::before{@include vw-pc(width, 175);}
+                &__add--yellowborder04::before{@include vw-pc(width, 180);}
+                &__add--yellowborder05::before{@include vw-pc(width, 91);}
+                
+                &__normal--desc, &__add--desc {@include vw-pc(font-size, 20); letter-spacing: -.025em;}
+
+
+                // 기본 혜택
+                &__normal--box {@include vw-pc(margin-bottom, 57);}
+                &__normal--list {display: flex; justify-content: center; align-items: center; @include vw-pc(gap, 120); width: 100%; background-color: #fff; @include vw-pc(border-radius, 20); @include vw-pc(box-shadow, 0 10 0 -2 #7EAF55 );}
+                &__normal--item {position: relative; @include vw-pc(padding, 37 0 39); @include vw-pc(width, 540); text-align: center;}
+                &__normal--item::after {content: ''; position: absolute; top: 50%; transform: translateY(-50%); @include vw-pc(right, -85);; @include vw-pc(width, 50); @include vw-pc(height, 50); background: url(../../is/images/content/ar_bnf_plus_icon_pc.png) no-repeat center/contain; background-size: 100%, 100%;}
+                &__normal--item:last-child::after {display: none;}
+                &__normal--img{@include vw-pc(width, 540); @include vw-pc(height, 254); @include vw-pc(margin-bottom, 19);}
+                
+
+                // 추가 혜택
+                &__add--box {@include vw-pc(margin-bottom, 39);}
+                &__add--list {display: flex; justify-content: center; align-items: center; @include vw-pc(gap, 24);}
+                &__add--item {position: relative; @include vw-pc(width, 424); @include vw-pc(height, 443); @include vw-pc(padding, 37 0 40); background-color: #fff; @include vw-pc(border-radius, 20); @include vw-pc(box-shadow, 0 10 0 -2 #7EAF55 ); text-align: center;}
+                &__add--speech--bubble {z-index: 5; position: absolute; @include vw-pc(top, 113); @include vw-pc(right, 47); @include vw-pc(font-size, 20); font-weight: 700; color: #fff;}
+                &__add--speech--bubble::after {z-index: -1; content: ''; position: absolute; @include vw-pc(top, -48); @include vw-pc(right, -33); @include vw-pc(width, 124); @include vw-pc(height, 124); background: url(../../is/images/content/ar_bnf_speech_bubble_pc.png) no-repeat center/contain; background-size: 100%, 100%;}
+                &__add--img {@include vw-pc(width, 304); @include vw-pc(height, 254); @include vw-pc(margin, 0 auto 19);}
+
+                // 하단 디스클라이머
+                &__bottom--box {text-align: center;}
+                &__bottom--desc {@include vw-pc(font-size, 16); @include vw-pc(line-height, 26);}
+            }
+        }
+    }
+}
+
+@media screen and (max-width:768px) {
+    .pt_ai_recipe {
+        .sec_content {
+            &.pt_bg-image.pt_add-bg {background-image: url('../../is/images/content/ar_content_bg_mo.jpg'); @include vw-mo(height, 4721); @include vw-mo(background-size, 720 4721); background-repeat: no-repeat; background-position: center top;}
+            .pt_con{
+                width: 100%; @include vw-mo(padding, 97 0 0);
+                .pt_tit{
+                    width: 100%; @include vw-mo(margin, 0 auto 56);
+                    &__main {@include vw-mo(width, 644); @include vw-mo(height, 166); @include vw-mo(margin, 0 auto 21);}
+                    &__desc {
+                        @include vw-mo(font-size, 34); @include vw-mo(line-height, 46);
+                    }
+                }
+    
+                // 참여 방법, 참여 혜택 공통 타이틀 부분
+                .pt_how, .pt_benefit{
+                    &__tit--box {
+                        width: 100%; @include vw-mo(margin, 0 auto 47);
+                        &::before {content: ''; @include vw-mo(left, 24); @include vw-mo(width, 231); @include vw-mo(height, 1);}
+                        &::after {content: ''; @include vw-mo(right, 24); @include vw-mo(width, 231); @include vw-mo(height, 1);}
+                    }
+                    &__tit--box02 {
+                        @include vw-mo(margin-bottom, 35);
+                    }
+                    &__tit {@include vw-mo(font-size, 38); @include vw-mo(line-height, 50);}
+                }
+    
+                // 참여 방법
+                .pt_how{
+                    @include vw-mo(margin-bottom, 96);
+                    // 스와이퍼기능 부분
+                    &__con--box {overflow: visible; @include vw-mo(margin-bottom, 92);}
+                    &__item {
+                        @include vw-mo(width, 540); @include vw-mo(height, 540); @include vw-mo(padding-top, 40); @include vw-mo(margin-right, 12);  @include vw-mo(margin-left, 12); @include vw-mo(border-radius, 20); @include vw-mo(box-shadow, 0 10 0 -2 #7EAF55 );
+                        &:first-child{@include vw-mo(margin-left, 24);}
+                        &:last-child{@include vw-mo(margin-right, 24);}
+                        &--04 .pt_how__step::after{content: ''; @include vw-mo(top, -61); @include vw-mo(width, 184); @include vw-mo(height, 184); background: url(../../is/images/content/ar_content_step_icon_mo.png) no-repeat center/contain; background-size: 100% 100%;}
+                    }
+                    &__step {@include vw-mo(width, 148); @include vw-mo(height, 42); @include vw-mo(margin, 0 auto 21); @include vw-mo(border-radius, 50); @include vw-mo(font-size, 26); @include vw-mo(line-height, 42);}
+                    &__text {@include vw-mo(margin-bottom, 23); @include vw-mo(font-size, 26); @include vw-mo(line-height, 36);}
+                    &__img {
+                        @include vw-mo(width, 440); @include vw-mo(height, 229); @include vw-mo(margin, 0 auto 17);
+                        >img{@include vw-mo(border-radius, 20);}
+                    }
+                    &__desc {@include vw-mo(font-size, 20); @include vw-mo(line-height, 30);}
+    
+                    &__pagination { 
+                        @include vw-mo(bottom, -52);
+                        .swiper-pagination-bullet { @include vw-mo(width, 12); @include vw-mo(height, 12); @include vw-mo(border, 3 solid #000); @include vw-mo(margin, 0 10); background: transparent; opacity: 1; }
+                        .swiper-pagination-bullet-active { background: #000; }
+                    }
+    
+                    // SNS 콘테스트 응모하기, BONUS 콘테스트 참여하기 CTA
+                    &__btn--box{display: flex; justify-content: center; flex-direction: column; align-items: center; @include vw-mo(gap, 21); @include vw-mo(margin-bottom, 30);}
+                    &__btn{@include vw-mo(width, 356); @include vw-mo(height, 71); @include vw-mo(border-radius, 35); @include vw-mo(font-size, 24);}
+    
+                    // 해시태그
+                    &__hash--list {display: flex; justify-content: space-between; align-items: center; flex-direction: column; @include vw-mo(gap, 24);}
+                    &__hash--item01 {@include vw-mo(width, 626);}
+                    &__hash--item02 {@include vw-mo(width, 626);}
+                    &__hash--box {display: flex; justify-content: flex-start; align-items: center; @include vw-mo(height, 90); margin: 0 auto; background-color: #fff; @include vw-mo(border-radius, 10);}
+                    &__hash--tit {@include vw-mo(width, 173); @include vw-mo(height, 90); @include vw-mo(border-radius, 10); @include vw-mo(font-size, 24); @include vw-mo(line-height, 32);}
+                    &__hash--tit02 {@include vw-mo(width, 173);}
+                    &__hash--text--box {display: flex; align-items: center; @include vw-mo(padding-left, 18);}
+                    &__hash--text {@include vw-mo(font-size, 20); @include vw-mo(line-height, 26);}
+                    &__hash--btn {@include vw-mo(margin-left, 81); @include vw-mo(padding-bottom, 2); @include vw-mo(border-bottom, 2 solid #000); @include vw-mo(font-size, 20);}
+                    
+                    // 응모하기 버튼 영역 분기처리
+                    &__chkwrap {@include vw-mo(height, 195);}
+                }
+    
+                // 참여 혜택
+                .pt_benefit{
+                    // 기본 혜택, 추가 혜택 타이틀 및 아이브로우 공통
+                    &__normal--tit, &__add--tit {@include vw-mo(margin-bottom, 29); @include vw-mo(font-size, 36); @include vw-mo(line-height, 40);}
+                    &__normal--eyebrow, &__add--eyebrow {@include vw-mo(margin-bottom, 29); @include vw-mo(font-size, 36); @include vw-mo(line-height, 46);}
+                    
+                    &__normal--yellowborder01, &__normal--yellowborder02, &__add--yellowborder03, &__add--yellowborder04, &__add--yellowborder05{z-index: 5; position: relative; display: inline-block;}
+                    &__normal--yellowborder01::before, &__normal--yellowborder02::before, &__add--yellowborder03::before, &__add--yellowborder04::before, &__add--yellowborder05::before{z-index: -1; content: ''; @include vw-mo(left, -4); @include vw-mo(height, 39);}
+                    &__normal--yellowborder01::after, &__normal--yellowborder02::after, &__add--yellowborder03::after, &__add--yellowborder04::after, &__add--yellowborder05::after{z-index: -1; content: ''; @include vw-mo(right, -4); @include vw-mo(width, 9); @include vw-mo(height, 39);}
+                    &__normal--yellowborder01::before{@include vw-mo(width, 201);}
+                    &__normal--yellowborder02::before{@include vw-mo(width, 252);}
+                    &__add--yellowborder03::before{@include vw-mo(width, 263);}
+                    &__add--yellowborder04::before{@include vw-mo(width, 269);}
+                    &__add--yellowborder05::before{@include vw-mo(width, 137);}
+                    
+                    &__normal--desc{@include vw-mo(font-size, 26); @include vw-mo(line-height, 38);}
+                    &__add--desc{@include vw-mo(font-size, 24); @include vw-mo(line-height, 36);}
+    
+    
+                    // 기본 혜택
+                    &__normal--box {@include vw-mo(margin-bottom, 56);}
+                    &__normal--list {flex-direction: column; @include vw-mo(gap, 145); @include vw-mo(width, 672); margin: 0 auto; @include vw-mo(padding, 56 0 59); @include vw-mo(border-radius, 20); @include vw-mo(box-shadow, 0 10 0 -2 #7EAF55 );}
+                    &__normal--item {padding: 0; @include vw-mo(width, 552);}
+                    &__normal--item::after {content: ''; top: inherit; transform: none; @include vw-mo(bottom, -110); right: 0; left: 50%; transform: translateX(-50%); @include vw-mo(width, 78); @include vw-mo(height, 78); background: url(../../is/images/content/ar_bnf_plus_icon_mo.png) no-repeat center/contain; background-size: 100% 100%;}
+                    &__normal--img{@include vw-mo(width, 552); @include vw-mo(height, 300); @include vw-mo(margin-bottom, 21);}
+    
+                    // 추가 혜택
+                    &__add--box {@include vw-mo(margin-bottom, 39);}
+                    &__add--list {flex-direction: column;}
+                    &__add--item {@include vw-mo(width, 672); @include vw-mo(height, 433); @include vw-mo(margin-bottom, 30); @include vw-mo(padding, 56 0 60); @include vw-mo(border-radius, 20); @include vw-mo(box-shadow, 0 10 0 -2 #7EAF55 );}
+                    &__add--item:last-child {margin-bottom: 0;}
+                    &__add--speech--bubble {@include vw-mo(top, 87); @include vw-mo(right, 70); @include vw-mo(font-size, 24);}
+                    &__add--speech--bubble::after {content: ''; position: absolute; @include vw-mo(top, -61); @include vw-mo(right, -45); @include vw-mo(width, 159); @include vw-mo(height, 159); background: url(../../is/images/content/ar_bnf_speech_bubble_mo.png) no-repeat center/contain; background-size: 100%, 100%;}
+                    &__add--img {@include vw-mo(width, 552); @include vw-mo(height, 200); @include vw-mo(margin, 0 auto 21);}
+    
+                    // 하단 디스클라이머
+                    &__bottom--box {text-align: center;}
+                    &__bottom--desc {@include vw-mo(font-size, 20); @include vw-mo(line-height, 30);}
+                }
+            }
+        }
+    }
+}

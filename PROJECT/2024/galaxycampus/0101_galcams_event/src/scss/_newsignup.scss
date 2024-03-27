@@ -1,0 +1,91 @@
+.galcams_event {
+    .sec_newsignup {
+        @include vw-pc(height, 835); @include vw-pc(padding, 163 0 78); background-color: #8d68fa;
+        &::after{content: ''; display: block; position: absolute; @include vw-pc(top, 0); left: 50%; transform: translate(-50%); @include vw-pc(width, 1920); @include vw-pc(height, 810); background: url(../../is/images/newsignup/gce_newsignup_deco_pc.jpg) no-repeat; @include vw-pc(background-size, 1920 810);}
+
+        .pt_newsignup-wrap {display: flex; flex-wrap: wrap;}
+        
+        .pt_title-box{
+            @include vw-pc(padding-left, 60); @include vw-pc(margin-bottom, 37); text-align: left; z-index: 10;
+
+            &__tag{display: inline-block; @include vw-pc(margin-bottom, 31); @include vw-pc(padding, 0 29); @include vw-pc(height, 40); @include vw-pc(border-radius, 20);  @include vw-pc(font-size, 26); @include vw-pc(line-height, 40); @include vw-pc(letter-spacing, -0.9); color: #fff; background-color: #6C3BF8;} 
+            &__eyebrow{@include vw-pc(margin-bottom, 9); @include vw-pc(font-size, 28); @include vw-pc(line-height, 36); font-weight: 700; @include vw-pc(letter-spacing, -1.4); color: #fff;}
+            &__main{@include vw-pc(margin-bottom, 36);@include vw-pc(font-size, 56); @include vw-pc(line-height, 74); font-weight: 700; @include vw-pc(letter-spacing, -2.8); color: #fff;}
+            &__sub{@include vw-pc(margin-bottom, 40); @include vw-pc(font-size, 26); @include vw-pc(line-height, 42); font-weight: 400; @include vw-pc(letter-spacing, -1.4); color: #fff;}
+            &__date{@include vw-pc(margin-bottom, 10); @include vw-pc(font-size, 20); @include vw-pc(line-height, 30); @include vw-pc(letter-spacing, -0.55); color: #fff;}
+            &__noti{@include vw-pc(margin-bottom,50); @include vw-pc(font-size, 20); @include vw-pc(line-height, 38); @include vw-pc(letter-spacing, -1); color: #71E3F5;}
+            &__btn{display: flex; @include vw-pc(width, 202); @include vw-pc(height, 56); @include vw-pc(border-radius, 40); @include vw-pc(font-size, 18); @include vw-pc(line-height, 56); font-weight: 700; @include vw-pc(letter-spacing, -0.9);}
+        }
+        
+        .pt_newsignup-swiper{
+            margin-right: unset; @include vw-pc(margin-left, 266);
+            &__wrapper{display: flex; justify-content: center; }
+            &__item{@include vw-pc(margin, 0 12); text-align: center; white-space: nowrap;
+                &--new{@include vw-pc(width, 482); background: url(../../is/images/newsignup/gce_newsignup_event01_bg_pc.png) no-repeat; @include vw-pc(background-size, 482 325);}
+                &--highshool{@include vw-pc(width, 348); background: url(../../is/images/newsignup/gce_newsignup_event02_bg_pc.png) no-repeat; @include vw-pc(background-size, 328 325); background-position: top center;
+                }
+            }
+            &__main-txt{@include vw-pc(margin, 42 0 24); @include vw-pc(font-size, 28); @include vw-pc(line-height, 40); font-weight: 700; @include vw-pc(letter-spacing, -1.6);}
+            &__tag{@include vw-pc(margin, 0 auto 8); @include vw-pc(width, 216); @include vw-pc(height, 44); background: url(../../is/images/newsignup/gce_newsignup_event_tag_bg_pc.png) no-repeat; @include vw-pc(background-size, 216 44); @include vw-pc(font-size, 18); @include vw-pc(line-height, 31); font-weight: 700; @include vw-pc(letter-spacing, -0.4); color: #fff;}
+            &__img{@include vw-pc(margin, 0 auto 30); @include vw-pc(width, 238); @include vw-pc(height, 151); @include vw-pc(box-shadow, 20 30 20 #00000029); @include vw-pc(border-radius, 20 30 20); }
+            &__desc-txt{
+                @include vw-pc(margin-bottom, 58); @include vw-pc(font-size, 20); @include vw-pc(line-height, 26); @include vw-pc(letter-spacing, -0.55); color: #fff;
+                &--high{@include vw-pc(margin-bottom, 0)}
+            }
+            &__btn{display: block; @include vw-pc(margin, 0 auto 16); @include vw-pc(width, 122); @include vw-pc(height, 39); @include vw-pc(font-size, 16); @include vw-pc(line-height, 39);  @include vw-pc(border-radius, 35); background-color: #fff; color: #000; @include vw-pc(border, 1 solid #fff);}
+            &__anchor{
+                display: block; @include vw-pc(font-size, 16); @include vw-pc(line-height, 20); @include vw-pc(letter-spacing, -.8); z-index: 1; color: #fff; margin: auto; @include vw-pc(border-bottom, 1 solid #fff);
+                &::after {@include vw-pc(border-bottom, 2 solid #fff); @include vw-pc(border-right, 2 solid #fff);}
+            }
+            &__noti-txt{@include vw-pc(margin-bottom, 20); @include vw-pc(font-size, 20); @include vw-pc(line-height, 38); @include vw-pc(letter-spacing, -1); color:#71E3F5;}
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .galcams_event {
+        .sec_newsignup {
+            @include vw-mo(height, 1474); overflow: hidden; @include vw-mo(padding, 105 0);
+            &::after{@include vw-mo(top, 0); @include vw-mo(width, 1336); @include vw-mo(height, 366); background: url(../../is/images/newsignup/gce_newsignup_deco_mo.png) no-repeat; @include vw-mo(background-size, 1366 366);}
+
+            .pt_newsignup-wrap {display: flex; flex-direction: column;}
+            
+            .pt_title-box{
+                padding-left: 0; @include vw-mo(margin-bottom, 45); text-align: center;
+    
+                &__tag{@include vw-mo(margin-bottom, 46); @include vw-mo(padding, 0 42); @include vw-mo(height, 55); @include vw-mo(border-radius, 37);  @include vw-mo(font-size, 32); @include vw-mo(line-height, 55); @include vw-mo(letter-spacing, 0);}
+                &__eyebrow {@include vw-mo(margin-bottom, 24); @include vw-mo(font-size, 38); @include vw-mo(line-height, 44); @include vw-mo(letter-spacing, -1.9);}
+                &__main{@include vw-mo(margin-bottom, 46);@include vw-mo(font-size, 62); @include vw-mo(line-height, 78); @include vw-mo(letter-spacing, -1.56);}
+                &__sub{@include vw-mo(margin-bottom, 40); @include vw-mo(font-size, 30); @include vw-mo(line-height, 42); font-weight: 400; @include vw-mo(letter-spacing, -1.4); color: #fff;}
+                &__date{@include vw-mo(margin-bottom, 10); @include vw-mo(font-size, 28); @include vw-mo(line-height, 42); @include vw-mo(letter-spacing, -1.4);}
+                &__noti{@include vw-mo(margin-bottom, 30); @include vw-mo(font-size, 22); @include vw-mo(line-height, 35); @include vw-mo(letter-spacing, -1.1);}
+                &__btn{display: flex; position: absolute; @include vw-mo(bottom,92); @include vw-mo(right,45); margin: 0 auto; @include vw-mo(width, 300); @include vw-mo(height, 70); @include vw-mo(border-radius, 38); @include vw-mo(font-size, 26); @include vw-mo(line-height, 71);  @include vw-mo(letter-spacing, -1.3);}
+            }
+            
+            .pt_newsignup-swiper{@include vw-mo(width, 624); overflow: visible; @include vw-mo(margin-left, 48);
+                &__wrapper{display: flex; justify-content: center; }
+                &__item{ margin: 0;
+                    &--new{@include vw-mo(width, 494); background: url(../../is/images/newsignup/gce_newsignup_event01_bg_mo.png) no-repeat; @include vw-mo(background-size, 494 489);}
+                    &--highshool{@include vw-mo(width, 494); background: url(../../is/images/newsignup/gce_newsignup_event02_bg_mo.png) no-repeat; @include vw-mo(background-size, 494 489);
+                    }
+                }
+                &__main-txt{@include vw-mo(margin, 86 0 46); @include vw-mo(font-size, 32); @include vw-mo(line-height, 42); @include vw-mo(letter-spacing, -1.6);}
+                &__tag{@include vw-mo(margin, 0 auto 23); @include vw-mo(width, 355); @include vw-mo(height, 74); background: url(../../is/images/newsignup/gce_newsignup_event_tag_bg_mo.png) no-repeat; @include vw-mo(background-size, 355 74); @include vw-mo(font-size, 26); @include vw-mo(line-height, 54); @include vw-mo(letter-spacing, -0.52);}
+                &__img{@include vw-mo(margin, 0 auto 18); @include vw-mo(width, 391); @include vw-mo(height, 248); @include vw-mo(box-shadow, 20 30 20 #00000029); @include vw-mo(border-radius, 20 30 20);}
+                &__desc-txt{
+                    @include vw-mo(margin-bottom, 170); @include vw-mo(font-size, 26); @include vw-mo(line-height, 35); @include vw-mo(letter-spacing, -0.65);
+                    &--high{@include vw-mo(margin-bottom, 0)}
+                }
+                &__btn{position: absolute; bottom: 0; @include vw-mo(left,-75); @include vw-mo(margin, 0 auto 50); @include vw-mo(width, 300); @include vw-mo(height, 70); @include vw-mo(font-size, 26); @include vw-mo(line-height, 71);  @include vw-mo(border-radius, 39);@include vw-mo(border, 1 solid #fff);}
+                &__anchor{
+                    display: inline-block; @include vw-mo(font-size, 26); @include vw-mo(line-height, 40); @include vw-mo(letter-spacing, -1.3); @include vw-mo(border-bottom, 1 solid #fff);
+                    &::after {@include vw-mo(border-bottom, 2 solid #fff); @include vw-mo(border-right, 2 solid #fff);}
+                }
+                &__noti-txt{@include vw-mo(margin-bottom, 4); @include vw-mo(font-size, 22); @include vw-mo(line-height, 38); @include vw-mo(letter-spacing, -1.1);}
+            }
+            .swiper-pagination-bullets{@include vw-mo(bottom, -136); display: none;}
+            .swiper-pagination-bullet {@include vw-mo(width, 50); @include vw-mo(height, 6); background-color: transparent; background-color: #fff; opacity: .2; @include vw-mo(border-radius, 4);}
+            .swiper-pagination-bullet-active{opacity: 1;}
+        }
+    }
+}

@@ -1,0 +1,41 @@
+@import '../../../../../../scss_global/scss-common2';
+@import 'bs_reset';
+@import 'kv';
+@import 'nav';
+@import 'intro';
+@import 'exam';
+@import 'event_total';
+@import 'raffle';
+// @import 'maison';
+// @import 'fallinflip';
+@import 'recommend';
+@import 'newsignup';
+@import 'galaxy';
+@import 'notice';
+
+// 갤캠스 APP 버전 분기 CSS 22.12.28(맥켄지)
+html.isWeb .only_app {display: none !important;}
+html.isApp .only_web {display: none !important;}
+
+// 갤캠스 GNB Fixed 오류 수정 22.12.28(맥켄지) - css 불필요해짐
+
+.galcams_event {
+    .sec_kv {
+        h2 {}
+    }
+    .sec_s23fe  {
+        .pt_text-box__num {background-color: #fff; color: #000;}
+    }
+    .sec_yearendgift {
+        .pt_text-box__num { background-color: #000000;}
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+
+}
+
+
+@media screen and (max-width: 768px) {
+
+}

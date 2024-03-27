@@ -1,0 +1,33 @@
+.pt_battle_ground {
+    .sec_information_hidden-02 {
+        width: 100%;  @include vw-pc(height, 850); position: relative;
+        &.pt_bg-image.pt_add-bg {background-image: url('../../is/images/bg_info_hidden_02_pc_v1.jpg'); @include vw-pc(background-size, 1920 850); background-repeat: no-repeat; background-position: center top;}
+
+        .pt_btn {
+            position: absolute; display: flex; flex-direction: column; justify-content: space-between; @include vw-pc(left, 164); @include vw-pc(top, 517); @include vw-pc(width, 216); @include vw-pc(height, 193); font-weight: 700;
+            &__join {@include vw-pc(width, 216); @include vw-pc(height, 50); border: 0; @include vw-pc(border-radius, 28); background-color: #F1AE40; @include vw-pc(font-size, 20); @include vw-pc(line-height, 36); @include vw-pc(letter-spacing, -1);}
+            &__noti {
+                @include vw-pc(width, 117); color: #fff; @include vw-pc(font-size, 18); font-weight: 700; @include vw-pc(border-bottom, 1 solid #fff);
+                &::after {content: ''; display: inline-block; @include vw-pc(width, 6); @include vw-pc(height, 6); @include vw-pc(margin, 0 2 4 6); @include vw-pc(border-bottom, 2 solid #fff); @include vw-pc(border-right, 2 solid #fff); transform: rotate(45deg);}    
+            }
+        }
+    }
+}
+
+@media screen and (max-width:768px) {
+    .pt_battle_ground {
+        .sec_information_hidden-02 {
+            @include vw-mo(height, 1270);
+            &.pt_bg-image.pt_add-bg {background-image: url('../../is/images/bg_info_hidden_02_mo.jpg'); @include vw-mo(background-size, 720 1270);}
+
+            .pt_btn {
+                @include vw-mo(left, 206); @include vw-mo(top, 897); @include vw-mo(width, 309); @include vw-mo(height, 260); align-items: center;
+                &__join {@include vw-mo(width, 309); @include vw-mo(height, 75); @include vw-mo(border-radius, 39); @include vw-mo(font-size, 26); @include vw-mo(line-height, 41); @include vw-mo(letter-spacing, -1);}
+                &__noti {
+                    @include vw-mo(width, 168); @include vw-mo(padding-bottom, 4); @include vw-mo(font-size, 26); @include vw-mo(border-bottom, 1 solid #fff);
+                    &::after {@include vw-mo(width, 12); @include vw-mo(height, 12); @include vw-mo(margin, 0 4 8 12); @include vw-mo(border-bottom, 2 solid #fff); @include vw-mo(border-right, 2 solid #fff);}
+                }
+            }
+        }
+    }
+}

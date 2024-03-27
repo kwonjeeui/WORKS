@@ -1,0 +1,114 @@
+@@include('../../../../../s-common/inc/header_ebiz_230707.html')
+
+
+<!-- split benefitzone_1.txt -->
+<link rel="stylesheet" href="./css/benefitzone.css" inline>
+
+<!-- 옴니태킹 페이지트래킹 -->
+<script type="text/javascript">
+	digitalData.page.pathIndicator.depth_2 = "galaxycampus";
+	digitalData.page.pathIndicator.depth_3 = "eventList";
+	digitalData.page.pathIndicator.depth_3 = "campus_store_benefitzone";
+</script>
+
+<!-- event popup tem -->
+<tiles:putattribute name="tooltip"><div id="tooltipArea_Event3791"></div></tiles:putattribute>
+<tiles:putattribute name="popup"><div id="popupArea_Event3791"></div></tiles:putattribute>
+<input type="hidden" id="openPop" data-st-path="/event/galaxycampus/">
+
+<main class="sec_project_wrap benefitzone" id="benefitzone">
+
+	<!-- sec_kv -->
+	<section class="sec_kv" id="sec_kv">
+		<div class="inner_1920">
+			<div class="img_box">
+				<img src="../is/images/bfz_kv_pc.jpg" alt="" class="m_hide" loading="lazy">
+				<img src="../is/images/bfz_kv_mo.jpg" alt="" class="m_show" loading="lazy">
+			</div>
+			<div class="pt_txt_box">
+				<h2 class="pt_title">갤럭시 캠퍼스 회원 혜택</h2>
+				<p class="pt_date en">2024.04.01 <span class="ko">~</span> 2024.04.30</p>
+				<p class="pt_des">
+					카드 혜택과 삼성전자 멤버십 포인트까지<br>
+					갤럭시 캠퍼스 회원을 위한 특별함을 만나보세요
+				</p>
+				<!-- <a href="https://account.samsung.com/membership/intro/" class="btn_common type_round black_bg pt_join_btn" data-omni-type="microsite" data-omni="sec:eventList:benefitzone:goto_samsung-account1" title="삼성닷컴 회원가입 페이지로 이동">삼성닷컴 회원 가입</a> -->
+			</div>
+		</div>
+	</section>
+	<!-- //sec_kv -->
+
+	<!-- sec_nav -->
+	<section class="sec_nav" id="sec_nav">
+		<div class="inner_1440">
+			<ul class="pt_nav_list">
+				<!-- 7/1 러닝 체인지로 삭제 -->
+				<!-- <li class="on">
+					<a href="javascript:;" data-omni-type="microsite" data-omni="sec:eventList:benefitzone:anc_benefit-month" title="이달의 혜택 영역으로 앵커드" class="btn_common" data-role-anchor="benefit_month">
+						이달의 혜택
+					</a>
+				</li> -->
+				<li class="on">
+					<a href="javascript:;" data-omni-type="microsite" data-omni="event:galaxycampus:eventList:tab_buying_sale" title="결제일할인 영역으로 앵커드" class="btn_common" data-role-anchor="billing_discount">
+						결제일할인
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;" data-omni-type="microsite" data-omni="event:galaxycampus:eventList:tab_free_installment" title="무이자할부 영역으로 앵커드" class="btn_common" data-role-anchor="interest_free">
+						무이자 할부
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;" data-omni-type="microsite" data-omni="event:galaxycampus:eventList:tab_membership_point_check" title="멤버십 포인트 영역으로 앵커드" class="btn_common" data-role-anchor="membership_points">
+						멤버십 포인트
+					</a>
+				</li>
+				<!-- 8/11 러닝 체인지로 삭제 -->
+				<!-- <li>
+					<a href="javascript:;" data-omni-type="microsite" data-omni="sec:eventList:benefitzone:anc_exclusive-service" title="닷컴 단독 서비스 영역으로 앵커드" class="btn_common" data-role-anchor="exclusive_service">
+						SPECIAL BENEFIT
+					</a>
+				</li> -->
+			</ul>
+		</div>
+	</section>
+	<!-- // sec_nav -->
+
+	<!-- sec_samsung_card -->
+	@@include('./split-html/samsung_card.html')
+	<!-- //sec_samsung_card -->
+
+	<!-- 하나카드 배너 -->
+	<!-- @@include('./split-html/banner.html') -->
+	<!-- //하나카드 배너 -->
+
+	<!-- 결제일할인 대상카드 배너 -->
+	<!-- @@include('./split-html/banner_card.html') -->
+	<!-- //결제일할인 대상카드 배너 -->
+
+	<!-- sec_card_benefit -->
+	@@include('./split-html/card_benefit.html')
+	<!-- //sec_card_benefit -->
+	
+	<!-- sec_point -->
+	@@include('./split-html/point.html')
+	<!-- //sec_point -->
+	
+	@@include('./split-html/notice.html')
+	<!-- //sec_notice -->
+
+
+</main>
+
+
+<script src="./js/benefitzone.min.js" inline></script>
+<script src="./js/isqa.min.js" inline></script>
+<!-- lozad 적용 시 주석 해제 후 사용-->
+<!-- <script type="text/javascript" src="https://www.samsung.com/sec/static/_script/lozad.min.js"></script> -->
+<!-- 응모팝업 무한로딩 걸릴 시 주석 해제하고 사용  --> 
+<!-- <script src="/sec/static/_script/jquery.form.min.js"></script> -->
+<!-- 응모팝업  내 우편번호 검색 기능 있을때 주석 해제 후 사용 -->
+<!-- <script type="text/javascript" src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js" charset="utf-8"></script> -->
+<!-- split stop -->
+
+@@include('../../../../../s-common/inc/footer_ebiz_230707.html')

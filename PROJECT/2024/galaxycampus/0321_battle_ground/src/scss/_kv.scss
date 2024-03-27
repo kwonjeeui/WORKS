@@ -1,0 +1,15 @@
+.pt_battle_ground {
+    .sec_kv {
+        width: 100%; @include vw-pc(height, 900);
+        &.pt_bg-image.pt_add-bg {background-image: url('../../is/images/bg_kv_pc_v1.jpg'); @include vw-pc(background-size, 1920 900); background-repeat: no-repeat; background-position: center top;}
+    }
+}
+
+@media screen and (max-width:768px) {
+    .pt_battle_ground {
+        .sec_kv {
+            width: 100%; @include vw-mo(height, 960);
+            &.pt_bg-image.pt_add-bg {background-image: url('../../is/images/bg_kv_mo.jpg'); @include vw-mo(background-size, 720 960); background-repeat: no-repeat; background-position: center top;}
+        }
+    }
+}

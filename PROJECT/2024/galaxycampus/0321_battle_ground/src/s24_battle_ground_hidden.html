@@ -1,0 +1,58 @@
+@@include('../../../../../s-common/inc/header_ebiz_230707.html')
+
+<!-- split s24_battle_ground_hidden.txt -->
+<link rel="stylesheet" href="./css/s24_battle_ground_hidden.css" inline>
+
+<!-- 옴니태킹 페이지트래킹 -->
+<script type="text/javascript">
+	digitalData.page.pathIndicator.depth_2 = "galaxycampus";
+	digitalData.page.pathIndicator.depth_3 = "gcsPromotion";
+	digitalData.page.pathIndicator.depth_4 = "s24xpubgmhidden";
+</script>
+
+<!-- event popup tem -->
+<tiles:putattribute name="tooltip"><div id="tooltipArea_Event3791"></div></tiles:putattribute>
+<tiles:putattribute name="popup"><div id="popupArea_Event3791"></div></tiles:putattribute>
+<input type="hidden" id="openPop" data-st-path="/event/galaxycampus/">
+
+<main class="sec_project_wrap pt_battle_ground" id="pt_battle_ground">
+
+	@@include('./split-html/kv.html')
+	<!--// sec_kv -->
+
+	@@include('./split-html/nav_hidden.html')
+	<!--// sec_nav_hidden -->
+
+    @@include('./split-html/information_hidden-01.html')
+	<!-- //sec_information_hidden-01 -->
+	
+    @@include('./split-html/information_hidden-02.html')
+	<!-- //sec_information_hidden-02 -->
+	
+	@@include('./split-html/event_01.html')
+	<!-- //sec_event_01 -->
+
+	@@include('./split-html/event_02.html')
+	<!-- //sec_event_02 -->
+
+	@@include('./split-html/challenge.html')
+	<!-- //sec_challenge -->
+
+	@@include('./split-html/share_hidden.html')
+	<!-- //sec_share -->
+
+	@@include('./split-html/notice_hidden.html')
+	<!-- //sec_notice_hidden -->
+</main>
+
+<script src="./js/s24_battle_ground_hidden.min.js" inline></script>
+<script src="./js/isqa.min.js" inline></script>
+<!-- lozad 적용 시 주석 해제 후 사용-->
+<script type="text/javascript" src="https://www.samsung.com/sec/static/_script/lozad.min.js"></script>
+<!-- 응모팝업 무한로딩 걸릴 시 주석 해제하고 사용  --> 
+<!-- <script src="/sec/static/_script/jquery.form.min.js"></script> -->
+<!-- 응모팝업  내 우편번호 검색 기능 있을때 주석 해제 후 사용 -->
+<!-- <script type="text/javascript" src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js" charset="utf-8"></script> -->
+<!-- split stop -->
+
+@@include('../../../../../s-common/inc/footer_ebiz_230707.html')

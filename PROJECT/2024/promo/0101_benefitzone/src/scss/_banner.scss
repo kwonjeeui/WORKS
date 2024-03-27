@@ -1,0 +1,82 @@
+.benefitzone {
+    .sec_banner {
+        @include vw-pc(height, 500); background: linear-gradient(#f6f7f1,#efdfe1);
+
+        &.sec_hana {height: auto; background: #fff;}
+        .pt_hana {
+            @include vw-pc(margin, 80 auto 0); @include vw-pc(border-radius, 20); position: relative; width: 100%; background: #E6EDFD;
+
+            &__img {}
+            &__txt {
+                position: absolute; @include vw-pc(top, 31); @include vw-pc(left, 50); text-align: left;
+                &--desc {@include vw-pc(font-size, 24); @include vw-pc(line-height, 32); font-weight: 700;}
+                &--title {@include vw-pc(margin-bottom, 13); @include vw-pc(font-size, 34); @include vw-pc(line-height, 40);}
+                &--date {@include vw-pc(font-size, 18); @include vw-pc(line-height, 18);}
+            }
+        }
+
+        .pt_back_green {background: #4bd57b;} 
+
+        // banner accordian area
+        .pt_accordian {text-align: left;
+            &__link {@include vw-pc(margin-top, 13);
+                .btn_common.btn_toggle {
+                    @include vw-pc(padding, 0 16 0 0); @include vw-pc(font-size, 18); @include vw-pc(line-height, 23); font-weight: 400;
+                    &::after {@include vw-pc(top, 5); border-right: 1px solid #000; border-bottom: 1px solid #000;}
+                    &.active {
+                        &::after {@include vw-pc(top, 8); transform: rotate(225deg);}
+                    }
+                }
+            }
+            &__con {@include vw-pc(border-bottom-left-radius, 20); @include vw-pc(border-bottom-right-radius, 20); background-color: #000;}
+            .notice_area { position: relative; @include vw-pc(padding, 33 0 37 0);
+                .notice_list {@include vw-pc(padding-left, 48); color: #fff;
+                    li {position:relative; @include vw-pc(padding, 0 0 0 14); line-height: 1.5; @include vw-pc(word-spacing, -0.2); @include vw-pc(font-size, 16); @include vw-pc(line-height, 28);}
+                    &.list_1depth li:before { content: ''; position: absolute; left: 0; @include vw-pc(top, 12); @include vw-pc(width, 4); @include vw-pc(height, 4);  border-radius: 50%; background-color:#fff;}
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .benefitzone {
+        .sec_banner {
+            @include vw-mo(height, 615);
+            &.sec_hana {@include vw-mo(width, 672); height: auto; margin: 0 auto; background: #fff;}
+            .pt_hana {
+                @include vw-mo(margin, 100 auto 0); @include vw-mo(border-radius, 20); background: #C1EBDB;
+    
+                &__img {@include vw-mo(height, 276);}
+
+                &__txt {
+                    position: absolute; @include vw-mo(top, 44); @include vw-mo(left, 30); text-align: left;
+                    &--desc {@include vw-mo(margin-bottom, 2); @include vw-mo(font-size, 24); @include vw-mo(line-height, 32); letter-spacing: -.028em}
+                    &--title {@include vw-mo(margin-bottom, 9); @include vw-mo(font-size, 30); @include vw-mo(line-height, 36); letter-spacing: -.06em;}
+                    &--date {@include vw-mo(font-size, 22); @include vw-mo(line-height, 22);}
+                }
+            }
+
+            // banner accordian area
+            .pt_accordian {
+                &__link {@include vw-mo(margin-top, 12);
+                    .btn_common.btn_toggle {
+                        @include vw-mo(padding, 0 20 0 0); @include vw-mo(font-size, 20); @include vw-mo(line-height, 22);
+                        &::after {@include vw-mo(top, 3);}
+                        &.active {
+                            &::after {@include vw-mo(top, 8);}
+                        }
+                    }
+                }
+                &__con {@include vw-mo(border-bottom-left-radius, 20); @include vw-mo(border-bottom-right-radius, 20);}
+                .notice_area {@include vw-pc(padding, 27 0);
+                    .notice_list {@include vw-mo(padding-left, 30);
+                        li {@include vw-mo(padding, 0 0 0 14); @include vw-mo(font-size, 22); @include vw-mo(line-height, 38);}
+                        &.list_1depth li:before {@include vw-mo(top, 15); @include vw-mo(width, 5); @include vw-mo(height, 5);}
+                    }
+                }
+            }
+        }
+
+    }
+}

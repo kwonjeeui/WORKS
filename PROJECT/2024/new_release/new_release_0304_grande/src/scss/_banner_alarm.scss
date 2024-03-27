@@ -1,0 +1,141 @@
+.grande {
+    .sec_banner_alarm{
+        @include vw-pc(padding-top,100);
+
+        .pt_banner {
+            position:relative; @include vw-pc(width,1320); margin:0 auto;
+
+            // coming soon
+            // &__soon {
+            //   position: absolute; left: 0; top: 0; background-color: rgba(0,0,0,0.6); width: 100%; height: 100%; z-index: 10; @include vw-pc(border-radius, 20); display: flex; align-items: center; justify-content: center; text-align: center;
+
+            //   &--txt {
+            //     @include vw-pc(font-size, 50); @include vw-pc(line-height, 66); color: #fff; font-weight: 700;
+            //     .en {@include vw-pc(line-height, 63); font-weight: bold;}
+            //   }
+            // }
+
+            &__content {position:absolute; @include vw-pc(left,160); @include vw-pc(top,28);}
+            &__txt {
+                &-box {
+                    @include vw-pc(margin-bottom,16);
+
+                    &--white {color:#fff;}
+                }
+                &--title {@include vw-pc(margin-bottom,3); @include vw-pc(font-size,40); @include vw-pc(line-height,50);}
+                &--date {@include vw-pc(font-size,22); font-weight:700; @include vw-pc(line-height,27);}
+            }
+            &__btn {
+                &-box {@include vw-pc(margin-bottom,16);}
+                &--alarm {
+                    @include vw-pc(height,43); @include vw-pc(padding,0 24); @include vw-pc(font-size,18); font-weight:700; @include vw-pc(border-radius,22);
+
+                    &.black_bg:hover {background-color:#000; color:#fff;}
+                }
+                &--more {@include vw-pc(padding-bottom,1); @include vw-pc(font-size,16); font-weight:400; @include vw-pc(letter-spacing,-.25); color: #666; @include vw-pc(border-bottom,1 solid #666);}
+            }
+            &__more {
+                position:relative; @include vw-pc(width,480); @include vw-pc(padding,14 20 15); @include vw-pc(border-radius,10); background-color:#F2F2F2;
+                &--title {
+                    @include vw-pc(margin-bottom,11); @include vw-pc(font-size,18); font-weight:700; @include vw-pc(line-height,23); @include vw-pc(letter-spacing,-.25);
+                    &-sub {@include vw-pc(margin-bottom,5); @include vw-pc(font-size,18); font-weight:700; @include vw-pc(line-height,23);}
+                }
+
+                &--box {position: relative;}
+                .pt_line {border: 1px solid #D6D6D6; @include vw-pc(margin,9 0);}
+                .pt_coupon {background:url("../../../is/images/banner_alarm/gd_banner_coupon_pc.png") no-repeat; @include vw-pc(background-size,82 52); @include vw-pc(background-position,right 5 top 20); background-position-y:50%;}
+                .pt_starbucks {background:url("../../../is/images/banner_alarm/gd_banner_starbucks_pc_v1.png") no-repeat; @include vw-pc(background-size,61 61); @include vw-pc(background-position,right 35 top 14); background-position-y:50%;}
+
+                &--num {@include vw-pc(margin-bottom,5); @include vw-pc(font-size,18); @include vw-pc(line-height,23); font-weight: 700; color: #2189FF;}
+                &--noti {display: inline-block; @include vw-pc(padding-right,15); @include vw-pc(font-size,14); @include vw-pc(line-height,18)}
+                &--badge {
+                    position:absolute; @include vw-pc(right,0); @include vw-pc(top,0); display:flex; justify-content:center; align-items:center; @include vw-pc(width,52); @include vw-pc(height,52); border-radius:50%; background-color:#000; text-align:center;
+                    
+                    &-txt {
+                        @include vw-pc(font-size,12); font-weight:700; @include vw-pc(line-height,16); color:#fff;
+                        
+                        .pt_c_brown {color:#CE9A62;}
+                        .pt_num {@include vw-pc(font-size,20);}
+                    }
+                }
+                .pt_banner__btn-box {display: inline-block; margin-bottom:0;}
+                .btn_common.btn_toggle::after {top:20%; @include vw-pc(width,5); @include vw-pc(height,5); @include vw-pc(border-width,1); border-color: #666;}
+            }
+        }
+        .pt_alarm_notice {
+            @include vw-pc(padding-top,40); text-align: center;
+            .btn_common.btn_toggle {@include vw-pc(padding-bottom,0); @include vw-pc(font-size,16);}
+            .btn_common.btn_toggle::after {@include vw-pc(right,1); top: 12%;}
+        }
+    }
+    
+}
+
+@media screen and (max-width: 768px) {
+    .grande {
+        .sec_banner_alarm{
+            @include vw-mo(padding,100 0 90);
+            .pt_banner {
+                @include vw-mo(width,672);
+    
+                // coming soon
+                // &__soon {
+                //   @include vw-mo(border-radius, 20);
+    
+                //   &--txt {
+                //     @include vw-mo(font-size, 50); @include vw-mo(line-height, 58);
+                //     .en {@include vw-mo(line-height, 58); font-weight: bold;}
+                //   }
+                // }
+
+                &__content {left:50%; top:0; transform:translateX(-50%); width:100%; height:100%; @include vw-mo(padding-top,35); text-align:center;}
+                &__txt {
+                    &-box {
+                        @include vw-mo(margin-bottom,13);
+
+                        &--white {color:#000;}
+                    }
+                    &--title {@include vw-mo(margin-bottom,3); @include vw-mo(font-size,50); @include vw-mo(line-height,58);}
+                    &--date {@include vw-mo(font-size,28); @include vw-mo(line-height,35);}
+                }
+                &__btn {
+                    &-box {@include vw-mo(margin-bottom,16);}
+                    &--alarm {@include vw-mo(height,60); @include vw-mo(padding,0 44); @include vw-mo(font-size,24); @include vw-mo(border-radius,30);}
+                    &--more {
+                        @include vw-mo(padding,0 15 1 0);@include vw-mo(font-size,16); @include vw-mo(letter-spacing,-.5); @include vw-mo(border-bottom,1 solid #000);
+
+                        &::after {top:17%; @include vw-mo(border-width,1);}
+                    }
+                }
+                &__more {
+                    position:absolute; left:50%; @include vw-mo(bottom,40); transform:translateX(-50%); @include vw-mo(width,570); @include vw-mo(padding,17 22 19);text-align:left;
+                    &--title {
+                        @include vw-mo(margin-bottom,17); @include vw-mo(font-size,24); @include vw-mo(line-height,28); @include vw-mo(letter-spacing,-.25);
+                        &-sub {@include vw-mo(margin-bottom,4); @include vw-mo(font-size,22); @include vw-mo(line-height,28);}
+                    }
+    
+                    .pt_line {@include vw-mo(margin,15 0);}
+                    .pt_coupon {background:url("../../../is/images/banner_alarm/gd_banner_coupon_mo.png") no-repeat; @include vw-mo(background-size,132 78); @include vw-mo(background-position,right 0 top 5); background-position-y:50%;}
+                    .pt_starbucks {background:url("../../../is/images/banner_alarm/gd_banner_starbucks_mo_v1.png") no-repeat; @include vw-mo(background-size,82 82); @include vw-pc(background-position,right 52 top 0); background-position-y:50%;}
+    
+                    &--num {@include vw-mo(margin-bottom,5); @include vw-mo(font-size,22); @include vw-mo(line-height,28);}
+                    &--noti {@include vw-mo(font-size,14); @include vw-mo(padding-right,14); @include vw-mo(line-height,18)}
+                    &--badge {
+                        @include vw-mo(right,0); @include vw-mo(top,0); @include vw-mo(width,64); @include vw-mo(height,64);
+                        
+                        &-txt {
+                            @include vw-mo(font-size,12); @include vw-mo(line-height,16);
+                            .pt_num {@include vw-mo(font-size,20);}
+                        }
+                    }
+                    .btn_common.btn_toggle::after {@include vw-mo(width,5); @include vw-mo(height,5); @include vw-mo(border-width,1);}
+                }
+            }
+            .pt_alarm_notice {
+                @include vw-mo(padding-top,40);
+                .btn_common.btn_toggle {@include vw-mo(padding-right,18); @include vw-mo(padding-bottom,2); @include vw-mo(font-size,24);}
+                .btn_common.btn_toggle::after {@include vw-pc(right,0); top: 14%;}
+            }
+        }
+    }
+}

@@ -1,1 +1,1 @@
-# bstones
+# bstones 입사 후 작업물 repo

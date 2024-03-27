@@ -1,0 +1,35 @@
+.pt_battle_ground {
+    .sec_event_02 {
+        width: 100%; @include vw-pc(height, 1296); position: relative;
+        &.pt_bg-image.pt_add-bg {background-image: url('../../is/images/bg_event02_pc.jpg'); @include vw-pc(background-size, 1920 1296); background-repeat: no-repeat; background-position: center top;}
+
+        .pt_btn {
+            position: absolute; 
+            // &--disabled {@include vw-pc(top, 906); @include vw-pc(left, 695); display: inline-flex; justify-content: center; align-items: center; @include vw-pc(width, 236); @include vw-pc(height, 50); @include vw-pc(font-size, 20); @include vw-pc(border-radius, 28); background-color: #F1AE40; opacity: .3; color: #fff; background-color: #000;}
+            &--buying {@include vw-pc(top, 906); @include vw-pc(left, 695); display: inline-flex; justify-content: center; align-items: center; @include vw-pc(width, 236); @include vw-pc(height, 50); @include vw-pc(font-size, 20); @include vw-pc(border-radius, 28); border: none; background-color: #F1AE40; color: #000; background-color: #F1AE40;}
+            &--notice {
+                @include vw-pc(top, 1086); left: 50%; transform: translateX(-50%); color: #fff; @include vw-pc(font-size, 18); font-weight: 700; @include vw-pc(border-bottom, 1 solid #fff);
+                &::after {content: ''; display: inline-block; @include vw-pc(width, 6); @include vw-pc(height, 6); @include vw-pc(margin, 0 2 4 6); @include vw-pc(border-bottom, 2 solid #fff); @include vw-pc(border-right, 2 solid #fff); transform: rotate(45deg);}
+            }
+        }
+    }
+}
+
+@media screen and (max-width:768px) {
+    .pt_battle_ground {
+        .sec_event_02 {
+            @include vw-mo(height, 1592);
+            &.pt_bg-image.pt_add-bg {background-image: url('../../is/images/bg_event02_mo.jpg'); @include vw-mo(background-size, 720 1592);}
+    
+            .pt_btn {
+                position: absolute; left: 50%; transform: translateX(-50%);
+                // &--disabled {@include vw-mo(top, 1244); @include vw-mo(width, 297); @include vw-mo(height, 73); @include vw-mo(font-size, 26); @include vw-mo(border-radius, 39);}
+                &--buying {@include vw-mo(top, 1244); @include vw-mo(width, 221); @include vw-mo(height, 71); @include vw-mo(font-size, 26); @include vw-mo(border-radius, 39);}
+                &--notice {
+                    @include vw-mo(top, 1429); @include vw-mo(padding-bottom, 4); @include vw-mo(font-size, 26); @include vw-mo(border-bottom, 1 solid #fff);
+                    &::after {@include vw-mo(width, 12); @include vw-mo(height, 12); @include vw-mo(margin, 0 4 8 12); @include vw-mo(border-bottom, 2 solid #fff); @include vw-mo(border-right, 2 solid #fff);}
+                }
+            }
+        }
+    }
+}

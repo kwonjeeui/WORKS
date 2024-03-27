@@ -1,0 +1,130 @@
+.grande {
+    .sec_banner{
+        @include vw-pc(padding-top,90);
+
+        .pt_banner {
+            position:relative; @include vw-pc(width,1320); margin:0 auto;
+
+            &__swiper {
+                .swiper-button-prev.pt_banner_prev,
+                .swiper-button-next.pt_banner_next {@include vw-pc(width,20); @include vw-pc(height,41); background-repeat:no-repeat; background-size:contain;}
+                .swiper-button-prev.pt_banner_prev::after,
+                .swiper-button-next.pt_banner_next::after {display:none;}
+                .swiper-button-prev.pt_banner_prev {@include vw-pc(left,34); background-image:url("../../../is/images/banner/gd_btn_prev_pc.png");}
+                .swiper-button-next.pt_banner_next {@include vw-pc(right,34); background-image:url("../../../is/images/banner/gd_btn_next_pc.png");}
+            }
+            // &__slide {
+            //     @include vw-pc(margin-right,60);
+
+            //     &:last-child {margin-right:0;}
+            // }
+            &__soon {
+              position: absolute; left: 0; top: 0; background-color: rgba(0,0,0,0.6); width: 100%; height: 100%; z-index: 10; @include vw-pc(border-radius, 20); display: flex; align-items: center; justify-content: center; text-align: center;
+
+              &--txt {
+                @include vw-pc(font-size, 50); @include vw-pc(line-height, 66); color: #fff; font-weight: 700;
+                .en {@include vw-pc(line-height, 63); font-weight: bold;}
+              }
+            }
+            &__content {position:absolute; @include vw-pc(left,160); @include vw-pc(top,47);}
+            &__txt {
+                &-box {
+                    @include vw-pc(margin-bottom,16);
+
+                    &--white {color:#fff;}
+                }
+                &--title {@include vw-pc(margin-bottom,3); @include vw-pc(font-size,40); @include vw-pc(line-height,53);}
+                &--date {@include vw-pc(font-size,22); font-weight:700; @include vw-pc(line-height,29);}
+            }
+            &__btn {
+                &-box {@include vw-pc(margin-bottom,38);}
+                &--alarm {
+                    @include vw-pc(height,43); @include vw-pc(padding,0 24); @include vw-pc(font-size,18); font-weight:700; @include vw-pc(border-radius,22);
+
+                    &.black_bg:hover {background-color:#000; color:#fff;}
+                }
+                &--more {@include vw-pc(padding-bottom,1); @include vw-pc(font-size,18); font-weight:400; @include vw-pc(letter-spacing,-.25); @include vw-pc(border-bottom,1 solid #000);}
+            }
+            &__more {
+                position:relative; @include vw-pc(width,520); @include vw-pc(padding,23 0 25 20); @include vw-pc(border-radius,10); background:url("../../../is/images/banner/gd_banner_starbucks_pc.png") no-repeat; @include vw-pc(background-size,112 112); @include vw-pc(background-position,right 20 top 0); background-position-y:50%; background-color:#F2F2F2;
+
+                &--badge {
+                    position:absolute; @include vw-pc(right,-20); @include vw-pc(top,-21); display:flex; justify-content:center; align-items:center; @include vw-pc(width,71); @include vw-pc(height,71); border-radius:50%; background-color:#000; text-align:center;
+
+                    &-txt {
+                        @include vw-pc(font-size,14); font-weight:700; @include vw-pc(line-height,18); color:#fff;
+
+                        .pt_c_brown {color:#CE9A62;}
+                        .pt_num {@include vw-pc(font-size,24);}
+                    }
+                }
+                &--title {@include vw-pc(margin-bottom,16); @include vw-pc(font-size,24); font-weight:700; @include vw-pc(line-height,35); @include vw-pc(letter-spacing,-.25);}
+                &--noti {
+                    &-box {@include vw-pc(margin-bottom,10);}
+                    &-txt {@include vw-pc(font-size,16); @include vw-pc(line-height,21);}
+                }
+                .pt_banner__btn-box {margin-bottom:0;}
+            }
+        }
+    }
+    
+}
+
+@media screen and (max-width: 768px) {
+    .grande {
+        .sec_banner{
+            .pt_banner {
+                @include vw-mo(width,672);
+    
+                // &__slide {
+                //     @include vw-mo(margin-right,48);
+                // }
+                &__soon {
+                  @include vw-mo(border-radius, 20);
+    
+                  &--txt {
+                    @include vw-mo(font-size, 50); @include vw-mo(line-height, 58);
+                    .en {@include vw-mo(line-height, 58); font-weight: bold;}
+                  }
+                }
+                &__content {left:50%; top:0; transform:translateX(-50%); width:100%; height:100%; @include vw-mo(padding-top,35); text-align:center;}
+                &__txt {
+                    &-box {
+                        @include vw-mo(margin-bottom,17);
+
+                        &--white {color:#000;}
+                    }
+                    &--title {@include vw-mo(margin-bottom,3); @include vw-mo(font-size,50); @include vw-mo(line-height,58);}
+                    &--date {@include vw-mo(font-size,28); @include vw-mo(line-height,37);}
+                }
+                &__btn {
+                    &-box {@include vw-mo(margin-bottom,16);}
+                    &--alarm {@include vw-mo(height,60); @include vw-mo(padding,0 44); @include vw-mo(font-size,24); @include vw-mo(border-radius,30);}
+                    &--more {
+                        @include vw-mo(padding,0 20 1 0);@include vw-mo(font-size,18); @include vw-mo(letter-spacing,-.5); @include vw-mo(border-bottom,1 solid #000);
+
+                        &::after {top:4%; @include vw-mo(border-width,1);}
+                    }
+                }
+                &__more {
+                    position:absolute; left:50%; @include vw-mo(bottom,40); transform:translateX(-50%); @include vw-mo(width,493); @include vw-mo(padding,16 0 19 20); @include vw-mo(border-radius,10); background:url("../../../is/images/banner/gd_banner_starbucks_mo.png") no-repeat right; @include vw-mo(background-size,105 105); @include vw-mo(background-position,right 22 top 0); background-position-y:50%; background-color:#F2F2F2; text-align:left;
+    
+                    &--badge {
+                        @include vw-mo(right,-30); @include vw-mo(top,-21); @include vw-mo(width,70); @include vw-mo(height,70);
+    
+                        &-txt {
+                            @include vw-mo(font-size,14); @include vw-mo(line-height,18);
+    
+                            .pt_num {@include vw-mo(font-size,24);}
+                        }
+                    }
+                    &--title {@include vw-mo(margin-bottom,17); @include vw-mo(font-size,22);  @include vw-mo(line-height,30); @include vw-mo(letter-spacing,-.25);}
+                    &--noti {
+                        &-box {@include vw-mo(margin-bottom,10);}
+                        &-txt {@include vw-mo(font-size,14); @include vw-mo(line-height,18);}
+                    }
+                }
+            }
+        }
+    }
+}

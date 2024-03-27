@@ -1,0 +1,39 @@
+@import '../../../../../../scss_global/scss-common2';
+@import 'bs_reset';
+@import 'nav';
+@import 'ongoing';
+@import 'banner';
+@import 'share';
+@import 'notice';
+
+body.scroll-up .promotion_hub .sec_nav .pt_nav-slider[sticky] {top: 80px;}
+
+.promotion_hub {    
+    overflow: hidden;
+    .sec_kv {
+        .pt_kv {position: absolute; @include vw-max(top, 105); left: 50%; transform: translateX(-50%); text-align: center;
+            &__eyebrow{display: inline-block; @include vw-max(width, 276); @include vw-max(height, 44); background: url(../../is/images/pmh_eyebrow_bg_pc.png) no-repeat; @include vw-max(background-size, 276 44); @include vw-max(margin-bottom, 28); @include vw-max(font-size,26); font-weight:700; @include vw-max(line-height, 44); @include vw-max(letter-spacing, -1.3);}
+            &__logo{@include vw-max(margin-bottom, 6); @include vw-max(width, 472); @include vw-max(height, 270);}
+            &__date{@include vw-max(font-size, 24); font-weight: 700; @include vw-max(line-height, 30); color: #fff;}
+        }
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1280px) {
+    body.scroll-up .promotion_hub .sec_nav .pt_nav-slider[sticky] {top: 56px;}
+}
+
+@media screen and (max-width:768px) {
+    body.scroll-up .promotion_hub .sec_nav .pt_nav-slider[sticky] {top: 56px;}
+
+    .promotion_hub {
+        .sec_kv {
+            .pt_img-box{@include vw-mo(width,720); @include vw-mo(height, 1033);}
+            .pt_kv{@include vw-mo(top, 262);
+                &__eyebrow{@include vw-mo(width, 428); @include vw-mo(height, 74); @include vw-mo(margin-bottom, 30); @include vw-mo(font-size, 36); @include vw-mo(line-height, 74); @include vw-mo(letter-spacing, -1.8); background: url(../../is/images/pmh_eyebrow_bg_mo.png) no-repeat; @include vw-mo(background-size, 428 74);}
+                &__logo{@include vw-mo(margin-bottom, 41); @include vw-mo(width, 550); @include vw-mo(height, 310); }
+                &__date{@include vw-mo(font-size, 32); @include vw-mo(line-height, 39);}
+            }
+        }
+    }
+}

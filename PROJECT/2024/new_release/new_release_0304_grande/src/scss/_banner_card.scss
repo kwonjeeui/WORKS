@@ -1,0 +1,43 @@
+.grande {
+  .pt_card-banner {
+      @include vw-pc(padding, 40 0 0);
+
+      &__inner {position: relative; @include vw-pc(width, 1200); margin: 0 auto;}
+
+      .pt_txt {
+          position: absolute; @include vw-pc(left, 47); top: 50%; transform: translateY(-50%); font-weight: 700;
+
+          &__eyebrow {@include vw-pc(font-size, 24); @include vw-pc(line-height, 40);}
+          &__main {@include vw-pc(margin-bottom, 13); @include vw-pc(font-size, 34); @include vw-pc(line-height, 40); font-family: 'Samsung Sharp Sans', 'SamsungSharpSans', 'SamsungOneKorean',Dotum,'돋움','Apple SD Gothic Neo',arial;}
+          &__date {@include vw-pc(margin-bottom, 13); @include vw-pc(font-size, 18); @include vw-pc(line-height, 23);}
+          &__btn {
+              @include vw-pc(font-size, 18); @include vw-pc(line-height, 23); font-weight: 400;
+          
+              &::after {top:24%; border-width: 1px;}
+          }
+
+          .pt_highlight {display: inline-block; @include vw-pc(padding, 0 4); @include vw-pc(border-radius, 6); color: #fff; background-color: #4BD57B;}
+      }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .grande {
+    .pt_card-banner {
+        @include vw-mo(padding, 80 0);
+        
+        &__inner {@include vw-mo(width, 672);}
+
+        .pt_txt {
+            @include vw-mo(left, 216);
+
+            &__eyebrow {@include vw-mo(margin-bottom, 2); @include vw-mo(font-size, 26); @include vw-mo(line-height, 36);}
+            &__main {@include vw-mo(margin-bottom, 10); @include vw-mo(font-size, 30); @include vw-mo(line-height, 36); letter-spacing: -0.05em;}
+            &__date {@include vw-mo(margin-bottom, 10); @include vw-mo(font-size, 22); @include vw-mo(line-height, 29);}
+            &__btn {@include vw-mo(padding-right,20); @include vw-mo(font-size, 20); @include vw-mo(line-height, 26);}
+
+            .pt_highlight {@include vw-mo(padding, 0 5); @include vw-mo(border-radius, 6);}
+        }
+    }
+  }
+}

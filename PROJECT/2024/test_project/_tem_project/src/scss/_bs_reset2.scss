@@ -1,0 +1,163 @@
+
+// reset prd server
+.en {vertical-align:baseline;}
+.btn-box,
+.btn-box ~ .btn-box {margin:0;}
+
+@media (max-width: 1440px) and (min-width: 1101px){
+    html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, a, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, button, time, mark, audio, video , dd a {font-size:inherit;}
+}
+
+@media (max-width: 1100px) and (min-width: 801px) {
+    html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, a, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, button, time, mark, audio, video, dd a {font-size:inherit;}
+}
+
+@media (max-width: 800px) {
+    html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, a, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, button, time, mark, audio, video, dd a {font-size:inherit;}
+}
+
+@media all and (max-width:414px) {
+    html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, a, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, button, time, mark, audio, video, dd a {font-size:inherit;}
+}
+// reset prd server
+
+@font-face {
+    font-family: 'HYBatang';
+    src: url('//cdn.samsung.com/etc/designs/smg/sec/font/HYBatang.eot');
+    src: url('//cdn.samsung.com/etc/designs/smg/sec/font/HYBatang.eot?#iefix') format("embedded-opentype"),
+        url('//cdn.samsung.com/etc/designs/smg/sec/font/HYBatang.woff2') format("woff2");
+    font-weight: normal;
+    font-style: normal
+}
+
+.m_hide {display: block !important;}
+.m_show {display: none !important;}
+
+.sec_project_wrap {
+    * {box-sizing: border-box;}
+
+    display: block; position: relative; min-width: 320px; margin: 0 auto; font-family: 'SamsungOneKorean',Dotum,'돋움','Apple SD Gothic Neo',arial; line-height: 1;
+
+    article, 
+    section, 
+    nav, 
+    aside, 
+    header, 
+    footer {display: block; position: relative}
+
+    section {max-width: 1920px; margin: 0 auto;}
+
+    a {text-decoration: none; color: inherit;}
+    // a:hover,
+    // a:focus,
+    // a:active {text-decoration: none; color: inherit;}
+
+    p,
+    span,
+    strong,
+    em,
+    i {font-style: normal; vertical-align: baseline;}
+
+    //포커스 스타일
+    :focus {outline: dashed 2px #2189ff !important;}
+
+    //언어
+    .kr {font-family: 'SamsungOneKorean',Dotum,'돋움','Apple SD Gothic Neo',arial;}
+    .en {font-family: 'Samsung Sharp Sans', 'SamsungSharpSans'; line-height: 1; letter-spacing: 0; vertical-align: baseline; font-size: inherit; font-weight: 700;}
+    .bt {font-family: 'HYBatang';}
+
+    .img_box {position: relative; width: 100%; font-size: 0;
+        img {width: 100%;}
+    }
+
+    .inner {
+        &_1440 {position: relative; width: 100%; max-width: 1440px; margin: 0 auto;}
+        &_1920 {position: relative; width: 100%; max-width: 1920px; margin: 0 auto;}
+    }
+
+    .clearfix:after {content: ''; display: block; clear: both;}
+
+    .hidden,
+    .blind {position: absolute !important; width: 1px !important; height: 1px !important; padding: 0 !important; margin: -1px !important; overflow: hidden !important; clip: rect(0, 0, 0, 0) !important; white-space: nowrap !important; border: 0 !important;}
+
+    .alert_msg {z-index: 1001; display: none; position: fixed; top: 0; left: 0; width: 100%; height: 30px; line-height: 30px; color: #fff; text-align: center; background: #8a51d3;}
+    
+    //버튼 기본속성
+    .pt_btn {
+        display: inline-flex; justify-content: center; align-items: center;
+        & * {pointer-events: none !important;} // 옴니태깅 오류 수정
+
+        //border-width, font-size, line-height, font-weight, :after(width, height, border-width: top right 0 0) 지정
+        &--right {border-bottom-style: solid; border-bottom-color: #000;
+            &::after {content: ''; margin: 0 0.3em 0 0.2em; border-style: solid; border-color: #000; transform: rotate(45deg);}
+        }
+        &--anchor {border-bottom-style: solid; border-bottom-color: #000;
+            &::after {content: ''; margin: 0 0.2em 0.25em 0.2em; border-style: solid; border-color: #000; transform: rotate(135deg);}
+        }
+        &--toggle {border-bottom-style: solid; border-bottom-color: #000;
+            &::after {content: ''; margin: 0 0.2em 0.25em 0.2em; border-style: solid; border-color: #000; transform: rotate(135deg);}
+            &.active::after {margin: 0.25em 0.2em 0 0.2em; transform: rotate(-45deg);}
+        }
+
+        //width, height, border-radius, font-size 지정
+        &--round-ln {border-style: solid; border-color: #000; font-weight: 700;} //border-width 지정
+        &--round-bk {font-weight: 700; color: #fff; background-color: #000;}
+        &--round-wh {font-weight: 700; color: #000; background-color: #fff;}
+
+
+        // //border-width, font-size, line-height, font-weight, :after(width, height, border-width: top right 0 0) 지정
+        // &--right {border-width: 2px; font-size: 20px; line-height: 24px;
+        //     &::after {width: 7px; height: 7px; border-width: 2px 2px 0 0;}
+        // }
+        // &--anchor {border-width: 2px; font-size: 20px; line-height: 24px;
+        //     &::after {width: 7px; height: 7px; border-width: 2px 2px 0 0;}
+        // }
+        // &--toggle {border-width: 2px; font-size: 20px; line-height: 24px;
+        //     &::after {width: 7px; height: 7px; border-width: 2px 2px 0 0;}
+        // }
+
+        // //width, height, border-radius, font-size 지정
+        // &--round-ln {width: 100px; height: 50px; border-width: 2px; border-radius: 25px; font-size: 22px;} //border-width 지정
+        // &--round-bk {width: 100px; height: 50px; border-radius: 25px; font-size: 22px;}
+        // &--round-wh {width: 100px; height: 50px; border-radius: 25px; font-size: 22px;}
+    }
+}
+
+.dimm {display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background-color: #000; opacity: 0.7;}
+
+@media all and (min-width:769px) and (max-width:1920px) {
+    .sec_project_wrap {
+        .inner {
+            &_1920 {max-width: 100%;}
+        }
+    }
+}
+
+@media all and (min-width:769px) and (max-width:1440px) {
+    .sec_project_wrap {
+        .inner {
+        &_1440 {max-width: 100%;}
+        }
+    }
+}
+
+@media all and (max-width:768px) {
+    .sec_project_wrap {
+        .m_hide {display:none !important;}
+        .m_show {display:block !important;}
+        .m_flex {display:flex !important;}
+
+        section {max-width:100%;}
+
+        .inner {
+            &_1440,
+            &_1920 {max-width: 100%;}
+        }
+        
+        .alert_msg {top: 0;left: 0;width: 100%;background: #8a51d3;height: 4.5625vw; font-size: 3.2vw; line-height: 4.5625vw;}
+
+        :focus {outline: -webkit-focus-ring-color auto 1px !important;}
+    }
+
+    .swiper-button-prev:focus, .swiper-button-next:focus {outline: -webkit-focus-ring-color auto 1px;}
+}

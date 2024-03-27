@@ -1,0 +1,77 @@
+<section class="sec_newsignup">
+    <div class="inner_1440">
+        <div class="pt_newsignup-wrap">
+            <div class="pt_title-box">
+                <p class="pt_title-box__tag en">Event 05</p>
+                <p class="pt_title-box__eyebrow">갤럭시 캠퍼스가 처음인 회원 누구나</p>
+                <h3 class="pt_title-box__main">신규 가입 혜택 받아 가세요!</h3>
+                <p class="pt_title-box__sub m_hide">갤럭시 캠퍼스 신규 가입 회원을 위해 <br>선물을 준비했으니 놓치지 마세요~</p>
+                <p class="pt_title-box__date"><strong>이벤트 기간</strong> <i class="" aria-hidden="true">I</i> 2024.03.01 <em class="kr">~</em> 2024.03.31</p>
+                <p class="pt_title-box__noti">※ 응모 완료 시 제휴 쿠폰함으로 즉시 지급됩니다.</p>
+                <a 
+                    href="https://www.samsungebiz.com/event/galaxycampus/member/introPage/" 
+                    class="btn_common type_round black_bg pt_title-box__btn" 
+                    title="갤럭시 캠퍼스 로그인 페이지로 이동" 
+                    data-omni-type="microsite" 
+                    data-omni="galaxycampus:eventList:gcseventhub:goto_gcsjoin"
+                >지금 가입하기</a>
+
+            </div>
+            <div class="swiper-container pt_newsignup-swiper">
+                <ul class="swiper-wrapper pt_newsignup-swiper__wrapper">
+                    <li class="swiper-slide pt_newsignup-swiper__item pt_newsignup-swiper__item--new">
+                        <p class="pt_newsignup-swiper__main-txt">3월 갤캠스<br> 신규 가입자 주목!</p>
+                        <p class="pt_newsignup-swiper__tag">네이버페이 3천 포인트 쿠폰</p>
+                        <div class="img_box pt_newsignup-swiper__img">
+                            <img src="../../is/images/newsignup/gce_newsignup_npay_card_pc_v1.png" alt="갤캠스 신규 가입자 네이버페이 3천 포인트 쿠폰" class="m_hide" loading="lazy">
+                            <img src="../../is/images/newsignup/gce_newsignup_npay_card_mo_v1.png" alt="갤캠스 신규 가입자 네이버페이 3천 포인트 쿠폰" class="m_show" loading="lazy">
+                        </div>
+                        <p class="pt_newsignup-swiper__desc-txt">갤럭시 캠퍼스가 처음이라면?<br> 가입 선물 받기 누르고 선물 받아가세요!</p>
+                        <a 
+                            href="javascript:" 
+                            class="btn_common type_round pt_newsignup-swiper__btn pt_logincheck pt_btn--newsignup" 
+                            title="갤캠스 신규 가입 선물 받기 응모팝업 오픈" 
+                            data-omni-type="microsite" 
+                            data-omni="event:galaxycampus:gcseventhub:goto_ngcs-newbi"
+                            onclick="ajax.call(optionsNewSignUp);"
+                        >가입 선물 받기</a>
+                    </li>
+                </ul>
+                <div class="swiper-pagination m_show"></div>
+            </div>
+
+            <a 
+                href="javascript:;" 
+                class="btn_common type_anchor pt_newsignup-swiper__anchor" 
+                data-role-anchor="noti_newsignup" 
+                data-omni-type="microsite" 
+                data-omni="galaxycampus:eventList:gcseventhub:goto_ngcs-newbie-gift-notice" 
+                title="갤캠스 신규 가입 혜택 유의사항 보러가기"
+            >유의사항 보기</a>
+        </div>
+    </div>
+</section>
+
+<!-- 회원 여부 체크 -->
+<script>
+	// Modal1
+	var optionsNewSignUp = {
+		url : "/event/galaxycampus/xhr/member/getSession",
+		type: "POST",
+		done : function(data){
+			var session = JSON.parse(data);
+			var returnUrl = window.location.pathname;
+			
+			if (session.mbrNo == 0) {
+				alert("로그인 후\n참여 가능합니다.");
+				location.href='https://www.samsungebiz.com/event/galaxycampus/member/introPage/?loginType=GCS&returnUrl='+returnUrl;
+			} else if (session.gcsMbrNo == 0) {
+				alert("갤럭시캠퍼스 회원만 이용 가능합니다");
+				location.href='https://www.samsungebiz.com/event/galaxycampus/member/loginDocumentEmailCheck';
+			} else {
+				// 로그인 후 처리할 기능
+                fnCallPop8(1513)
+			}
+		}
+	};
+</script>

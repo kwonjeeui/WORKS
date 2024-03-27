@@ -1,0 +1,72 @@
+/* notice */
+.grande {
+    .bold{font-weight: 700 !important; color: #fff;}
+    .sec_notice {
+        @include vw-pc(padding, 50 0); @include vw-pc(font-size, 14); background: #171717;
+    
+        .sec_area { @include vw-pc(width, 1240); margin: 0 auto; text-align: left;}
+        .notice_area { position: relative; @include vw-pc(padding, 40 0); @include vw-pc(padding, 40 0); border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            &:last-child { border-bottom:none; }
+            .notice_tit { display: block; position: absolute; @include vw-pc(top, 40);  left: 0;line-height: 1.5; font-weight: 700; color: #ffffff; }
+            .notice_sub_tit { @include vw-pc(margin, 20 0); @include vw-pc(padding-left, 180); color: rgba(255, 255, 255, 0.4);}
+            .notice_sub_tit:nth-of-type(2) { @include vw-pc(margin,0 0 20); }
+            .notice_list {@include vw-pc(margin-bottom, 60); @include vw-pc(padding-left, 200); color: rgba(255, 255, 255, 0.4);
+                &:last-child {margin-bottom: 0;}
+                li {  position:relative; @include vw-pc(padding, 0 0 10 15); line-height: 1.4; @include vw-pc(word-spacing, -0.2);
+                    &:last-child { padding-bottom: 0; }
+                    a {color: rgba(255, 255, 255, 0.4);}
+                }
+                &.list_1depth li:before { content: ''; position: absolute; left: 0; @include vw-pc(top, 6); @include vw-pc(width, 4);  @include vw-pc(height, 4);  border-radius: 50%; background-color:#888; }
+                .list_2depth { @include vw-pc(padding-top, 10);
+                    li {
+                        @include vw-pc(padding-left, 8);
+                        @include vw-pc(text-indent, -8);
+                        &:last-child { padding-bottom: 0; }
+                        &:before { display: none; }
+                    }
+                }
+                .pt_notice_title{@include vw-pc(margin-bottom, 20); font-weight: 700; color: #fff;}
+                .pt_notice_title::before{display: none;}
+                .pt_notice__list{@include vw-pc(margin-bottom, 30);}
+                .pt_notice_sub_title{font-weight: 700;}
+                .pt_notice_sub_title::before{display: none;}
+                .pt_notice_desc_none::before{display: none;}
+            }
+        }
+    }
+    
+}
+
+@media screen and (max-width: 768px) {
+    .grande {
+        .sec_notice { @include vw-mo(padding, 45 0);  @include vw-mo(font-size, 24);
+            .sec_area { @include vw-mo(width, 660);  }
+            .notice_area { @include vw-mo(padding, 45 0);
+                .notice_tit {
+                    position: static; @include vw-mo(top, 50); left: 0; @include vw-mo(padding-bottom, 20); @include vw-mo(font-size, 24); color:#ccc; 
+                    &--function{@include vw-mo(padding-bottom, 40);}
+                }
+                .notice_sub_tit { @include vw-mo(margin, 20 0); @include vw-mo(padding-left, 0); color: rgba(255, 255, 255, 0.4);}
+                .notice_sub_tit:nth-of-type(2) { @include vw-mo(margin,0 0 20); }
+                .notice_list {@include vw-mo(margin-bottom, 50); @include vw-mo(padding-left, 0);
+                    li { @include vw-mo(padding, 0 0 10 10); @include vw-mo(font-size, 24);
+                        ol,
+                        ul { @include vw-mo(padding-top, 10); }
+                    }
+                    &.list_1depth li:before { left: 0; @include vw-mo(top, 12); @include vw-mo(width, 4); @include vw-mo(height, 4); }
+                    .list_2depth {
+                        @include vw-mo(padding-left, 4); @include vw-mo(padding-top, 10);
+                        li {@include vw-mo(padding-left, 12); @include vw-mo(text-indent, -10)}
+                    }
+                    .pt_notice_title{@include vw-mo(margin-bottom, 17); padding-left: 0}
+                    .pt_notice__list{@include vw-mo(margin-bottom, 30);}
+                    .pt_notice_sub_title{padding-left: 0}
+                    .pt_notice_desc{@include vw-mo(padding-left, 15);}
+                    .pt_notice_desc::before{@include vw-mo(left, 5);}
+                }
+            }
+        }
+    
+    }
+
+}

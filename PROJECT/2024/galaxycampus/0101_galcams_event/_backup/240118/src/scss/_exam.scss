@@ -1,0 +1,141 @@
+$main_color : #6C3BF8;
+
+.galcams_event {
+    .sec_exam { 
+        background-color: #F8FDFF;
+
+        .inner_1440 {
+            position: relative; @include vw-pc(width, 1320); @include vw-pc(padding, 138 0 100); margin: 0 auto;
+
+            &::before {position: absolute; @include vw-pc(top, 113); @include vw-pc(left, 69); content: ''; @include vw-pc(width, 274.73); @include vw-pc(height, 269); background: url('../../is/images/exam/gce_exam_bg01_pc.png') no-repeat; @include vw-pc(background-size, 274.73 269);}
+            &::after {position: absolute; @include vw-pc(top, 223); @include vw-pc(right, -26); content: ''; @include vw-pc(width, 282); @include vw-pc(height, 295); background: url('../../is/images/exam/gce_exam_bg02_pc.png') no-repeat; @include vw-pc(background-size, 282 295);}
+            
+            .pt_title-box {
+                text-align: center;
+    
+                &__tag {display: inline-block; @include vw-pc(width, 160); @include vw-pc(height, 40); @include vw-pc(margin-bottom, 37); border-radius: 100px; @include vw-pc(font-size, 26); @include vw-pc(line-height, 40); color: #fff; background-color: $main_color; font-weight: 700;}
+                &__sub {@include vw-pc(margin-bottom, 15); @include vw-pc(font-size, 28); @include vw-pc(line-height, 36); font-weight: 700; color: $main_color;}
+                &__main {@include vw-pc(margin-bottom, 25); @include vw-pc(font-size, 56); @include vw-pc(line-height, 74); @include vw-pc(letter-spacing, -.5);}
+                &__desc {@include vw-pc(margin-bottom, 32); @include vw-pc(font-size, 26); @include vw-pc(line-height, 44);}
+            }
+    
+            .pt_info {
+                @include vw-pc(margin-bottom, 60);
+                &__list {display: flex; justify-content: center; align-items: center;}
+                &__title,
+                &__desc {@include vw-pc(font-size, 20); @include vw-pc(line-height, 38); @include vw-pc(letter-spacing, -.5); font-weight: 700;}
+                &__title {
+                    position: relative; @include vw-pc(margin, 0 15 0 5);
+                    &::after {content: ''; position: absolute; top: 50%; @include vw-pc(right, -8); transform: translateY(-50%); @include vw-pc(width, 2); @include vw-pc(height, 15); background-color: #000;}
+                }
+            }
+    
+            .pt_exam-tit{
+                display: flex; justify-content: center; align-items: center; @include vw-pc(margin-bottom, 50);
+                
+                &__img {
+                    display: inline-block; @include vw-pc(margin-right, 7);
+                
+                    &--01 {@include vw-pc(width, 49); @include vw-pc(height, 41); background: url('../../is/images/exam/gce_exam_title01.png') repeat; @include vw-pc(background-size, 49 41);}
+                    &--02 {@include vw-pc(width, 38); @include vw-pc(height, 42); background: url('../../is/images/exam/gce_exam_title02.png') repeat; @include vw-pc(background-size, 38 42);}
+                }
+                &__txt{@include vw-pc(font-size, 31); font-weight: 700; @include vw-pc(letter-spacing, -0.25); @include vw-pc(line-height, 41);}
+            }
+    
+            .pt_exam {
+                display: flex; align-items: center; justify-content: space-between;
+                
+                &:not(:last-child) {@include vw-pc(margin-bottom, 60);}
+                &__item {position: relative; @include vw-pc(width, 639); @include vw-pc(border-radius, 30); overflow: hidden;}
+                .pt_exam-tag {position: absolute; @include vw-pc(top, 16); @include vw-pc(right, 56); @include vw-pc(font-size, 20); @include vw-pc(line-height, 24); font-weight: 700; @include vw-pc(letter-spacing, -.5); text-align: center; color: #fff;}
+                &-cont {
+                    position: absolute; top: 50%; @include vw-pc(left, 40); transform: translateY(-50%);
+    
+                    &__num {
+                        display: flex; align-items: center; justify-content: center; @include vw-pc(width, 89); @include vw-pc(height, 28); @include vw-pc(margin-bottom, 24); border-radius: 100px; @include vw-pc(font-size, 16); @include vw-pc(line-height, 28); font-weight: 700; text-align: center;
+                    
+                        &--01 {@include vw-pc(border, 2 solid #27A0EE); color: #27A0EE;}
+                        &--02 {@include vw-pc(border, 2 solid #FFAD50); color: #FFAD50;}
+                        &--03 {@include vw-pc(border, 2 solid #09A791); color: #09A791;}
+                        &--04 {@include vw-pc(border, 2 solid #7652CC); color: #7652CC;}
+                    }
+                    &__tit {@include vw-pc(margin-bottom, 8); @include vw-pc(font-size, 26); @include vw-pc(line-height, 35); font-weight: 700;}
+                    &__desc {
+                        @include vw-pc(margin-bottom, 27); @include vw-pc(font-size, 20); @include vw-pc(line-height, 28);
+                    
+                        &--line-two {@include vw-pc(margin-bottom, 55);}
+                    }
+                    &__btn {@include vw-pc(width, 216); @include vw-pc(height, 47); @include vw-pc(border, 2 solid #000); border-radius: 100px; @include vw-pc(font-size, 20); @include vw-pc(line-height, 47); font-weight: 700; @include vw-pc(letter-spacing, -0.5); text-align: center;}
+                }
+            }
+
+            .pt_anchor {position: relative; display: inline-block; left: 50%; transform: translate(-50%); @include vw-pc(font-size, 16); @include vw-pc(line-height, 20); @include vw-pc(letter-spacing, -.8);}
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .galcams_event {
+        .sec_exam { 
+            .inner_1440 {
+                @include vw-mo(width, 671); @include vw-mo(padding, 110 0 100);
+    
+                &::before {@include vw-mo(top, 73); @include vw-mo(left, 22); @include vw-mo(width, 655); @include vw-mo(height, 395); background: url('../../is/images/exam/gce_exam_bg_mo.png') no-repeat; @include vw-mo(background-size, 655 395);}
+                &::after {display: none;}
+                .pt_title-box {
+                    &__tag {@include vw-mo(width, 212); @include vw-mo(height, 55); @include vw-mo(margin-bottom, 20); @include vw-mo(font-size, 32); @include vw-mo(line-height, 55);}
+                    &__sub {@include vw-mo(margin-bottom, 24); @include vw-mo(font-size, 38); @include vw-mo(line-height, 50);}
+                    &__main {@include vw-mo(margin-bottom, 40); @include vw-mo(font-size, 62); @include vw-mo(line-height, 81); @include vw-mo(letter-spacing, -.5);}
+                    &__desc {@include vw-mo(margin-bottom, 40); @include vw-mo(font-size, 28); @include vw-mo(line-height, 42); @include vw-mo(letter-spacing, -.5);}
+                }
+        
+                .pt_info {
+                    @include vw-mo(margin-bottom, 60);
+    
+                    &__title,
+                    &__desc {@include vw-mo(font-size, 28); @include vw-mo(line-height, 37); @include vw-mo(letter-spacing, -.5);}
+                    &__title {
+                        @include vw-mo(margin, 0 15 0 5);
+                        &::after {@include vw-mo(right, -8); @include vw-mo(width, 2); @include vw-mo(height, 20);}
+                    }
+                }
+        
+                .pt_exam-tit{
+                    @include vw-mo(margin-bottom, 38);
+                    
+                    &__img {
+                        @include vw-mo(margin-right, 9);
+                    
+                        &--01 {@include vw-mo(width, 49); @include vw-mo(height, 41); @include vw-mo(background-size, 49 41);}
+                        &--02 {@include vw-mo(width, 38); @include vw-mo(height, 42); @include vw-mo(background-size, 38 42);}
+                    }
+                    &__txt{@include vw-mo(font-size, 28); @include vw-mo(letter-spacing, -0.25); @include vw-mo(line-height, 37);}
+                }
+        
+                .pt_exam {
+                    display: block;
+        
+                    &:not(:last-child) {@include vw-mo(margin-bottom, 60);}
+                    &__item {@include vw-mo(width, 639); @include vw-mo(margin, 0 auto 34); @include vw-mo(border-radius, 30);
+                    
+                        &:last-child {margin-bottom: 0;}
+                    }
+                    .pt_exam-tag {@include vw-mo(top, 16); @include vw-mo(right, 61); @include vw-mo(font-size, 20); @include vw-mo(line-height, 24); @include vw-mo(letter-spacing, -.5);}
+                    &-cont {
+                        @include vw-mo(left, 50); 
+        
+                        &__num {@include vw-mo(width, 89); @include vw-mo(height, 28); @include vw-mo(margin-bottom, 24); @include vw-mo(font-size, 16); @include vw-mo(line-height, 28);}
+                        &__tit {@include vw-mo(margin-bottom, 8); @include vw-mo(font-size, 26); @include vw-mo(line-height, 35);}
+                        &__desc {
+                            @include vw-mo(margin-bottom, 27); @include vw-mo(font-size, 20); @include vw-mo(line-height, 28);
+                        
+                            &--line-two {@include vw-mo(margin-bottom, 47);}
+                        }
+                        &__btn {@include vw-mo(width, 216); @include vw-mo(height, 47); @include vw-mo(border, 2 solid #000); @include vw-mo(font-size, 20); @include vw-mo(line-height, 47); @include vw-mo(letter-spacing, -0.5);}
+                    }
+                }
+                .pt_anchor {@include vw-mo(margin-bottom,40);@include vw-mo(font-size, 26); @include vw-mo(line-height, 40); @include vw-mo(letter-spacing, -1.3);}
+            }
+        }
+    }
+}

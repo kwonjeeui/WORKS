@@ -1,0 +1,94 @@
+.home_class {
+    .sec_open_banner {@include vw-pc(padding, 97 0 100);
+        .pt_open {
+            @include vw-pc(width,1314); @include vw-pc(margin,0 auto 50);
+            
+            &__subtitle {
+                display:flex; align-items:center; @include vw-pc(margin-bottom,39); @include vw-pc(font-size,30); font-weight:700; @include vw-pc(line-height,30);
+
+                &::before {content:""; display:inline-block; width:100%; @include vw-pc(height,2); @include vw-pc(margin-right,24); background-color:rgba(51,51,51,.1);}
+                &::after {content:""; display:inline-block; width:100%; @include vw-pc(height,2); @include vw-pc(margin-left,24); background-color:rgba(51,51,51,.1);}
+            }
+            &__content {
+                display:flex; justify-content:space-between; align-items:center; @include vw-pc(padding,48); @include vw-pc(border-radius,20); background-color:#EFF2F5;
+
+                .pt_event_content {
+                    display:flex; @include vw-pc(gap,24); align-items:center;
+
+                    .pt_event_img {@include vw-pc(width,162);}
+                    .pt_event_txt p {@include vw-pc(font-size,21); @include vw-pc(line-height,33); @include vw-pc(margin-bottom,24);}
+                    .pt_event_txt .pt_event_btn {@include vw-pc(height,50); @include vw-pc(padding,0 31); @include vw-pc(font-size,17); @include vw-pc(letter-spacing,-.17); @include vw-pc(border-radius,25);}
+                }
+
+                .pt_event_info {
+                    &__list {display:flex; flex-flow:column nowrap; @include vw-pc(gap,18);}
+                    &__item {display:flex; @include vw-pc(gap,30);}
+                    &__title {
+                        @include vw-pc(width,106); @include vw-pc(padding-top,5); @include vw-pc(font-size,24); font-weight:700; line-height:0; text-align:justify;
+
+                        &::before {content:""; display:inline-block; width:100%;}
+                        &::after {content:""; display:inline-block; width:100%;}
+                    }
+                    &__desc {
+                        position:relative; @include vw-pc(font-size,21); @include vw-pc(line-height,30);
+
+                        &::before {content:""; position:absolute; @include vw-pc(left,-15); @include vw-pc(top,5); @include vw-pc(width,2); @include vw-pc(height,20); background-color:rgba(51,51,51,.2);}
+                        &--benefit {font-weight:700;}
+                    }
+                }
+            }
+            &__btn-box {text-align: center;
+                .type_anchor {@include vw-pc(font-size, 20); @include vw-pc(line-height, 20); font-weight: 400;}
+                .type_arrow {@include vw-pc(font-size, 20); @include vw-pc(line-height, 20); font-weight: 700;}
+            }
+        }
+    }
+}
+	
+@media screen and (max-width:768px) {
+    .home_class {
+        .sec_open_banner {@include vw-mo(padding, 314 0 95);
+            .pt_open {
+                @include vw-mo(width,640); @include vw-mo(margin,0 auto 50);
+                
+                &__subtitle {
+                    display:flex; align-items:center; @include vw-mo(margin-bottom,39); @include vw-mo(font-size,30); font-weight:700; @include vw-mo(line-height,30);
+    
+                    &::before {content:""; display:inline-block; width:100%; @include vw-mo(height,2); @include vw-mo(margin-left,24); background-color:rgba(51,51,51,.1);}
+                    &::after {content:""; display:inline-block; width:100%; @include vw-mo(height,2); @include vw-mo(margin-left,24); background-color:rgba(51,51,51,.1);}
+                }
+                &__content {
+                    display:flex; flex-flow:column nowrap; justify-content:flex-start; align-items:baseline; @include vw-mo(gap,48); @include vw-mo(padding,40); @include vw-mo(border-radius,20); background-color:#EFF2F5;
+    
+                    .pt_event_content {
+                        display:flex; @include vw-mo(gap,40); align-items:center;
+    
+                        .pt_event_img {flex-shrink:0; @include vw-mo(width,180);}
+                        .pt_event_txt p {@include vw-mo(font-size,30); @include vw-mo(line-height,42); @include vw-mo(margin-bottom,30); @include vw-mo(letter-spacing,-.9);}
+                        .pt_event_txt .pt_event_btn {@include vw-mo(height,75); @include vw-mo(padding,0 40); @include vw-mo(font-size,30); @include vw-mo(letter-spacing,-.75); @include vw-mo(border-radius,40);}
+                    }
+    
+                    .pt_event_info {
+                        &__list {display:flex; flex-flow:column nowrap; @include vw-mo(gap,18);}
+                        &__item {display:flex; flex-flow:column nowrap; @include vw-mo(gap,20);}
+                        &__title {
+                            display:flex; align-items:center; width:100%; padding:0; @include vw-mo(font-size,30); font-weight:700; @include vw-mo(line-height,51); text-align:left; white-space:nowrap;
+    
+                            &::before {content:none;}
+                            &::after {content:""; display:inline-block; width:100%; @include vw-mo(height,2); @include vw-mo(margin-left,24); background-color:rgba(51,51,51,.2);}
+                        }
+                        &__desc {
+                            position:relative; @include vw-mo(font-size,30); @include vw-mo(line-height,42); @include vw-mo(padding-left,15); @include vw-mo(text-indent,-15);
+    
+                            &::before {content:"-"; position:static; width:auto; height:auto; @include vw-mo(margin-right,5); background-color:transparent;}
+                        }
+                    }
+                }
+                &__btn-box {
+                    .type_anchor {@include vw-mo(font-size, 30); @include vw-mo(line-height, 40); @include vw-mo(letter-spacing, -1.5);}
+                    .type_arrow {@include vw-mo(font-size, 30); @include vw-mo(line-height, 40); @include vw-mo(letter-spacing, -1.5);}
+                }
+            }
+        }
+    }
+}

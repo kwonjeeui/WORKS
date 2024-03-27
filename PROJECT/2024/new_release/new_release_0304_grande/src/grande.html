@@ -1,0 +1,103 @@
+@@include('../../../../../s-common/inc/header_sec_220113.html')
+<!-- @@include('../../../../../s-common/inc/header_sec_local_230921.html') -->
+
+<!-- split grande_01.txt -->
+<link rel="stylesheet" href="./css/grande.css" inline>
+
+<!-- 옴니태킹 페이지트래킹 -->
+<script type="text/javascript">
+	digitalData.page.pathIndicator.depth_2 = "event";
+	digitalData.page.pathIndicator.depth_3 = "bespoke-grandeai";
+
+</script>
+
+<!-- event popup tem -->
+<tiles:putattribute name="tooltip"><div id="tooltipArea_Event3791"></div></tiles:putattribute>
+<tiles:putattribute name="popup"><div id="popupArea_Event3791"></div></tiles:putattribute>
+<input type="hidden" id="openPop" data-st-path="/sec/">
+
+<main class="sec_project_wrap grande" id="grande01">
+    @@include('./split-html/kv.html')
+	<!--// sec_kv -->
+
+    @@include('./split-html/nav.html')
+    <!--// sec_nav -->
+
+    @@include('./split-html/banner_alarm.html')
+    <!--// sec_banner_alarm -->
+
+    @@include('./split-html/sticky_grande.html')
+    <!--// sec_sticky -->
+
+    @@include('./split-html/buying_grande.html')
+    <!--// sec_buying_grande -->
+
+    @@include('./split-html/benefit_npay_popup.html')
+
+    <!-- @@include('./split-html/buying_comp.html') -->
+    <!--// sec_buying_comp -->
+
+    @@include('./split-html/banner_starbucks.html')
+    <!-- // sec_banner_starbucks -->
+
+    @@include('./split-html/faq.html')
+    <!-- // sec_faq -->
+
+    <section class="component_tab sec_component" id="component_tap">
+        <div class="tab_title">
+            <h3>
+                삼성닷컴 의류케어 유형별 모아보기
+            </h3>
+            <!-- <p class="tab_info_txt">* BESPOKE 무풍갤러리 체험단 행사 모델은 2월 4주차부터 배송 가능합니다.</p> -->
+        </div>
+        <div class="pt_category_box" data-anchor="false" data-swiper="true">
+            <div class="pt_slider_category_sticky">
+                <div class="pt_slider_category_wrap">
+                    <button type="button" class="pt_btn_popup_category m_show" title="카테고리 탭 메뉴 열기"><span class="blind">카테고리 탭 메뉴 열기</span></button>
+                    <div class="swiper-container">
+                        <p class="pt_category_title">제품 카테고리 선택</p>
+                        <ul class="swiper-wrapper pt_category_list">
+                            <li class="swiper-slide on"><a href="#" title="세탁기+건조기 탭" data-omni-type="microsite" data-omni="sec:event:bespoke-grandeai:tab_component_washer_dryer_pkg">세탁기+건조기</a></li>
+                            <li class="swiper-slide"><a href="#" title="세탁기+건조기+에어드레서 탭" data-omni-type="microsite" data-omni="sec:event:bespoke-grandeai:tab_component_washer_dryer_dresser_pkg">세탁기+건조기+에어드레서</a></li>
+                            <li class="swiper-slide"><a href="#" title="통버블 세탁기 탭" data-omni-type="microsite" data-omni="sec:event:bespoke-grandeai:tab_component_top_loader_washer_single" data-category="top-loader-wa">통버블 세탁기</a></li>
+                            <li class="swiper-slide"><a href="#" title="에어드레서 탭" data-omni-type="microsite" data-omni="sec:event:bespoke-grandeai:tab_component_air_dresser_single">에어드레서</a></li>
+                            <li class="swiper-slide"><a href="#" title="슈드레서 탭" data-omni-type="microsite" data-omni="sec:event:bespoke-grandeai:tab_component_shoe_dresser_single">슈드레서</a></li>
+                            <!-- <li class="swiper-slide"><a href="#" title="AI 콤보 탭" data-omni-type="microsite" data-omni="sec:event:bespoke-grandeai:tab_component_shoe_Aicombo"><em class="en">AI</em> 콤보</a></li> -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--// sec_component -->
+</main>
+<!-- split stop -->
+
+<style type="text/css">.wrap-component .component-contents{height:400px}</style>
+@@for (var i = 0; i < 5; i++) {<div class="wrap-component"><div class="component-contents">컴포넌트</div></div>}
+
+<!-- split grande_02.txt -->
+<div class="sec_project_wrap grande" id="grande03">
+
+    @@include('./split-html/about.html')
+    <!--// sec_event -->
+
+    @@include('./split-html/notice.html')
+    <!-- //sec_notice -->
+</div>
+
+<!-- <script src="./js/buying_comp.min.js" inline></script> -->
+<script defer src="https://images.samsung.com/kdp/event/sec/assets/js/service_20240215.js"></script>
+<script src="./js/buying_script.min.js" inline></script>
+<script src="./js/grande.min.js" inline></script>
+
+
+
+<!-- split stop -->
+<!-- 응모팝업 무한로딩 걸릴 시 주석 해제하고 사용  -->
+<!-- <script src="./js/buying_together.min.js" inline></script> -->
+<!-- <script src="/sec/static/_script/jquery.form.min.js"></script> -->
+
+@@include('../../../../../s-common/inc/footer_sec_220113.html')
+
+

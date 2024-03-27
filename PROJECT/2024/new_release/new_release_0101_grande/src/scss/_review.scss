@@ -1,0 +1,254 @@
+.grande {
+    .sec_review {@include vw-pc(padding,80 0 80); 
+        .inner_1440 {
+            @include vw-pc(width,1320); margin:0 auto;
+
+            .pt_evt_box {display:flex; justify-content:space-between;
+                .pt_evt_cnt {@include vw-pc(width,642); text-align:center;
+                    .pt_title_box {display:flex; flex-direction:column; align-items:center; position:relative; @include vw-pc(margin-bottom,5);
+                        &.pt_bg-image.pt_add-bg::before {content:''; display:block; position:absolute; @include vw-pc(top,-28); left:50%; @include vw-pc(width,622); @include vw-pc(height,151); background:url('../../is/images/review/gd_title_deco_pc.png') no-repeat top center / contain; transform:translate(-50%,0);}
+                        .pt_deco_text {
+                            display:inline-flex; align-self:center; @include vw-pc(margin-bottom,14); @include vw-pc(font-size,30); font-weight:700; @include vw-pc(line-height,52); color:#fff; letter-spacing:0; background-color:#3D8CEE;
+                            .en{@include vw-pc(line-height,54);}
+                        }
+                        .pt_deco_text::before {content:''; display:inline-flex; @include vw-pc(margin-right,22); @include vw-pc(border-top,26 solid transparent); @include vw-pc(border-left,10 solid #fff); @include vw-pc(border-bottom,26 solid transparent);}
+                        .pt_deco_text::after {content:''; display:inline-flex; @include vw-pc(margin-left,22); @include vw-pc(border-top,26 solid transparent); @include vw-pc(border-right,10 solid #fff); @include vw-pc(border-bottom,26 solid transparent);}
+                        .pt_title {@include vw-pc(margin-bottom,12); @include vw-pc(font-size,42); font-weight:700; @include vw-pc(line-height,52); letter-spacing:-.05em;
+                            strong {color:#708864; vertical-align:baseline; letter-spacing:-.05em;}
+                        }
+                        .pt_date {@include vw-pc(margin-bottom,20); @include vw-pc(font-size,22); font-weight:700; @include vw-pc(line-height,27); letter-spacing:0;}
+                        .pt_text {@include vw-pc(font-size,14); @include vw-pc(line-height,24); color:#00000060; letter-spacing:0;}
+                    }
+                    .img_box {@include vw-pc(width,699); @include vw-pc(height,406); @include vw-pc(margin,0 -12 -6 -45); pointer-events:none;}
+                    .pt_btn_submit {@include vw-pc(width,190); @include vw-pc(font-size,20); font-weight:700; @include vw-pc(line-height,50); color:#fff; background-color:#000; @include vw-pc(border-radius,25); margin:0 auto;}
+                }
+                .pt_evt_desc {@include vw-pc(width,660); @include vw-pc(padding-top,122);
+                    .pt_evt_step {display:flex; flex-direction:column; @include vw-pc(gap,24);
+                        li.pt_bg-image.pt_add-bg {
+                            &.pt_step1 .pt_step_title {background-image:url('../../is/images/review/gd_step_ico1_pc.png'); @include vw-pc(background-size,40 28);}
+                            &.pt_step2 .pt_step_title {background-image:url('../../is/images/review/gd_step_ico2_pc.png'); @include vw-pc(background-size,40 40);}
+                            &.pt_step3 .pt_step_title {background-image:url('../../is/images/review/gd_step_ico3_pc.png'); @include vw-pc(background-size,40 40);}
+                        }
+                        .pt_step_title {
+                            display:flex; align-items:center; position:relative; @include vw-pc(height,86); @include vw-pc(padding-left,72); background-color:#DEE2E6; background-repeat:no-repeat; @include vw-pc(background-position,24 center); @include vw-pc(border-radius,20);
+                            &.pt_active {@include vw-pc(border-radius,20 20 0 0);}
+                            .pt_step {display:inline-flex; justify-content:center; @include vw-pc(width,86); @include vw-pc(margin-right,8); @include vw-pc(font-size,16); font-weight:700; @include vw-pc(line-height,32); color:#fff; background-color:#000; @include vw-pc(border-radius,6);}
+                            .pt_title {@include vw-pc(font-size,22); font-weight:700; @include vw-pc(line-height,26); letter-spacing:-.07em;}
+                            .pt_title strong {color:#3D8CEE; vertical-align:baseline; letter-spacing:-.05em;}
+                            a[data-role-accordian] {display:inline-flex; position:absolute; top:50%; @include vw-pc(right,24); @include vw-pc(width,27); height:100%; font-size:1px; color:transparent; text-indent:-99999em; transform:translate(0,-50%); background:url('../../is/images/review/gd_step_ico_plus_pc.png') no-repeat center / contain;}
+                            a[data-role-accordian].active {background-image:url('../../is/images/review/gd_step_ico_minus_pc.png');}
+                            .pt_btn_write {display:inline-flex; justify-content:center; @include vw-pc(margin-left,8); @include vw-pc(width,132); @include vw-pc(font-size,16); font-weight:700; @include vw-pc(line-height,40); color:#fff; background-color:#000; @include vw-pc(border-radius,20);}
+                        }
+                        .pt_step_cnt {display:flex; align-items:center; @include vw-pc(padding,24 0); background-color:#F4F7FA; @include vw-pc(border-radius,0 0 20 20);
+                            &#pt_step_cnt1 {
+                                .img_box {@include vw-pc(width,225); @include vw-pc(height,270); @include vw-pc(margin,0 30 0 52);}
+                                .pt_text .pt_round_text {display:inline-block; @include vw-pc(width,92); @include vw-pc(height,30); @include vw-pc(margin,0 5 0 -8); @include vw-pc(font-size,15); font-weight:700; @include vw-pc(border,1 solid #000); background-color:#fff; letter-spacing:-.05em; @include vw-pc(border-radius,15); vertical-align:baseline; text-align:center;}
+                            }
+                            &#pt_step_cnt2 {
+                                .img_box {@include vw-pc(width,402); @include vw-pc(height,268); @include vw-pc(margin,0 -22 0 -17);}
+                                .pt_text{
+                                    .pt_chk::before {content: ''; display: inline-block; @include vw-pc(margin-right, 5); @include vw-pc(margin-top, -2); @include vw-pc(width,20); @include vw-pc(height,20); background-image: url('../../is/images/review/gd_step_ico_chk_pc.png'); @include vw-pc(background-size,20 20); vertical-align: middle;}
+                                }
+                                .pt_cnt .pt_copy {display:flex; align-items:stretch; @include vw-pc(width,275); @include vw-pc(height,40); @include vw-pc(margin, 16 0);
+                                    .pt_mid_txt {display:inline-flex; justify-content:center; align-items:center; flex:1; @include vw-pc(font-size,12); @include vw-pc(border-radius,10 0 0 10); background-color:#fff;}
+                                    .btn_hashcopy {display:inline-flex; justify-content:center; align-items:center; @include vw-pc(width,77); @include vw-pc(font-size,12); font-weight:700; @include vw-pc(line-height,14); color:#fff; @include vw-pc(border-radius,0 10 10 0); background-color:#3D8CEE;}
+                                }
+                                .pt_noti_txt {@include vw-pc(font-size,12); @include vw-pc(line-height,14); letter-spacing:-.05em; color:#00000080;}
+                            }
+                            &#pt_step_cnt3 {
+                                .img_box {@include vw-pc(width,155); @include vw-pc(height,268); @include vw-pc(margin,0 58 0 96);}
+                                .pt_text .pt_round_text {display:inline-block; @include vw-pc(width,96); @include vw-pc(height,30); @include vw-pc(margin,0 5); @include vw-pc(font-size,15); font-weight:700; color:#fff; background-color:#000; letter-spacing:-.05em; @include vw-pc(border-radius,15); vertical-align:baseline; text-align:center;}
+                            }
+                            .pt_cnt {
+                                .pt_step_num {display:inline-flex; justify-content:center; align-items:center; @include vw-pc(width,76); @include vw-pc(height,32); @include vw-pc(margin-bottom,18); @include vw-pc(font-size,18); font-weight:700; color:#fff; @include vw-pc(border,2 solid #000); background-color:#3D8CEE; @include vw-pc(border-radius,9); @include vw-pc(box-shadow,4 4 0 #000000);}
+                                .pt_text {@include vw-pc(font-size,18); font-weight:700; @include vw-pc(line-height,28); letter-spacing:-.05em;
+                                    strong {color:#3D8CEE; vertical-align:baseline; letter-spacing:-.05em;}
+                                }
+                            }
+                        }
+                    }
+                    .pt_tip {display:flex; @include vw-pc(padding-left,14); @include vw-pc(margin-top,24);
+                        .pt_tit {position: relative; @include vw-pc(width,50); @include vw-pc(margin-right,8); @include vw-pc(font-size,16); font-weight:700; @include vw-pc(line-height,26);
+                            &::after {content: ''; display: inline-block; @include vw-pc(width,20); @include vw-pc(height,20); background-image: url('../../is/images/review/gd_tip_ico.png'); @include vw-pc(background-size,20 20); vertical-align: sub;}
+                        }
+                        .pt_desc {
+                            > p {@include vw-pc(margin-bottom,2); @include vw-pc(font-size,16); @include vw-pc(line-height,20); letter-spacing:-.05em;}
+                            > span {display:inline-block; @include vw-pc(font-size,14); @include vw-pc(line-height,18); color:#888888; letter-spacing:-.05em; vertical-align:baseline;}
+                            .pt_tip_btn {border-bottom:1px solid #000; @include vw-pc(margin-left,10); @include vw-pc(font-size,14); font-weight:700; @include vw-pc(line-height,18); letter-spacing:-.05em;}
+                        }
+                    }
+                }
+            }
+
+            .pt_btn_box {@include vw-pc(margin,30 0 50); text-align:center;}
+            .btn_noti {@include vw-pc(font-size,16);}
+
+            .accordion_box {
+                text-align:center; @include vw-pc(margin-top, 30);
+                .btn_more {@include vw-pc(width, 183); @include vw-pc(height, 38); @include vw-pc(border-radius,20); @include vw-pc(font-size,16); @include vw-pc(margin-right,24);}
+                .btn_noti {padding-bottom:0; @include vw-pc(font-size, 18); margin-bottom:0; color:#000000; font-weight:400; border-bottom:1px solid #000000;}
+                .btn_noti::after {border-right:1px solid #000000; border-bottom:1px solid #000000;}
+    
+                .noti_list .type_none{color:#000;}
+                .noti_list a {color:#000;}
+    
+                .accordion_area{display:flex;text-align:left;@include vw-pc(width, 1320);@include vw-pc(margin,0 auto);@include vw-pc(padding,70 0 80);overflow:hidden; color:#000;}
+                .noti_left{width:50%;position:relative; @include vw-pc(padding-right,40);}
+                .noti_right{width:50%; @include vw-pc(padding-left,40);}
+                .noti_left::after{content: '';position: absolute; right:0; top: 0; display: block; width: 1px; height: 100%; background-color: #000000; opacity: 0.2; z-index: 5;}
+                .noti_tit{@include vw-pc(margin,0 0 20); @include vw-pc(font-size,20); font-weight:700}
+                .noti_list {@include vw-pc(margin-bottom, 36);}
+                .noti_list:last-child {margin-bottom: 0;}
+                .noti_list li{position:relative;@include vw-pc(padding,0 0 0 10); @include vw-pc(font-size, 16); @include vw-pc(line-height,34);color:#555;}
+                .noti_list.noti_list_num li{@include vw-pc(padding,0 0 0 19); @include vw-pc(text-indent,-19);}
+                .noti_list li:after{display:block;content:'';position:absolute;@include vw-pc(top,15); left:0;@include vw-pc( width,4);@include vw-pc(height,4);border-radius:50%;background-color:#555}
+                .noti_list.noti_list_num li:after{display:none}
+                .noti_list li a {color:#555;word-break:break-all;}
+                .noti_list li a.btn_package {@include vw-pc(border-bottom, 1 solid #555); @include vw-pc(line-height, 20);}
+                .noti_list li a.btn_package::after {@include vw-pc(top, 3);}
+                .noti_list.noti_2depth{@include vw-pc(padding,4 0);}
+                .noti_list.noti_2depth li{@include vw-pc(padding,0 0 0 20); @include vw-pc(text-indent,-20);}
+                .noti_list.noti_2depth li::after {display:none;}
+                .noti_list.noti_2depth li::after,
+                .noti_list.noti_2depth li > p {@include vw-pc(padding,0 0 0 10);}
+                .noti_list .type_none,.noti_list.noti_list_num .type_none{@include vw-pc(padding,0 0 10); @include vw-pc(font-size,18); font-weight:700;color:#000; @include vw-pc(line-height,34); text-indent:0;}
+                .noti_list .type_none::after,
+                .noti_list .type_none_sub::after {display:none;}
+                .noti_list .type_none_sub li::after {display:none;}
+                .noti_list .type_none_sub li{@include vw-pc(text-indent, -8); @include vw-pc(padding-left, 8);}
+
+                .pt_badge {display: inline-block; @include vw-pc(width, 127); @include vw-pc(height, 27); @include vw-pc(border-radius, 5); background: #000000; color: #fff; font-weight: 700; text-align: center; @include vw-pc(font-size, 16); @include vw-pc(letter-spacing, -.25); @include vw-pc(line-height, 27); @include vw-pc(margin-left, 10);}
+            }
+
+        }
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .grande {
+        .sec_review {@include vw-mo(padding,120 0); overflow: hidden;
+            
+            .inner_1440 {
+                @include vw-mo(width,672); margin:0 auto;
+    
+                .pt_evt_box {display:block;  width:100%;
+                    .pt_evt_cnt {@include vw-mo(width,642); text-align:center; margin:0 auto;
+                        .pt_title_box {display:flex; flex-direction:column; align-items:center; position:relative; @include vw-mo(margin-bottom,5);
+                            &.pt_bg-image.pt_add-bg::before { @include vw-mo(top,-38);  @include vw-mo(width,635); @include vw-mo(height,158); background:url('../../is/images/review/gd_title_deco_mo.png') no-repeat top center / contain; }
+                            .pt_deco_text {
+                                display:inline-flex; align-self:center; @include vw-mo(margin-bottom,14); @include vw-mo(font-size,28); font-weight:700; @include vw-mo(line-height,52); 
+                                .en{@include vw-mo(line-height,54);}
+                            }
+                            .pt_deco_text::before {content:''; display:inline-flex; @include vw-mo(margin-right,22); @include vw-mo(border-top,26 solid transparent); @include vw-mo(border-left,10 solid #fff); @include vw-mo(border-bottom,26 solid transparent);}
+                            .pt_deco_text::after {content:''; display:inline-flex; @include vw-mo(margin-left,22); @include vw-mo(border-top,26 solid transparent); @include vw-mo(border-right,10 solid #fff); @include vw-mo(border-bottom,26 solid transparent);}
+                            .pt_title {@include vw-mo(margin-bottom,16); @include vw-mo(font-size,48);@include vw-mo(line-height,62);
+                                strong {vertical-align:baseline; letter-spacing:-.05em;}
+                            }
+                            .pt_date {@include vw-mo(margin-bottom,20); @include vw-mo(font-size,26);  @include vw-mo(line-height,27); }
+                            .pt_text {@include vw-mo(font-size,20); @include vw-mo(line-height,30); color:#404040; opacity: .6; }
+                        }
+                        .img_box {@include vw-mo(width,720); @include vw-mo(height,480); @include vw-mo(margin,0 -12 -6 -45);}
+                        
+                    }
+                    .pt_evt_desc {@include vw-mo(width,672); @include vw-mo(padding-top,10);
+                        .pt_evt_step {display:flex; flex-direction:column; @include vw-mo(gap,30);
+                            li.pt_bg-image.pt_add-bg {
+                                &.pt_step1 .pt_step_title {background-image:url('../../is/images/review/gd_step_ico1_mo.png'); @include vw-mo(background-size,50 35);}
+                                &.pt_step2 .pt_step_title {background-image:url('../../is/images/review/gd_step_ico2_mo.png'); @include vw-mo(background-size,50 50);}
+                                &.pt_step3 .pt_step_title {background-image:url('../../is/images/review/gd_step_ico3_mo.png'); @include vw-mo(background-size,48 48);}
+                            }
+                            .pt_step_title {
+                                display:flex; align-items:center; position:relative; @include vw-mo(height,106); @include vw-mo(padding-left,108); background-repeat:no-repeat; @include vw-mo(background-position,40 center); @include vw-mo(border-radius,10);
+                                &.pt_active {@include vw-mo(border-radius,20 20 0 0);}
+                                .pt_step {display:inline-flex; justify-content:center; @include vw-mo(width,81); @include vw-mo(margin-right,20); @include vw-mo(font-size,18);  @include vw-mo(line-height,32);  @include vw-mo(border-radius,6);}
+                                .pt_title {@include vw-mo(font-size,24); @include vw-mo(line-height,30);}
+                                a[data-role-accordian] {display:inline-flex; position:absolute; top:50%; @include vw-mo(right,24); @include vw-mo(width,24); height:100%; font-size:1px; color:transparent; text-indent:-99999em; transform:translate(0,-50%); background:url('../../is/images/review/gd_step_ico_plus_pc.png') no-repeat center / contain;}
+                                a[data-role-accordian].active {background-image:url('../../is/images/review/gd_step_ico_minus_pc.png');}
+                                .pt_btn_write {@include vw-mo(margin-left,25); @include vw-mo(width,164); @include vw-mo(font-size,22); font-weight:700; @include vw-mo(line-height,50);  @include vw-mo(border-radius,40);}
+                            }
+                            .pt_step_cnt {display:flex; justify-content: center; align-items:center; flex-wrap:wrap; @include vw-mo(padding,60 0 50);  @include vw-mo(border-radius,0 0 10 10);
+                                &#pt_step_cnt1 {
+                                    .img_box {@include vw-mo(width,281); @include vw-mo(height,396); @include vw-mo(margin,0 60 0 32);}
+                                    .pt_text .pt_round_text {display:inline-block; @include vw-mo(width,141); @include vw-mo(height,41); @include vw-mo(line-height,41); @include vw-mo(margin,0 5 0 -8); @include vw-mo(font-size,22); @include vw-mo(border,1 solid #000); @include vw-mo(border-radius,30);}
+                                }
+                                &#pt_step_cnt2 {
+                                    .img_box {@include vw-mo(width,525); @include vw-mo(height,396); @include vw-mo(margin,0 -22 0 -17);}
+                                    .pt_text{
+                                        .pt_chk::before {content: ''; display: inline-block; @include vw-mo(margin-right, 5); @include vw-mo(margin-top, -3); @include vw-mo(width,25); @include vw-mo(height,25); background-image: url('../../is/images/review/gd_step_ico_chk_mo.png'); @include vw-mo(background-size,25 25); }
+                                    }
+                                    .pt_cnt .pt_copy {display:flex; align-items:stretch; @include vw-mo(width,481); @include vw-mo(height,70); @include vw-mo(margin, 16 0);
+                                        .pt_mid_txt { @include vw-mo(font-size,20); @include vw-mo(border-radius,10 0 0 10); }
+                                        .btn_hashcopy {@include vw-mo(width,135); @include vw-mo(font-size,20);  @include vw-mo(line-height,23);@include vw-mo(border-radius,0 10 10 0); }
+                                    }
+                                    .pt_noti_txt {@include vw-mo(font-size,20); @include vw-mo(line-height,20); letter-spacing:-.05em; color:#000; opacity: .8;}
+                                }
+                                &#pt_step_cnt3 {
+                                    .img_box {@include vw-mo(width,240); @include vw-mo(height,396); @include vw-mo(margin,0 58 0 96);}
+                                    .pt_text .pt_round_text {display:inline-block; @include vw-mo(width,141); @include vw-mo(height,41); @include vw-mo(line-height,41); @include vw-mo(margin,0 5); @include vw-mo(font-size,22); @include vw-mo(border-radius,20);}
+                                }
+                                .pt_cnt {
+                                    text-align: center; @include vw-mo(margin-top,20);
+                                    .pt_step_num {display:inline-flex; justify-content:center; align-items:center; @include vw-mo(width,113); @include vw-mo(height,45); @include vw-mo(margin-bottom,24); @include vw-mo(font-size,26);  @include vw-mo(border,2 solid #000); @include vw-mo(border-radius,9); @include vw-mo(box-shadow,4 4 0 #000000);}
+                                    .pt_text {@include vw-mo(font-size,24);  @include vw-mo(line-height,33);
+                                    }
+                                }
+                            }
+                        }
+                        .pt_btn_submit {@include vw-mo(width,200); @include vw-mo(height,68); @include vw-mo(font-size,24); @include vw-mo(line-height,68);  @include vw-mo(border-radius,71); color:#fff; background-color:#000; @include vw-mo(margin,30 auto 0); text-align: center; font-weight: 700;} 
+                        .pt_tip {display:flex; @include vw-mo(padding-left,27); @include vw-mo(margin-top,33);
+                            .pt_tit {@include vw-mo(width,100); @include vw-mo(margin-right,8); @include vw-mo(font-size,24); font-weight:700; @include vw-mo(line-height,26);
+                                &::after {@include vw-mo(width,27); @include vw-mo(height,27); background-image: url('../../is/images/review/gd_tip_ico.png'); @include vw-mo(background-size,27 27); vertical-align: bottom;}
+                            }
+                            .pt_desc {
+                                > p {@include vw-mo(margin-bottom,10); @include vw-mo(font-size,24); @include vw-mo(line-height,32); letter-spacing:-.05em;}
+                                > span {display:inline-block; @include vw-mo(font-size,21); @include vw-mo(line-height,32);}
+                                .pt_tip_btn {@include vw-mo(margin-left,10); @include vw-mo(font-size,21); font-weight:700; @include vw-mo(line-height,25); letter-spacing:-.05em;}
+                            }
+                        }
+                    }
+                }
+    
+                .pt_btn_box {@include vw-mo(margin,40 0 0 0); text-align:center;}
+                .btn_noti {@include vw-mo(font-size,24);}
+    
+                .accordion_box {
+                    text-align:center; @include vw-mo(margin-top, 40);
+                    .btn_more {@include vw-mo(width, 183); @include vw-mo(height, 38); @include vw-mo(border-radius,20); @include vw-mo(font-size,16); @include vw-mo(margin-right,24);}
+                    .btn_noti {@include vw-mo(font-size, 24); margin-bottom:0; color:#000; border-bottom:1px solid #000;}
+                    .btn_noti::after {border-right:1px solid #000; border-bottom:1px solid #000;}
+        
+                    .noti_list .type_none{color:#000;}
+                    .noti_list a {color:#000;}
+        
+                    .accordion_area{display:block; width: 100%; @include vw-mo(margin,0 auto);@include vw-mo(padding,60 30 80);overflow:hidden; color:#000;}
+                    .noti_left{width:100%;position:relative; @include vw-mo(padding-right,0); @include vw-mo(margin-bottom,36);}
+                    .noti_right{width:100%; @include vw-mo(padding-left,0);}
+                    .noti_left::after{display: none;}
+                    .noti_tit{@include vw-mo(margin,0 0 20); @include vw-mo(font-size,28); font-weight:700}
+                    .noti_list {@include vw-mo(margin-bottom, 36);}
+                    .noti_list:last-child {margin-bottom: 0;}
+                    .noti_list li{position:relative;@include vw-mo(padding,0 0 0 10); @include vw-mo(font-size,22); @include vw-mo(line-height,32);color:#555;}
+                    .noti_list.noti_list_num li{@include vw-mo(padding,0 0 0 24); @include vw-mo(text-indent,-24);}
+                    .noti_list li + li{@include vw-mo(margin-top,5);}
+                    .noti_list li:after{display:block;content:'';position:absolute;@include vw-mo(top,12); left:0;@include vw-mo( width,4);@include vw-mo(height,4);border-radius:50%;background-color:#555}
+                    .noti_list li a {color:#555;word-break:break-all;}
+                    .noti_list li a.btn_package {@include vw-mo(border-bottom, 1 solid #555); @include vw-mo(line-height, 25);}
+                    .noti_list li a.btn_package::after {@include vw-mo(top, 4);}
+                    .noti_list.noti_2depth{@include vw-mo(padding,4 0);}
+                    .noti_list.noti_2depth li{@include vw-mo(padding,0 0 0 9); @include vw-mo(text-indent,-9);}
+                    .noti_list.noti_2depth li::after {display:none;}
+                    .noti_list.noti_2depth li::after,
+                    .noti_list.noti_2depth li > p {@include vw-mo(padding,0 0 0 10);}
+                    .noti_list .type_none, .noti_list.noti_list_num .type_none{@include vw-mo(padding,0 0 10); @include vw-mo(font-size,28); font-weight:700;color:#000; @include vw-mo(line-height,34);}
+                    .noti_list .type_none::after,
+                    .noti_list .type_none_sub::after {display:none;}
+                    .noti_list .type_none_sub li::after {display:none;}
+                    .noti_list .type_none_sub li{@include vw-mo(text-indent, -8); @include vw-mo(padding-left, 8);}
+
+                    .pt_badge {@include vw-mo(width, 185); @include vw-mo(height, 26); @include vw-mo(border-radius, 13); @include vw-mo(font-size, 22); @include vw-mo(letter-spacing, -.5); @include vw-mo(line-height, 26); @include vw-mo(margin-left, 10);}
+                }
+            }
+        }
+    }
+}

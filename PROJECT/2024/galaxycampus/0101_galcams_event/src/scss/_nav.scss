@@ -1,0 +1,45 @@
+.galcams_event {
+    .sec_nav {
+        @include vw-max(height, 62);
+        .pt_nav-slider { display: none;
+            background-color: #0F4735; transition: all 0.5s;
+            &[sticky] {display: block; width: 100%; z-index: 100; position: fixed; top: 0; left: 0; animation: navFade 0.3s;}
+        }
+        .pt_nav{display: flex; justify-content: center; align-items: center; text-align: center; @include vw-max(height, 62); color: #fff; 
+            &__item{
+                display: contents; position: relative;  @include vw-pc(font-size, 18); font-weight: 700; @include vw-pc(letter-spacing,-0.45); white-space: nowrap;
+                &--active {color: #FCF806;}
+            }
+            &__btn{display: inline-flex; align-items: center; @include vw-max(padding, 0 25); @include vw-max(height, 62); @include vw-max(font-size, 18); @include vw-max(letter-spacing, -.45); font-weight: 700;}
+        }
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .galcams_event {
+        .sec_nav {
+            @include vw-mo(height, 111);
+            .pt_nav{justify-content: flex-start; @include vw-mo(height, 110);
+                &__item{
+                    display: block; position: relative; width: auto; @include vw-pc(font-size, 24); @include vw-pc(letter-spacing,-1.8);
+                    &::before{ content: ''; position: absolute;  @include vw-mo(right, -1); @include vw-mo(width, 2); @include vw-mo(height, 24); top: 50%; transform: translateY(-50%); background-color: #fff; opacity: .8;}
+                    &:last-child::before{display: none;}
+                }
+                &__btn{@include vw-mo(padding, 0 44); @include vw-mo(height, 110); @include vw-mo(font-size, 24); @include vw-mo(line-height, 32); @include vw-mo(letter-spacing, -1.2);
+                }
+            }
+        }
+    }
+}
+
+
+@keyframes navFade {
+    from {
+      opacity: 0;
+    }
+  
+    to {
+      opacity : 1;
+    }
+}

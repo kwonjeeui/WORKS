@@ -1,0 +1,13 @@
+.pt_battle_ground {
+    .sec_special {
+        color: darkred;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .pt_battle_ground {
+        .sec_special {
+            
+        }
+    }
+}

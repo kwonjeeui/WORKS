@@ -1,0 +1,292 @@
+// default
+@import '../../../../../../scss_global/scss-common2';
+@import 'bs_reset';
+@import 'notice';
+
+.catherine_project {
+    // common css start
+    .inner_1440 {text-align: center;}
+
+    .btn_common {
+        @include vw-pc(font-size, 16);
+        .pt_arrow_icon{position: relative; display: inline-block; @include vw-pc(width, 6); @include vw-pc(height, 6);}
+        .pt_arrow_icon::after {content:''; position: absolute; top: 50%; right: 0; display:inline-block; width: 100%; height:100%; @include vw-pc(border-bottom, 2 solid #000); @include vw-pc(border-right, 2 solid #000); @include vw-pc(border-width, 2);}
+    
+        .pt_arrow_right{margin: 0 0.2em;}
+        .pt_arrow_right::after {transform:translateY(-50%) rotate(-45deg);}
+        .pt_arrow_anchor{margin:0 0.3em;}
+        .pt_arrow_anchor::after {transform:translateY(-78%) translateX(35%) rotate(45deg);}
+        &.active .pt_arrow_anchor::after {top: auto; bottom:50%; transform:translateY(78%) translateX(35%) rotate(225deg);}
+    }
+
+    .pt_btn01{@include vw-pc(font-size, 28);}
+    .pt_btn01.btn_common .pt_arrow_icon{@include vw-pc(width, 10); @include vw-pc(height, 10);}
+    .pt_btn01.btn_common .pt_arrow_icon::after {@include vw-pc(border-width, 3);}
+
+    // 김치플러스 탭
+    .pt_tab_second {@include vw-pc(font-size, 30); @include vw-pc(line-height, 30); font-weight: 700; @include vw-pc(margin, 100 0);}
+
+    // 섹션 유의사항 토글
+    .pt_btn_toggle {display: block; @include vw-pc(margin-top, 49); @include vw-pc(font-size, 16); @include vw-pc(line-height, 20); @include vw-pc(letter-spacing, -1); font-weight: 400; color: #666666; text-decoration: underline; text-underline-offset : 5px;}
+
+    // common css end
+
+
+    // section start
+
+    // keyview section
+    .sec_kv {
+        .pt_kv {
+            &__text {position: absolute; @include vw-pc(top, 159); @include vw-pc(left, 297);}
+            &__title {@include vw-max(font-size, 50); @include vw-max(line-height, 60); @include vw-max(letter-spacing, -1); font-weight: 700;}
+            &__subtitle {@include vw-pc(margin-top, 15); @include vw-max(font-size, 20); @include vw-max(line-height, 28); @include vw-max(letter-spacing, -1); font-weight: 400;}
+            &__date {@include vw-pc(margin-top, 24); @include vw-max(font-size, 18); @include vw-max(line-height, 22);}
+            // comment : kv는 19220 기준이라 vw-max로만 사용해주시면 됩니다!
+        }
+    }
+
+    // tab section
+    .sec_tab {
+        .pt_tab {
+            &__list {display: flex; margin: 0 auto; @include vw-pc(width, 590); @include vw-pc(border-right, 1 solid #e1e1e1); @include vw-pc(border-left, 1 solid #e1e1e1);}
+            // comment : width를 지정하기보다는 justify-content: center; 로 중앙에 오게 해줘도 괜찮아요! width를 지정해주면 혹시나 탭이 추가되거나 삭제되면 또 수정해줘야하는 번거로움이 있습니다 :)
+            // comment : 탭박스에 border값을 주기보다는 item에 스타일을 주는게 좋을거같아요
+            &__item {@include vw-pc(width, 295);
+                &:first-child {border-right: 1px solid #E1E1E1;}
+                & + .is-active {@include vw-pc(width, 318); @include vw-pc(padding, 11 32); background-color: #000; color: #fff;}
+
+                &.is-active {@include vw-pc(width, 318); @include vw-pc(padding, 11 32); background-color: #000; color: #fff;}
+                // comment : &.is-active로 써야 맞습니다 :)
+                // & + .is-active 요렇게 쓰면 pt_tab__item 다음에오는 is-active를 갖고있는 아이에게 스타일을 주겠다는 의미여서 첫번째 탭이 선택된다해도 스타일적용이 안되요
+            }
+            &__text {@include vw-pc(margin-left, 15);}
+
+            .pt_btn_tab {display: flex; justify-content: center; align-items: center; @include vw-pc(font-size, 20); @include vw-pc(line-height, 28); font-weight: 700; @include vw-pc(padding, 6 0);}
+            .img_box {@include vw-pc(width, 46);}
+            // comment : pt_tab 에 있는 pt_btn_tab,img_box 로 스타일 잡아주시는게 좋아요! 다른영역동일하게 확인부탁드려요
+        }
+        .pt_btn_tab {display: flex; justify-content: center; align-items: center; @include vw-pc(font-size, 20); @include vw-pc(line-height, 28); font-weight: 700; @include vw-pc(padding, 6 0);}
+        .img_box {@include vw-pc(width, 46);}
+    }
+
+    // sticky navigation section
+    .sec_nav {background-color: #000; color: #fff; @include vw-pc(font-size, 20); @include vw-pc(line-height, 22); @include vw-pc(letter-spacing, -1); font-weight: 700; text-align: center;
+
+        .pt_nav {
+            &__list {@include vw-pc(width, 675); margin: 0 auto;}
+            &__item {display: inline-flex; align-items: center; &:not(:last-child) {&::after {content: "line"; display: block; @include vw-pc(font-size, 0); @include vw-pc(width, 1); background-color: #707070;}}}
+
+            &__item {display: inline-flex; align-items: center;
+                &:not(:last-child)::after {content: ""; display: block; @include vw-pc(width, 1); @include vw-pc(height, 16); @include vw-pc(font-size, 0); background-color: #707070;}
+            }
+            // comment : __item / :after 의 스타일적용은 한줄나눠서 적어주셔야 보기 편하고, last-child하고 :after 나눠서 안쓰고 같이 써도 무방합니다! :)
+            // comment : nav에 라인은 의미가 있는 요소는 아니여서 content는 비워두셔도 괜찮아요! 가상요소안에 텍스트가 필요하거나 의미있는 백그라운드, 이미지등 대체하는 텍스트가 필요할때, 특수문자로 표현해야할때 사용해주시면 될거같아요!
+        }
+        .pt_btn_nav {display: block; @include vw-pc(padding, 19 37);}
+    }
+
+    // 한정 구매 혜택 section
+    .sec_benefit {@include vw-pc(padding, 100 0);
+        .pt_bnf {
+            &__tab {
+                @include vw-pc(padding, 0 24 0 26); @include vw-pc(font-size, 20); @include vw-pc(line-height, 32); @include vw-pc(letter-spacing, -0.5); @include vw-pc(border, 2 solid #D2D2D2);
+                &+.pt_bnf__tab {@include vw-pc(margin-left, 10)}
+            }
+            &__title {
+                @include vw-pc(font-size, 30); @include vw-pc(line-height, 50); @include vw-pc(margin-top, 32);
+
+                &--tight {@include vw-pc(letter-spacing, -1);}
+            }
+            &__subtitle {@include vw-pc(font-size, 42); @include vw-pc(line-height, 50); @include vw-pc(letter-spacing, -1); @include vw-pc(margin-top, 3); color: #E2732D;}
+            &__list {
+                @include vw-pc(width, 1319); @include vw-pc(margin, 0 auto); display: flex; justify-content: space-between;
+            
+                &--top {@include vw-pc(margin-top, 54);}
+                // comment : list--top top 여백은 title 영역에서 bottom 여백으로 주는게 좋습니다!
+                &--bottom {@include vw-pc(margin-top, 30);}
+                // comment : list--bottom top 여백은 list--top 영역에서 bottom 여백으로 주는게 좋습니다!
+            }
+            &__item {
+                position: relative; background-color: #F4ECE4; @include vw-pc(border-radius, 10);
+
+                &--type01 {
+                    @include vw-pc(width, 650);
+
+                    .text_box {position: absolute; @include vw-pc(height, 198); @include vw-pc(left, 28); @include vw-pc(top, 56); display: flex; flex-direction: column; justify-content: space-between;}
+                    .pt_bnf {
+                        &__tag {
+                            position: absolute; @include vw-pc(left, 30); @include vw-pc(top, -13); @include vw-pc(width, 54); @include vw-pc(height, 54); @include vw-pc(padding, 7 15 5); @include vw-pc(border-radius, 5); background-color: #E2732D;
+                            &::after {content: ""; display: block; position: absolute; @include vw-pc(right, -5); @include vw-pc(top, 2); @include vw-pc(border-bottom, 5 solid #A05000); @include vw-pc(border-top, 5 solid transparent); @include vw-pc(border-right, 4 solid transparent); @include vw-pc(border-left, 4 solid #A05000);}
+            
+                            &--text {
+                                color: #fff; @include vw-pc(font-size, 15); @include vw-pc(line-height, 21); @include vw-pc(letter-spacing, -2); font-weight: 700;
+                                .en {@include vw-pc(font-size, 22); @include vw-pc(line-height, 21); font-weight: bold;}
+                            }
+                        }
+                        &__text {
+                            &--title {@include vw-pc(letter-spacing, -1); font-weight: 700; text-align: left; @include vw-pc(font-size, 30); @include vw-pc(line-height, 38);}
+                            &--sale {
+                                position: absolute; @include vw-pc(top, 19); @include vw-pc(right, 28); @include vw-pc(font-size, 18); @include vw-pc(line-height, 30); @include vw-pc(letter-spacing, 1); font-weight: 700;
+
+                                &_color {color: #E2732D;}
+                                &_strong {@include vw-pc(font-size, 58); @include vw-pc(line-height, 71);}
+                                &_tight {@include vw-pc(letter-spacing, -1);}
+                            }
+                            &--notice {position: absolute; @include vw-pc(bottom, 13); @include vw-pc(right, 20); @include vw-pc(font-size, 16); @include vw-pc(line-height, 20); @include vw-pc(letter-spacing, -1); font-weight: 400;}
+                        }
+                    }
+
+                    .pt_btn {
+                        &_more {position: absolute; @include vw-pc(left, 0); @include vw-pc(bottom, 0); @include vw-pc(font-size, 18); @include vw-pc(line-height, 15); @include vw-pc(letter-spacing, -1); font-weight: 400;}
+                        &_coupon {@include vw-pc(width, 170); @include vw-pc(margin-bottom, 42); @include vw-pc(margin-left, -5); @include vw-pc(font-size, 18); @include vw-pc(line-height, 9); font-weight: 600;}
+                    }
+                }
+
+                &--type02 {
+                    @include vw-pc(width, 426);
+
+                    .text_box {position: absolute; @include vw-pc(height, 147); @include vw-pc(left, 28); @include vw-pc(top, 56); display: flex; justify-content: space-between;}
+                    .pt_bnf {
+                        &__tag {
+                            position: absolute; @include vw-pc(left, 30); @include vw-pc(top, -13); @include vw-pc(width, 54); @include vw-pc(height, 54); @include vw-pc(padding, 7 15 5); @include vw-pc(border-radius, 5); background-color: #E38D67;
+                            &::after {content: ""; display: block; position: absolute; @include vw-pc(right, -5); @include vw-pc(top, 2); @include vw-pc(border-bottom, 5 solid #E07E1D); @include vw-pc(border-top, 5 solid transparent); @include vw-pc(border-right, 4 solid transparent); @include vw-pc(border-left, 4 solid #E07E1D);}
+
+                            &--text {
+                                color: #fff; @include vw-pc(font-size, 15); @include vw-pc(line-height, 21); @include vw-pc(letter-spacing, -2); font-weight: 700;
+                                .en {@include vw-pc(font-size, 22); @include vw-pc(line-height, 21); font-weight: bold;}
+                            }
+                        }
+                        &__text {
+                            &--title {
+                                @include vw-pc(letter-spacing, -1); font-weight: 700; text-align: left; @include vw-pc(font-size, 24); @include vw-pc(line-height, 30); @include vw-pc(letter-spacing, -1);
+                                .en {@include vw-pc(font-size, 24); @include vw-pc(line-height, 30); font-weight: bold;}
+                            }
+                            &--sale {
+                                position: absolute; @include vw-pc(top, 14); @include vw-pc(right, 20); @include vw-pc(font-size, 16); @include vw-pc(line-height, 24); @include vw-pc(letter-spacing, 1); font-weight: 700;
+                                
+                                &_color {color: #E38D67;}
+                                &_strong {@include vw-pc(font-size, 42); @include vw-pc(line-height, 50); font-weight: bold;}
+                                &_tight {@include vw-pc(letter-spacing, -1);}
+                            }
+                            &--notice {position: absolute; @include vw-pc(bottom, 13); @include vw-pc(right, 20); @include vw-pc(font-size, 16); @include vw-pc(line-height, 20); @include vw-pc(letter-spacing, -1); font-weight: 400;}
+                        }
+                    }
+
+                    .pt_btn_more {position: absolute; @include vw-pc(left, 0); @include vw-pc(bottom, 0); @include vw-pc(font-size, 18); @include vw-pc(line-height, 15); @include vw-pc(letter-spacing, -1); font-weight: 400;}
+                }
+            }
+        }
+    }
+
+    // 바잉툴 section
+    .sec_buying {@include vw-pc(padding, 100 0); background-color: #F7F7F7;
+        .pt_buy {
+            &__tab {
+                @include vw-pc(padding, 0 24 0 26); @include vw-pc(font-size, 20); @include vw-pc(line-height, 32); @include vw-pc(letter-spacing, -0.5); @include vw-pc(border, 2 solid #D2D2D2);
+                &+.pt_buy__tab {@include vw-pc(margin-left, 10)}
+            }
+            &__title {@include vw-pc(font-size, 42); @include vw-pc(line-height, 50); font-weight: 700;}
+            &__subtitle {@include vw-pc(font-size, 18); @include vw-pc(line-height, 36); @include vw-pc(letter-spacing, -1); font-weight: 400;}
+            &__wrap {display: flex; justify-content: space-between; @include vw-pc(width, 1320); @include vw-pc(margin, 29 auto 0);}
+            &__box {
+                @include vw-pc(width, 650);
+                
+                &--right {
+                    .pt_buy {
+                        &__title {@include vw-pc(letter-spacing, -2);}
+                    }
+                }
+            }
+        }
+    }
+
+    // 이벤트 section
+    .sec_event {@include vw-pc(padding, 96 0 100 0); background-color: #F7F7F7;
+        .inner_1440 {position: relative;}
+        // comment : inner는 relative 속성을 갖고있는 아이에요 :) 이중으로 주지않아도 괜찮습니다
+
+        .pt_evt {
+            &__wrap {display: flex; justify-content: space-between; @include vw-pc(width, 1320); @include vw-pc(margin, 0 auto);}
+            &__box {
+                &--left {text-align: left;}
+                &--right {text-align: center;}
+                // comment : 텍스트 기본 left라 따로 주지않아도 괜찮고 center는 사용하는 영역에 스타일 지정해주시는게 좋습니다
+            }
+            &__title {@include vw-pc(font-size, 42); @include vw-pc(line-height, 50); @include vw-pc(letter-spacing, -1); font-weight: 700;}
+            &__desc {
+                @include vw-pc(font-size, 18); @include vw-pc(line-height, 26); @include vw-pc(letter-spacing, -2); font-weight: 400; @include vw-pc(margin, 15 0 39);
+                
+                &--bold {font-weight: 700;}
+                &--color {font-weight: 700; color: #775247;}
+            }
+            &__text {
+                display: flex; justify-content: space-between; @include vw-pc(margin-bottom, 40);
+
+                &--title {@include vw-pc(font-size, 17); @include vw-pc(line-height, 34); @include vw-pc(letter-spacing, -1); font-weight: 700;}
+                &--cont {@include vw-pc(font-size, 17); @include vw-pc(line-height, 20); @include vw-pc(letter-spacing, -1); font-weight: 400; @include vw-pc(margin-top, 6);
+                    li + li {@include vw-pc(margin-top, 11);}
+
+                    .pt_btn_model {@include vw-pc(font-size, 17); @include vw-pc(line-height, 20); @include vw-pc(letter-spacing, -1); font-weight: 600; text-decoration: underline; @include vw-pc(margin-left, 10);}
+                }
+                &--small {font-weight: 400;}
+                &--toggle {display: flex;}
+            }
+            &__yogiyo {
+                .img_box {@include vw-pc(width, 207); position: absolute; @include vw-pc(left, 463); @include vw-pc(top, 14);}
+            }
+            &__how {
+                &--title {
+                    display: flex; align-items: center; @include vw-pc(font-size, 18); @include vw-pc(line-height, 35); @include vw-pc(letter-spacing, -1); font-weight: 700;
+                    &::after {content: "line"; display: block; @include vw-pc(font-size, 0); @include vw-pc(width, 560); @include vw-pc(height, 1); background-color: #707070; @include vw-pc(margin-left, 17);}
+                }
+                &--list {display: flex; justify-content: space-between; @include vw-pc(width, 685);}
+                &--item {
+                    @include vw-pc(width, 220); @include vw-pc(border-radius, 10); background-color: #fff; box-shadow: 10px 10px 30px rgb(0, 0, 0, 0.2);
+                    
+                    .img_box {@include vw-pc(width, 110); @include vw-pc(margin, 25 auto 19);}
+                }
+                &--text {@include vw-pc(font-size, 15); @include vw-pc(line-height, 20); @include vw-pc(letter-spacing, -1); font-weight: 400;}
+                &--bold {font-weight: 700;}
+            }
+            &__hashtag {
+                display: flex; align-items: center; @include vw-pc(margin-top, 14); background-color: #fff; box-shadow: 10px 10px 30px rgb(0, 0, 0, 0.2); @include vw-pc(border-radius, 10);
+                // comment : 해시태그박스에 relative 추가해주세요 :) 위에 응모방법 shadow에 가려집니당 
+            
+                &--text {@include vw-pc(width, 511); @include vw-pc(font-size, 18); @include vw-pc(line-height, 20); @include vw-pc(letter-spacing, -1); font-weight: 700;}
+            }
+        }
+
+        .pt_btn {
+            &_join {@include vw-pc(width, 158); @include vw-pc(font-size, 16); @include vw-pc(line-height, 30); @include vw-pc(letter-spacing, -1); font-weight: 700;}
+            &_photo-notice {@include vw-pc(margin-left, 23); @include vw-pc(font-size, 16); @include vw-pc(line-height, 29); @include vw-pc(letter-spacing, -1); font-weight: 700; text-decoration: underline; text-underline-offset : 5px;}
+            &_review {display: block; @include vw-pc(font-size, 14); @include vw-pc(line-height, 25); @include vw-pc(letter-spacing, -1); font-weight: 700; @include vw-pc(margin, 15 0 23); text-decoration: underline; text-underline-offset : 5px;}
+            &_copy {@include vw-pc(width, 173); @include vw-pc(border-radius, 10); background-color: #775247; color: #fff; @include vw-pc(font-size, 15); @include vw-pc(line-height, 60); @include vw-pc(letter-spacing, -1); font-weight: 700;}
+            // comment : 버튼마다 스타일 지정하기보단 공통 잡아둔 스타일을 이용해서 추가로 필요한 스타일만 지정해주는게 좋습니다.
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .catherine_project {
+        // common css start
+        .inner_1920, .inner_1440 {position: relative;}
+
+        // 김치플러스 탭 내 내용 없음으로 표시
+        .second_tab_text {display: block; text-align: center; @include vw-mo(font-size, 30); @include vw-mo(line-height, 30); @include vw-mo(padding, 200 0); font-weight: 700;}
+
+        .pt_benefit_tab {@include vw-mo(margin-bottom, 45); text-align: center;
+            .btn_common {@include vw-pc(border, 2 solid #D2D2D2); @include vw-mo(height, 74); @include vw-mo(border-radius, 50); @include vw-mo(font-size, 24); @include vw-mo(padding, 0 30); & + .btn_common {margin-left: 10px;}}
+        }
+
+        .btn_common {@include vw-mo(font-size, 16);
+            .pt_arrow_icon{position: relative; display: inline-block; @include vw-mo(width, 6); @include vw-mo(height, 6);}
+            .pt_arrow_icon::after {content:''; position: absolute; top: 50%; right: 0; display:inline-block; width: 100%; height:100%; @include vw-pc(border-bottom, 2 solid #000); @include vw-pc(border-right, 2 solid #000); @include vw-mo(border-width, 2);}
+            .pt_arrow_right{margin: 0 0.2em;}
+            .pt_arrow_right::after {transform:translateY(-50%) rotate(-45deg);}
+            .pt_arrow_anchor{margin:0 0.3em;}
+            .pt_arrow_anchor::after {transform:translateY(-78%) translateX(35%) rotate(45deg);}
+            &.active .pt_arrow_anchor::after {top: auto; bottom:50%; transform:translateY(78%) translateX(35%) rotate(225deg);}
+        }
+        // common css end
+    }
+}

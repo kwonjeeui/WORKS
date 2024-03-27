@@ -1,0 +1,114 @@
+.grande {
+    .sec_spec {
+        .inner_1440 {
+            .pt_btn_box{margin:0 auto; @include vw-pc(width, 1220); @include vw-pc(height, 50); @include vw-pc(border-radius, 20); background-color: #D9D9D9; text-align: center;}
+            .pt_btn_box.active{@include vw-pc(border-radius, 20 20 0 0);}
+            .btn_spec{position: relative; @include vw-pc(padding, 14 0); @include vw-pc(font-size, 22); text-align: center;
+                &::after {content:''; position:absolute; top:37%; @include vw-pc(right, -16); @include vw-pc(width, 6); @include vw-pc(height, 6); border-right:2px solid #000; border-bottom:2px solid #000; transform:rotate(45deg);}
+            }
+
+            .accordion_area{margin:0 auto; @include vw-pc(padding, 22 50 40); @include vw-pc(width, 1220); background-color: #D9D9D9; @include vw-pc(border-radius, 0 0 20 20);
+                thead{
+                    th{
+                        @include vw-pc(padding-bottom, 28); @include vw-pc(font-size, 24); font-weight: 700; @include vw-pc(letter-spacing, -0.25); @include vw-pc(border-bottom, 1 solid #b3b3b3); text-align: center;
+                        &:last-child{@include vw-pc(border-left, 50 solid transparent);}
+                    }
+                }
+                tbody{
+                    tr{}
+                    th{@include vw-pc(padding-right, 50); vertical-align:middle; @include vw-pc(font-size, 24); @include vw-pc(line-height, 32); font-weight: 700; @include vw-pc(letter-spacing, -0.25); @include vw-pc(border-bottom, 1 solid #b3b3b3); text-align: left;}
+                    td{
+                        @include vw-pc(border-bottom, 1 solid #b3b3b3);
+                        &:last-child{@include vw-pc(border-left, 50 solid transparent);}
+                    }
+                    .pt_spec{
+                        display:flex; flex-wrap:wrap; @include vw-pc(width, 468); @include vw-pc(padding, 30 0);
+                        &__laundry{
+                            &--first{
+                                .pt_spec__item{@include vw-pc(margin-bottom, 64);}
+                            }
+                            &--second{
+                                .pt_spec__item{@include vw-pc(margin-bottom, 16);}
+                            }
+                        }
+                        &__dry{
+                            &--first{
+                                .pt_spec__item{@include vw-pc(margin-bottom, 80);}
+                            }
+                            &--second{
+                                .pt_spec__item{@include vw-pc(margin-bottom, 16);}
+                            }
+                        }
+                        &__item{
+                            @include vw-pc(margin-bottom, 30); width: 50%;
+                            &:last-child{@include vw-pc(margin-bottom, 0);}
+                            &:nth-last-child(2){@include vw-pc(margin-bottom, 0);}
+                            &--w100{width: 100%;}
+                        }
+                        &__title{@include vw-pc(font-size, 18); @include vw-pc(line-height, 32); font-weight: 700; @include vw-pc(letter-spacing, -0.5);}
+                        &__desc{@include vw-pc(font-size, 18); @include vw-pc(line-height, 32); @include vw-pc(letter-spacing, -0.9);}
+                    }
+                }
+            }
+            
+        }
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .grande {
+        .sec_spec {
+            .inner_1440 {
+                .pt_btn_box{@include vw-mo(width, 672); @include vw-mo(height, 60); @include vw-mo(border-radius, 25);}
+                .pt_btn_box.active{@include vw-mo(border-radius, 25 25 0 0);}
+                .btn_spec{@include vw-mo(padding, 18 0); @include vw-mo(font-size, 24);
+                    &::after {content:''; position:absolute; top:43%; @include vw-mo(right, -16); @include vw-mo(width, 6); @include vw-mo(height, 6); border-right:2px solid #000; border-bottom:2px solid #000; transform:rotate(45deg);}
+                }
+    
+                .accordion_area{@include vw-mo(padding, 20 24 60); @include vw-mo(width, 672); @include vw-mo(border-radius, 0 0 25 25);
+                    thead{
+                        th{
+                            @include vw-mo(padding-bottom, 20); @include vw-mo(font-size, 24); @include vw-mo(line-height, 30); font-weight: 700; @include vw-mo(letter-spacing, -2); @include vw-mo(border-bottom, 1 solid #b3b3b3); text-align: left;
+                            &:last-child{@include vw-mo(border-left, 16 solid transparent);}
+                        }
+                    }
+                    tbody{
+                        tr{}
+                        th{@include vw-mo(padding-right, 20); @include vw-mo(font-size, 24); @include vw-mo(line-height, 30); @include vw-mo(letter-spacing, -0.5); @include vw-mo(border-bottom, 1 solid #b3b3b3);}
+                        td{
+                            @include vw-mo(border-bottom, 1 solid #b3b3b3);
+                            &:last-child{@include vw-mo(border-left, 16 solid transparent);}
+                        }
+                        .pt_spec{
+                            display:flex; flex-wrap:no-wrap; @include vw-mo(width, 264); @include vw-mo(padding, 28 0);
+                            &__laundry{
+                                &--first{
+                                    .pt_spec__item{@include vw-mo(margin-bottom, 30);}
+                                }
+                                &--second{
+                                    .pt_spec__item{@include vw-mo(margin-bottom, 30);}
+                                }
+                            }
+                            &__dry{
+                                &--first{
+                                    .pt_spec__item{@include vw-mo(margin-bottom, 30);}
+                                }
+                                &--second{
+                                    .pt_spec__item{@include vw-mo(margin-bottom, 30);}
+                                }
+                            }
+                            &__item{
+                                @include vw-mo(margin-bottom, 30); width: 100%;
+                                &:last-child{@include vw-mo(margin-bottom, 0);}
+                                &:nth-last-child(2){@include vw-mo(margin-bottom, 30);}
+                            }
+                            &__title{@include vw-mo(font-size, 22); @include vw-mo(line-height, 30); @include vw-mo(letter-spacing, -0.50);}
+                            &__desc{@include vw-mo(font-size, 22); @include vw-mo(line-height, 30); @include vw-mo(letter-spacing, -0.50);}
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

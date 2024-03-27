@@ -1,0 +1,49 @@
+
+/* notice */
+.tem_project {
+    .sec_kv {
+        overflow: hidden; 
+
+        // vw-max 1920
+        // .pt_kv-img{ position: relative; left: 50%; transform: translateX(-50%); @include vw-max(width, 1920); @include vw-max(height, 565); }
+        // .pt_kv-tit{
+        //     position: absolute; left: 50%; @include vw-max(top, 160); transform: translateX(-50%); @include vw-max(width, 1320);
+        //     &__eyebrow{ @include vw-max(margin-bottom, 2); @include vw-max(font-size, 24); @include vw-max(line-height, 34); }
+        //     &__main{ @include vw-max(margin-bottom, 15); @include vw-max(font-size, 55); @include vw-max(line-height, 65); font-weight: 700; }
+        //     &__sub{ @include vw-max(margin-bottom, 10); @include vw-max(font-size, 22); @include vw-max(line-height, 28); }
+        //     &__date{ @include vw-max(margin-bottom, 7); @include vw-max(font-size, 20); @include vw-max(line-height, 30); font-weight: 700; }
+        //     &__disc{ @include vw-max(font-size, 14); @include vw-max(line-height, 24); }
+        // }
+
+        // vw-pc 1440
+        .pt_kv-img{ position: relative; left: 50%; transform: translateX(-50%); @include vw-pc(width, 1920); @include vw-pc(height, 565); }
+        .pt_kv-tit{
+            position: absolute; left: 50%; @include vw-pc(top, 160); transform: translateX(-50%); @include vw-pc(width, 1320);
+            &__eyebrow{ @include vw-pc(margin-bottom, 2); @include vw-pc(font-size, 24); @include vw-pc(line-height, 34); }
+            &__main{ @include vw-pc(margin-bottom, 15); @include vw-pc(font-size, 55); @include vw-pc(line-height, 65); font-weight: 700; }
+            &__sub{ @include vw-pc(margin-bottom, 10); @include vw-pc(font-size, 22); @include vw-pc(line-height, 28); }
+            &__date{ @include vw-pc(margin-bottom, 7); @include vw-pc(font-size, 20); @include vw-pc(line-height, 30); font-weight: 700; }
+            &__disc{ @include vw-pc(font-size, 14); @include vw-pc(line-height, 24); }
+        }
+
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .tem_project {
+        .sec_kv {
+
+            // vw-mo 720
+            .pt_kv-img{ @include vw-mo(width, 720); @include vw-mo(height, 840); }
+            .pt_kv-tit{
+                @include vw-mo(top, 55); transform: translate(-50%, 0%); @include vw-mo(width, 660); text-align: center;
+                &__eyebrow{@include vw-mo(margin-bottom, 2); @include vw-mo(font-size, 28); @include vw-mo(line-height, 38); }
+                &__main{@include vw-mo(margin-bottom, 15); @include vw-mo(font-size, 68); @include vw-mo(line-height, 78); }
+                &__sub{@include vw-mo(margin-bottom, 12); @include vw-mo(font-size, 28); @include vw-mo(line-height, 38); white-space: nowrap; }
+                &__date{@include vw-mo(margin-bottom, 10); @include vw-mo(font-size, 26); @include vw-mo(line-height, 36);}
+                &__disc{ @include vw-mo(font-size, 18); @include vw-mo(line-height, 30); }
+            }
+
+        }
+    }
+}

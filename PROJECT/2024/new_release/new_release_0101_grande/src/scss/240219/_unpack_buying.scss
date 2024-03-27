@@ -1,0 +1,693 @@
+// MOBILE
+body.pt_no_scroll {overflow-y: hidden !important; width: 100%;}
+
+.grande {
+    .sec_buying_unpack {@include vw-mo(padding,96 0 0); background-color: #fff;
+        .pt_buying_title {
+            @include vw-mo(margin-bottom,19); @include vw-mo(font-size,46); font-weight:700; @include vw-mo(line-height,62); text-align:center;
+            &--blue{color: #2b82e2;}
+        }
+        input[type=radio] {position: absolute!important; width: 1px!important; height: 1px!important; padding: 0!important; margin: -1px!important; overflow: hidden!important; clip: rect(0,0,0,0)!important; white-space: nowrap!important; border: 0!important;}
+        input[type=radio]:checked + label {position: relative;
+
+            &::before {content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); display: block; width: 100%; height: 100%; position: absolute; @include vw-mo(border, 3 solid #1E81F8); @include vw-mo(border-radius, 10); box-sizing: border-box; z-index: 2;}
+
+            & .pt_option__noti {background-color: #1E81F8; color: #fff;}
+
+            .pt_speech-bubble {
+                color: #fff; background-color: #1E81F8;
+            
+                &::before {border-top-color: #1E81F8;}
+            }
+        }
+        label {cursor: pointer;}
+        input:focus + label {outline:#2189ff dashed 2px!important;}
+
+
+        .pt_highlight {color:#1E81F8 !important;}
+        .pt_text-center {text-align: center !important;}
+        .pt_buying_unpack {
+            position: relative; @include vw-mo(padding-bottom, 80);
+
+            // 스티키
+            [data-buying-sticky-thumnail] {
+
+                &.fixed {position: fixed; @include vw-mo(top,80); left: 0; right: 0; width: 100%; background-color: #fff; @include vw-mo(box-shadow, 0 6 14 #00000014);}
+                &.pt_move {transform: translateY(-100%);}
+                &.opened {
+                    z-index: 25;
+                
+                    .pt_sticky {z-index: 25;}
+                    .pt_btn--open::after {filter: scale(1); transform: translateY(-50%) rotate(180deg);}
+                }
+                
+            }
+            
+            .pt_prd-slide {
+                z-index:10; position:absolute; left:0; top:0; @include vw-mo(margin-bottom, 0); width: 100%;
+                
+                // .swiper-container {position: relative;}
+                .swiper-container .swiper-wrapper .swiper-slide {@include vw-mo(height,454);}
+
+                .pt_pod-txt {@include vw-mo(font-size,32); font-weight:700; @include vw-mo(line-height,99); text-align:center; background-color:#FAFAFA;}
+                .pt_bg {content: ''; position: absolute; @include vw-mo(top,99); left: 0;width: 100%; @include vw-mo(height, 355); background: rgba(0,0,0,.4); display: block;}
+                .pt_bg.pt_video_off {display:none;}
+                .pt_btn_play {display: block; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 100%; height: 100%; background: url('../../is/images/gd_pod_btn_play_icon.png') no-repeat; @include vw-mo(background-size, 124  124); @include vw-mo(background-position, center); z-index: 2;}
+                // .img_box__bubble{z-index:1; position:absolute; @include vw-mo(left,312); @include vw-mo(top,70); @include vw-mo(width,236); @include vw-mo(height,52);}
+                .pt_bubble{z-index:1; position:absolute; @include vw-mo(left,190); @include vw-mo(top,29); @include vw-mo(width,82); @include vw-mo(height,40); @include vw-mo(border-radius,100); background-color: #E0F1FF;@include vw-mo(font-size, 24); @include vw-mo(line-height,40); font-weight: 700; @include vw-mo(letter-spacing,-0.8); text-align: center;}
+            }
+            .pt_prd-select {z-index:9; position:relative; width:100%; margin: 0 auto; @include vw-mo(padding,454 24 0); overflow: hidden; background-color:#fff;}
+            .pt_app_hide, .pt_app_show {display: none;}
+            .pt_info {display: flex; justify-content: space-between; align-items:center; @include vw-mo(margin,43 0 29);
+
+                &__desc {display: flex; justify-content:flex-start; align-items: center; @include vw-mo(font-size, 28); font-weight: 700; @include vw-mo(line-height, 24);
+
+                    &:last-child {margin-bottom: 0;}
+                    .pt_icon--shopbag-blue {@include vw-mo(margin-right, 10);}
+                    .pt_icon--check-blue {@include vw-mo(margin-right, 7);}
+                }
+                &__tag {position: relative; display: inline-flex; justify-content: center; align-items: center; @include vw-mo(width, 127); @include vw-mo(height, 36); @include vw-mo(margin-left, 8); @include vw-mo(font-size, 24); color: #fff; background-color: #1E81F8; @include vw-mo(border-radius, 6);}
+
+                .pt_btn {
+                    &--coupon {
+                        @include vw-mo(width,148); @include vw-mo(height,50); @include vw-mo(font-size,22); background-color:#278DFB; font-weight:700; @include vw-mo(border-radius,100); color:#fff; @include vw-mo(line-height, 50); text-align: center;
+                        &::after{content: ''; display: inline-block; @include vw-mo(margin-left, 6); @include vw-mo(width, 16); @include vw-mo(height, 17);  background: url('../../is/images/unpack_buying/gd_coupon_download_mo.png') no-repeat center; background-size: contain;}
+                    }
+                }
+            }
+            .pt_prd__title {
+                display:flex; align-items:baseline; flex-flow:column nowrap;
+                &--name {font-weight:700;}
+                &--sku {font-weight: 700; color: #999;}
+            }
+            .pt_option {@include vw-mo(margin-top, 70);
+                &__box {@include vw-mo(margin-bottom, 67);}
+                &__box:last-child{margin-bottom: 0;}
+                &__title-box {
+                    display: flex; justify-content: space-between; align-items: center; @include vw-mo(margin-bottom, 27);
+                    
+                    &--model {@include vw-mo(margin-bottom, 19);}
+                }
+                &__title {display: flex; align-items: center; @include vw-mo(font-size, 30); font-weight: 700; @include vw-mo(line-height, 36);
+
+                    .pt_inch-img {display: inline-block; @include vw-mo(width, 36); @include vw-mo(height, 27); background: url(../../is/images/unpack_buying/buying/mtv_inch_cm_mo.png) no-repeat; background-size: contain; @include vw-mo(margin-left, 10);}
+                    
+                    .pt_icon--tradein {@include vw-mo(margin-left, 15);}
+                    .pt_highlight {@include vw-mo(margin-left, 15);}
+                    &--samcare{@include vw-mo(font-size, 28); @include vw-mo(line-height, 34);}
+
+                }
+                &__dimm {
+                    z-index: 9; position: absolute; top : 0; left: 0; display: flex; align-items: center; justify-content: center; width: 100%; height: 100%; background-color: #fff; border: 1px solid #000; @include vw-mo(border-radius, 10); font-weight: 700; color: #1E81F8; @include vw-mo(font-size, 22); @include vw-mo(line-height, 26); text-align: center;
+                }
+                &__list {display: flex; @include vw-mo(gap, 24);
+    
+                    &--grid01 {
+                        .pt_option__item {@include vw-mo(width, 150);}
+                    }
+                    &--grid02 {
+                        .pt_option__item {@include vw-mo(width, 324);}
+                    }
+                    &--grid03 {
+                        .pt_option__item {@include vw-mo(width, 208);}
+                    }
+                    &--grid04 {
+                        .pt_option__item {@include vw-mo(width, 324);}
+                    }
+                    &--grid05 {
+                        .pt_option__item {@include vw-mo(width, 324);}
+                    }
+                    &--gridcolor {
+                        @include vw-mo(padding-left,26); @include vw-mo(gap, 55); align-items: flex-end;
+                        .pt_option__item {@include vw-mo(width, 44);}
+                        .pt_option__label {width: 100%; white-space: nowrap; @include vw-mo(outline-offset,3); border-radius: 50%;}
+                        .pt_option__desc {white-space: nowrap;}
+                    }
+                }
+                &__item {position: relative; flex-shrink: 0;
+
+                    &.pt_hide {display:none !important;}
+                    &--card {
+                        @include vw-mo(height, 174);
+
+                        .pt_option__desc {position: absolute; @include vw-mo(bottom, 15); left: 50%; transform: translateX(-50%); display: flex; justify-content: center; align-items: center; width: 100%; @include vw-mo(font-size, 24); @include vw-mo(line-height, 25); font-weight: 700; text-align: center;}
+                    }
+                    &--model {
+                        position: relative;
+                        .pt_option__label { @include vw-mo(height, 102); flex-shrink: 0; }
+                        .pt_option__desc {position: absolute; top:50%; left: 50%; transform: translate(-50%,-50%); display: flex; flex-direction: column; justify-content: center; align-items: center; width: 100%; @include vw-mo(font-size, 25); font-weight:700; @include vw-mo(line-height, 32); text-align: right;}
+                        .pt_option__noti {position: absolute; display: flex; @include vw-mo(width, 184); @include vw-mo(height, 32); @include vw-mo(border-bottom-left-radius, 5); @include vw-mo(border-bottom-right-radius, 5); align-items: center; justify-content: center; @include vw-mo(font-size, 20); font-weight: 700; left: 50%; transform: translateX(-50%); top: 0; color: #fff; background-color: #D8EDFF; color: #4097FF; letter-spacing: -.05em; z-index:2;}
+                    }
+                    // &--model::before{z-index: 10; content: '티빙 6개월'; position: absolute; @include vw-mo(top, -30); left: 50%; transform: translateX(-50%); @include vw-mo(width, 121); @include vw-mo(height, 49); background: url(../../is/images/unpack_buying/buying/mtv_buying_tving_tag_mo.png) no-repeat center/contain; background-size: 100% 100%; text-indent: -9999em;}
+                    // &--model-04::before{display: none;}
+                    &--color {
+                        display: flex; align-items: center; justify-content: center; flex-direction: column;
+
+                        .pt_option__label {@include vw-mo(margin-bottom,19); justify-content: center; align-items: center; @include vw-mo(font-size, 24); text-align: center; border: none;}
+                        .pt_color-chip {position: relative; display: block; @include vw-mo(margin, 0 auto); @include vw-mo(width, 44); @include vw-mo(height, 44); @include vw-mo(border,1 solid #ddd); border-radius: 50%;}
+                        .pt_option__desc {@include vw-mo(font-size, 24); letter-spacing: -0.025em;}
+                        
+                        input[type=radio]:checked + label {
+                            font-weight: 700;
+                            &::before{border: none;}
+                            .pt_color-chip {
+                                &::before {content: ""; position: absolute; @include vw-mo(top,-9); @include vw-mo(left,-9); display: block; @include vw-mo(width,60); @include vw-mo(height,60); @include vw-mo(border,2 solid #1E81F8); border-radius: 50%; box-sizing: border-box;}
+                            }
+                        }
+                        input[type=radio]:checked + label + .pt_option__desc {font-weight: 700;}
+                    }
+                    &--text {@include vw-mo(height, 90);
+    
+                        .pt_option__label {justify-content: center; align-items: center; text-align: center;}
+                        .pt_option__desc {@include vw-mo(font-size, 25); font-weight: 700;}
+                    }
+                    &--storage {@include vw-mo(height, 90);
+    
+                        .pt_option__label {justify-content: center; align-items: center; text-align: center;}
+                        .pt_option__desc {@include vw-mo(font-size, 25); font-weight: 700;}
+
+                        .pt_option__flex {display: flex;}
+                        .pt_option__img {@include vw-mo(width, 105);}
+                        .pt_option__text {display: flex; flex-direction: column; justify-content: space-between;}
+                        .pt_option__double {@include vw-mo(font-size, 24); font-weight: 700; text-align: right;}
+                        .pt_option__upgrade {@include vw-mo(font-size, 20); @include vw-mo(line-height, 28);}
+                        .pt_option__arrow {
+                            display: inline-flex; align-items: center; color: #A3A3A3;
+                            
+                            &::after {content: ''; display: block; @include vw-mo(width, 24); @include vw-mo(height, 24); @include vw-mo(margin, 0 10); background: center / contain no-repeat;}
+
+                            &--gray::after {margin-left: 0;}
+
+                            &.pt_add-bg::after {background-image: url('../../../is/images/unpack_buying/gd_buying_option_arrpw_black.png');}
+                            &--gray.pt_add-bg::after {background-image: url('../../../is/images/unpack_buying/gd_buying_option_arrpw_gray.png');}
+                        }
+                    }
+                    &--etc {
+                        input[type=radio]:checked + .pt_option__label::after {background: no-repeat center / cover;}
+                        input[type=radio]:checked + .pt_option__label.pt_add-bg::after {background-image: url('../../../is/images/unpack_buying/ico_check-on.png');}
+
+                        .pt_option__label {position: relative; flex-direction: column; text-align: center; @include vw-mo(height, 80);
+                            
+                            &::after {content: ''; position: absolute;top:50%;  transform: translateY(-50%); @include vw-mo(left, 26); display: block; @include vw-mo(width, 30); @include vw-mo(height, 30); background: no-repeat center / cover;}
+
+                            &.pt_add-bg::after {background-image: url('../../../is/images/unpack_buying/ico_check-off.png');}
+                        }
+                        .pt_option__desc {@include vw-mo(font-size, 25); font-weight: 700;}
+                        .pt_option__notice {display: flex; justify-content: center; align-items: center; @include vw-mo(font-size, 22); @include vw-mo(line-height, 31); text-align: left;
+
+                            .pt_icon--no {@include vw-mo(margin-right, 10);}
+                        }
+                        .pt_option__text-no {letter-spacing: -0.05em;}
+                    }
+                    &--add{position: relative;}
+                    // &--add::before{z-index: 10; content: ''; position: absolute; @include vw-mo(top, -30); left: 50%; transform: translateX(-50%); @include vw-mo(width, 276); @include vw-mo(height, 49); background: url(../../is/images/unpack_buying/buying/mtv_buying_samcare+_tag_mo.png) no-repeat center/contain; background-size: 100% 100%;}
+                }
+                &__label {position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; height: 100%; border: 1px solid #E2E2E2; @include vw-mo(border-radius, 10); box-sizing: border-box; background-color: #fff;}
+                &__info {@include vw-mo(font-size, 24); font-weight: 700;}
+                &__btn-box {display: flex; align-items: center;}
+                &__btn {display: flex;
+
+                    &--plus {
+                        @include vw-mo(width, 34); @include vw-mo(height, 34); @include vw-mo(margin-left, 10); background: no-repeat center / cover;
+                    
+                        &.pt_add-bg {background-image: url('../../../is/images/unpack_buying/ico_plus.png');}
+                    }
+                    
+                }
+                &__tooltip {
+                    position: absolute; left: 50%; @include vw-mo(bottom, -30); transform: translateX(-50%); display: flex; justify-content: center; align-items: center; @include vw-mo(width, 180); @include vw-mo(height, 40); border: 1px solid #000; @include vw-mo(border-radius, 4); background-color: #fff; @include vw-mo(font-size, 18); font-weight: 700; letter-spacing: -0.05em; z-index: 5;
+                
+                    &::before {content: ''; display: block; position: absolute; top: 0; left: 50%; transform: translate(-50%, -50%) rotate(45deg); @include vw-mo(width, 8); @include vw-mo(height, 8); border: 1px solid #000; border-bottom-color: #fff; border-right-color: #fff; background-color: #fff;}
+                }
+
+                &__samcare--desc{@include vw-mo(margin-top, 30); @include vw-mo(font-size, 24); @include vw-mo(line-height, 40); letter-spacing: -.025em; color: #1E81F8;}
+                &__samcare--tag{z-index: 9; position: absolute; @include vw-mo(top, -30); left: 50%; transform: translateX(-50%); @include vw-mo(width, 276); @include vw-mo(height, 45); background-color: #2189FF; @include vw-mo(border-radius, 5); @include vw-mo(font-size, 25); font-weight: 700; letter-spacing: -.05em; @include vw-mo(line-height, 45); text-align: center; color: #fff;}
+                &__samcare--tag::after{content: ''; display: inline-block; position: absolute; @include vw-mo(bottom, -3); left: 50%; transform: translateX(-50%) rotate(-45deg);@include vw-mo(border-top, 4 solid transparent); @include vw-mo(border-bottom, 4 solid #1E81F8); @include vw-mo(border-left, 4 solid #1E81F8); @include vw-mo(border-right, 4 solid transparent);}
+            }
+            .pt_speech-bubble {display: flex; justify-content: center; align-items: center; flex-direction: column; position: absolute; @include vw-mo(top, -37); left: 50%; transform: translate(-50%); @include vw-mo(width, 184); @include vw-mo(height,64); color: #4097FF; @include vw-mo(border-radius, 5); background-color: #D8EDFF; @include vw-mo(font-size, 22); font-weight: 700; line-height: 1.1; z-index: 2;
+                .pt_speech-bubble-sub{@include vw-mo(margin-top, 3); @include vw-mo(font-size, 18);}
+                &:before {content: ''; position: absolute; left: 50%; bottom: 0; transform: translate(-50%,100%); display: block; width: 0; height: 0; @include vw-mo(border-left, 6 solid transparent); @include vw-mo(border-right, 6 solid transparent); @include vw-mo(border-top, 10 solid #D8EDFF);}
+
+                &__small {@include vw-mo(font-size, 18);}
+            }
+            .pt_icon {display: inline-block;
+
+                &--star {@include vw-mo(width, 24); @include vw-mo(height, 24); @include vw-mo(margin-right, 10); background: no-repeat center / cover;}
+                &--shopbag {@include vw-mo(width, 27); @include vw-mo(height, 31); @include vw-mo(margin-left, 10); background: no-repeat center / cover;}
+                &--shopbag-blue {@include vw-mo(width, 27); @include vw-mo(height, 31); background: no-repeat center / cover;}
+                &--check-blue {@include vw-mo(width, 30); @include vw-mo(height, 30); background: no-repeat center / cover;}
+                &--tradein {@include vw-mo(width, 31); @include vw-mo(height, 31); background: no-repeat center / cover;}
+                &--yes {@include vw-mo(width, 61); @include vw-mo(height, 37); @include vw-mo(margin-right, 10); background: no-repeat center / cover;}
+                &--no {@include vw-mo(width, 38); @include vw-mo(height, 40); @include vw-mo(margin-right, 10); background: no-repeat center / cover;}
+            }
+
+            .pt_add-bg.pt_icon {
+                &--star {background-image: url('../../../is/images/unpack_buying/gd_ico_star_pc.png')}
+            }
+            
+            .pt_color-chip {@include vw-mo(width, 20); @include vw-mo(height, 20); @include vw-mo(margin-right, 4); border-radius: 50%;}
+            .pt_notice {@include vw-mo(margin-top, 57);
+
+                &__item {@include vw-mo(margin-top, 10); @include vw-mo(padding-left, 18); @include vw-mo(font-size, 24); @include vw-mo(line-height, 40); letter-spacing: -0.05em; @include vw-mo(text-indent, -18); color: #888;}
+                &__item:first-child {margin-top: 0;}
+            }
+            .pt_prd-slide__control {z-index: 1; position: absolute; @include vw-mo(bottom, 0); left: 50%; transform: translateX(-50%); display: flex; align-items: center; @include vw-mo(gap, 12);}
+            .pt_prd-slide__pagi {display: flex; @include vw-mo(gap, 12);
+
+                .swiper-pagination-bullet {@include vw-mo(width, 14); @include vw-mo(height, 14); @include vw-mo(border, 2 solid #000); background-color: transparent; opacity: 1;}
+                .swiper-pagination-bullet-active {background-color: #000;}
+            }
+
+
+            // .swiper-button-prev, .swiper-button-next {display: none;}
+            .swiper-button-prev, .swiper-button-next {display: block; @include vw-mo(width, 18); @include vw-mo(height, 33); @include vw-mo(margin, 0); background-repeat: no-repeat; background-position: center; background-size: contain; transform: translateY(-50%);}
+            .swiper-button-prev:focus, .swiper-button-next:focus {outline:#2189ff dashed 2px!important;}
+            .swiper-button-prev {
+                @include vw-mo(left, 13); 
+                
+                &.pt_add-bg {background-image: url('../../../is/images/unpack_buying/gd_btn_prev_pc.png');}
+                &.pt_add-bg.pt_dark {background-image: url('../../../is/images/unpack_buying/gd_btn_prev_white_pc.png');}
+            }
+            .swiper-button-next {
+                @include vw-mo(right, 13); 
+                
+                &.pt_add-bg {background-image: url('../../../is/images/unpack_buying/gd_btn_next_pc.png');}
+                &.pt_add-bg.pt_dark {background-image: url('../../../is/images/unpack_buying/gd_btn_next_white_pc.png');}
+            }
+            .swiper-button-prev:after, .swiper-button-next:after {display: none;}
+        }
+        
+        .pt_btn_wrap{
+            z-index:1; position: relative; left:50%; transform:translateX(-50%); display:inline-block; width:100%; @include vw-mo(padding-top,43); background-color: #fff; text-align:center;
+            &.m_hide{display: none !important;}
+            &.m_show{display: inline-block !important;}
+            .pt_prd-slide__anchor {display:inline-block; @include vw-mo(font-size, 24); margin-bottom:0; padding-bottom:0; font-weight: 400;}
+            .pt_prd-slide__anchor::after {top: 15%; border-right:1px solid #000000; border-bottom:1px solid #000000;}
+        }
+        
+        .pt_tadein { position: relative; display: block; @include vw-mo(margin-bottom, 24);
+            &:last-child {@include vw-mo(margin-bottom, 70);}
+
+            &__text { position: absolute; top: 50%; transform:  translateY(-50%); @include vw-mo(left, 30); z-index: 2; }
+            &__title { @include vw-mo(font-size, 28); @include vw-mo(line-height, 35); }
+            &__link { display: inline-flex; @include vw-mo(margin-top, 5); align-items: center; @include vw-mo(font-size, 22); @include vw-mo(line-height, 38); letter-spacing: -0.05em; @include vw-mo(border-bottom, 1 solid #000); font-weight: 700; 
+                &::after { content: ""; display: block; @include vw-mo(width, 8); @include vw-mo(height, 16); @include vw-mo(margin-top, -3); background: url(../../../is/images/unpack_buying/gd_ico_arrow_right.png) no-repeat center/contain; @include vw-mo(margin-left, 8) }
+            }
+            &__img { width: 100%; @include vw-mo(height, 150); }
+
+        }
+
+        .pt_banner { position: relative; width: 100%; @include vw-mo(height, 164); @include vw-mo(border-radius, 10); overflow: hidden; 
+            & + .pt_banner { @include vw-mo(margin-top, 24); }
+            &__text { z-index: 2; position: absolute; top: 50%; transform: translateY(-50%); @include vw-mo(left, 30); }
+            &__title { @include vw-mo(font-size, 24); @include vw-mo(line-height, 28); letter-spacing: -.025em; }
+            &__desc { @include vw-mo(margin-top, 6); color: #888; @include vw-mo(font-size, 16); }
+            &__more { @include vw-mo(margin-top, 6); letter-spacing: -.025em;
+
+                &.type_anchor { @include vw-mo(font-size, 20); 
+                    &::after { @include vw-mo(margin, -4 2 -4.5 6); transform: rotate(315deg); }
+                }
+                &.type_round { @include vw-mo(height, 46); @include vw-mo(padding, 0 17); @include vw-mo(font-size, 20); }
+            }
+            &__disc { @include vw-mo(margin-top, 6);
+                li { @include vw-mo(font-size, 16); letter-spacing: -.025em; @include vw-mo(line-height, 20); color: #666666; }
+            }
+            &__img { position: absolute; top: 0; left: 0; width: 100%; height: auto; }
+
+            // kv 사진 아래 추가된 9% 할인 베너
+            &__dis-text{z-index: 2; position: absolute; top:50%; transform: translateY(-50%); @include vw-mo(left, 34); }
+            &__dis-sub{@include vw-mo(margin-bottom, 6); @include vw-mo(font-size, 22); font-weight: 700; @include vw-mo(line-height, 28); letter-spacing: -.05em;}
+            &__dis-title{
+                @include vw-mo(font-size, 30); font-weight: 700; @include vw-mo(line-height, 40); letter-spacing: -.05em;
+                .pt_blue_txt{color: #3355FF;}
+            }
+            &__dis-disc{@include vw-mo(font-size, 16); @include vw-mo(line-height, 20); color: #666666;}
+            .pt_blue {color:#0045FF;}
+        }
+        .pt_banner[data-role="btnModal"]:hover{cursor: pointer;}
+    }
+    
+    // 바잉툴 내 인치 변환 팝업
+    .popup_content{display:none;z-index:101; @include vw-mo(width,600);@include vw-mo(border-radius,15);position:absolute;top:0;left:50%;padding:10px;background-color:#fff;background-size:100%; transform:translateX(-50%);
+        .pt_pop-img {@include vw-mo(height, 666);}
+        .btn_close {position: absolute; @include vw-mo(bottom, -100); left: 50%; transform: translateX(-50%); display: block; @include vw-mo(width, 65); @include vw-mo(height, 65); background: url(../../is/images/unpack_buying/buying/mtv_close_mo.png) no-repeat; background-size: contain;}
+    }
+
+    #pod_modal{display:none;z-index:104;@include vw-mo(width,640);position:absolute;top:0;left:50%;padding:0px; transform:translateX(-50%); background-size:100%; text-align: center;}
+    #pod_modal.pt_mosize{@include vw-mo(width,500);}
+    #pod_modal video {width:100%; @include vw-mo(margin-bottom,0);}
+    #pod_modal [data-role="caption"] {@include vw-mo(max-height, 100); @include vw-mo(padding, 20); background-color: #fff; text-align: left; line-height: 1.5; @include vw-mo(font-size,16);}
+    #pod_modal .btn_close{position: absolute; left: 50%; @include vw-mo(bottom, -50); transform: translate(-50%, 100%); border-radius: 100%; display: inline-block; @include vw-mo(width, 61);@include vw-mo(height, 61); border: none;
+        img{@include vw-mo(width, 61);@include vw-mo(height, 61);}
+    }
+
+}
+
+// PC
+@media screen and (min-width: 769px) {
+	// body.pt_no_scroll {position: fixed; overflow-y: scroll !important;}
+
+    // zoom modal
+    .pswp--zoom-allowed .pswp__button--zoom {display: none;}
+
+    .grande {
+
+
+        #pod_modal{display:none; z-index:104; @include vw-pc(width,1000); position:absolute; top:0; left:50%; background-size:100%; transform:translateX(-50%); text-align: center; background-color: #fff;}
+        #pod_modal video {width:100%; @include vw-pc(margin-bottom,0);}
+        #pod_modal [data-role="caption"] {@include vw-pc(max-height,100); @include vw-pc(padding, 20); background-color: #fff; text-align: left; line-height: 1.5; @include vw-pc(font-size,16);}
+        #pod_modal .btn_close{
+            display: block; position: absolute; left: 50%; @include vw-pc(bottom, -50); transform: translate(-50%, 100%); @include vw-pc(width, 61);  @include vw-pc(height, 61); border-radius: 100%; display: inline-block;
+            img{@include vw-pc(width, 61);@include vw-pc(height, 61);}
+        }
+    
+        .sec_buying_unpack {
+            @include vw-pc(padding-top, 47);
+
+            input[type=radio]:checked + label::before {@include vw-pc(border, 2 solid #1E81F8); @include vw-pc(border-radius, 10);}
+            .pt_buying_title {margin-bottom:0; @include vw-pc(font-size,42); font-weight:700; @include vw-pc(line-height,52); text-align:center;}
+            .pt_buying_unpack {
+                display: flex; @include vw-pc(gap, 50); @include vw-pc(width, 1260); margin: 0 auto; @include vw-pc(padding, 8 0 46);
+
+                //스티키
+                [data-buying-sticky-thumnail] {
+                    &.fixed {position: static; @include vw-pc(width, 784);}
+                    &.pt_move {transform: translateY(-100%);}
+                    &.opened {
+                        z-index: 25;
+                    
+                        .pt_sticky {z-index: 25;}
+                        .pt_btn--open::after {display: none;}
+                    }
+                    
+                }
+
+                .pt_prd-slide {
+                    position:sticky; @include vw-pc(top,62); @include vw-pc(width, 784); @include vw-pc(height,651); @include vw-mo(padding-bottom, 0); margin-bottom: 0;
+
+                    .swiper-container .swiper-wrapper .swiper-slide {@include vw-pc(height,607);}
+                    .swiper-slide-active{@include vw-pc(width, 745);}
+                    .pt_pod-txt {@include vw-pc(height,95); @include vw-pc(padding-top,47); @include vw-pc(font-size,26); line-height:1; background-color:transparent;}
+                    .pt_bg {position: absolute; z-index: 103; top:auto; bottom:0; left: 0; width: 100%; @include vw-pc(height,512); background: rgba(0,0,0,.4); display: block; @include vw-pc(border-radius,20);}
+                    .pt_bg.pt_video_off {display:none;}
+                    .pt_btn_play {display: block; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 100%; height: 100%; background: url('../../is/images/gd_pod_btn_play_icon.png') no-repeat; @include vw-pc(background-size, 124  124); @include vw-pc(background-position, center); z-index: 2;}
+                    // .img_box__bubble{position: absolute; @include vw-pc(top, 0); @include vw-pc(left,395); @include vw-pc(width, 241); @include vw-pc(height, 44);}
+                    .pt_bubble{z-index:1; position:absolute; @include vw-pc(left,244); @include vw-pc(top,41); @include vw-pc(width,81); @include vw-pc(height,35); @include vw-pc(border-radius,16); @include vw-pc(font-size, 22); @include vw-pc(line-height,35);@include vw-pc(letter-spacing,-0.8);}
+                }
+
+
+                .pt_prd-select {@include vw-pc(padding,38 2 2);}
+                .pt_info {display:inline-flex; @include vw-pc(margin,0 0 12);
+
+                    &__desc {justify-content:flex-start; @include vw-pc(font-size, 17); @include vw-pc(line-height, 24); @include vw-pc(letter-spacing, -1.19);
+    
+                        .pt_icon--shopbag-blue {@include vw-pc(margin-right, 8);}
+                        .pt_icon--check-blue {@include vw-pc(margin-right, 6);}
+                    }
+                    &__tag {@include vw-pc(width, 70); @include vw-pc(height, 20); @include vw-pc(margin-left, 6); @include vw-pc(font-size, 14); @include vw-pc(border-radius, 4);}
+
+                    .pt_btn {
+                        &--coupon {width:auto; @include vw-pc(height,33); @include vw-pc(margin-left,10); @include vw-pc(padding,0 12); @include vw-pc(font-size,14); @include vw-pc(letter-spacing,-.7);}
+                        &::after{content: ''; display: block; @include vw-pc(margin-left, 4); @include vw-pc(width, 12); @include vw-pc(height, 13);  background: url('../../is/images/unpack_buying/gd_coupon_download_pc.png') no-repeat center; background-size: contain;}
+                    }
+                }
+                .pt_prd__title {
+                    @include vw-pc(gap,2); @include vw-pc(width,373); @include vw-pc(margin-bottom,40);
+
+                    &--name {@include vw-pc(font-size,24); @include vw-pc(line-height,32);}
+                    &--sku {@include vw-pc(font-size,20); @include vw-pc(line-height,25);}
+                }
+                .pt_option {@include vw-pc(margin-top, 0);
+                    
+                    &__box {
+                        @include vw-pc(margin-bottom, 24);
+                        &-01{
+                            .pt_option__title-box{@include vw-pc(margin-bottom, 10);}
+                        }
+                        &-02{
+                            @include vw-pc(margin-bottom, 34);
+                        }
+                    }
+                    &__title-box {
+                        @include vw-pc(margin-bottom, 10);
+                    
+                        &--model {@include vw-pc(margin-bottom, 9);}
+                    }
+                    &__title {@include vw-pc(font-size, 18); @include vw-pc(line-height, 23);
+
+                    .pt_inch-img {@include vw-pc(width, 36); @include vw-pc(height, 27); background: url(../../is/images/unpack_buying/buying/mtv_inch_cm_pc.png) no-repeat; @include vw-pc(margin-left, 10);}
+
+                        .pt_icon--tradein {@include vw-pc(margin-left, 10);}
+                        .pt_highlight {@include vw-pc(margin-left, 10);}
+                    }
+                    &__dimm {
+                        z-index: 9; position: absolute; top : 0; left: 0; display: flex; align-items: center; justify-content: center; width: 100%; height: 100%; background-color: #fff; border: 1px solid #000; @include vw-pc(border-radius, 10); font-weight: 700; color: #1E81F8; @include vw-pc(font-size, 16); @include vw-pc(line-height, 20); text-align: center;
+                    }
+                    &__list {@include vw-pc(gap, 14);
+        
+                        &--grid01 {
+                            .pt_option__item {@include vw-pc(width, 106); @include vw-pc(height, 84);}
+                        }
+                        &--grid02 {
+                            .pt_option__item {@include vw-pc(width, 180); @include vw-pc(height, 76);}
+                        }
+                        &--grid03 {
+                            .pt_option__item{@include vw-pc(width, 115); @include vw-pc(height, 100);}
+                            // .pt_option__img{@include vw-pc(width, 92); @include vw-pc(height,72);}
+                        }
+                        &--grid04 {
+                            .pt_option__item {@include vw-pc(width, 200); @include vw-pc(height, 86);}
+                        }
+                        &--grid05 {
+                            .pt_option__item {@include vw-pc(width, 200); @include vw-pc(height, 86);}
+                        }
+                        &--gridcolor {
+                            @include vw-pc(gap, 34); @include vw-pc(padding-left,6); 
+                            .pt_option__item {@include vw-pc(width, 26);}
+                            .pt_option__label {@include vw-pc(outline-offset,3);}
+                        }
+                    }
+                    &__item {
+                        &--model {
+                            .pt_option__label {@include vw-pc(height, 76);}
+                            .pt_option__desc {@include vw-pc(font-size,16); @include vw-pc(line-height, 26);}
+                            .pt_option__desc span {@include vw-pc(font-size,16); @include vw-pc(line-height,21);}
+                        }
+                        // &--model::before{content: '티빙 6개월'; @include vw-pc(top, -25); @include vw-pc(width, 82); @include vw-pc(height, 35); background: url(../../is/images/unpack_buying/buying/mtv_buying_tving_tag_pc.png) no-repeat center/contain; background-size: 100% 100%;}
+                        &--card {
+                            @include vw-pc(width,106); @include vw-pc(height, 100);
+
+                            .pt_option__desc {@include vw-pc(bottom, 3); @include vw-pc(font-size, 12); font-weight: 700; @include vw-pc(line-height, 16);}
+                        }
+                        &--color {
+                            display: flex; align-items: center; justify-content: center;
+    
+                            .pt_option__label {@include vw-pc(margin-bottom,13);justify-content: center; align-items: center; @include vw-pc(font-size, 12); text-align: center;}
+                            .pt_color-chip {display: block; @include vw-pc(margin, 0 auto); @include vw-pc(width, 26); @include vw-pc(height, 26); @include vw-pc(border,1 solid #ddd); border-radius: 50%;}
+                            .pt_option__desc {@include vw-pc(font-size, 14); @include vw-pc(line-height, 18);}
+                            input[type=radio] + label::before {display: none;}
+                            input[type=radio]:checked + label {
+                                .pt_color-chip {
+                                    &::before {@include vw-pc(top,-6); @include vw-pc(left,-6); @include vw-pc(width,36); @include vw-pc(height,36); @include vw-pc(border,2 solid #1E81F8);}
+                                }
+                            }
+                        }
+                        &--text {@include vw-pc(width, 200); @include vw-pc(height, 86);
+
+                            .pt_option__desc {@include vw-pc(font-size, 18);}
+                        }
+                        &--storage {@include vw-pc(width, 200); @include vw-pc(height, 86);
+
+                            .pt_option__desc {@include vw-pc(font-size, 18);}
+
+                            .pt_option__img {@include vw-pc(width, 72);}
+                            .pt_option__double {@include vw-pc(font-size, 15);}
+                            .pt_option__upgrade {@include vw-pc(font-size, 14); @include vw-pc(line-height, 20);}
+                            .pt_option__arrow {
+                                
+                                &::after {@include vw-pc(width, 16); @include vw-pc(height, 16); @include vw-pc(margin, 0 5);}
+                            }
+                        }
+                        &--etc {
+                            .pt_option__label {@include vw-pc(padding, 0); @include vw-pc(height, 86);
+
+                                &::after {@include vw-pc(left, 20); @include vw-pc(width, 18); @include vw-pc(height, 18);}
+                            }
+                            .pt_option__desc {@include vw-pc(font-size, 18); @include vw-pc(line-height, 22);}
+                            .pt_option__notice {@include vw-pc(font-size, 14); @include vw-pc(line-height, 17);
+
+                                .pt_icon--no {@include vw-pc(margin-right, 5);}
+                            }
+                        }
+                        // &--add::before{content: ''; position: absolute; @include vw-pc(top, -17); @include vw-pc(width, 174); @include vw-pc(height, 35); background: url(../../is/images/unpack_buying/buying/mtv_buying_samcare+_tag_pc.png) no-repeat center/contain; background-size: 100% 100%;}
+
+
+                    }
+                    &__label {@include vw-pc(border-radius, 10);}
+                    &__info {@include vw-pc(font-size, 14);}
+                    &__btn {
+                        &--plus {@include vw-pc(width, 14); @include vw-pc(height, 14); @include vw-pc(margin-left, 5);}
+                    }
+                    &__tooltip {
+                        @include vw-pc(bottom, -15); @include vw-pc(width, 124); @include vw-pc(height, 22); @include vw-pc(border-radius, 4); @include vw-pc(font-size, 12);
+                    
+                        &::before {@include vw-pc(width, 4); @include vw-pc(height, 4);}
+                    }
+                    &__samcare--desc{@include vw-pc(margin-top, 15); @include vw-pc(font-size, 16); @include vw-pc(line-height, 24);}
+                    &__samcare--tag{@include vw-pc(top, -18); @include vw-pc(width, 174); @include vw-pc(height, 31); @include vw-pc(border-radius, 4); @include vw-pc(font-size, 15); @include vw-pc(line-height, 31);}
+                    &__samcare--tag::after{content: '';  @include vw-pc(bottom, -3); @include vw-pc(border-top, 4 solid transparent); @include vw-pc(border-bottom, 4 solid #1E81F8); @include vw-pc(border-left, 4 solid #1E81F8); @include vw-pc(border-right, 4 solid transparent);}
+                }
+
+                .pt_price_box {
+                    @include vw-pc(width,373); @include vw-pc(margin-bottom,20);
+
+                    .pt_benefit {
+                        @include vw-pc(margin-bottom,20); @include vw-pc(padding,16 25); @include vw-pc(border-radius,10); background-color:#F7F7F7;
+
+                        &--tit {@include vw-pc(margin-bottom,11); @include vw-pc(font-size,18); font-weight:700; @include vw-pc(line-height,23); @include vw-pc(letter-spacing,-.5);}
+                        &__txt-box {}
+                        &__item {
+                            display:flex; justify-content:space-between; @include vw-pc(font-size,18); @include vw-pc(line-height,26); @include vw-pc(letter-spacing,-.25);
+
+                            &--txt {
+                                position:relative; @include vw-pc(padding-left,10);
+
+                                &::before {content:""; position:absolute; left:0; @include vw-pc(top,9); @include vw-pc(width,4); @include vw-pc(height,4); border-radius:50%; background-color:#000;}
+                            }
+                            &--price {}
+                        }
+                    }
+                    .pt_sale {
+                        &-box {
+                            display:flex; justify-content:space-between; @include vw-pc(font-size,20); font-weight:700; @include vw-pc(line-height,36);
+                            &--price{display: flex;}
+                        }
+                        &--blue {@include vw-pc(font-size,22); @include vw-pc(line-height,36); color:#2B82E2;}
+                    }
+                }
+
+                .pt_btn {
+                    display:flex; align-items:center; justify-content:center; @include vw-pc(width,334); @include vw-pc(height,43); @include vw-pc(font-size,18); font-weight:700; @include vw-pc(border-radius,22); color:#fff;
+
+                    &-box {display:flex; justify-content: center; @include vw-pc(margin-top, 20);}
+                    &--coupon {
+                        @include vw-pc(margin-left, 10); @include vw-pc(width,108); @include vw-pc(height,33); @include vw-pc(font-size,14); background-color:#278DFB;
+                        &::after{content: ''; display: block; @include vw-pc(margin-left, 10); @include vw-pc(width, 12); @include vw-pc(height, 13);  background: url('../../is/images/unpack_buying/gd_coupon_download_pc.png') no-repeat center; background-size: contain;}
+                    }
+                    &--buy {background-color:#000;}
+                    &--disabled{background-color:#ddd; pointer-events: none;}
+                }
+
+                .pt_speech-bubble {@include vw-pc(top, -30); @include vw-pc(width, 120); @include vw-pc(height,37); @include vw-pc(border-radius, 4); @include vw-pc(font-size, 14);
+                    .pt_speech-bubble-sub{@include vw-pc(margin-top, 3); @include vw-pc(font-size, 10);}
+    
+                    &:before {@include vw-pc(border-left-width, 4); @include vw-pc(border-right-width, 4); @include vw-pc(border-top-width, 6);}
+
+                    &__small {@include vw-pc(font-size, 10);}
+                }
+                .pt_icon {
+                    &--star {@include vw-pc(width, 18); @include vw-pc(height, 18); @include vw-pc(margin-right, 7);}
+                    &--shopbag {@include vw-pc(width, 16); @include vw-pc(height, 19); @include vw-pc(margin-left, 7);}
+                    &--shopbag-blue {@include vw-pc(width, 16); @include vw-pc(height, 19);}
+                    &--check-blue {@include vw-pc(width, 18); @include vw-pc(height, 18);}
+                    &--tradein {@include vw-pc(width, 16); @include vw-pc(height, 13); @include vw-pc(margin-left, 10);}
+                    &--yes {@include vw-pc(width, 44); @include vw-pc(height, 28); @include vw-pc(margin-right, 5);}
+                    &--no {@include vw-pc(width, 21); @include vw-pc(height, 22); @include vw-pc(margin-right, 5);}
+                }
+                .pt_add-bg.pt_icon {
+                    &--star {background-image: url('../../../is/images/unpack_buying/gd_ico_star_pc.png')}
+                }
+                .pt_color-chip {@include vw-pc(width, 12); @include vw-pc(height, 12); @include vw-pc(margin-right, 4);}
+                .pt_notice {@include vw-pc(margin-top, 29);
+    
+                    &__item {margin-top: 0; @include vw-pc(padding-left, 13); @include vw-pc(font-size, 14); @include vw-pc(line-height, 26); @include vw-pc(letter-spacing, -.25); @include vw-pc(text-indent, -13);}
+                }
+                .pt_prd-slide__control {@include vw-pc(bottom,-37); @include vw-pc(left,25); @include vw-pc(gap, 8); transform:none;}
+                .pt_prd-slide__pagi {@include vw-pc(gap, 20);
+
+                    .swiper-pagination-bullet {@include vw-pc(width, 130); @include vw-pc(height, 3); border:none; border-radius:0; background-color:#707070;}
+                    .swiper-pagination-bullet.swiper-pagination-bullet-active {background-color:#000;}
+                }
+
+                .swiper-button-prev, .swiper-button-next {display: block; @include vw-pc(width, 18); @include vw-pc(height, 33); @include vw-pc(margin, 0); background-repeat: no-repeat; background-position: center; background-size: contain; transform: translateY(-50%);}
+                .swiper-button-prev:focus, .swiper-button-next:focus {outline:#2189ff dashed 2px!important;}
+                .swiper-button-prev {
+                    @include vw-pc(left, 13); 
+                    
+                    &.pt_add-bg {background-image: url('../../../is/images/unpack_buying/gd_btn_prev_pc.png');}
+                    &.pt_add-bg.pt_dark {background-image: url('../../../is/images/unpack_buying/gd_btn_prev_white_pc.png');}
+                }
+                .swiper-button-next {
+                    @include vw-pc(right, 13); 
+                    
+                    &.pt_add-bg {background-image: url('../../../is/images/unpack_buying/gd_btn_next_pc.png');}
+                    &.pt_add-bg.pt_dark {background-image: url('../../../is/images/unpack_buying/gd_btn_next_white_pc.png');}
+                }
+                .swiper-button-prev:after, .swiper-button-next:after {display: none;}
+            }
+
+            // .pt_info {
+            //     &__desc {@include vw-pc(width,784); @include vw-pc(margin,29 auto 0); @include vw-pc(font-size,16); font-weight:700; @include vw-pc(line-height,24);}
+            // }
+            
+            .pt_btn_wrap{
+                @include vw-pc(padding-top,24);
+                &.m_hide{display: inline-block !important;}
+                &.m_show{display: none !important;}
+
+                .pt_prd-slide__anchor {@include vw-pc(margin-bottom, 0); @include vw-pc(padding-bottom, 0);  @include vw-pc(font-size, 18); border-bottom: 1px solid #000; font-weight: 400;}
+                .pt_prd-slide__anchor::after {top: 15%; border-right:1px solid #000000; border-bottom:1px solid #000000;}
+            }
+            .pt_tadein { @include vw-pc(margin-bottom, 20); margin-top: 0;
+                &:last-child {@include vw-pc(margin-bottom, 35);}
+
+                &__text { @include vw-pc(left, 20); }
+                &__title { @include vw-pc(font-size, 18); @include vw-pc(line-height, 23); }
+                &__link { @include vw-pc(margin-top, 8); @include vw-pc(font-size, 18); @include vw-pc(line-height, 24); @include vw-pc(border-bottom, 1 solid #000);
+                    &::after { @include vw-pc(width, 6); @include vw-pc(height, 12); @include vw-pc(margin-top, 0); @include vw-pc(margin-left, 8) }
+                }
+                &__img { width: 100%; @include vw-pc(height, 100); }
+            }
+            .pt_banner { @include vw-pc(margin-top, 30); @include vw-pc(height, 110); @include vw-pc(border-radius, 10);
+                & + .pt_banner { @include vw-pc(margin-top, 20); }
+                &__text { @include vw-pc(left, 24); }
+                &__title { @include vw-pc(font-size, 15); @include vw-pc(line-height, 18); }
+                &__desc { @include vw-pc(margin-top, 6); @include vw-pc(font-size, 10); }
+                &__more { @include vw-pc(margin-top, 7);
+                    &.type_anchor { @include vw-pc(font-size, 12); 
+                        &::after { @include vw-pc(width, 4); @include vw-pc(height, 4); @include vw-pc(margin, 0 2 0 2); @include vw-pc(border-width, 1); }
+                    }
+                    &.type_round { @include vw-pc(height, 26); @include vw-pc(padding, 0 18); @include vw-pc(font-size, 10); }
+                }
+                &__disc { @include vw-pc(margin-top, 5);
+                    li {@include vw-pc(font-size, 10); @include vw-pc(line-height, 12);}
+                }
+            }
+        }
+
+        // 바잉툴 내 인치 변환 팝업
+        .popup_content{@include vw-pc(width, 502);
+            .pt_pop-img {@include vw-pc(height, 443);}
+            .btn_close {@include vw-pc(bottom, -60); @include vw-pc(width, 40); @include vw-pc(height, 40); background: url(../../is/images/unpack_buying/buying/mtv_close_pc.png) no-repeat;}
+        }
+    }
+}
+// zoom modal
+@media screen and (min-width: 900px) {
+
+    // zoom modal
+    .pswp__img {@include vw-pc(border-radius, 20);}
+    .pswp__top-bar, .pswp__bullets-indicator {width: 800px; transform: translate(-50%); transition: 0.3s;}
+    .pswp__top-bar {top: calc(50% - 340px); left: 50%; }
+    .pswp__bullets-indicator { bottom: calc(50% - 340px); height: 60px; }
+
+    .pswp--zoomed-in {
+        .pswp__top-bar, .pswp__bullets-indicator {width: 1040px;}
+        .pswp__top-bar {top: calc(50% - 442px);}
+        .pswp__bullets-indicator { bottom: calc(50% - 442px); }
+    }
+
+    .pswp__button--arrow--prev {left: 50%; transform: translateX(-100%); margin-left: -400px;}
+    .pswp__button--arrow--next {left: 50%; margin-left: 400px;}
+
+}

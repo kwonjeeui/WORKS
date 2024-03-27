@@ -1,0 +1,148 @@
+@import '../../../../../../scss_global/scss-common2';
+@import 'bs_reset';
+@import 'samsung_card';
+@import 'banner';
+@import 'banner_card';
+@import 'card_benefit';
+@import 'point';
+@import 'notice';
+
+body.scroll-up .benefitzone .sec_nav .pt_nav_list.fixed {top: 80px;}
+.benefitzone {
+    // s: section common
+    section {
+
+        .pt_common_txt_box {
+            text-align: center;
+            .pt_subject {display: flex; justify-content: center; align-items: center; position: relative; @include vw-pc(width, 182); @include vw-pc(height, 49); @include vw-pc(margin, 0 auto 40); background: #000; color: #fff; @include vw-pc(font-size, 30); font-weight: 700; letter-spacing: -0.025em; @include vw-pc(border-radius, 6);}
+            .pt_subject::after {display: block; content: ""; position: absolute; @include vw-pc(bottom, -10); left: 50%; transform: translateX(-50%) rotate(135deg); background-color: #000; @include vw-pc(width, 20); @include vw-pc(height, 20); @include vw-pc(border-bottom-left-radius, 10);}
+            .pt_sub_title {display: block; @include vw-pc(margin-bottom, 10); @include vw-pc(font-size, 24); @include vw-pc(line-height, 24); font-weight: 700; letter-spacing: -0.025em;}
+            .pt_title {@include vw-pc(font-size, 42); @include vw-pc(line-height, 52); font-weight: 700; letter-spacing: -0.025em;}
+        }
+        .pt_common_notice {
+            text-align: center;
+            .pt_notice_btn {position:relative; @include vw-pc(padding-right, 20); @include vw-pc(font-size, 18); font-weight: 700; letter-spacing: -0.025em;}
+            .pt_notice_btn::after {display: block; content: ''; position:absolute; @include vw-pc(top, 2); @include vw-pc(right, 2); @include vw-pc(right, 2); transform: rotate(45deg); @include vw-pc(width, 8); @include vw-pc(height, 8); @include vw-pc(border-bottom, 1 solid #000); @include vw-pc(border-right, 1 solid #000);}
+            .pt_notice_btn.active::after {transform: rotate(-45deg);}
+        }
+    }
+    // e: section common
+
+
+    // .sec_banner{display: flex; align-items: center; justify-content: center; flex-direction: column; text-align: center;
+    //     .pt_join_btn {@include vw-pc(width, 180); @include vw-pc(height, 48); @include vw-pc(font-size, 18); @include vw-pc(line-height, 32); letter-spacing: -0.05em; @include vw-pc(border-radius, 24);}
+    // }
+
+
+    .sec_kv {
+        @include vw-max(height,327);
+        .img_box img {@include vw-max(height,327);}
+        .pt_txt_box {position:absolute; @include vw-max(top, 50); left:50%; transform: translateX(-50%); text-align: center;
+            .pt_title {@include vw-max(margin-bottom, 20); @include vw-max(font-size, 48); letter-spacing: -0.05em;}
+            .pt_date {@include vw-max(margin-bottom, 18); @include vw-max(font-size, 20); @include vw-max(line-height, 32); font-weight: 700;}
+            .pt_date .ko {@include vw-max(font-size, 22); vertical-align: middle;}
+            .pt_des {@include vw-max(margin-bottom, 25); @include vw-max(font-size, 20); line-height: 1.5; letter-spacing: -0.05em;}
+        }
+    }
+
+    // .sec_banner {@include vw-pc(height, 500); background: linear-gradient(#f6f7f1, #efdfe1);
+    //     .pt_txt_box { 
+    //         .pt_txt {@include vw-pc(margin-bottom, 35); @include vw-pc(font-size, 42); @include vw-pc(line-height, 52); letter-spacing: -0.05em;
+    //             strong {vertical-align: baseline;}
+    //         }
+    //     }
+    // }
+
+    .sec_nav {z-index: 10;
+        .pt_nav_list { display: table; table-layout: fixed; position: absolute; @include vw-pc(top, -45); left: 50%; transform: translateX(-50%); transition: top 0.5s; @include vw-pc(width, 1200); margin: 0 auto; @include vw-pc(border-radius, 20);background-color: #fff; @include vw-pc(box-shadow, 20 20 15 0 rgba(0,0,0,0.06)); z-index: 10;}
+        .pt_nav_list.fixed { position: fixed; top: 0; left: 50%; transform: translateX(-50%);max-width: 100%;}
+        .pt_nav_list > li:not(.on) + li:not(.on) {@include vw-pc(border-left, 1 solid #f4f4f3);}
+        .pt_nav_list > li {display: table-cell;
+            > a {width: 100%; @include vw-pc(height, 90); @include vw-pc(font-size, 20);}
+            > a.btn_common{border-bottom: 0;}
+            > a::before {display: block; content: ""; @include vw-pc(width, 39); @include vw-pc(height, 40); @include vw-pc(margin-right, 12); background-size: contain; background-repeat: no-repeat;}
+            &:nth-child(1) > a::before {background-image: url("../../is/images/bfz_nav_icon01_pc.png");}
+            // &:nth-child(2) > a::before {background-image: url("../../is/images/bfz_nav_icon02_pc.png");}
+            &:nth-child(2) > a::before {background-image: url("../../is/images/bfz_nav_icon02_pc.png");}
+            &:nth-child(3) > a::before {@include vw-pc(width, 45); background-image: url("../../is/images/bfz_nav_icon03_pc.png");}
+            // &:nth-child(4) > a::before {background-image: url("../../is/images/bfz_nav_icon05_pc_v3.png");}
+            // &:nth-child(5) > a::before {background-image: url("../../is/images/bfz_nav_icon06_pc.png");}
+
+            &.on {position: relative; background-color: #000; color: #fff; @include vw-pc(border-radius, 20);}
+            &.on > a::before {filter: invert(1);}
+            &.on::after {display: block; content: ""; position: absolute; @include vw-pc(bottom, -10); left: 50%; transform: translateX(-50%) rotate(135deg); background-color: #000; @include vw-pc(width, 20); @include vw-pc(height, 20);}
+        }
+    }
+
+}
+
+@media screen and (max-width: 1440px) {
+    body.scroll-up .benefitzone .sec_nav .pt_nav_list.fixed {top: 56px;}
+}
+
+@media screen and (max-width: 768px) {
+    body.scroll-up .benefitzone .sec_nav .pt_nav_list.fixed {top: 56px;}
+    .benefitzone { overflow: hidden;
+        // s: section common
+        section {
+            .pt_common_txt_box {
+                .pt_subject {@include vw-mo(width, 170); @include vw-mo(height, 46); @include vw-mo(margin, 0 auto 25); @include vw-mo(font-size, 28); @include vw-mo(line-height, 31); letter-spacing: -0.025em; @include vw-mo(border-radius, 6);}
+                .pt_subject::after {@include vw-mo(bottom, -10); @include vw-mo(width, 20); @include vw-mo(height, 20); @include vw-mo(border-bottom-left-radius, 10);}
+                .pt_sub_title {@include vw-mo(margin-bottom, 20); @include vw-mo(font-size, 28); @include vw-mo(line-height, 28); @include vw-mo(letter-spacing, -.7);}
+                .pt_title {@include vw-mo(font-size, 50); @include vw-mo(line-height, 60); letter-spacing: -0.025em;}
+            }
+            .pt_common_notice {
+                .pt_notice_btn {@include vw-mo(padding-right, 18); @include vw-mo(font-size, 24); letter-spacing: -0.025em;}
+                .pt_notice_btn::after {@include vw-mo(top, 6); @include vw-mo(right, 2); @include vw-mo(right, 2); transform: rotate(45deg); @include vw-mo(width, 8); @include vw-mo(height, 8); @include vw-mo(border-bottom, 1 solid #000); @include vw-mo(border-right, 1 solid #000);}
+                .pt_notice_btn.active::after {transform: rotate(-45deg);}
+            }
+        }
+        // e: section common
+        
+
+        .sec_banner{
+            .pt_join_btn {@include vw-mo(width, 280); @include vw-mo(height, 70); @include vw-mo(font-size, 30); @include vw-mo(line-height, 70); letter-spacing: -0.05em; @include vw-mo(border-radius, 40);}
+        }
+    
+    
+        .sec_kv {
+            @include vw-mo(height,414);
+            .img_box img {@include vw-mo(height,414);}
+            .pt_txt_box {width: 100%; @include vw-mo(top, 100);
+                .pt_title {@include vw-mo(margin-bottom, 25); @include vw-mo(font-size, 60); letter-spacing: -0.05em;}
+                .pt_date {@include vw-mo(margin-bottom, 20); @include vw-mo(font-size, 26); @include vw-mo(line-height, 34); font-weight: 700;}
+                .pt_date .ko {@include vw-mo(font-size, 26); vertical-align: middle;}
+                .pt_des {@include vw-mo(margin-bottom, 30); @include vw-mo(font-size, 30); line-height: 1.5; letter-spacing: -0.05em;}
+            }
+        }
+    
+        // .sec_banner {@include vw-mo(height, 615);
+        //     .pt_txt_box { 
+        //         .pt_txt {@include vw-mo(margin-bottom, 50); @include vw-mo(font-size, 52); @include vw-mo(line-height, 65); letter-spacing: -0.05em;
+        //         }
+        //     }
+        // }
+        .sec_nav { 
+            .pt_nav_list {top: 0; left: 0; transform: unset; width: 100vw; border-radius: 0; @include vw-mo(box-shadow, 5 5 10 0 rgba(0,0,0,0.05)); transition: top 0.5s;}
+            .pt_nav_list.fixed {left: 0; transform: none;}
+            .pt_nav_list > li:not(.on) + li:not(.on) {@include vw-mo(border-left, 1 solid #f4f4f3);}
+            .pt_nav_list > li {@include vw-mo(height, 100); vertical-align: middle;
+                > a {display: flex; flex-direction: column; @include vw-mo(height, 120); @include vw-mo(font-size, 24);}
+                > a[data-role-anchor="membership_points"],
+                > a[data-role-anchor="exclusive_service"] {letter-spacing: -.1em;}
+                > a::before {@include vw-mo(width, 52); @include vw-mo(height, 50); @include vw-mo(margin-bottom, 7); margin-right: 0;}
+                &:nth-child(1) > a::before {background-image: url("../../is/images/bfz_nav_icon01_pc.png");}
+                // &:nth-child(2) > a::before {background-image: url("../../is/images/bfz_nav_icon02_mo.png");}
+                &:nth-child(2) > a::before {background-image: url("../../is/images/bfz_nav_icon02_mo.png");}
+                &:nth-child(3) > a::before {@include vw-mo(width, 56); background-image: url("../../is/images/bfz_nav_icon03_mo.png");}
+                // &:nth-child(4) > a::before {@include vw-mo(margin-bottom, 4); background-image: url("../../is/images/bfz_nav_icon05_mo_v2.png");}
+                // &:nth-child(5) > a::before {background-image: url("../../is/images/bfz_nav_icon06_mo.png");}
+    
+                &.on {position: relative; border-radius: 0;}
+                &.on:nth-child(1) {border-radius: 0;}
+                &.on:nth-child(4) {border-radius: 0;}
+                &.on::after {display: none;}
+            }
+        }
+    }
+}

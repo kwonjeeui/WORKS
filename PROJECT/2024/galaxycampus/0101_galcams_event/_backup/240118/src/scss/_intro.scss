@@ -1,0 +1,86 @@
+.galcams_event {
+    .sec_intro {
+        @include vw-max(height, 960); @include vw-max(padding, 45 0 0 0);
+        .pt_title-box{
+            @include vw-max(margin-bottom, 75); text-align: center;
+
+            &__sub{@include vw-max(margin-bottom, 15);@include vw-max(font-size, 28); @include vw-max(line-height, 36); font-weight: 700; @include vw-max(letter-spacing, -0.7); color: #6C3BF8;}
+            &__main{@include vw-max(margin-bottom, 15);@include vw-max(font-size, 56); @include vw-max(line-height, 72); font-weight: 700; @include vw-max(letter-spacing, -2.8);}
+            &__noti{@include vw-max(font-size, 20); @include vw-max(line-height, 20); @include vw-max(letter-spacing, -1);}
+        }
+        .pt_event{
+            // 슬라이드 이벤트가 많을 때는 justify-content 주석처리하기
+            justify-content: center;
+            @include vw-max(padding-bottom, 90);
+            &__item{
+                position: relative; @include vw-max(width, 312);
+                // &:first-child{@include vw-max(margin-left, 300);}
+                // &:last-child{@include vw-max(margin-right, 160);}
+                &:nth-child(even){@include vw-max(margin-top, 80);}
+                &:nth-child(odd){@include vw-max(margin-bottom, 80);}
+
+                // &:first-of-type { 
+                //     .pt_event__tag { background: #ffffff; color: #000000; }
+                // }
+            }
+            &__img{@include vw-max(width, 312);}
+            &__tag{
+                position: absolute; @include vw-max(top, 10); @include vw-max(left, 10); @include vw-max(padding, 0 13); display: inline-block; @include vw-max(height, 28); @include vw-max(border-radius, 15); @include vw-max(font-size, 16); @include vw-max(line-height, 28);  color: #fff; background-color: #000; 
+
+                // 이벤트 1번 배경 흰색 변경 2024.01.02
+                
+            }
+            &__txt-box{
+                position: absolute; @include vw-max(bottom, 52); left: 50%; transform: translate(-50%); text-align: center; width: 100%;
+                &--white{color: #fff;}
+            }
+            &__main{
+                @include vw-max(margin-bottom, 28); @include vw-max(font-size, 32); font-weight:700; @include vw-max(letter-spacing, -1.6);
+                &--en{@include vw-max(letter-spacing, 0);}
+            }
+            &__desc{@include vw-max(font-size, 20); @include vw-max(line-height, 32); @include vw-max(letter-spacing, -0.5);}
+            &__btn{display: inline-block; @include vw-max(border-radius, 15); }
+        }
+        .swiper-pagination{@include vw-max(bottom, -0);}
+        .swiper-pagination-bullet {@include vw-pc(width, 150); @include vw-pc(height, 8); @include vw-pc(border-radius,4); background: #ddd; opacity: 1;}
+        .swiper-pagination-bullet-active {background: #000;}
+        .swiper-button-next,.swiper-button-prev{color:#000; @include vw-max(top, 655); @include vw-max(width, 12); @include vw-max(height, 18);}
+        .swiper-button-next{@include vw-max(right, 885);}
+        .swiper-button-prev{@include vw-max(left, 890);}
+        .swiper-button-next::after,.swiper-button-prev::after{@include vw-max(font-size, 16); font-weight: 700;}
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .galcams_event {
+        .sec_intro {
+            @include vw-mo(height, 1000); @include vw-mo(padding, 0 0 162);
+            .pt_title-box{
+                @include vw-mo(margin-bottom, 45);
+    
+                &__sub{@include vw-mo(margin-bottom, 22);@include vw-mo(font-size, 38); @include vw-mo(line-height, 44); font-weight: 600; @include vw-mo(letter-spacing, -1.9);}
+                &__main{@include vw-mo(margin-bottom, 22);@include vw-mo(font-size, 62); @include vw-mo(line-height, 78); @include vw-mo(letter-spacing, -1.55);}
+                &__noti{@include vw-mo(font-size, 24); @include vw-mo(line-height, 20); @include vw-mo(letter-spacing, -1);}
+            }
+            .pt_event{
+                justify-content: flex-start; @include vw-mo(padding-bottom, 45);
+                &__item{
+                    position: relative; @include vw-mo(width, 312); @include vw-mo(height, 480); 
+                    // &:first-child{@include vw-mo(margin-left, 40);}
+                    // &:last-child{@include vw-mo(margin-right, 40);}
+                    &:nth-child(even){@include vw-mo(margin-top, 70);}
+                    &:nth-child(odd){@include vw-mo(margin-bottom, 70);}
+                }
+                &__img{@include vw-mo(width, 312);}
+                &__tag{position: absolute; @include vw-mo(top, 10); @include vw-mo(left, 10); @include vw-mo(padding, 0 14); display: inline-block; @include vw-mo(height, 28); @include vw-mo(border-radius, 15);  @include vw-mo(font-size, 16); @include vw-mo(line-height, 28);}
+                &__txt-box{position: absolute; @include vw-mo(bottom, 49); left: 50%; transform: translate(-50%); text-align: center; width: 100%;}
+                &__main{@include vw-mo(margin-bottom, 21); @include vw-mo(font-size, 35); @include vw-mo(letter-spacing, -1.75);}
+                &__desc{@include vw-mo(font-size, 20); @include vw-mo(line-height, 32); @include vw-mo(letter-spacing, -0.25);}
+                &__navi{display: none;}
+            }
+            .swiper-pagination{@include vw-mo(bottom, 0);}
+            .swiper-pagination-bullet {@include vw-mo(width, 50); @include vw-mo(height, 6); @include vw-mo(margin, 0 6); background-color: #000; @include vw-mo(border-radius, 4); opacity: .1;}
+            .swiper-pagination-bullet-active {@include vw-mo(width, 50); @include vw-mo(height, 6); opacity: 1;}
+        }
+    }
+}

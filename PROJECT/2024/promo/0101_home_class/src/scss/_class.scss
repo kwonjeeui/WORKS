@@ -1,0 +1,113 @@
+.home_class {
+    .sec_class {@include vw-pc(padding, 95 0 100);
+        .pt_class {
+            &__swiper {@include vw-pc(padding,10); }
+            &__list {justify-content: space-between;}
+            &__slide {@include vw-pc(width, 420); text-align: center;
+                &:not(:last-child){@include vw-pc(margin-right,30);}
+            }
+            &__tit {display: flex; align-items: center; position: relative; @include vw-pc(height, 72); @include vw-pc(margin-bottom, 20); @include vw-pc(border-radius, 42); @include vw-pc(box-shadow, 0 5 10 #00000029);
+                &--blue {@include vw-pc(padding-left, 104); background-color: #A7BBF1;}
+                &--yellow {@include vw-pc(padding-left, 97); background-color: #F5E3A1;}
+                &--green {@include vw-pc(padding-left, 72); background-color: #D0E2BB;}
+                &--mint {@include vw-pc(padding-left, 122); background-color: #D6ECF2;}
+                &::before {content: ''; position: absolute; top: 50%; transform: translateY(-50%); @include vw-pc(left, 6); @include vw-pc(width, 60); @include vw-pc(height, 60); background-repeat: no-repeat; background-position: center; background-size: contain;}
+                // &--blue::before {background-image: url('../../is/images/class/hc_class_icon_pc01.png');}
+                // &--yellow::before {background-image: url('../../is/images/class/hc_class_icon_pc02.png');}
+                // &--green::before {background-image: url('../../is/images/class/hc_class_icon_pc03.png');}
+                .pt_title {@include vw-pc(font-size, 20); @include vw-pc(line-height, 30); @include vw-pc(letter-spacing, -0.8);}
+            }
+            &__item {@include vw-pc(border-radius, 20); @include vw-pc(box-shadow, 0 5 10 #00000029);}
+            &__img {@include vw-pc(height, 240);
+                &--event {position: relative;}
+                &--event::before {content: 'evnet'; display: block; position: absolute; z-index: 1; @include vw-pc(top, 30); @include vw-pc(right, 30); @include vw-pc(width, 85); @include vw-pc(height, 30); background: url('../../is/images/class/hc_class_event_pc.png') no-repeat center / contain; font-size: 0;}
+            }
+            &__txt-area {
+                .pt_teacher {@include vw-pc(padding, 15 0); @include vw-pc(font-size, 24); @include vw-pc(line-height, 39); @include vw-pc(letter-spacing, -0.96); background: #000; color: #fff; font-weight: 400;}
+                .pt_txt-box {@include vw-pc(padding, 36 0 48);}
+                .pt_tit {display: block; @include vw-pc(margin-bottom, 5); @include vw-pc(font-size, 20); @include vw-pc(line-height, 30);}
+                .pt_des {@include vw-pc(margin-bottom, 24); @include vw-pc(font-size, 20); @include vw-pc(line-height, 30);}
+                .pt_btn_class {
+                    display: flex; justify-content: center; align-items: center; @include vw-pc(width, 182); @include vw-pc(height, 50); @include vw-pc(margin,0 auto 10); @include vw-pc(font-size, 17); @include vw-pc(line-height, 25); @include vw-pc(letter-spacing, -0.17); @include vw-pc(border-radius, 25);
+
+                    &:last-of-type {margin-bottom:0;}
+                }
+            }
+
+            // img lazy
+            .pt_class__list.pt_bg-image.pt_add-bg {
+                .pt_class__tit--blue::before {background-image: url('../../is/images/class/hc_class_icon_pc01.png');}
+                .pt_class__tit--yellow::before {background-image: url('../../is/images/class/hc_class_icon_pc02.png');}
+                .pt_class__tit--green::before {background-image: url('../../is/images/class/hc_class_icon_pc03.png');}
+                .pt_class__tit--mint::before {background-image: url('../../is/images/class/hc_class_icon_pc04.png');}
+            }
+
+            &_noti {@include vw-pc(margin-top, 40); @include vw-pc(font-size, 17); @include vw-pc(line-height, 19); letter-spacing: -.048em; text-align: center; color: #000000;}
+        }
+
+        .swiper-pagination {position: static; width: 100%; @include vw-pc(margin-top, 40);
+            .swiper-pagination-bullet {@include vw-pc(width, 10); @include vw-pc(height, 10); @include vw-pc(margin-right, 10); background-color: #8F8F8F;}
+            .swiper-pagination-bullet:last-child {margin-right: 0;}
+            .swiper-pagination-bullet-active {background-color: #000;}
+        }
+
+    }
+}
+	
+@media screen and (max-width:768px) {
+    .home_class {
+        .sec_class {@include vw-mo(padding, 75 0 95);
+            .pt_class {@include vw-mo(width, 640); margin: auto;
+                &__swiper {width: auto; @include vw-pc(padding,0);  @include vw-pc(margin-left,0);}
+                &__slide {width: 100%; 
+                    &:not(:last-child){@include vw-pc(margin-right,0);}
+                }
+                &__tit {@include vw-mo(height, 90); @include vw-mo(margin-bottom, 20); @include vw-mo(border-radius, 45); box-shadow: none;
+                    &--blue {@include vw-mo(padding-left, 157);}
+                    &--yellow {@include vw-mo(padding-left, 145);}
+                    &--green {@include vw-mo(padding-left, 99);}
+                    &--mint {@include vw-mo(padding-left, 164);}
+                    &::before {@include vw-mo(left, 10); @include vw-mo(width, 70); @include vw-mo(height, 70);}
+                    // &--blue::before {background-image: url('../../is/images/class/hc_class_icon_mo01.png');}
+                    // &--yellow::before {background-image: url('../../is/images/class/hc_class_icon_mo02.png');}
+                    // &--green::before {background-image: url('../../is/images/class/hc_class_icon_mo03.png');}
+                    .pt_title {@include vw-mo(font-size, 30); @include vw-mo(line-height, 42); @include vw-mo(letter-spacing, -1.2);}
+                }
+                &__item {@include vw-mo(border-radius, 20); border: 1px solid #00000029; box-shadow: none;}
+                &__img {@include vw-mo(height, 400);
+                    &--event::before {@include vw-mo(top, 30); @include vw-mo(right, 30); @include vw-mo(width, 105); @include vw-mo(height, 40); background-image: url('../../is/images/class/hc_class_event_mo.png')}
+                }
+                &__txt-area {
+                    .pt_teacher {@include vw-mo(padding, 28 0); @include vw-mo(font-size, 42); @include vw-mo(line-height, 42); @include vw-mo(letter-spacing, -1.26);}
+                    .pt_txt-box {@include vw-mo(padding, 58 0 60);}
+                    .pt_tit {@include vw-mo(margin-bottom, 18); @include vw-mo(font-size, 33); @include vw-mo(line-height, 42);}
+                    .pt_tit2 {margin-bottom: 0;}
+                    .pt_des {@include vw-mo(margin-bottom, 30); @include vw-mo(font-size, 33); @include vw-mo(line-height, 42);}
+                    .pt_btn_class {@include vw-mo(width, 290); @include vw-mo(height, 75); @include vw-mo(margin,0 auto 20); @include vw-mo(font-size, 30); @include vw-mo(line-height, 37); @include vw-mo(letter-spacing, -0.75); @include vw-mo(border-radius, 45);}
+                }
+
+                .swiper-button-arrow {display: block; top: 42.3%;}
+                .swiper-button-arrow::after {display: block; @include vw-mo(width, 23); @include vw-mo(height, 42); background: url('../../is/images/class/hc_class_arrow_pc.png') no-repeat center / contain; font-size: 0;}
+                .swiper-button-prev {@include vw-mo(left, 22);}
+                .swiper-button-next {@include vw-mo(right, 0);}
+                .swiper-button-next::after {transform: rotate(180deg);}
+
+                // img lazy
+                .pt_class__list.pt_bg-image.pt_add-bg {
+                    .pt_class__tit--blue::before {background-image: url('../../is/images/class/hc_class_icon_mo01.png');}
+                    .pt_class__tit--yellow::before {background-image: url('../../is/images/class/hc_class_icon_mo02.png');}
+                    .pt_class__tit--green::before {background-image: url('../../is/images/class/hc_class_icon_mo03.png');}
+                    .pt_class__tit--mint::before {background-image: url('../../is/images/class/hc_class_icon_mo04.png');}
+                }
+
+                    &_noti {@include vw-mo(margin-top, 40); @include vw-mo(font-size, 25); @include vw-mo(line-height, 28); letter-spacing: -.09em; line-height: 1.4;}
+            }
+    
+            .swiper-pagination {position: static; width: 100%; @include vw-mo(margin-top, 40);
+                .swiper-pagination-bullet {@include vw-mo(width, 16); @include vw-mo(height, 16); @include vw-mo(margin-right, 20); background-color: #8F8F8F;}
+                .swiper-pagination-bullet:last-child {margin-right: 0;}
+                .swiper-pagination-bullet-active {background-color: #000;}
+            }
+        }
+    }
+}

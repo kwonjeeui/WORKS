@@ -1,0 +1,41 @@
+.pt_ai_recipe {
+    .sec_ai_toon { @include vw-pc(padding, 100 0 0 0); @include vw-pc(height, 1078); text-align: center; background: url("../../is/images/ai_toon/ar_toon_bg_pc.png") no-repeat center / contain; @include vw-pc(background-size, 1920 1078);
+        .pt_titlebox { @include vw-pc(margin, 0 auto 136 auto); display:inline-block;
+            &__title { @include vw-pc(width, 413); @include vw-pc(margin, 0 auto 18);}
+            &__content { @include vw-pc(font-size, 30); @include vw-pc(line-height, 40);  letter-spacing: -0.05em; position: relative;
+                // &:after { position: absolute; content: ''; @include vw-pc(width, 44); @include vw-pc(height, 40); background: url("../../is/images/ai_toon/ar_toon_icon.svg") no-repeat center / cover; }
+            }
+        }
+        .pt_toon { @include vw-pc(width, 660); @include vw-pc(left, -8); margin: 0 auto;
+            &__sup { @include vw-pc(font-size, 20); vertical-align: text-top; }
+            &__img { @include vw-pc(width, 588); @include vw-pc(height, 457); @include vw-pc(margin, 0 auto 45 auto); }
+            &__tag { @include vw-pc(font-size, 34); font-weight: 700; @include vw-pc(margin, 0 0 43 0); letter-spacing: -0.025em; }
+            &__pagination { @include vw-pc(bottom, 0);
+                .swiper-pagination-bullet { @include vw-pc(width, 12); @include vw-pc(height, 12); @include vw-pc(border, 3 solid #000); @include vw-pc(margin, 0 10); background: transparent; opacity: 1; }
+                .swiper-pagination-bullet-active { background: #000; }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:768px) {
+    .pt_ai_recipe {
+        .sec_ai_toon { @include vw-mo(padding, 100 0 0 0); @include vw-mo(height, 1120); background: url("../../is/images/ai_toon/ar_toon_bg_mo.png") no-repeat center / contain; @include vw-mo(background-size, 720 1120);
+            .pt_titlebox { @include vw-mo(margin, 0 auto 155 auto); 
+                &__title { @include vw-mo(width, 534); @include vw-mo(margin-bottom, 25); }
+                &__content { @include vw-mo(font-size, 34); @include vw-mo(line-height, 44); 
+                    // &:after { position: absolute; content: ''; @include vw-mo(width, 44); @include vw-mo(height, 40); background: url("../../is/images/ai_toon/ar_toon_icon.svg") no-repeat center / cover; }
+                }
+            }
+            .pt_toon { @include vw-mo(width, 565); @include vw-mo(left, -4); 
+                &__sup { @include vw-mo(font-size, 22); }
+                &__img { @include vw-mo(width, 505); @include vw-mo(height, 427); @include vw-mo(margin, 0 auto 55 auto); }
+                &__tag { @include vw-mo(font-size, 36); @include vw-mo(margin, 0 0 33 0); }
+                &__pagination { @include vw-mo(bottom, 0);
+                    .swiper-pagination-bullet { @include vw-mo(width, 12); @include vw-mo(height, 12); @include vw-mo(border, 3 solid #000); @include vw-mo(margin, 0 10); }
+                    .swiper-pagination-bullet-active { background: #000; }
+                }
+            }
+        }
+    }
+}

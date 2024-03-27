@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+  <g id="체크" transform="translate(5 -7.668)">
+    <g id="타원_191" data-name="타원 191" transform="translate(-5 7.668)" fill="none" stroke="#1E81F8" stroke-width="2">
+      <circle cx="15" cy="15" r="15" stroke="none"/>
+      <circle cx="15" cy="15" r="14" fill="none"/>
+    </g>
+    <path id="패스_370" data-name="패스 370" d="M13.448,18.6l4.413,5.43,8.832-9.655" transform="translate(-10.403 3.468)" fill="none" stroke="#1E81F8" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+  </g>
+</svg>

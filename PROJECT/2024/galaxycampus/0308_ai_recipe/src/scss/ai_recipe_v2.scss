@@ -1,0 +1,19 @@
+@import '../../../../../../scss_global/scss-common2';
+@import 'bs_reset';
+@import 'kv_v2';
+@import 'nav';
+@import 'ai_toon_v2';
+@import 'content_v2';
+@import 'chance';
+@import 'share';
+@import 'notice';
+
+.pt_ai_recipe {
+
+}
+
+@media screen and (max-width: 768px) {
+    .pt_ai_recipe {
+
+    }
+}

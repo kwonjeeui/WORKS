@@ -1,0 +1,57 @@
+body.scroll-up .pt_ai_recipe .sec_nav .pt_nav[sticky] {top: 80px;}
+.pt_ai_recipe {
+    .sec_nav {@include vw-pc(height, 62);
+        .pt_nav {background-color: #000; transition: all 0.7s;
+            &[sticky] {display: block; position: fixed; top: 0; left: 0; width: 100%; animation: navFade 0.3s; z-index: 100;}
+        }
+        .pt_nav{
+            &__list {display: flex; justify-content: center; align-items: center; @include vw-pc(height, 62); color: #fff; text-align: center;}
+            &__item{display: contents;
+                &--active {
+					.pt_nav__btn {color: #B2D0FF;}
+				}
+            }
+            &__btn{
+                position: relative; display: inline-flex; align-items: center; @include vw-pc(padding, 0 60); @include vw-pc(height, 62); @include vw-pc(font-size, 18); font-weight: 700;  @include vw-pc(letter-spacing, -.45); white-space: nowrap;
+                &:after {content: ''; position: absolute; right: 0; top: 50%; transform: translateY(-50%); @include vw-pc(width, 1); @include vw-pc(height, 20); background-color: #fff; opacity: .3;}
+            }
+            .pt_nav__item:last-child {
+                .pt_nav__btn::after {display: none;}
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1280px) {
+    body.scroll-up .pt_ai_recipe .sec_nav .pt_nav[sticky] {top: 55px;}
+}
+
+@media screen and (max-width: 768px) {
+    body.scroll-up .pt_ai_recipe .sec_nav .pt_nav[sticky] {top: 55px;}
+    .pt_ai_recipe {
+        .sec_nav {
+            @include vw-mo(height, 111);
+            .pt_nav{
+                &__list {justify-content: flex-start; @include vw-mo(height, 110);}
+                &__item{
+                    display: block; width: auto;
+                    &:last-child::after{display: none;}
+                }
+                &__btn{
+                    @include vw-mo(padding, 0 50); @include vw-mo(height, 110); @include vw-mo(font-size, 26); @include vw-mo(line-height, 35); @include vw-mo(letter-spacing, 0);
+                    &::after{content: ''; position: absolute; top: 50%; @include vw-mo(right, -1); transform: translateY(-50%); @include vw-mo(width, 2); @include vw-mo(height, 34); background-color: #fff; opacity: .3;}
+                }
+            }
+        }
+    }
+}
+
+@keyframes navFade {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity : 1;
+    }
+}

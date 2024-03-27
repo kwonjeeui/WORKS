@@ -1,0 +1,42 @@
+.grande {
+    .pt_starbucks-banner {
+        @include vw-pc(padding, 102 0 50);
+        &__inner {@include vw-pc(width, 1200); margin: 0 auto; @include vw-pc(padding, 27 49 30 50); @include vw-pc(border-radius, 20); background-color: #F4F4F4;}
+        &__wrap {display: flex; align-items: end;}
+        .img_box {@include vw-pc(width, 165); @include vw-pc(margin, 0 42 14 0);}
+        &__text_box {@include vw-pc(margin-right, 39);}
+        &__title {
+            @include vw-pc(padding-bottom, 13); @include vw-pc(font-size, 28); @include vw-pc(line-height, 40); letter-spacing: -0.025em; font-weight: 700;
+            .pt_txt_blue {color: #2189FF;}
+        }
+        &__info {display: block; @include vw-pc(font-size, 18); @include vw-pc(line-height, 28); font-weight: 500;}
+        &__review_btn {align-items: center; @include vw-pc(width, 192); @include vw-pc(height, 48); @include vw-pc(margin-right, 20); @include vw-pc(font-size, 20); @include vw-pc(border-radius, 50); letter-spacing: -0.025em;}
+        &__notice_btn {@include vw-pc(width, 118); @include vw-pc(margin-bottom, 11); @include vw-pc(font-size, 20); letter-spacing: -0.05em; font-weight: 400;}
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .grande {
+        .pt_starbucks-banner {
+            @include vw-mo(padding, 100 0 50);
+            &__inner {position: relative; @include vw-mo(width, 672); @include vw-mo(padding, 23 60 25 40); @include vw-mo(border-radius, 8);}
+            &__wrap {display: block;}
+            .img_box {position: absolute; @include vw-mo(top, 92); @include vw-mo(right, 61); @include vw-mo(width, 175); margin: 0;}
+            &__title {
+                @include vw-mo(padding-bottom, 11); @include vw-mo(font-size, 28); @include vw-mo(line-height, 38);
+            }
+            &__info_box {@include vw-mo(margin-bottom, 12);}
+            &__info {
+                &:not(:last-child) {@include vw-mo(margin-bottom, 4);}
+                &.pt_txt_indent {@include vw-mo(text-indent,45);}
+                @include vw-mo(font-size, 16); @include vw-mo(line-height, 21); font-weight: 400;
+            }
+            &__review_btn {@include vw-mo(width, 180); @include vw-mo(height, 52); @include vw-mo(margin-right, 20); @include vw-mo(font-size, 20); @include vw-mo(border-radius, 100);}
+            &__notice_btn {@include vw-mo(width, 128); @include vw-mo(margin-bottom, 13); @include vw-mo(font-size, 20);}
+            .btn_toggle {
+                @include vw-mo(padding, 0 17 3 0);
+                &:after {top: 15%;}
+            }
+        }
+    }
+}

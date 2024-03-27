@@ -1,0 +1,163 @@
+.home_class {
+    .sec_program {@include vw-pc(padding, 100 0); background: #EAF5DF;
+        &.pt_bg-image.pt_add-bg{background: url('../../is/images/program/hc_program_bg_pc.jpg') no-repeat center / cover;}
+        .pt_program {@include vw-pc(width, 1320); margin: auto;}
+        .pt_contents__title-box {@include vw-pc(margin-bottom, 40);}
+        .pt_contents__des {@include vw-pc(font-size,30); @include vw-pc(line-height,30);}
+
+        .pt_ranking {display: flex; flex-flow:row wrap; justify-content: space-between; @include vw-pc(margin-bottom, 52);
+            &__main-title {width:100%; @include vw-pc(margin-bottom,120); @include vw-pc(font-size,54); @include vw-pc(line-height,66); @include vw-pc(letter-spacing,-1.62); text-align:center;}
+            &__item {position: relative; @include vw-pc(width, 420); @include vw-pc(height, 500); @include vw-pc(border-radius, 20); @include vw-pc(box-shadow, 0 5 10 #00000029);
+                &--golf {order: 2; position: relative; @include vw-pc(top, -40);}
+                &--yoga {order: 1;}
+                &--makeup {order: 3;}
+                &::before {content: ''; display: block; position: absolute; @include vw-pc(left, 20); z-index: 1; @include vw-pc(width, 80); background-repeat: no-repeat; background-position: center; background-size: contain;}
+                &--golf::before {@include vw-pc(top, -45); @include vw-pc(height, 104); background-image: url('../../is/images/program/hc_program_ranking_icon_pc01.png');}
+                &--yoga::before {@include vw-pc(top, -20); @include vw-pc(height, 80); background-image: url('../../is/images/program/hc_program_ranking_icon_pc02_v2.png');}
+                &--makeup::before {@include vw-pc(top, -20); @include vw-pc(height, 80); background-image: url('../../is/images/program/hc_program_ranking_icon_pc02_v2.png');}
+            }
+            &__tag {display: flex; position: absolute; @include vw-pc(top, 30); @include vw-pc(right, 30); 
+                .img_box {@include vw-pc(margin-right, 12);}
+                .img_box:last-child {margin-right: 0;}
+                .pt_best {@include vw-pc(width, 76);}
+                .pt_hot {@include vw-pc(width, 68);}
+            }
+            &__txt-box {position: absolute; top: 0; left: 0; width: 100%; height: 100%; @include vw-pc(padding, 62 0 0 40);}
+            &__title {@include vw-pc(margin-bottom, 8); @include vw-pc(font-size, 30); @include vw-pc(line-height, 42); font-weight: 700;}
+            &__des {
+                @include vw-pc(margin-bottom, 17); @include vw-pc(font-size, 20); @include vw-pc(line-height, 30); @include vw-pc(letter-spacing, -0.6);
+                &--01 {color: #00152F;}
+                &--02 {color: #2F2F00;}
+            }
+            .pt_btn_ranking {
+                display:flex; @include vw-pc(width, 118); @include vw-pc(height, 50); @include vw-pc(margin-bottom,10); @include vw-pc(border-radius, 25); @include vw-pc(font-size, 17); @include vw-pc(line-height, 25); @include vw-pc(letter-spacing, -0.17);
+
+                &:last-of-type {margin-bottom:0;}
+            }
+        }
+
+        .pt_link {text-align: center;
+            &__title {@include vw-pc(margin-bottom, 47); @include vw-pc(font-size, 36); @include vw-pc(line-height, 36); @include vw-pc(letter-spacing, -1.08);}
+            &__item {@include vw-pc(margin-bottom, 43);
+                &:last-child {margin-bottom: 0;}
+                .pt_tit {position: relative; @include vw-pc(margin-bottom, 24); @include vw-pc(font-size, 30); @include vw-pc(line-height, 30);}
+                .pt_tit::before {content: ''; display: block; position: absolute; top: 50%; left: 0; width: 100%; height: 1px; background-color: #000; opacity: 0.2;}
+                .pt_tit .pt_bg {position: relative; z-index: 1; @include vw-pc(padding, 0 30); background-color: #EAF5DF;}
+                .pt_tit span {position: relative; @include vw-pc(padding, 0 30);}
+                .pt_tit span::before {content: ''; display: block; position: absolute; top: 50%; transform: translateY(-50%); @include vw-pc(left, 15); width: 1px; @include vw-pc(height, 20); background-color: #000; opacity: 0.2;}
+                .pt_tit span::after {content: ''; display: block; position: absolute; top: 50%; transform: translateY(-50%); @include vw-pc(right, -6); @include vw-pc(width, 24); @include vw-pc(height, 24); background-repeat: no-repeat; background-position: center; background-size: contain;}
+                .pt_class {display: flex; flex-wrap: wrap;}
+                .pt_class li {@include vw-pc(margin, 10 10 0 0);}
+                .pt_class li:nth-child(5n) {margin-right: 0;}
+                .pt_class li:nth-child(-n+5) {margin-top: 0;}
+                .pt_class .pt_btn_link {@include vw-pc(width, 256); @include vw-pc(height, 60); background-color: #fff; border: none; @include vw-pc(font-size, 24); @include vw-pc(line-height, 30); @include vw-pc(letter-spacing, -0.72); @include vw-pc(border-radius, 30);}
+                .pt_class .pt_btn_link::before {content: ''; display: inline-block; @include vw-pc(width, 24); @include vw-pc(height, 24); @include vw-pc(padding-left, 5); background-repeat: no-repeat; background-position: center; background-size: contain;}
+
+                // &--health .pt_tit span::after {background-image: url('../../is/images/program/hc_program_link_icon_01.png');}
+                // &--beauty .pt_tit span::after {background-image: url('../../is/images/program/hc_program_link_icon_02.png');}
+                // &--hobby .pt_tit span::after {background-image: url('../../is/images/program/hc_program_link_icon_03.png');}
+                // &--education .pt_tit span::after {background-image: url('../../is/images/program/hc_program_link_icon_04.png');}
+
+                // &--health .pt_class li:nth-child(1) .pt_btn_link::before {background-image: url('../../is/images/program/hc_program_link_icon_01-01.png');}
+                // &--health .pt_class li:nth-child(2) .pt_btn_link::before {background-image: url('../../is/images/program/hc_program_link_icon_01-02.png');}
+                // &--health .pt_class li:nth-child(3) .pt_btn_link::before {background-image: url('../../is/images/program/hc_program_link_icon_01-03.png');}
+                // &--health .pt_class li:nth-child(4) .pt_btn_link::before {background-image: url('../../is/images/program/hc_program_link_icon_01-04.png');}
+                // &--health .pt_class li:nth-child(5) .pt_btn_link::before {background-image: url('../../is/images/program/hc_program_link_icon_01-05.png');}
+                // &--health .pt_class li:nth-child(6) .pt_btn_link::before {background-image: url('../../is/images/program/hc_program_link_icon_01-06.png');}
+                // &--health .pt_class li:nth-child(7) .pt_btn_link::before {background-image: url('../../is/images/program/hc_program_link_icon_01-07.png');}
+                // &--health .pt_class li:nth-child(8) .pt_btn_link::before {background-image: url('../../is/images/program/hc_program_link_icon_01-08.png');}
+                // &--health .pt_class li:nth-child(9) .pt_btn_link::before {background-image: url('../../is/images/program/hc_program_link_icon_01-09.png');}
+                // &--beauty .pt_class li:nth-child(1) .pt_btn_link::before {background-image: url('../../is/images/program/hc_program_link_icon_02-01.png');}
+                // &--beauty .pt_class li:nth-child(2) .pt_btn_link::before {background-image: url('../../is/images/program/hc_program_link_icon_02-02.png');}            
+                // &--hobby .pt_class li:nth-child(1) .pt_btn_link::before {background-image: url('../../is/images/program/hc_program_link_icon_03-01.png');}
+                // &--hobby .pt_class li:nth-child(2) .pt_btn_link::before {background-image: url('../../is/images/program/hc_program_link_icon_03-02.png');}
+                // &--hobby .pt_class li:nth-child(3) .pt_btn_link::before {background-image: url('../../is/images/program/hc_program_link_icon_03-03.png');}
+                // &--hobby .pt_class li:nth-child(4) .pt_btn_link::before {background-image: url('../../is/images/program/hc_program_link_icon_03-04.png');}
+                // &--hobby .pt_class li:nth-child(5) .pt_btn_link::before {background-image: url('../../is/images/program/hc_program_link_icon_03-05.png');}
+                // &--education .pt_class li:nth-child(1) .pt_btn_link::before {background-image: url('../../is/images/program/hc_program_link_icon_04-01.png');}
+                // &--education .pt_class li:nth-child(2) .pt_btn_link::before {background-image: url('../../is/images/program/hc_program_link_icon_04-02.png');}
+                // &--education .pt_class li:nth-child(3) .pt_btn_link::before {background-image: url('../../is/images/program/hc_program_link_icon_04-03.png');}
+            }
+        }
+
+        // img lazy
+        .pt_link__list.pt_bg-image.pt_add-bg {
+            .pt_link__item--health .pt_tit span::after {background-image: url('../../is/images/program/hc_program_link_icon_01.png');}
+            .pt_link__item--beauty .pt_tit span::after {background-image: url('../../is/images/program/hc_program_link_icon_02.png');}
+            .pt_link__item--hobby .pt_tit span::after {background-image: url('../../is/images/program/hc_program_link_icon_03.png');}
+            .pt_link__item--education .pt_tit span::after {background-image: url('../../is/images/program/hc_program_link_icon_04.png');}
+
+            .pt_link__item--health .pt_class li:nth-child(1) .pt_btn_link::before {background-image: url('../../is/images/program/hc_program_link_icon_01-01.png');}
+            .pt_link__item--health .pt_class li:nth-child(2) .pt_btn_link::before {background-image: url('../../is/images/program/hc_program_link_icon_01-02.png');}
+            .pt_link__item--health .pt_class li:nth-child(3) .pt_btn_link::before {background-image: url('../../is/images/program/hc_program_link_icon_01-03.png');}
+            .pt_link__item--health .pt_class li:nth-child(4) .pt_btn_link::before {background-image: url('../../is/images/program/hc_program_link_icon_01-04.png');}
+            .pt_link__item--health .pt_class li:nth-child(5) .pt_btn_link::before {background-image: url('../../is/images/program/hc_program_link_icon_01-05.png');}
+            .pt_link__item--health .pt_class li:nth-child(6) .pt_btn_link::before {background-image: url('../../is/images/program/hc_program_link_icon_01-06.png');}
+            .pt_link__item--health .pt_class li:nth-child(7) .pt_btn_link::before {background-image: url('../../is/images/program/hc_program_link_icon_01-07.png');}
+            .pt_link__item--health .pt_class li:nth-child(8) .pt_btn_link::before {background-image: url('../../is/images/program/hc_program_link_icon_01-08.png');}
+            .pt_link__item--health .pt_class li:nth-child(9) .pt_btn_link::before {background-image: url('../../is/images/program/hc_program_link_icon_01-09.png');}
+            .pt_link__item--beauty .pt_class li:nth-child(1) .pt_btn_link::before {background-image: url('../../is/images/program/hc_program_link_icon_02-01.png');}
+            .pt_link__item--beauty .pt_class li:nth-child(2) .pt_btn_link::before {background-image: url('../../is/images/program/hc_program_link_icon_02-02.png');}            
+            // .pt_link__item--hobby .pt_class li:nth-child(1) .pt_btn_link::before {background-image: url('../../is/images/program/hc_program_link_icon_03-01.png');}
+            .pt_link__item--hobby .pt_class li:nth-child(1) .pt_btn_link::before {background-image: url('../../is/images/program/hc_program_link_icon_03-02.png');}
+            .pt_link__item--hobby .pt_class li:nth-child(2) .pt_btn_link::before {background-image: url('../../is/images/program/hc_program_link_icon_03-03.png');}
+            .pt_link__item--hobby .pt_class li:nth-child(3) .pt_btn_link::before {background-image: url('../../is/images/program/hc_program_link_icon_03-04.png');}
+            .pt_link__item--hobby .pt_class li:nth-child(4) .pt_btn_link::before {background-image: url('../../is/images/program/hc_program_link_icon_03-05.png');}
+            .pt_link__item--education .pt_class li:nth-child(1) .pt_btn_link::before {background-image: url('../../is/images/program/hc_program_link_icon_04-01.png');}
+            .pt_link__item--education .pt_class li:nth-child(2) .pt_btn_link::before {background-image: url('../../is/images/program/hc_program_link_icon_04-02.png');}
+            .pt_link__item--education .pt_class li:nth-child(3) .pt_btn_link::before {background-image: url('../../is/images/program/hc_program_link_icon_04-03.png');}
+        }
+    }
+}
+	
+@media screen and (max-width:768px) {
+    .home_class {
+        .sec_program {@include vw-mo(padding, 73 0 118); background-image: url('../../is/images/program/hc_program_bg_mo.jpg');
+            .pt_program {@include vw-mo(width, 640);}
+            .pt_contents__title-box {@include vw-mo(margin-bottom, 62);}
+            .pt_contents__des {@include vw-mo(margin-bottom,20); @include vw-mo(font-size,30); font-weight:700; @include vw-mo(line-height,42);}
+        
+            .pt_ranking {display: block; @include vw-mo(margin-bottom, 74);
+                &__main-title {width:100%; @include vw-mo(margin-bottom,48); @include vw-mo(font-size,50); @include vw-mo(line-height,70); @include vw-mo(letter-spacing,-2.5); text-align:center;}
+                &__item {width: 100%; height:auto; @include vw-mo(min-height,531); @include vw-mo(margin-bottom, 40); @include vw-mo(border-radius, 20);
+                    &--golf {order: 1; top: 0;}
+                    &--yoga {order: 2;}
+                    &--makeup {order: 3;}
+                    &::before {@include vw-mo(left, 40); @include vw-mo(width, 80);}
+                    &--golf::before {@include vw-mo(top, -45); @include vw-mo(height, 104); background-image: url('../../is/images/program/hc_program_ranking_icon_mo01.png');}
+                    &--yoga::before {@include vw-mo(top, -20); @include vw-mo(height, 80); background-image: url('../../is/images/program/hc_program_ranking_icon_mo02_v2.png');}
+                    &--makeup::before {@include vw-mo(top, -20); @include vw-mo(height, 80); background-image: url('../../is/images/program/hc_program_ranking_icon_mo02_v2.png');}
+                }
+                &__tag {@include vw-mo(top, 30); @include vw-mo(right, 30); 
+                    .img_box {@include vw-mo(margin-right, 12);}
+                    .img_box:last-child {margin-right: 0;}
+                    .pt_best {@include vw-mo(width, 99);}
+                    .pt_hot {@include vw-mo(width, 88);}
+                }
+                &__txt-box {@include vw-mo(padding, 64 0 0 40);}
+                &__title {@include vw-mo(margin-bottom, 10); @include vw-mo(font-size, 36); @include vw-mo(line-height, 50);}
+                &__des {@include vw-mo(margin-bottom, 35); @include vw-mo(font-size, 28); @include vw-mo(line-height, 39); @include vw-mo(letter-spacing, -0.84); color: #021A1F;}
+                .pt_btn_ranking {@include vw-mo(width, 180); @include vw-mo(height, 75); @include vw-mo(margin-bottom,20); @include vw-mo(border-radius, 45); @include vw-mo(font-size, 30); @include vw-mo(line-height, 37); @include vw-mo(letter-spacing, -0.75);}
+            }
+        
+            .pt_link {
+                &__title {@include vw-mo(margin-bottom, 46); @include vw-mo(font-size, 40); @include vw-mo(line-height, 56); @include vw-mo(letter-spacing, -1.6);}
+                &__item {@include vw-mo(margin-bottom, 60);
+                    &:last-child {margin-bottom: 0;}
+                    .pt_tit {@include vw-mo(margin-bottom, 45); @include vw-mo(font-size, 30); @include vw-mo(line-height, 30);}
+                    .pt_tit .pt_bg {@include vw-mo(padding, 0 22);}
+                    .pt_tit span {@include vw-mo(padding, 0 30);}
+                    .pt_tit span::before {@include vw-mo(left, 15); width: 1px; @include vw-mo(height, 26);}
+                    .pt_tit span::after {@include vw-mo(right, -6); @include vw-mo(width, 30); @include vw-mo(height, 30);}
+                    .pt_class li {@include vw-mo(margin, 11 11 0 0);}
+                    .pt_class li:nth-child(5n) {@include vw-mo(margin-right, 11);}
+                    .pt_class li:nth-child(-n+5) {@include vw-mo(margin-top, 11);}
+                    .pt_class li:nth-child(3n) {margin-right: 0;}
+                    .pt_class li:nth-child(-n+3) {margin-top: 0;}
+                    .pt_class .pt_btn_link {@include vw-mo(width, 206); @include vw-mo(height, 60); border: none; @include vw-mo(font-size, 30); @include vw-mo(line-height, 38); @include vw-mo(letter-spacing, -0.9); @include vw-mo(border-radius, 30);}
+                    .pt_class .pt_btn_link::before {@include vw-mo(width, 30); @include vw-mo(height, 30); @include vw-mo(padding-left, 7);}
+                }
+            }
+        }
+    }
+}

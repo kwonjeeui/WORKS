@@ -1,0 +1,28 @@
+.pt_battle_ground{
+    .sec_share {
+        @include vw-pc(padding, 100 0); background-color:#F7F7F7; text-align: center;
+        
+        .pt_title {@include vw-pc(margin-bottom, 45); @include vw-pc(font-size, 37); @include vw-pc(line-height, 44); @include vw-pc(letter-spacing, -1.85);}
+        .pt_btn-box {display: flex; justify-content: center; @include vw-pc(gap, 82);}
+        .pt_btn {
+            &__img {@include vw-pc(margin, 0 auto 19); @include vw-pc(width, 94); @include vw-pc(height, 94);}
+            &__txt {@include vw-pc(font-size, 17); @include vw-pc(line-height, 22); @include vw-pc(letter-spacing, -0.85); font-weight: 700;}
+        }
+    }
+}
+
+@media screen and (max-width:768px) {
+    .pt_battle_ground {
+        .sec_share {
+            @include vw-mo(padding, 115 0 119);
+
+            .pt_title {@include vw-mo(margin-bottom, 58); @include vw-mo(font-size, 62); @include vw-mo(line-height, 78); @include vw-mo(letter-spacing, -1);}
+            .pt_btn-box {display: flex; flex-wrap: wrap; justify-content: space-between; @include vw-mo(gap, 53 0); @include vw-mo(width, 465); margin: 0 auto;}
+            .pt_btn {
+                @include vw-mo(width, 203);
+                &__img {@include vw-mo(margin, 0 auto 20); @include vw-mo(width, 145); @include vw-mo(height, 145);}
+                &__txt {@include vw-mo(font-size, 26); @include vw-mo(line-height, 34); @include vw-mo(letter-spacing, -1);}
+            }
+        }
+    }
+}

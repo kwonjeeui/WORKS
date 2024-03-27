@@ -1,0 +1,57 @@
+.galcams_event {
+    .sec_flex {
+        @include vw-pc(padding, 151 0 90); @include vw-max(width, 1920); @include vw-pc(height, 800); background: url(../../is/images/2308/gce_flex_bg_pc.jpg) no-repeat; background-position: center; @include vw-pc(background-size, 1920 800);
+        .pt_text-box { @include vw-pc(padding-left, 60);
+            &__num {display: inline-flex; align-items: center; justify-content: center; @include vw-pc(width, 160); @include vw-pc(height, 40); @include vw-pc(margin-bottom, 35); @include vw-pc(font-size, 26); font-weight: 700; color: #fff; @include vw-pc(border-radius, 20); background-color: #6C3BF8;}
+            &__tit {@include vw-pc(margin-bottom, 27); @include vw-pc(font-size, 56); @include vw-pc(line-height, 66); @include vw-pc(letter-spacing, -2.8);}
+            &__sub {@include vw-pc(margin-bottom, 30); @include vw-pc(font-size, 30); @include vw-pc(line-height, 46); @include vw-pc(letter-spacing, -1.5);}
+        }
+
+        .pt_info {
+            @include vw-pc(margin-bottom, 50);
+            &__list,
+            &__title {@include vw-pc(font-size, 20); @include vw-pc(line-height, 38); @include vw-pc(letter-spacing, -1);}
+            &__title {
+                position: relative; @include vw-pc(margin, 0 10 0 5); font-weight: 700;
+                &::after {content: ''; position: absolute; top: 50%; @include vw-pc(right, -8); transform: translateY(-50%); @include vw-pc(width, 2); @include vw-pc(height, 15); background-color: #000;}
+            }
+        }
+
+        .pt_flex__img{position: absolute; @include vw-pc(top, -146); @include vw-pc(left, 474);  @include vw-pc(width, 1205);}
+
+        .pt_flex__btn{display: flex; @include vw-pc(margin,0 0 37 60); @include vw-pc(width, 202); @include vw-pc(height, 56); @include vw-pc(border-radius, 40); @include vw-pc(font-size, 18); @include vw-pc(line-height, 56); font-weight: 700; @include vw-pc(letter-spacing, -0.9); }
+        .pt_anchor {position: relative; display: inline-block; left: 50%; transform: translateX(-50%); @include vw-pc(font-size, 16); @include vw-pc(line-height, 20); @include vw-pc(letter-spacing, -.8);}
+
+        .pt_flex_noti{position: absolute; @include vw-pc(bottom, -54); @include vw-pc(left, 1236); @include vw-pc(font-size, 20); color:#595959; width: 100%;}
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .galcams_event {
+        .sec_flex {
+            @include vw-mo(padding, 100 0); @include vw-mo(width, 720); @include vw-mo(height, 1442); background: url(../../is/images/2308/gce_flex_bg_mo.jpg) no-repeat; @include vw-mo(background-size, 720 1442);
+            .pt_text-box { @include vw-mo(padding-left, 0); text-align: center;
+                &__num {@include vw-mo(width, 212); @include vw-mo(height, 55); @include vw-mo(margin-bottom, 38); @include vw-mo(font-size, 32); @include vw-mo(border-radius, 37);}
+                &__tit {@include vw-mo(margin-bottom, 40); @include vw-mo(font-size, 62); @include vw-mo(line-height, 78); @include vw-mo(letter-spacing, -1.55);}
+                &__sub {@include vw-mo(margin-bottom, 42); @include vw-mo(font-size, 28); @include vw-mo(line-height, 42); @include vw-mo(letter-spacing, -1.4);}
+            }
+
+            .pt_info {
+                @include vw-mo(margin-bottom, 542);
+                &__list {text-align: center; @include vw-mo(font-size, 28); @include vw-mo(line-height, 42); @include vw-mo(letter-spacing, -1.4);}
+                &__title {@include vw-mo(font-size, 28); @include vw-mo(line-height, 42); @include vw-mo(letter-spacing, -1.4);}
+                &__title {
+                    @include vw-mo(margin, 0 15 0 5); vertical-align: top;
+                    &::after {@include vw-mo(right, -12); @include vw-mo(width, 2); @include vw-mo(height, 20);}
+                }
+            }
+
+            .pt_flex__img{position: absolute; @include vw-mo(top, 538); @include vw-mo(left,0);  @include vw-mo(width, 720);}
+
+            .pt_flex__btn{display: flex; @include vw-mo(margin, 0 auto 50); @include vw-mo(width, 274); @include vw-mo(height, 71); @include vw-mo(border-radius, 38); @include vw-mo(font-size, 26); @include vw-mo(line-height, 71);  @include vw-mo(letter-spacing, -1.3); }
+            .pt_anchor {@include vw-mo(font-size, 26); @include vw-mo(line-height, 40); @include vw-mo(letter-spacing, -1.3);}
+
+            .pt_flex_noti{@include vw-mo(bottom, -50); @include vw-mo(left, 480); @include vw-mo(font-size, 22);}
+        }
+    }
+}

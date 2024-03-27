@@ -1,0 +1,21 @@
+.pt_battle_ground {
+    .sec_content01 {
+        width: 100%; @include vw-pc(height, 1735);
+        &.pt_bg-image.pt_add-bg {position: relative; background-image: url('../../is/images/bg_content01_pc.jpg'); @include vw-pc(background-size, 1920 1735); background-repeat: no-repeat; background-position: center top;}
+
+        .inner_1440 {position: static;}
+
+        .pt_btn {position: absolute; @include vw-pc(top, 1509); left: 50%; transform: translateX(-50%); @include vw-pc(width, 236); @include vw-pc(height, 50); background-color: #F1AE40; border-color: #F1AE40; @include vw-mo(border-radius, 28); @include vw-pc(font-size, 20); letter-spacing: -.025em;}
+    }
+}
+
+@media screen and (max-width:768px) {
+    .pt_battle_ground {
+        .sec_content01 {
+            width: 100%; @include vw-mo(height, 2207);
+            &.pt_bg-image.pt_add-bg {position: relative; background-image: url('../../is/images/bg_content01_mo.jpg'); @include vw-mo(background-size, 720 2207); background-repeat: no-repeat; background-position: center top;}
+
+            .pt_btn {position: absolute; @include vw-mo(top, 1966); left: 50%; transform: translateX(-50%); @include vw-mo(width, 240); @include vw-mo(height, 75); @include vw-mo(border-radius, 39); @include vw-mo(font-size, 26); letter-spacing: -.025em;}
+        }
+    }
+}

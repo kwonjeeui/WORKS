@@ -1,0 +1,198 @@
+   
+.grande {
+    .sec_photo_event {
+        background-color: #E2E5E2;
+        @include vw-pc(padding, 90 0 100);
+
+        .btn_apply {@include vw-pc(width, 72); @include vw-pc(line-height,32); @include vw-pc(font-size,12); font-weight: 700; @include vw-pc(border-radius,16); background-color: #000; color:#fff;}
+        .btn_wrap {display:flex; align-items:center; justify-content: flex-start; width: 100%; @include vw-pc(margin-top,50);}
+        .btn_wrap .btn_apply {@include vw-pc(width, 158); @include vw-pc(height,39); @include vw-pc(margin-right, 30); @include vw-pc(font-size,16); font-weight: 700; @include vw-pc(border-radius,20); background-color: #000; color:#fff;}
+        .btn_more {@include vw-pc(font-size, 16); font-weight: 700; @include vw-pc(border-width, 2); border-bottom: 1px solid #000;}
+        
+        .cnt_box{@include vw-pc(width,1320);@include vw-pc(margin,0 auto);
+            .event_wrap {position: relative; display:flex;justify-content:space-between;align-items:flex-start; flex-wrap: wrap;
+                // &::after{content:'';position:absolute;@include vw-pc(top,120);@include vw-pc(left,435);@include vw-pc(width,135);@include vw-pc(height,135);background:url('../../is/images/gd_photo_gift_pc_v3.png') no-repeat center / cover;}
+                // &.pt_yogiyo::before {content:'';position:absolute;@include vw-pc(top, 17); @include vw-pc(left, 420); @include vw-pc(width, 167); @include vw-pc(height, 167); background: url('../../../is/images/gd_photo_rain_pc.png') no-repeat center / cover;}
+                &.pt_yogiyo::after {content:'';position:absolute;@include vw-pc(top, 76); @include vw-pc(left, 402); @include vw-pc(width, 167); @include vw-pc(height, 167); background: url('../../is/images/gd_photo_gift_yogiyo_pc_v2.png') no-repeat center / cover;}
+            }
+            .desc_box{position:relative; width: 45%;
+                .title_box{@include vw-pc(margin-bottom,40);}
+                .title_box .pt_title{@include vw-pc(margin-bottom,30);@include vw-pc(font-size,42);font-weight:700;@include vw-pc(line-height,50);letter-spacing:-.05em; position: relative}
+                .title_box .img_box.pt_title{@include vw-pc(width, 417);}
+                .title_box .pt_title .sup{@include vw-pc(font-size, 26); position: relative; @include vw-pc(top, -18);}
+                .title_box .main_txt{@include vw-pc(margin-bottom, 20); @include vw-pc(font-size, 42); letter-spacing:-0.05em;}
+                .title_box .sub_txt{@include vw-pc(font-size, 18); @include vw-pc(line-height, 26); letter-spacing:-0.03em;}
+                .title_box .sub_txt em{font-weight: 700;}
+                .title_box .pt_desc{@include vw-pc(font-size,14); @include vw-pc(line-height,24); letter-spacing:-0.025em; opacity: 0.7;}
+                // .info_wrap {@include vw-pc(margin-bottom, 30);}
+                .info_wrap li{display:flex;align-items: flex-start; @include vw-pc(margin-bottom, 10); @include vw-pc(font-size,17); @include vw-pc(line-height,20);}
+                .info_wrap li:last-child {margin-bottom: 0;}
+                .info_wrap li .pre_txt {@include vw-pc(width,162); @include vw-pc(font-size, 16); font-weight: 700;}
+                .info_wrap li .pre_txt.event_end {display: flex; align-items: center;}
+                .info_wrap li .pre_txt.event_end::after {content: '마감'; display: inline-flex; justify-content: center; align-items: center; @include vw-pc(width,54); @include vw-pc(height, 24); @include vw-pc(border-radius, 3); @include vw-pc(margin-left, 6); @include vw-pc(font-size, 14); font-weight: 700; background-color: #000; color: #fff;}
+                .info_wrap li .pre_txt span {display: inline-block; @include vw-pc(width, 53); @include vw-pc(height, 23); @include vw-pc(border-radius, 4); background: #000; color: #fff; text-align: center; @include vw-pc(font-size, 14); font-weight: 700; @include vw-pc(line-height, 23); @include vw-pc(margin-left, 5);}
+                .info_wrap li .desc_txt {@include vw-pc(font-size, 15); letter-spacing: -0.025em;}
+                .info_wrap li .desc_txt.pt_gray {color: #777;}
+                .info_wrap li .desc_txt .btn_more {line-height: 1.1;}
+                .info_wrap li .desc_txt .pt_event_end {display: inline-block; @include vw-pc(margin-left, 8); @include vw-pc(padding, 0 14); @include vw-pc(border-radius, 3); background-color: #000; color: #fff; @include vw-pc(font-size, 14); @include vw-pc(line-height, 23); font-weight: 700; vertical-align: baseline;}
+                
+                
+                .info_wrap li.end {position: relative;}
+                .info_wrap li.end::after {content: '종료'; display: block; @include vw-pc(height, 22); @include vw-pc(padding, 0 15); @include vw-pc( border-radius, 2); @include vw-pc(margin-left, 10); background-color: #000; color: #fff; @include vw-pc(font-size, 14); @include vw-pc(line-height, 22);}
+            }
+            .event_apply{position:relative;display:flex;flex-wrap:wrap;justify-content:space-between;@include vw-pc(width,683); 
+                dt{position:relative;width:100%;@include vw-pc(margin-bottom,20);}
+                // dt::before{content:'';position:absolute;top:50%; right:0; @include vw-pc(width, 548); @include vw-pc(height,1);background:#e1e1e1;}
+                dt span{display:inline-block; position:relative; @include vw-pc(font-size,18); font-weight:700; @include vw-pc(line-height,22);}
+                dd{@include vw-pc(width,220); @include vw-pc(height,324); @include vw-pc(padding,25 0); background:#fff; @include vw-pc(border-radius,10);box-shadow:5px 5px 10px rgb(0 0 0 / 5%); position: relative;}
+                dd .img_box{@include vw-pc(width,110);@include vw-pc(margin,0 auto 24);}
+                dd .img_box span {position: absolute; display: flex; justify-content: center; align-items: center; @include vw-pc(width, 34); @include vw-pc(height, 34); border-radius: 50%; background: #000; color: #fff; @include vw-pc(font-size, 16); @include vw-pc(left, 0); @include vw-pc(top,0); z-index: 1;}
+                dd .way_txt{display:flex; flex-direction:column; justify-content:space-between; align-items: center; @include vw-pc(height,138); @include vw-pc(font-size,15);@include vw-pc(line-height,20);text-align:center;}  
+                dd .way_txt.last {justify-content: flex-start;}
+                dd .way_txt p {@include vw-pc(margin-bottom, 10);}
+                dd .way_txt .btn_apply {@include vw-pc(width,142); @include vw-pc(height,34); @include vw-pc(margin-bottom, 0); @include vw-pc(font-size,16);}
+                dd .way_txt .btn_more{display: inline-block; @include vw-pc(margin-bottom, 15);}
+                dd .way_txt strong{vertical-align:baseline;}
+                dd:last-child .way_txt strong{ font-weight: 600; }
+                
+            }
+            .btn_review {background: transparent; color:#000;}
+            .btn_review:hover, .btn_review:focus, .btn_review:active {background:#000;color:#fff;}
+
+            .btn_noti {@include vw-pc(font-size, 16);}
+        }
+
+        .accordion_box{
+            position: relative;
+            .btn_box{@include vw-pc(font-size, 16);}
+        }
+        .accordion_area{display:flex;text-align:left;@include vw-pc(width, 1320);@include vw-pc(margin,0 auto);@include vw-pc(padding,80 0 40);overflow:hidden; color:#000;}
+        .noti_left{width:50%;position:relative; @include vw-pc(padding-right,60);}
+        .noti_right{width:50%; @include vw-pc(padding-left,60);}
+        .noti_left::after{content: '';position: absolute; right:0; top: 0; display: block; width: 1px; height: 100%; background-color: #666; opacity: 0.2; z-index: 5;}
+        .noti_tit{@include vw-pc(margin,0 0 20); @include vw-pc(font-size,20); font-weight:700}
+        .noti_list {@include vw-pc(margin-bottom, 36);}
+        .noti_list:last-child {margin-bottom: 0;}
+        .noti_list li{position:relative;@include vw-pc(padding,0 0 0 15); @include vw-pc(font-size,16); @include vw-pc(line-height,28);color:#666;}
+        .noti_list > li:after{display:block;content:'';position:absolute;@include vw-pc(top,12); left:0;@include vw-pc( width,4);@include vw-pc(height,4);border-radius:50%;background-color:#666}
+        .noti_list li a {color:#666;word-break:break-all;}
+        .noti_list .noti_2depth{@include vw-pc(padding-bottom, 10); }
+        .noti_list.noti_2depth li{@include vw-pc(padding,0 0 0 9); @include vw-pc(text-indent,-9);}
+        .noti_list.noti_2depth li::after{display: none;}
+        .noti_list.noti_2depth li::after,
+        .noti_list.noti_2depth li > p {@include vw-pc(padding,0 0 0 10);}
+        .noti_list .type_none{@include vw-pc(padding,0 0 14); @include vw-pc(font-size,22); font-weight:700;color:#000; @include vw-pc(line-height,30);}
+        .noti_list .type_none::after,
+        .noti_list .type_none_sub::after {display:none;}
+        .noti_list .type_none_sub li::after {display:none;}
+        .noti_list .type_none_sub li{@include vw-pc(text-indent, -8); @include vw-pc(padding-left, 8);}
+        .noti_list .type_none_sub{text-indent: 0; padding-left: 0;}
+        .noti_list .type_none_sub.mb{@include vw-pc(margin-top, 10)}
+
+        .noti_list_pt {@include vw-pc(margin-bottom, 40);}
+        .noti_list_pt:last-child {margin-bottom: 0;}
+        .noti_list_pt li{position:relative;@include vw-pc(padding,0 0 0 15); @include vw-pc(font-size,16); @include vw-pc(line-height,32);color:#666;}
+        .noti_list_pt li.c_white{color:#cbcbcb; font-weight: 700;}
+        .noti_list_pt li:after{display:block;content:'※';position:absolute;@include vw-pc(top,-2); left: 0;@include vw-pc(font-size,18);}
+        .noti_list_pt li a {color:#666;}
+        .noti_list_pt .noti_2depth{@include vw-pc(padding,4 0);}
+        .noti_list_pt .noti_2depth li{padding:0}
+        .noti_list_pt .noti_2depth li{@include vw-pc(text-indent, -10); @include vw-pc(padding-left, 10);}
+        .noti_list_pt .noti_2depth li::after,
+        .noti_list_pt .noti_3depth li::after{display: none;}
+        .noti_list_pt .noti_3depth li{@include vw-pc(text-indent, 0); @include vw-pc(padding-left, 0);}
+        .noti_list_pt .type_none {@include vw-pc(padding,0 0 10); @include vw-pc(font-size,18); font-weight:700;color:#000;}
+        .noti_list_pt .type_none::after {display:none;}
+        .noti_list_pt .type2_none{@include vw-pc(padding-left, 0);@include vw-pc(margin-top, 15);}
+        .noti_list_pt .type2_none::after {display:none;}
+    }
+}
+
+
+
+
+@media screen and (max-width:  768px) {
+    .grande {
+        .sec_photo_event {
+            @include vw-mo(padding,93 0 80);
+            .btn_apply {@include vw-mo(width, 162); @include vw-mo(height,36); @include vw-mo(line-height,36); @include vw-mo(font-size,18); font-weight: 700; @include vw-mo(border-radius,17); background-color: #000; color:#fff; @include vw-mo(margin-bottom,60);}
+            .cnt_box .event_wrap {
+                display: block; padding: 0;
+                // &::after {display: none;}
+                // &.pt_yogiyo::before {display: block; @include vw-mo(top, -30); left: auto; @include vw-mo(right, 158); @include vw-mo(width, 149); @include vw-mo(height, 149); background-image: url('../../../is/images/gd_photo_rain_mo.png');}
+                &.pt_yogiyo::after {display: block; @include vw-mo(top, -17); left: auto; @include vw-mo(right, 20); @include vw-mo(width, 149); @include vw-mo(height, 149); background-image: url('../../../is/images/gd_photo_gift_yogiyo_mo_v1.png');}
+            }
+            .cnt_box{display:flex; flex-direction: column; width: 100%;@include vw-mo(margin,0 auto);
+                .desc_box{position:relative; @include vw-mo(padding, 67 0 0 40); width: 100%;
+                    // &::after{content:''; display: none; position:absolute; @include vw-mo(top, -25); @include vw-mo(right, 34); @include vw-mo(width,175);@include vw-mo(height,175);background:url('../../is/images/gd_photo_gift_pc_v3.png') no-repeat center / cover;}
+                    .title_box{@include vw-mo(margin-bottom,55);}
+                    .title_box .pt_title{@include vw-mo(margin-bottom,35);@include vw-mo(font-size,44);font-weight:700;@include vw-mo(line-height,56);letter-spacing:-.05em;}
+                    .title_box .pt_title .sup{@include vw-mo(font-size, 26); position: relative; @include vw-mo(top, -18);}
+                    .title_box .main_txt {@include vw-mo(font-size, 50); @include vw-mo(margin-bottom, 25);}
+                    .title_box .sub_txt{@include vw-mo(font-size,28);@include vw-mo(line-height,36);letter-spacing:-0.03em; @include vw-mo(margin-bottom, 10);}
+                    .title_box .pt_desc{@include vw-mo(font-size,18); @include vw-mo(line-height,24); letter-spacing:-0.025em;}
+                    .info_wrap {@include vw-mo(margin-bottom, 55);}
+                    .info_wrap li{display:flex; @include vw-mo(margin-bottom, 15); @include vw-mo(font-size, 28); @include vw-mo(line-height, 33);}
+                    .info_wrap li:last-child {margin-bottom: 0;}
+                    .info_wrap li p.pre_txt{@include vw-mo(width,260);font-weight:700; @include vw-mo(font-size,28);}
+                    .info_wrap li .pre_txt.event_end::after {@include vw-mo(width,70); @include vw-mo(height, 30); @include vw-mo(border-radius, 5); @include vw-mo(margin-left, 6); @include vw-mo(font-size, 18);}
+                    .info_wrap li .pre_txt span {@include vw-mo(width, 70); @include vw-mo(height, 31); @include vw-mo(border-radius, 5); @include vw-mo(font-size, 18); @include vw-mo(line-height, 31); @include vw-mo(margin-left, 8);}
+                    .info_wrap li p.desc_txt {@include vw-mo(font-size,28);}
+                    .info_wrap li .desc_txt .pt_event_end {@include vw-mo(margin-left, 8); @include vw-mo(padding, 0 20); @include vw-mo(border-radius, 4); @include vw-mo(font-size, 18); @include vw-mo(line-height, 30); vertical-align: top;}
+                    .info_wrap li .desc_txt .btn_more {@include vw-mo(font-size,21);}
+
+                }
+                
+                .event_apply{position:relative;display:flex;flex-wrap:wrap;justify-content:space-between;width: 100%; @include vw-mo(width, 640); @include vw-mo(padding-top, 50); @include vw-mo(border-top, 2 solid #e5d9d2); margin: 0 auto;
+                    dt{position:relative;width:100%;@include vw-mo(margin-bottom,20);}
+                    // dt::before{content:'';position:absolute;top:50%;left:0;width:100%;@include vw-mo(height,1);background:#e1e1e1;}
+                    dt span{display:inline-block;position:relative;@include vw-mo(padding-right,20);@include vw-mo(font-size,22);font-weight:700;@include vw-mo(line-height,35);}
+                    dd{display: flex; align-items: center; width: 100%;@include vw-mo(border-radius,10); @include vw-mo(height, auto); @include vw-mo(padding,25 0 25 40);}
+                    dd + dd{@include vw-mo(margin-top,20);}
+                    dd .img_box{@include vw-mo(width,140);@include vw-mo(margin,0 30 0 0);}
+                    dd .img_box span {@include vw-mo(width, 40); @include vw-mo(height, 40); @include vw-mo(font-size, 22); @include vw-mo(left, 0); @include vw-mo(top,0); z-index: 1;}
+                    dd .way_txt{display:flex;flex-direction:column;justify-content:space-between;align-items:flex-start; @include vw-mo(height,auto); @include vw-mo(font-size,28);@include vw-mo(line-height,42);text-align:left; letter-spacing: -0.05em;}
+                    dd .way_txt p{ @include vw-mo(margin-bottom, 0);}
+                    dd .way_txt strong{vertical-align:baseline;}
+                    dd .way_txt a.black_border_btn{@include vw-mo(font-size, 18); font-weight: 700; border-bottom: 1px solid #000; display: inline-flex; align-items: center; @include vw-mo(gap,4); margin: 0 auto; @include vw-mo(margin-top,5);}
+                    dd .way_txt a.black_border_btn i{@include vw-mo(width,6); @include vw-mo(height,10); display: block; background: url("../../is/images/gai_link_ico.png") no-repeat center / cover;}
+                    dd .way_txt a.btn_more {@include vw-mo(font-size, 28); letter-spacing: -0.08em;}
+                    dd:last-child .way_txt p{@include vw-mo(margin-bottom, 0);}
+                    dd:last-child .way_txt strong{ font-weight: 600; }
+                    dd:last-child .way_txt .btn_apply{display: inline-flex; @include vw-mo(width,138); @include vw-mo(line-height,64); @include vw-mo(height,64); @include vw-mo(margin,10 0); @include vw-mo(font-size,24); @include vw-mo(border-radius,32);}
+                }
+
+                .btn_wrap {
+                    display: flex; justify-content: center; @include vw-mo(padding-top, 45);
+                    .btn_noti {@include vw-mo(font-size, 22); font-weight: 700;}
+                    .btn_apply {display: none;}
+                }
+                
+
+                .btn_box {display:flex;align-items:center;position:absolute;bottom:0;left:0;}
+                .btn_box .type_round{@include vw-mo(height,38);@include vw-mo(font-size,16);@include vw-mo(line-height,38);@include vw-mo(border-radius,19); border: 1px solid #000;}
+                .btn_box .btn_review {@include vw-mo(width,127);}
+                .btn_box .btn_apply {@include vw-mo(width,153);}
+                .btn_box .btn_common + .btn_common{@include vw-mo(margin-left,30);}
+                
+                .btn_review {background: transparent; color:#000;}
+                .btn_review:hover, .btn_review:focus, .btn_review:active {background:#000;color:#fff;}
+            }
+
+            .accordion_area{
+                position: relative; @include vw-mo(padding-top, 60); text-align: center; @include vw-mo(width, 600);
+
+                .btn_box{@include vw-mo(width, 600); margin: 0 auto; @include vw-mo(font-size, 18);}
+                .btn_box .btn_accordion{@include vw-mo(margin-bottom,30);}
+                .btn_box .btn_common.btn_toggle::after{top: 9%;}
+                .btn_box .btn_common.btn_toggle.on::after{top: 29%;}
+
+                .noti_list li.type_none{@include vw-mo(padding,0 0 18); @include vw-mo(font-size,31); font-weight:700;color:#000; @include vw-mo(line-height,50);}
+                .noti_list li.type_none::after {display: none;}
+                .noti_list li {@include vw-mo(font-size, 22); @include vw-mo(line-height, 30); @include vw-mo(padding-bottom, 10); text-align: left;}
+                .noti_list li::after {@include vw-mo(width, 4); @include vw-mo(height, 4); @include vw-mo(top, 12);}
+
+            }
+        }
+    }
+}

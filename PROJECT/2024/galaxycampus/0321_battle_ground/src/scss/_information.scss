@@ -1,0 +1,9 @@
+.pt_battle_ground {
+    .sec_information {width: 100%; @include vw-pc(height, 714); background-image: url('../../is/images/bg_info_pc_v1.jpg'); @include vw-pc(background-size, 1920 714); background-repeat: no-repeat; background-position: center top;}
+}
+
+@media screen and (max-width:768px) {
+    .pt_battle_ground {
+        .sec_information {@include vw-mo(height, 1117); background-image: url('../../is/images/bg_info_mo.jpg'); @include vw-mo(background-size, 720 1117);}
+    }
+}

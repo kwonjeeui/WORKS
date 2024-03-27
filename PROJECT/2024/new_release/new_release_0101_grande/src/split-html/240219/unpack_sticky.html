@@ -1,0 +1,124 @@
+<section class="sec_sticky m_show" id="sec_sticky">
+     <!-- 매장픽업:s -->
+     <div>
+        <div class="hidden" data-pickup-plazaNo id="plazaNo-G000276030"></div> <!--(매장코드)-->
+        <div class="hidden" data-pickup-storeAddr id="storeAddr-G000276030"></div> <!--(매장주소)-->
+    </div>
+    <!-- // 매장픽업:e -->
+
+    <div class="inner_1920" data-buying-sticky>
+        <div class="pt_sticky m_show">
+
+            <div class="pt_sticky__top">
+                <div class="pt_sticky__title-box">
+                    <div class="pt_sticky__title">
+                        <p class="pt_title en" data-buying-text="pdNm"></p>
+                        <p class="pt_volumn en" data-buying-text="sku"></p>
+                    </div>
+                </div>
+
+                <div class="pt_sticky__inner" data-buying-btn>
+                    <div class="pt_sticky__price-box">
+                        <div data-buying-show="priceA!=-">
+                            <div class="pt_sticky__sale-box pt_sticky__sale-box--priceA">
+                                <span class="pt_sale pt_sale--txt">기준가</span>
+                                <div class="pt_sale--wrap">
+                                <span class="pt_sale pt_sale--price">
+                                    <em class="en" data-buying-text="priceA"></em> 
+                                    원
+                                </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="pt_sticky__sale-box pt_sticky__sale-box--priceB" data-buying-show="priceB!=-">
+                                <span class="pt_sale pt_sale--txt pt_sale--blue">혜택가</span>
+                                <div class="pt_sale--wrap">
+                                <span class="pt_sale pt_sale--price pt_sale--blue">
+                                    <!-- <em class="en" data-buying-calc="priceA-benefitA-benefitB-benefitE" data-gclub-show="N"></em> -->
+                                    <em class="en" data-buying-text="priceB"></em> <!-- 쿠폰 적용가 없으면 혜택가 활성화 -->
+                                    원
+                                </span>
+                                </div>
+                            </div>
+                            <div class="pt_sticky__sale-box pt_sticky__sale-box--priceC" data-buying-show="priceC!=-">
+                                <span class="pt_sale pt_sale--txt pt_sale--blue" >쿠폰 적용가</span>
+                                <div class="pt_sale--wrap">
+                                <span class="pt_sale pt_sale--price pt_sale--blue">
+                                    <em class="en" data-buying-text="priceC"></em>
+                                    원
+                                </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pt_sticky__btn-box">
+                        <div class="pt_btn__buy--open pt_hide">
+                            <a href="" class="btn_common type_round black_bg pt_btn pt_btn--buy" data-role="btnPdUrl" data-omni-type="microsite" data-omni="" target="_blank">구매하기</a>
+                        </div>
+                        <div class="pt_btn__buy--close">
+                            <button class="pt_btn pt_btn--open pt_bg-image" data-buying-role="btnDeactiveLink" data-omni-type="microsite" data-omni=""><span class="pt_btn_show_benefit">구매하기</span></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="pt_btn_arrow_show_box">
+                    <button class="pt_btn_arrow_show" data-buying-role="btnDeactiveLink" data-omni-type="microsite" data-omni=""></button>
+                </div>
+            </div>
+
+            <div class="pt_sticky__bottom" id="benefitBox" data-buying-role="buyingBenefitBox" style="display: none;">
+                <button class="pt_btn pt_btn--open pt_bg-image pt_accor_cta" data-role-buying-accordianClose="buyingBenefitBtn"><span class="pt_btn_show_benefit"></span></button>
+                <div class="pt_price-box">
+                    <ul class="pt_benefit"  data-buying-show="sku!=KU55UA7000FXKR">
+                        <li class="pt_benefit--tit">구매 혜택</li>
+                        <!-- 체험단 쿠폰 할인 -->
+                        <li class="pt_benefit__item" data-buying-show="benefitA!=-">
+                            <div class="pt_benefit__txt-box">
+                                <p class="pt_benefit__item--txt">쿠폰 할인</p>
+                                <a href="javascript:;" class="pt_btn pt_btn--coupon pt_bg-image" data-role="btnCouponPromo" data-buying-role="btnCoupon" data-omni-type="microsite" data-omni="">쿠폰 받기</a>
+                            </div>
+                            <span class="pt_benefit__item--price"><em class="en" data-buying-text="benefitA"></em>원</span>
+                        </li>
+                        <!-- 삼성카드 결제일할인 -->
+                        <li class="pt_benefit__item" data-buying-show="benefitB!=-">
+                            <div class="pt_benefit__txt-box">
+                                <p class="pt_benefit__item--txt">삼성카드 결제일할인</p>
+                            </div>
+                            <span class="pt_benefit__item--price"><em class="en" data-buying-text="benefitB"></em>원</span>
+                        </li>
+                        <!-- 요기요 모바일 상품권 -->
+                        <li class="pt_benefit__item" data-buying-show="benefitC!=-">
+                            <div class="pt_benefit__txt-box">
+                                <p class="pt_benefit__item--txt">요기요 모바일 상품권</p>
+                            </div>
+                            <span class="pt_benefit__item--price"><em class="en" data-buying-text="benefitC"></em>원</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- 페이지 전체 공통으로 들어가는 디스클라이머 -->
+                <!-- <p class="pt_txt_disclaimer">※ 회원 등급에 따라 삼성전자 멤버십 포인트 적립율이 달라질 수 있습니다.</p> -->
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="pt_submit-popup" id="alarmPopup" tabindex="0">
+    <p class="pt_submit-popup__title">재입고 알림 신청</p>
+
+    <form class="pt_submit-popup__form" id="alarmForm">
+        <p class="pt_submit-popup__text">고객님의 휴대폰 번호</p>
+        <input type="number" class="pt_submit-popup__input" placeholder="숫자만 입력 가능합니다. (‘-’ 제외)" data-popup-role="phoneNumber">
+        <p class="pt_submit-popup__text">고객님의 이메일</p>
+        <input type="text" class="pt_submit-popup__input" data-popup-role="eMail">
+    </form>
+
+    <p class="pt_submit-popup__noti">
+        ※ 휴대폰 번호를 입력하시면 알림톡이나 SMS로 재입고 알림이 발송됩니다. <br />
+        단, 심야시간(22시~08시)에는 알림이 발송되지 않습니다. <br />
+        재입고 알림 신청 후 30일 뒤 신청하신 내역은 자동 취소됩니다.
+    </p>
+    <a href="#" class="pt_submit-popup__close" data-role="closeAlarmModal" data-target="#alarmPopup"><span class="blind">닫기</span></a>    
+
+</div>

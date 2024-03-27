@@ -1,0 +1,64 @@
+.pt_ai_recipe {
+    .sec_chance {
+        @include vw-pc(max-width, 1920); @include vw-pc(height, 1206); @include vw-pc(padding, 120 0); background: right/cover no-repeat url(../../../is/images/chance/ar_chance_bg_pc_v1.jpg);
+
+        .pt_title_box {
+            @include vw-pc(margin, 0 auto 60); text-align: center;
+            &::before {display: block; content: ''; position: absolute; background: url('../../is/images/chance/ar_chance_character_pc.png') center/cover no-repeat; @include vw-pc(left, 114); @include vw-pc(top, -6); @include vw-pc(width, 188); @include vw-pc(height, 202);}
+            .img_box {position: relative; @include vw-pc(width, 588); margin: 0 auto;}
+        }
+        .pt_cont_box {
+            width: 100%; position: relative; display: flex; justify-content: flex-start; @include vw-pc(height, 334); @include vw-pc(padding, 40 60); @include vw-pc(border-radius, 20); background-color: #fff; box-shadow: 0px 6px 0px #A3B76F;
+            .img_box {@include vw-pc(width, 516); @include vw-pc(margin-right, 90);}
+            .txt_box {margin: auto 0;}
+            &--01 {@include vw-pc(margin-bottom, 24);}
+            &--02 {@include vw-pc(margin-bottom, 39);}
+        }
+
+        .pt_chance {
+            &__info {@include vw-pc(margin-bottom, 15); @include vw-pc(font-size, 24); @include vw-pc(line-height, 34); @include vw-pc(letter-spacing, -0.6); font-weight: 700;}
+            &__desc {
+                @include vw-pc(margin-bottom, 18); @include vw-pc(font-size, 20); @include vw-pc(line-height, 28); @include vw-pc(letter-spacing, -0.5);
+                .en {font-weight: normal;}
+            }
+            &__noti {
+                text-align: center; @include vw-pc(font-size, 16); @include vw-pc(line-height, 26); @include vw-pc(letter-spacing, -0.4);
+                .en {font-weight: normal;}
+            }
+            &__btn {@include vw-pc(width, 262); @include vw-pc(height, 50); @include vw-pc(border-radius, 25); background-color: #000; color: #fff; @include vw-pc(font-size, 18); @include vw-pc(line-height, 22); @include vw-pc(letter-spacing, -0.45); font-weight: 700;}
+        }
+    }
+}
+
+@media screen and (max-width:768px) {
+    .pt_ai_recipe {
+        .sec_chance {
+            @include vw-mo(padding, 97 0 100); @include vw-mo(height, 2096); background: center/cover no-repeat url("../../is/images/chance/ar_chance_bg_mo_v1.jpg");
+    
+            .pt_title_box {
+                @include vw-mo(margin, 0 auto 60);
+                &::before {background: url('../../is/images/chance/ar_chance_character_mo.png') center/cover no-repeat; @include vw-mo(left, 41); @include vw-mo(top, 159); @include vw-mo(width, 126); @include vw-mo(height, 135);}
+                .img_box {position: relative; @include vw-mo(width, 454); @include vw-mo(height, 229); margin: 0 auto;}
+            }
+            .pt_cont_box {
+                @include vw-mo(width, 672); position: relative; display: flex; justify-content: flex-start; flex-direction: column; @include vw-mo(padding, 60); @include vw-mo(border-radius, 20); background-color: #fff; box-shadow: 0px 6px 0px #A3B76F; text-align: center; z-index: 1;
+                .img_box {@include vw-mo(width, 552); @include vw-mo(margin, 0 0 27 0);}
+                &--01 {@include vw-mo(height, 746); @include vw-mo(margin, 0 auto 30);}
+                &--02 {@include vw-mo(height, 709); @include vw-mo(margin, 0 auto 39);}    
+            }
+
+            .pt_chance {
+                &__info {@include vw-mo(margin-bottom, 11); @include vw-mo(font-size, 26); @include vw-mo(line-height, 38); @include vw-mo(letter-spacing, -0.6); font-weight: 700;}
+                &__desc {
+                    @include vw-mo(margin-bottom, 36); @include vw-mo(font-size, 24); @include vw-mo(line-height, 36); @include vw-mo(letter-spacing, -0.6);
+                    .en {font-weight: normal;}
+                }
+                &__noti {
+                    text-align: center; @include vw-mo(font-size, 20); @include vw-mo(line-height, 28); @include vw-mo(letter-spacing, -0.6);
+                    .en {font-weight: normal;}
+                }
+                &__btn {@include vw-mo(width, 246); @include vw-mo(height, 71); @include vw-mo(border-radius, 35); background-color: #000; color: #fff; @include vw-mo(font-size, 24); @include vw-mo(line-height, 36); @include vw-mo(letter-spacing, -0.45); font-weight: 700;}
+            }
+        }
+    }
+}

@@ -1,0 +1,44 @@
+.galcams_event {
+    .sec_galaxy {
+       @include vw-pc(padding, 113 0 92);
+        
+        .pt_title{@include vw-pc(margin-bottom, 88); @include vw-pc(font-size, 56); @include vw-pc(line-height, 30); font-weight: 700; @include vw-pc(letter-spacing, -2.8); text-align: center;}
+
+        .pt_product{
+            display: flex; justify-content: center; align-items: center; @include vw-pc(gap,24); margin: 0 auto; @include vw-pc(width, 1320);
+
+            &__item{position: relative; }
+            &__img{@include vw-pc(width, 424);}
+            &__txt-box{position: absolute; @include vw-pc(top, 177); @include vw-pc(left, 20); @include vw-pc(padding, 40 28); @include vw-pc(width, 384); @include vw-pc(height, 183);}
+            &__txt{@include vw-pc(margin-bottom, 16); @include vw-pc(font-size, 28); @include vw-pc(line-height, 38); font-weight: 700; @include vw-pc(letter-spacing, -1.4);}
+            &__btn{
+                /** comming soon **/
+                // @include vw-pc(width, 114); @include vw-pc(height, 40); @include vw-pc(font-size, 16); font-weight: 700; @include vw-pc(letter-spacing, -.4); background-color: #BBBDCB; border-color: #BBBDCB;
+                /** 구매하기 **/
+                @include vw-pc(width, 114); @include vw-pc(height, 40); @include vw-pc(font-size, 16); font-weight: 700; @include vw-pc(letter-spacing, -.4);
+                &--blackonly:hover {background-color:#000; color:#fff;}
+                // &--silveronly:hover {background-color: #BBBDCB; color:#fff;}
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .galcams_event {
+        .sec_galaxy {
+            @include vw-mo(height, 1103); @include vw-mo(padding, 100 0 8);
+            
+            .pt_title{@include vw-mo(margin-bottom, 75); @include vw-mo(font-size, 62); @include vw-mo(line-height, 73); @include vw-mo(letter-spacing, -3.1);}
+    
+            .pt_product{
+                @include vw-mo(width, 672); flex-direction: column;
+                
+                &__item{@include vw-mo(margin-bottom, 24);}
+                &__img{ @include vw-mo(width, 672);}
+                &__txt-box{@include vw-mo(top, 24); @include vw-mo(left, 338); @include vw-mo(padding, 33 0); @include vw-mo(width, 310); @include vw-mo(height, 160);}
+                &__txt{@include vw-pc(margin-bottom, 16); @include vw-mo(font-size, 24); @include vw-mo(line-height, 32); @include vw-mo(letter-spacing, -1.2); text-align: center;}
+                &__btn{@include vw-mo(margin, 0 75); @include vw-mo(width, 160); @include vw-mo(height, 48); @include vw-mo(font-size, 24); @include vw-mo(letter-spacing, -.6)}
+            }
+        }
+    }
+}

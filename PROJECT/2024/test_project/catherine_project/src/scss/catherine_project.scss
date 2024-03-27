@@ -1,0 +1,2230 @@
+// default
+@import '../../../../../../scss_global/scss-common2';
+@import 'bs_reset';
+@import 'notice';
+
+.catherine_project {
+    // 김치플러스 탭 내 내용 없음으로 표시
+    .second_tab_text {
+        display: block;
+        @include vw-pc(font-size, 30);
+        @include vw-pc(line-height, 30);
+        font-weight: 700;
+        @include vw-pc(margin, 100 0);
+    }
+
+    // common css start
+    .inner_1920 {
+        position: relative;
+    }
+
+    .inner_1440 {
+        position: relative;
+        text-align: center;
+    }
+
+    .pt_benefit_tab {
+        @include vw-pc(margin-bottom, 32);
+
+        .btn_common {
+            border: 2px solid #D2D2D2;
+
+            @include vw-pc(height, 52);
+            @include vw-pc(border-radius, 50);
+            @include vw-pc(font-size, 20);
+            @include vw-pc(padding, 0 23.8 0 26.2);
+
+            & + .btn_common {
+                margin-left: 10px;
+            }
+        }
+    }
+
+    .btn_common {
+        @include vw-pc(font-size, 16);
+        .pt_arrow_icon{position: relative; display: inline-block; @include vw-pc(width, 6); @include vw-pc(height, 6);}
+        .pt_arrow_icon::after {content:''; position: absolute; top: 50%; right: 0; display:inline-block; width: 100%; height:100%; 
+        border-bottom:2px solid #000; border-right:2px solid #000; @include vw-pc(border-width, 2);}
+    
+        .pt_arrow_right{margin: 0 0.2em;}
+        .pt_arrow_right::after {transform:translateY(-50%) rotate(-45deg);}
+        .pt_arrow_anchor{margin:0 0.3em;}
+        .pt_arrow_anchor::after {transform:translateY(-78%) translateX(35%) rotate(45deg);}
+        &.active .pt_arrow_anchor::after {top: auto; bottom:50%; transform:translateY(78%) translateX(35%) rotate(225deg);}
+    }
+
+    .pt_btn01{@include vw-pc(font-size, 28);}
+    .pt_btn01.btn_common .pt_arrow_icon{@include vw-pc(width, 10); @include vw-pc(height, 10);}
+    .pt_btn01.btn_common .pt_arrow_icon::after {@include vw-pc(border-width, 3);}
+    // common css end
+
+
+    // section start
+
+    // key view section
+    .sec_kv {
+        .pt_kv {
+            &_text_wrap {
+                position: absolute;
+                @include vw-max(width, 491);
+                @include vw-max(height, 242);
+                @include vw-max(top, 159);
+                @include vw-max(left, 297);
+            }
+
+            &_title {
+                @include vw-max(font-size, 50);
+                font-weight: 700;
+                @include vw-max(line-height, 60);
+            }
+
+            &_subtitle {
+                @include vw-max(font-size, 20);
+                font-weight: 400;
+                @include vw-max(line-height, 28);
+                @include vw-max(margin-top, 15);
+            }
+
+            &_date {
+                @include vw-max(font-size, 18);
+                @include vw-max(line-height, 22);
+                @include vw-max(margin-top, 24);
+
+                .kr {
+                    font-weight: 700;
+                    @include vw-max(font-size, 18);
+                    @include vw-max(line-height, 22);
+                }
+            }
+        }
+    }
+
+    // tab section
+    .sec_tab {
+        @include vw-pc(margin-top, -12);
+
+        .btn_common {
+            border: 1px solid #707070;
+            border-radius: 10px 10px 0 0;
+            @include vw-pc(height, 72);
+            @include vw-pc(padding, 0 41);
+            
+            .pt_nav_tab {
+                @include vw-pc(font-size, 20);
+                @include vw-pc(margin-left, 15);
+            }
+        }
+    }
+
+    // sticky tab section
+    .sec_nav {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        background-color: #000;
+
+        .sticky_nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            @include vw-pc(width, 665);
+            @include vw-pc(margin, 0 auto);
+
+            &_item {
+                position: relative;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    z-index: 2;
+                    @include vw-pc(right, -1);
+                    top: 50%;
+                    @include vw-pc(width, 2);
+                    @include vw-pc(height, 20);
+                    transform: translateY(-50%);
+                    background-color: #4e4e4e;
+                }
+
+                &:last-child::after {
+                    display: none;
+                }
+            }
+
+            .nav_text {
+                display: block;
+                @include vw-pc(padding, 0 40);
+                @include vw-pc(font-size, 20);
+                @include vw-pc(line-height, 64);
+                @include vw-pc(letter-spacing, -1);
+                color: #fff;
+                font-weight: 700;
+
+                & * {pointer-events: none !important;} // 옴니태깅 오류 수정
+            }
+
+            &.fixed_start {
+                position: fixed;
+                left: 0;
+                top: 0;
+                width: 100%;
+                z-index: 90;
+            }
+        }
+    }
+
+    // 구매 혜택 section
+    .sec_benefit {
+        @include vw-pc(padding, 99 0);
+
+        .inner_1440 {
+            overflow-x: hidden;
+        }
+
+        .pt_benefit_01 {
+            display: grid;
+            align-items: center;
+
+            &_subtitle {
+                @include vw-pc(font-size, 30);
+                @include vw-pc(line-height, 50);
+            }
+
+            &_title {
+                @include vw-pc(font-size, 42);
+                @include vw-pc(line-height, 50);
+                color: #E2732D;
+            }
+
+            &_list {
+                @include vw-pc(width, 1319);
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                
+                &_wrap {
+                    // 혜택 01 ~ 02 wrapper
+                    &--01 {
+                        @include vw-pc(margin, 50.3 auto 0);
+
+                        .pt_benefit_01_list--item {
+                            @include vw-pc(width, 650);
+                            @include vw-pc(height, 280);
+
+                            &::before {
+                                content: "주황색 태그 배경 이미지 1";
+                                @include vw-pc(font-size, 0);
+                                display: block;
+                                background: center/cover no-repeat url('../../is/images/benefit_tag_bg-01.png');
+                                position: absolute;
+                                @include vw-pc(left, 30);
+                                @include vw-pc(top, -12.7);
+                                @include vw-pc(width, 61);
+                                @include vw-pc(height, 54);
+                            }
+                        }
+                    }
+
+                    // 혜택 03 ~ 05 wrapper
+                    &--02 {
+                        @include vw-pc(margin, 30 auto 0);
+
+                        .pt_benefit_01_list--item {
+                            display: inline-flex;
+                            @include vw-pc(width, 426);
+                            @include vw-pc(height, 219);
+
+                            &::before {
+                                content: "주황색 태그 배경 이미지 2";
+                                @include vw-pc(font-size, 0);
+                                display: block;
+                                background: center/cover no-repeat url('../../is/images/benefit_tag_bg-02.png');
+                                position: absolute;
+                                @include vw-pc(left, 30);
+                                @include vw-pc(top, -12.7);
+                                @include vw-pc(width, 61);
+                                @include vw-pc(height, 54);
+                            }
+
+                            & + .pt_benefit_01_list--item {
+                                @include vw-pc(margin-left, 20);
+                            }
+                        }
+                    }
+                }
+
+                // 각 혜택 박스 css
+                &--item {
+                    position: relative;
+                    background-color: #F4ECE4;
+                    @include vw-pc(border-radius, 5);
+
+                    .type_round {
+                        position: absolute;
+                        @include vw-pc(top, 167);
+                        @include vw-pc(left, 29);
+                        @include vw-pc(height, 44);
+                        @include vw-pc(border-radius, 50);
+                        @include vw-pc(font-size, 18);
+                        @include vw-pc(padding, 0 20);
+                    }
+
+                    .pt_btn01 {
+                        position: absolute;
+                        @include vw-pc(width, 141);
+                        @include vw-pc(height, 23);
+                        @include vw-pc(bottom, 26);
+                        @include vw-pc(left, 34);
+                        @include vw-pc(font-size, 18);
+                        @include vw-pc(letter-spacing, -1);
+                        @include vw-pc(line-height, 15.15);
+                        font-weight: 400;
+
+                        .pt_arrow_icon{
+                            @include vw-pc(width, 5);
+                            @include vw-pc(height, 5);
+                        
+                            &::after {
+                                @include vw-pc(border-width, 1);
+                            }
+                        }
+
+                        &--short {
+                            @include vw-pc(width, 92);
+                        }
+                    }
+                }
+            }
+
+            // 혜택 넘버 태그
+            &_tag {
+                @include vw-pc(font-size, 15);
+                font-weight: 700;
+                color: #fff;
+                @include vw-pc(width, 24);
+                @include vw-pc(height, 42);
+                position: absolute;
+                @include vw-pc(left, 45);
+                @include vw-pc(top, -8.7);
+                @include vw-pc(line-height, 21);
+
+                .en {
+                    @include vw-pc(font-size, 22);
+                    font-weight: bold;
+                }
+            }
+
+            // 혜택 타이틀
+            &_text {
+                position: absolute;
+                @include vw-pc(left, 28);
+                @include vw-pc(top, 56);
+                @include vw-pc(font-size, 30);
+                @include vw-pc(line-height, 38);
+                font-weight: 700;
+                text-align: left;
+
+                // 혜택 03 ~ 05 타이틀
+                &--small {
+                    @include vw-pc(left, 30);
+                    @include vw-pc(top, 54);
+                    @include vw-pc(font-size, 24);
+                    @include vw-pc(line-height, 30);
+                }
+            }
+
+            // 혜택 할인가
+            &_sale {
+                position: absolute;
+                @include vw-pc(right, 28);
+                @include vw-pc(top, 19);
+                @include vw-pc(font-size, 18);
+                @include vw-pc(line-height, 30);
+                font-weight: 700;
+
+                &--number {
+                    @include vw-pc(font-size, 58);
+                    @include vw-pc(line-height, 71);
+                    color: #E2732D;
+                    font-weight: bold;
+                }
+
+                &--color {
+                    @include vw-pc(line-height, 30);
+                    color: #E2732D;
+                }
+
+                &--small {
+                    position: absolute;
+                    @include vw-pc(right, 20);
+                    @include vw-pc(top, 14);
+                    @include vw-pc(font-size, 16);
+                    @include vw-pc(line-height, 24);
+                    color: #000;
+
+                    &_number {
+                        @include vw-pc(font-size, 42);
+                        @include vw-pc(line-height, 50.4);
+                        font-weight: bold;
+                        color: #E38D67;
+                    }
+
+                    &_color {
+                        color: #E38D67;
+                    }
+                }
+            }
+
+            // 혜택 내 이미지
+            &_img {
+                display: block;
+                position: absolute;
+
+                &--01 {
+                    @include vw-pc(width, 166);
+                    @include vw-pc(height, 173);
+                    @include vw-pc(right, 41);
+                    @include vw-pc(bottom, 9);
+                }
+
+                &--02 {
+                    @include vw-pc(width, 237.73);
+                    @include vw-pc(height, 107);
+                    @include vw-pc(right, 31.4);
+                    @include vw-pc(top, 119);
+                }
+
+                &--03 {
+                    @include vw-pc(width, 187);
+                    @include vw-pc(height, 75);
+                    @include vw-pc(right, 16);
+                    @include vw-pc(top, 79);
+                }
+
+                &--04 {
+                    @include vw-pc(width, 147);
+                    @include vw-pc(height, 78.65);
+                    @include vw-pc(right, 37);
+                    @include vw-pc(top, 79.7);
+                }
+
+                &--05 {
+                    @include vw-pc(width, 186.99);
+                    @include vw-pc(height, 86.68);
+                    @include vw-pc(right, 29);
+                    @include vw-pc(top, 69.7);
+                }
+            }
+
+            &_notice {
+                position: absolute;
+                @include vw-pc(right, 20);
+                @include vw-pc(bottom, 11);
+                @include vw-pc(font-size, 16);
+                @include vw-pc(line-height, 20);
+                font-weight: 400;
+            }
+        }
+
+        // 유의사항 토글
+        .notice_toggle {
+            color: #666;
+            @include vw-pc(width, 210);
+            @include vw-pc(font-size, 16);
+            @include vw-pc(line-height, 20);
+            font-weight: 400;
+            margin: 50px auto 0;
+
+            .pt_arrow_icon {
+                @include vw-pc(width, 6);
+                @include vw-pc(height, 6);
+                text-decoration: #666;
+            
+                &::after {
+                    @include vw-pc(border-width, 2);
+                }
+            }
+        }
+    }
+
+    // 바잉툴 section
+    .sec_special {
+        background-color: #F7F7F7;
+        @include vw-pc(padding, 99 0);
+
+        .pt_special {
+            &_title {
+                @include vw-pc(font-size, 42);
+                @include vw-pc(line-height, 50);
+                text-align: center;
+                font-weight: 700;
+
+                &--left {
+                    @include vw-pc(width, 650);
+                }
+
+                &--right {
+                    @include vw-pc(width, 650);
+                    @include vw-pc(letter-spacing, -2);
+                }
+            }
+
+            &_notice {
+                @include vw-pc(font-size, 18);
+                @include vw-pc(line-height, 36);
+                text-align: center;
+                font-weight: 400;
+                color: #666666;
+            }
+
+            // 타이틀, 바잉툴 레이아웃 
+            &_divider {
+                @include vw-pc(width, 1320);
+                @include vw-pc(margin, 0 auto);
+                display: flex;
+                flex-wrap: nowrap;
+                justify-content: space-between;
+            }
+
+            // 바잉툴 영역 (production aka.prod)
+            &_prod {
+                &_wrap {
+                    position: relative;
+                    @include vw-pc(margin-top, 31);
+
+                    // 스와이퍼 내 이미지 모두 동일 사이즈로 맞추는게 best, 어도비 XD로 안되서 마진 처리
+                    &--01 {
+                        .swiper-wrapper {
+                            .swiper-slide {
+                                @include vw-pc(margin, 65 0 43.9 0);
+                            }
+                        }
+                    }
+
+                    &--02 {
+                        .swiper-wrapper {
+                            .swiper-slide {
+                                &:first-child {
+                                    @include vw-pc(margin, 65 0 43.9 0);
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &_tag {
+                    position: absolute;
+                    z-index: 10;
+                    @include vw-pc(top, -6.8);
+                    @include vw-pc(height, 56);
+
+                    // 바잉툴 택 이미지 처리 ver
+                    &--01 {
+                        @include vw-pc(width, 48.52);
+                        @include vw-pc(left, 14);
+                    }
+
+                    &--02 {
+                        @include vw-pc(width, 60.73);
+                        @include vw-pc(left, 70.5);
+                    }
+
+                    &--03 {
+                        @include vw-pc(width, 60.73);
+                        @include vw-pc(left, 139.3);
+                    }
+                }
+
+                &_inner {
+                    // 바잉툴 스와이퍼 + 페이지네이션 영역
+                    &--left {
+                        position: absolute;
+                        @include vw-pc(left, 0);
+                        @include vw-pc(top, 0);
+                        overflow: hidden;
+                        @include vw-pc(width, 370);
+                    }
+
+                    // 바잉툴 토글 + 상품 정보 + 쿠폰 및 구매 영역
+                    &--right {
+                        position: absolute;
+                        @include vw-pc(right, 0);
+                        @include vw-pc(top, 0);
+                        overflow: hidden;
+                        @include vw-pc(width, 280);
+                    }
+                }
+
+                &_swiper {
+                    .pt_special_buyingtool_swiper {
+                        @include vw-pc(width, 370);
+                        @include vw-pc(height, 347);
+
+                        .swiper-button-next {
+                            background: center/cover no-repeat url('../../is/images/special_prod_btn_next.png');
+                        }
+
+                        .swiper-button-prev {
+                            background: center/cover no-repeat url('../../is/images/special_prod_btn_prev.png');
+                        }
+
+                        .swiper-button-prev,
+                        .swiper-button-next {
+                            @include vw-pc(width, 15.83);
+                            @include vw-pc(height, 33.71);
+                            @include vw-pc(top, 189);
+                            // 기본 스와이퍼 속성이 reset 되지 않는 이슈 .. why
+                            // margin-top: calc(-1 * var(--swiper-navigation-size)/ 2);
+
+                            &::after {
+                                display: none;
+                            }
+                        }
+
+                        // 기본값 reset
+                        .swiper-pagination {
+                            display: none;
+                        }
+                    }
+                }
+
+                &_pagination {
+                    display: flex;
+                    flex-wrap: nowrap;
+                    justify-content: space-between;
+                    @include vw-pc(margin, 12 auto 0);
+
+                    &--01 {
+                        @include vw-pc(width, 272);
+                    }
+                    
+                    &--02 {
+                        @include vw-pc(width, 342);
+
+                        li {
+                            &:first-child {
+                                // 페이지네이션 아이콘 이미지 상이하여 조절
+                                @include vw-pc(margin-top, 2);
+                            }
+                        }
+                    }
+
+                    &_item {
+                        // 버튼 width 값 100% 채우기
+                        display: block;
+                    }
+                }
+
+                &_toggle {
+                    @include vw-pc(width, 280);
+                    @include vw-pc(height, 76);
+                    display: inline-flex;
+                    justify-content: center;
+
+                    &_text {
+                        @include vw-pc(font-size, 20);
+                        @include vw-pc(line-height, 32);
+                        font-weight: 700;
+                        color: #fff;
+
+                        &--yellow {
+                            @include vw-pc(font-size, 22);
+                            color: #FDEF7C; 
+                        }
+
+                        &--small {
+                            @include vw-pc(font-size, 16);
+                            @include vw-pc(line-height, 24);
+                        }
+                    }
+
+                    // 바잉툴 갈색 토글 버튼 커스텀
+                    &_icon {
+                        @include vw-pc(width, 23);
+                        @include vw-pc(height, 23);
+                        @include vw-pc(margin-left, 8);
+
+                        &--02 {
+                            @include vw-pc(margin-top, 32);
+                        }
+                    }
+
+                    .type_anchor {
+                        border-bottom: none;
+                        border-width: 0;
+                        transform: none;
+
+                        &::after {
+                            display: none;
+                        }
+                    }
+                }
+
+                &_desc {
+                    &_text {
+                        @include vw-pc(font-size, 20);
+                        @include vw-pc(line-height, 24);
+                        @include vw-pc(margin-top, 21);
+                        font-weight: 700;
+                    }
+
+                    &_model {
+                        @include vw-pc(font-size, 14);
+                        @include vw-pc(line-height, 20);
+                        color: #A2A2A2;
+                    }
+                }
+
+                &_color {
+                    // radio 버튼 색상 바꿔주기 (off)
+                    [type="radio"] {
+                        appearance: none;
+                        @include vw-pc(width, 16);
+                        @include vw-pc(height, 16);
+                        border-radius: 50%;
+                        background-color: #9199A2;
+                        border: 2px solid #B7B7B7;
+
+                        & +.pt_special_prod_color_radio {
+                            @include vw-pc(margin-left, 8);
+                        }
+                    }
+
+                    // radio 버튼 색상 바꿔주기 (on)
+                    [type="radio"]:checked {
+                        @include vw-pc(width, 21);
+                        @include vw-pc(height, 21);
+                        box-shadow: 0 0 0 2px #000;
+                        border: 2px solid #B7B7B7;
+                        background-color: #fff;
+                    }
+
+                    &_radio {                        
+                        &--text {
+                            display: block;
+                            @include vw-pc(font-size, 14);
+                            @include vw-pc(line-height, 16.8);
+                            @include vw-pc(letter-spacing, -2);
+                            @include vw-pc(margin-top, 4);
+                            font-weight: 400;
+                        }
+                    }
+
+                    // 회색선
+                    &::after {
+                        content: "-";
+                        font-size: 0;
+                        display: block;
+                        background-color: #707070;
+                        @include vw-pc(width, 248);
+                        @include vw-pc(height, 1);
+                        @include vw-pc(margin, 12 auto 13);
+                    }
+
+                    // 푸드쇼케이스 색상 단일 : '패널 레디'
+                    &--02 {
+                        display: block;
+                        @include vw-pc(margin-top, 52);
+                    }
+                }
+
+                &_price {
+                    @include vw-pc(font-size, 18);
+                    font-weight: 700;
+                    @include vw-pc(line-height, 36);
+                    text-align: left;
+                    @include vw-pc(margin, 0 auto);
+                    @include vw-pc(letter-spacing, -1);
+
+                    table {
+                        @include vw-pc(width, 248);
+
+                        th {
+                            @include vw-pc(width, 115);
+                            @include vw-pc(letter-spacing, -1);
+                        }
+
+                        td {
+                            text-align: right;
+                        }
+                    }
+
+                    &--blue {
+                        color: #006BEA;
+                    }
+
+                    &--small {
+                        @include vw-pc(font-size, 16);
+                    }
+
+                    .btn_coupon {
+                        display: flex;
+                        @include vw-pc(width, 164);
+                        @include vw-pc(height, 23);
+                        @include vw-pc(margin, 19 auto);
+                        @include vw-pc(font-size, 18);
+                        font-weight: 700;
+                        @include vw-pc(line-height, 47);
+                    }
+
+                    .pt_special_prod_coupon_icon {
+                        @include vw-pc(width, 16);
+                        @include vw-pc(height, 19);
+                        @include vw-pc(margin-left, 5);
+                    }
+
+                    // Sold Out 버튼
+                    .btn_gray {
+                        display: flex;
+                        @include vw-pc(margin, 0 auto);
+                        @include vw-pc(width, 158);
+                        @include vw-pc(height, 46);
+                        @include vw-pc(font-size, 18);
+                        @include vw-pc(line-height, 43.2);
+                        font-weight: bold;
+                        color: #fff;
+                        background-color: #707070;
+                        border: none;
+                        @include vw-pc(border-radius, 100);
+                        font-family: 'Samsung Sharp Sans';
+                    }
+
+                    // 구매 버튼
+                    .black_bg {
+                        display: flex;
+                        @include vw-pc(margin, 0 auto);
+                        @include vw-pc(width, 158);
+                        @include vw-pc(height, 44);
+                        @include vw-pc(font-size, 18);
+                        @include vw-pc(line-height, 43.2);
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+
+        .pt_prod_tab {
+            @include vw-pc(margin, 10 0 12 0);
+
+            .btn_common {
+                @include vw-pc(width, 62);
+                @include vw-pc(height, 30);
+            }
+        }
+
+        .notice_toggle {
+            color: #666;
+            @include vw-pc(width, 160);
+            @include vw-pc(font-size, 16);
+            @include vw-pc(line-height, 19);
+            font-weight: 400;
+            margin: 49px auto 0;
+
+            .pt_arrow_icon {
+                @include vw-pc(width, 6);
+                @include vw-pc(height, 6);
+                text-decoration: #666;
+            
+                &::after {
+                    @include vw-pc(border-width, 2);
+                }
+            }
+        }
+    }
+
+    // 이벤트 section
+    .sec_event {
+        background-color: #F7F7F7;
+        @include vw-pc(padding, 96 0 80);
+
+        .pt_event {
+            &_wrap {
+                display: inline-flex;
+                flex-wrap: nowrap;
+            }
+
+            // 영역 간 사이 조정
+            &_item {
+                &:first-child {
+                    @include vw-pc(margin-right, 8);
+                }
+
+                &:last-child {
+                    @include vw-pc(margin-left, 26);
+                }
+            }
+
+            &_text_wrap {
+                @include vw-pc(width, 395);
+                text-align: left;
+
+                // 응모하기 버튼
+                .type_round {
+                    @include vw-pc(width, 158);
+                    @include vw-pc(font-size, 16);
+                    font-weight: 700;
+                }
+
+                // 토글 버튼
+                .pt_btn01 {
+                    float: right;
+                    @include vw-pc(font-size, 16);
+
+                    // 대상모델 확인하기
+                    &--01 {
+                        display: inline-block;
+                        @include vw-pc(width, 130);
+                        @include vw-pc(margin-left, 10);
+                        font-weight: 600;
+                    }
+
+                    // 포토 ... 유의사항 보기
+                    &--02 {
+                        float: right;
+                        @include vw-pc(width, 220);
+                        @include vw-pc(line-height, 29);
+                        font-weight: 700;
+                    }
+
+                    .pt_arrow_icon {
+                        @include vw-pc(width, 6);
+                        @include vw-pc(height, 6);
+                    
+                        &::after {
+                            @include vw-pc(border-width, 2);
+                        }
+                    }
+                }
+            }
+
+            // "포토 상품평 이벤트"
+            &_title {
+                @include vw-pc(font-size, 42);
+                @include vw-pc(line-height, 50.4);
+                font-weight: 700;
+            }
+
+            // "김치플러스 ... 드려요"
+            &_desc {
+                @include vw-pc(margin-top, 15);
+                @include vw-pc(line-height, 26);
+                
+                &--bold {
+                    font-weight: 700;
+                }
+                
+                &--color {
+                    font-weight: 700;
+                    color: #775247;
+                }
+            }
+
+            // 이벤트 상세 내용 테이블
+            &_cont {
+                @include vw-pc(margin, 39 0 40 0);
+
+                tr {
+                    display: flex;
+                    @include vw-pc(margin-bottom, 11);
+                }
+
+                th {
+                    display: inline-block;
+                    @include vw-pc(width, 106);
+                    @include vw-pc(margin-right, 53);
+                    @include vw-pc(font-size, 17);
+                    font-weight: 700;
+                }
+
+                &--small {
+                    @include vw-pc(font-size, 14);
+                    font-weight: 400;
+                }
+            }
+
+            // 요기요 이미지
+            &_bubble {
+                display: block;
+                @include vw-pc(width, 207);
+                @include vw-pc(height, 207);
+            }
+
+            // 이벤트 응모 방법
+            &_how {
+                &_title {
+                    @include vw-pc(font-size, 18);
+                    font-weight: 700;
+                    @include vw-pc(line-height, 35);
+
+                    &:after {
+                        content: "-";
+                        display: inline-block;
+                        @include vw-pc(font-size, 0);
+                        background-color: #000;
+                        opacity: .15;
+                        @include vw-pc(width, 560);
+                        @include vw-pc(height, 1);
+                        @include vw-pc(line-height, 11);
+                        @include vw-pc (margin-left, 16.8);
+                    }
+                }
+
+                &_list {
+                    display: grid;
+                    grid-template-columns: repeat(3, 1fr);
+                    @include vw-pc(column-gap, 12);
+                }
+
+                &_item {
+                    position: relative;
+                    @include vw-pc(width, 220);
+                    @include vw-pc(height, 289);
+                    @include vw-pc(border-radius, 5);
+                    box-shadow: 7px 7px 7px #ededed; // 이미지 처리 중 고민
+                    @include vw-pc(padding, 25 0 18 0);
+                    background-color: #fff;
+
+                    &_img {
+                        display: block;
+                        margin: 0 auto;
+                        @include vw-pc(width, 110.56);
+                        @include vw-pc(height, 110.56);
+                    }
+
+                    &_text {
+                        @include vw-pc(margin-top, 19.4);
+                        @include vw-pc(font-size, 15);
+                        font-weight: 400;
+                        @include vw-pc(line-height, 20);
+
+                        &--bold {
+                            font-weight: 700;
+                        }
+                    }
+
+                    .pt_btn01 {
+                        @include vw-pc(width, 125);
+                        @include vw-pc(font-size, 14);
+                        font-weight: 700;
+                        @include vw-pc(margin, 15 auto 0);
+
+                        .pt_arrow_icon {
+                            @include vw-pc(width, 3);
+                            @include vw-pc(height, 3);
+                            @include vw-pc(margin-bottom, 4);
+                        }
+                    }
+                }
+
+                // 해시태그 복사
+                &_hashtag {
+                    position: relative;
+                    @include vw-pc(height, 40);
+                    box-shadow: 7px 7px 7px #ededed;
+                    @include vw-pc(margin-top, 11.6);
+                    background-color: #fff;
+
+                    &_text {
+                        @include vw-pc(width, 511);
+                        text-align: center;
+                        @include vw-pc(font-size, 18);
+                        font-weight: 700;
+                        @include vw-pc(line-height, 40);
+                    }
+
+                    .btn_common {
+                        position: absolute;
+                        @include vw-pc(right, 0);
+                        @include vw-pc(top, 0);
+                        @include vw-pc(width, 173);
+                        background-color: #775247;
+                        @include vw-pc(border-radius, 10);
+                        border: none;
+                        color: #fff;
+                        @include vw-pc(font-size, 15);
+                        font-weight: 700;
+                        @include vw-pc(line-height, 20);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .catherine_project {
+        // common
+        .inner_1440 {
+            position: relative;
+            text-align: left;
+        }
+
+        .inner_1920 {
+            position: relative;
+        }
+
+        .pt_benefit_tab {
+            @include vw-mo(margin-bottom, 45);
+            text-align: center;
+
+            .btn_common {
+                border: 2px solid #D2D2D2;
+
+                @include vw-mo(height, 74);
+                @include vw-mo(border-radius, 50);
+                @include vw-mo(font-size, 24);
+                @include vw-mo(padding, 0 30);
+
+                & + .btn_common {
+                    margin-left: 10px;
+                }
+            }
+        }
+
+        .btn_common {
+            @include vw-mo(font-size, 16);
+            .pt_arrow_icon{position: relative; display: inline-block; @include vw-mo(width, 6); @include vw-mo(height, 6);}
+            .pt_arrow_icon::after {content:''; position: absolute; top: 50%; right: 0; display:inline-block; width: 100%; height:100%; 
+            border-bottom:2px solid #000; border-right:2px solid #000; @include vw-mo(border-width, 2);}
+        
+            .pt_arrow_right{margin: 0 0.2em;}
+            .pt_arrow_right::after {transform:translateY(-50%) rotate(-45deg);}
+            .pt_arrow_anchor{margin:0 0.3em;}
+            .pt_arrow_anchor::after {transform:translateY(-78%) translateX(35%) rotate(45deg);}
+            &.active .pt_arrow_anchor::after {top: auto; bottom:50%; transform:translateY(78%) translateX(35%) rotate(225deg);}
+        }
+
+        // 최상단 탭 (탭 별 사이즈 상이하여 직접 조정)
+        .second_tab_text {
+            display: block;
+            text-align: center;
+            @include vw-mo(font-size, 30);
+            @include vw-mo(line-height, 30);
+            @include vw-mo(padding, 200 0);
+            font-weight: 700;
+        }
+
+        // keyview section
+        .sec_kv {
+            .pt_kv {
+                &_text_wrap {
+                    text-align: center;
+                    position: absolute;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    @include vw-mo(width, 720);
+                    @include vw-mo(top, 65);
+                }
+    
+                &_title {
+                    @include vw-mo(font-size, 62);
+                    font-weight: 700;
+                    @include vw-mo(line-height, 66);
+                    @include vw-mo(letter-spacing, -1);
+                }
+    
+                &_subtitle {
+                    @include vw-mo(font-size, 26);
+                    font-weight: 400;
+                    @include vw-mo(line-height, 36);
+                    @include vw-mo(margin-top, 6);
+                }
+    
+                &_date {
+                    @include vw-mo(font-size, 26);
+                    @include vw-mo(line-height, 31);
+                    @include vw-mo(margin-top, 12);
+    
+                    .kr {
+                        font-weight: 700;
+                        @include vw-mo(font-size, 26);
+                        @include vw-mo(line-height, 31);
+                    }
+                }
+            }
+        }
+
+        // 최상단 탭 영역
+        .sec_tab {
+            @include vw-mo(margin-top, -14);
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+
+            .btn_common {
+                border: 1px solid #707070;
+                border-radius: 10px 10px 0 0;
+                @include vw-mo(height, 80);
+                @include vw-mo(padding, 0 47);
+                
+                .pt_nav_tab {
+                    @include vw-mo(font-size, 26);
+                    font-weight: 700;
+                }
+
+                &--02 {
+                    float: right;
+                    @include vw-mo(width, 370);
+                }
+            }
+        }
+
+        // 스티키 nav 영역
+        .sec_nav {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            background-color: #000;
+
+            .sticky_nav {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                @include vw-mo(width, 639);
+                @include vw-mo(margin, 0 auto);
+    
+                &_item {
+                    position: relative;
+    
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        z-index: 2;
+                        @include vw-mo(right, -1);
+                        top: 50%;
+                        @include vw-mo(width, 2);
+                        @include vw-mo(height, 24);
+                        transform: translateY(-50%);
+                        background-color: #4e4e4e;
+                    }
+    
+                    &:last-child::after {
+                        display: none;
+                    }
+                }
+    
+                .nav_text {
+                    display: block;
+                    @include vw-mo(padding, 25 24);
+                    @include vw-mo(font-size, 24);
+                    @include vw-mo(line-height, 32);
+                    @include vw-mo(letter-spacing, -2);
+                    color: #fff;
+                    font-weight: 700;
+    
+                    & * {pointer-events: none !important;} // 옴니태깅 오류 수정
+                }
+    
+                &.fixed_start {
+                    position: fixed;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    z-index: 90;
+                }
+            }
+        }
+
+        // 구매 혜택 영역
+        .sec_benefit {
+            @include vw-mo(padding, 100 0);
+
+            .pt_benefit_01 {
+                &_subtitle {
+                    @include vw-mo(font-size, 36);
+                    @include vw-mo(line-height, 54);
+                    text-align: center;
+                    display: block;
+                }
+
+                &_title {
+                    @include vw-mo(font-size, 48);
+                    @include vw-mo(line-height, 54);
+                    color: #E2732D;
+                    text-align: center;
+                }
+
+                // 구매 혜택 01 ~ 05 wrapper
+                &_list {
+                    @include vw-mo(width, 672);
+                    margin: 0 auto;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+
+                    &_wrap {
+                        // 혜택 01 ~ 02
+                        &--01 {
+                            @include vw-mo(margin, 30 auto 0);
+    
+                            .pt_benefit_01_list--item {
+                                @include vw-mo(width, 326);
+                                @include vw-mo(height, 470);
+    
+                                &::before {
+                                    content: "주황색 태그 배경 이미지 1";
+                                    @include vw-mo(font-size, 0);
+                                    display: block;
+                                    background: center/cover no-repeat url('../../is/images/benefit_tag_bg-01-mo.png');
+                                    position: absolute;
+                                    @include vw-mo(left, 26);
+                                    @include vw-mo(top, -10);
+                                    @include vw-mo(width, 95.71);
+                                    @include vw-mo(height, 47);
+                                }
+                            }
+                        }
+
+                        // 혜택 03 ~ 05 (스와이프)
+                        &--02 {
+                            @include vw-mo(margin, 80 auto 0);
+
+                            .pt_benefit_01_list--item {
+                                @include vw-mo(width, 508);
+                                @include vw-mo(height, 287);
+    
+                                &::before {
+                                    content: "주황색 태그 배경 이미지 2";
+                                    @include vw-mo(font-size, 0);
+                                    display: block;
+                                    background: center/cover no-repeat url('../../is/images/benefit_tag_bg-02-mo.png');
+                                    position: absolute;
+                                    @include vw-mo(left, 26);
+                                    @include vw-mo(top, -10);
+                                    @include vw-mo(width, 95.71);
+                                    @include vw-mo(height, 47);
+                                }
+    
+                                & + .pt_benefit_01_list--item {
+                                    @include vw-mo(margin-left, 20);
+                                }
+                            }
+                        }
+                    }
+
+                    &--item {
+                        position: relative;
+                        background-color: #F4ECE4;
+                        @include vw-mo(border-radius, 5);
+                        @include vw-mo(padding-left, 26);
+
+                        // 혜택 02 버튼
+                        .type_round {
+                            position: absolute;
+                            @include vw-mo(top, 163);
+                            @include vw-mo(left, 26);
+                            @include vw-mo(height, 58);
+                            @include vw-mo(border-radius, 50);
+                            @include vw-mo(font-size, 22);
+                            @include vw-mo(padding, 0 22);
+                        }
+
+                        // 전 혜택 토글 버튼
+                        .pt_btn01 {
+                            position: absolute;
+                            @include vw-mo(left, 26);
+                            @include vw-mo(width, 150);
+                            @include vw-mo(height, 29);
+                            @include vw-mo(font-size, 20);
+                            @include vw-mo(letter-spacing, -2);
+                            @include vw-mo(line-height, 22);
+                            font-weight: 400;
+
+                            .pt_arrow_icon {
+                                @include vw-mo(width, 6);
+                                @include vw-mo(height, 6);
+                            
+                                &::after {
+                                    @include vw-mo(border-width, 2);
+                                }
+                            }
+
+                            &--a {
+                                @include vw-mo(top, 160);
+                            }
+
+                            &--b {
+                                @include vw-mo(top, 241);
+                            }
+
+                            &--c {
+                                @include vw-mo(top, 186);
+                            }
+
+                            &--short {
+                                @include vw-mo(width, 105);
+                            }
+                        }
+                    }
+                }
+
+                &_tag {
+                    @include vw-mo(font-size, 22);
+                    font-weight: 700;
+                    color: #fff;
+                    @include vw-mo(width, 66);
+                    @include vw-mo(height, 47);
+                    position: absolute;
+                    @include vw-mo(left, 41);
+                    @include vw-mo(top, 0);
+                    @include vw-mo(line-height, 30);
+                    @include vw-mo(letter-spacing, -2);
+    
+                    .en {
+                        @include vw-mo(font-size, 22);
+                        font-weight: bold;
+                    }
+                }
+
+                // 혜택 문구
+                &_text {
+                    position: absolute;
+                    @include vw-mo(left, 26);
+                    @include vw-mo(top, 64);
+                    @include vw-mo(font-size, 32);
+                    @include vw-mo(line-height, 40);
+                    @include vw-mo(letter-spacing, -2);
+                    font-weight: 700;
+                    text-align: left;
+    
+                    &--small {
+                        @include vw-mo(left, 26);
+                        @include vw-mo(top, 50);
+                        @include vw-mo(font-size, 32);
+                        @include vw-mo(line-height, 40);
+                    }
+                }
+
+                // 혜택 내 할인가
+                &_sale {
+                    position: absolute;
+                    @include vw-mo(right, 20);
+                    @include vw-mo(top, 8);
+                    @include vw-mo(font-size, 20);
+                    @include vw-mo(line-height, 53);
+                    font-weight: 700;
+
+                    &--number {
+                        @include vw-mo(font-size, 48);
+                        @include vw-mo(line-height, 53);
+                        color: #E2732D;
+                        font-weight: bold;
+                    }
+
+                    &--color {
+                        @include vw-mo(line-height, 53);
+                        color: #E2732D;
+                    }
+
+                    &--small {
+                        position: absolute;
+                        @include vw-mo(right, 20);
+                        @include vw-mo(top, 13);
+                        @include vw-mo(font-size, 20);
+                        @include vw-mo(line-height, 53);
+                        color: #000;
+
+                        &_number {
+                            @include vw-mo(font-size, 48);
+                            @include vw-mo(line-height, 53);
+                            font-weight: bold;
+                            color: #E38D67;
+                        }
+
+                        &_color {
+                            color: #E38D67;
+                        }
+                    }
+                }
+
+                &_img {
+                    display: block;
+                    position: absolute;
+
+                    &--01 {
+                        @include vw-mo(width, 122);
+                        @include vw-mo(height, 173);
+                        @include vw-mo(left, 104);
+                        @include vw-mo(bottom, 44);
+                    }
+
+                    &--02 {
+                        top: auto;
+                        @include vw-mo(width, 205.61);
+                        @include vw-mo(height, 91.68);
+                        @include vw-mo(left, 60);
+                        @include vw-mo(bottom, 68.7);
+                    }
+
+                    &--03 {
+                        @include vw-mo(width, 209);
+                        @include vw-mo(height, 84);
+                        @include vw-mo(right, 0);
+                        @include vw-mo(top, 96);
+                    }
+
+                    &--04 {
+                        @include vw-mo(width, 182);
+                        @include vw-mo(height, 85.64); 
+                        @include vw-mo(right, 14);
+                        @include vw-mo(top, 97.4);
+                    }
+
+                    &--05 {
+                        @include vw-mo(width, 211.52);
+                        @include vw-mo(height, 94.92); 
+                        @include vw-mo(right, 9);
+                        @include vw-mo(top, 86.1 );
+                    }
+                }
+
+                &_notice {
+                    position: absolute;
+                    @include vw-mo(right, 20);
+                    @include vw-mo(bottom, 15);
+                    @include vw-mo(font-size, 20);
+                    @include vw-mo(line-height, 24);
+                    font-weight: 500;
+                }
+
+                // 혜택 03 ~ 05 화살표 버튼 커스텀
+                &_swiper {
+                    display: flex;
+
+                    .swiper-button-next,
+                    .swiper-button-prev {
+                        position: absolute;
+                        @include vw-mo(width, 61);
+                        @include vw-mo(height, 23);
+                        @include vw-mo(top, 773);
+
+                        &::after {
+                            display: none;
+                        }
+                    }
+
+                    .swiper-button-next {
+                        background: center/cover no-repeat url('../../is/images/benefit_swiper_btn-mo.png');
+                        @include vw-mo(right, 40);
+                    }
+
+                    .swiper-button-prev {
+                        background: center/cover no-repeat url('../../is/images/benefit_swiper_btn-mo.png');
+                        transform: rotateY(180deg);
+                        @include vw-mo(margin-left, 530);
+                    }
+                }
+            }
+
+            .notice_toggle {
+                display: block;
+                color: #666;
+                @include vw-mo(width, 300);
+                @include vw-mo(font-size, 24);
+                @include vw-mo(line-height, 40);
+                font-weight: 400;
+                margin: 50px auto 0;
+    
+                .pt_arrow_icon {
+                    @include vw-mo(width, 9);
+                    @include vw-mo(height, 9);
+                    text-decoration: #666;
+                
+                    &::after {
+                        @include vw-mo(border-width, 2);
+                    }
+                }
+            }
+        }
+
+        // 바잉툴 섹션
+        .sec_special {
+            background-color: #F7F7F7;
+            padding: 0;
+            
+            .special_prod_01 {
+                @include vw-mo(padding-top, 76);
+
+                &--02 {
+                    @include vw-mo(padding-bottom, 100);
+                }
+            }
+
+            .pt_special {
+                &_title {
+                    @include vw-mo(font-size, 48);
+                    @include vw-mo(line-height, 62);
+                    font-weight: 700;
+                }
+
+                &_prod {
+                    background-color: #fff;
+                    @include vw-mo(border-radius, 10);
+                    @include vw-mo(width, 672);
+                    margin: 0 auto;
+                    position: relative;
+                    @include vw-mo(margin-top, 35);
+
+                    // 바잉툴 택 배경 -> 이미지, 내부 텍스트 처리
+                    &_tag {
+                        display: block;
+                        position: absolute;
+                        @include vw-mo(top, -13);
+                        @include vw-mo(width, 79);
+                        @include vw-mo(height, 72);
+    
+                        &--01 {
+                            background: center/cover no-repeat url('../is/images/special_prod_tag_01-mo.png');
+                            @include vw-mo(left, 12);
+                        }
+
+                        &--02 {
+                            background: center/cover no-repeat url('../is/images/special_prod_tag_02-mo.png');
+                            @include vw-mo(left, 96);
+                        }
+
+                        &--03 {
+                            background: center/cover no-repeat url('../is/images/special_prod_tag_03-mo.png');
+                            @include vw-mo(left, 180);
+                        }
+
+                        &--04 {
+                            background: center/cover no-repeat url('../is/images/special_prod_tag_04-mo.png');
+                            @include vw-mo(left, 12);
+                            @include vw-mo(width, 66);
+                            @include vw-mo(height, 75);
+                        }
+
+                        &--05 {
+                            background: center/cover no-repeat url('../is/images/special_prod_tag_05-mo.png');
+                            @include vw-mo(left, 96);
+                        }
+
+                        &--06 {
+                            background: center/cover no-repeat url('../is/images/special_prod_tag_06-mo.png');
+                            @include vw-mo(left, 180);
+                        }
+
+                        &--07 {
+                            background: center/cover no-repeat url('../is/images/special_prod_tag_07-mo.png');
+                            @include vw-mo(left, 260);
+                        }
+
+                        // 택 내 텍스트 위 여백 조정
+                        &.pdt_9 {
+                            @include vw-mo(padding-top, 9);
+                        }
+
+                        // 택 내 텍스트 다수 속성 조정
+                        &--text {
+                            display: inline-block;
+                            justify-content: center;
+                            font-weight: 700;
+                            text-align: center;
+                            align-items: center;
+                            color: #fff;
+                            @include vw-mo(width, 72);
+                            @include vw-mo(height, 72);
+                            @include vw-mo(line-height, 24);
+
+                            // font-size 16px
+                            .fz_16 {
+                                @include vw-mo(font-size, 16);
+                            }
+
+                            // font-size 20px
+                            .fz_20 {
+                                @include vw-mo(font-size, 20);
+                            }
+
+                            // font-size 22px
+                            .fz_22 {
+                                @include vw-mo(font-size, 22);
+                            }
+
+                            // font-size 26px
+                            .fz_26 {
+                                @include vw-mo(font-size, 26);
+                            }
+
+                            // letter-spacing -2px
+                            .ls_2 {
+                                @include vw-mo(letter-spacing, -2);
+                            }
+
+                            // letter-spacing -2.5px
+                            .ls_2-5 {
+                                @include vw-mo(letter-spacing, -2.5);
+                            }
+
+                            // letter-spacing -3px
+                            .ls_3 {
+                                @include vw-mo(letter-spacing, -3);
+                            }
+
+                            // line-height 26px
+                            .lh_26 {
+                                @include vw-mo(line-height, 26);
+                            }
+                        }
+                    }
+
+                    // 바잉툴 페이지네이션 이미지
+                    &_pagination {
+                        @include vw-mo(width, 587);
+                        margin: 8px auto;
+                        display: flex;
+                        flex-wrap: nowrap;
+                        justify-content: space-between;
+
+                        &_wrap {
+                            border-top: 1px solid #D5D5D5;
+                            border-bottom: 1px solid #D5D5D5;
+                        }
+
+                        &_item {
+                            @include vw-mo(width, 134);
+                            @include vw-mo(height, 144);
+                        }
+                    }
+
+                    // 바잉툴 아래 영역 : 컬러 + 제품명 / 토글 + 가격 + 쿠폰 및 구매 버튼
+                    &_item {
+                        &_wrap {
+                            display: flex;
+                            flex-wrap: nowrap;
+                            justify-content: space-between;
+
+                            // 컬러 + 제품명
+                            &--01 {
+                                @include vw-mo(padding, 12 14 39);
+                                @include vw-mo(width, 295);
+                            }
+
+                            // 토글 + 가격 및 버튼
+                            &--02 {
+                                @include vw-mo(width, 377);
+                            }
+
+                            .pt_prod_tab {
+                                @include vw-mo(margin-bottom, 11);
+                                text-align: center;
+
+                                .btn_common {
+                                    @include vw-mo(width, 78);
+                                    @include vw-mo(height, 42);
+                                    @include vw-mo(font-size, 20);
+                                    @include vw-mo(line-height, 21);
+                                    font-weight: 700;
+                                }
+                            }
+                        }
+                    }
+
+                    &_color {
+                        display: block;
+                        text-align: center;
+
+                        // pc 버전에서 있던 실선 꾸밈 초기화
+                        &::after {
+                            display: none;
+                        }
+
+                        [type="radio"] {
+                            appearance: none;
+                            @include vw-mo(width, 25);
+                            @include vw-mo(height, 25);
+                            border-radius: 50%;
+                            background-color: #9199A2;
+                            border: 2px solid #B7B7B7;
+    
+                            & +.pt_special_prod_color_radio {
+                                @include vw-mo(margin-left, 10);
+                            }
+                        }
+    
+                        // radio 버튼 색상 바꿔주기 (on)
+                        [type="radio"]:checked {
+                            @include vw-mo(width, 30);
+                            @include vw-mo(height, 30);
+                            box-shadow: 0 0 0 2px #000;
+                            border: 2px solid #B7B7B7;
+                            background-color: #fff;
+                        }
+    
+                        &_radio {                        
+                            &--text {
+                                display: block;
+                                @include vw-mo(font-size, 20);
+                                @include vw-mo(line-height, 18);
+                                @include vw-mo(letter-spacing, -2);
+                                @include vw-mo(margin-top, 3);
+                                font-weight: 400;
+                            }
+                        }
+                    }
+
+                    // 제품명 부분
+                    &_text {
+                        @include vw-mo(width, 268);
+                        border-top: 1px solid #D5D5D5;
+                        @include vw-mo(padding-top, 12);
+                        @include vw-mo(margin-top, 10);
+                        text-align: center;
+
+                        &--name {
+                            @include vw-mo(font-size, 26);
+                            @include vw-mo(line-height, 34);
+                            font-weight: 700;
+
+                            .en {
+                                @include vw-mo(font-size, 26);
+                                @include vw-mo(line-height, 32);
+                                @include vw-mo(letter-spacing, -1.5);
+                            }
+                        }
+
+                        &--code {
+                            font-weight: 400;
+                            @include vw-mo(font-size, 20);
+                            @include vw-mo(line-height, 31);
+                        }
+                    }
+
+                    &_toggle {
+                        background-color: #84746A;
+                        @include vw-mo(width, 377);
+                        @include vw-mo(height, 99);
+                        justify-content: center;
+
+                        &_text {
+                            @include vw-mo(font-size, 30);
+                            @include vw-mo(line-height, 49);
+                            @include vw-mo(letter-spacing, -2);
+                            font-weight: 700;
+                            color: #fff;
+
+                            &--yellow {
+                                @include vw-mo(font-size, 30);
+                                color: #FDEF7C; 
+                            }
+                        }
+
+                        &_icon {
+                            @include vw-mo(width, 29);
+                            @include vw-mo(height, 29);
+                            @include vw-mo(margin-left, 8);
+                        }
+
+                        .type_anchor {
+                            border-bottom: none;
+                            border-width: 0;
+                            transform: none;
+
+                            &::after {
+                                display: none;
+                            }
+                        }
+                    }
+
+                    // 혜택가 테이블 내 텍스트 속성
+                    &_price {
+                        @include vw-mo(font-size, 28);
+                        font-weight: 700;
+                        @include vw-mo(line-height, 49);
+                        text-align: left;
+                        margin: 23px auto 37px;
+                        @include vw-mo(letter-spacing, -2);
+                        @include vw-mo(width, 343);
+
+                        th {
+                            @include vw-mo(width, 110);
+                        }
+
+                        td {
+                            text-align: right;
+                        }
+
+                        &--blue {
+                            color: #006BEA;
+
+                            th {
+                                @include vw-mo(line-height, 34);
+                            }
+                        }
+
+                        &--big {
+                            @include vw-mo(font-size, 30);
+                            @include vw-mo(line-height, 62);
+                        }
+
+                        &--small {
+                            @include vw-mo(font-size, 28);
+                            @include vw-mo(line-height, 61.74);
+                            font-weight: 400;
+                        }
+                    }
+
+                    // 바잉툴 내 버튼 레이아웃
+                    &_button_wrap {
+                        @include vw-mo(width, 343);
+                        margin: 24px auto 0;
+                        display: flex;
+                        flex-wrap: nowrap;
+                        justify-content: space-between;
+                        align-items: center;
+                    }
+
+                    // 쿠폰 버튼
+                    .btn_coupon {
+                        display: block;
+                        margin: 0 auto;
+                        @include vw-mo(width, 220);
+                        @include vw-mo(height, 32);
+                        @include vw-mo(font-size, 24);
+                        @include vw-mo(line-height, 32);
+                        font-weight: 700;
+
+                        .pt_special_prod_coupon_icon {
+                            display: inline-flex;
+                            @include vw-mo(width, 17.5);
+                            @include vw-mo(height, 20);
+                            @include vw-mo(margin-left, 5);
+                        }
+                    }
+
+                    // 자세히 보기 버튼
+                    .btn_more {
+                        display: block;
+                        text-align: center;
+                        @include vw-mo(width, 110);
+                        @include vw-mo(height, 32);
+                        @include vw-mo(font-size, 24);
+                        @include vw-mo(line-height, 32);
+                        font-weight: 700;
+                    }
+
+                    // 구매 버튼
+                    .black_bg {
+                        display: block;
+                        text-align: center;
+                        @include vw-mo(width, 210);
+                        @include vw-mo(height, 55);
+                        @include vw-mo(font-size, 24);
+                        @include vw-mo(line-height, 49.39);
+                        font-weight: 700;
+                    }
+                }
+
+                // 바잉툴 내 스와이퍼 버튼 커스텀
+                &_buyingtool_swiper {
+                    overflow: hidden;
+
+                    .swiper-button-next {
+                        background: center/cover no-repeat url('../../is/images/special_prod_btn_next.png');
+                        @include vw-mo(right, 24);
+                    }
+
+                    .swiper-button-prev {
+                        background: center/cover no-repeat url('../../is/images/special_prod_btn_prev.png');
+                        @include vw-mo(left, 24);
+                    }
+
+                    .swiper-button-prev,
+                    .swiper-button-next {
+                        @include vw-mo(width, 16);
+                        @include vw-mo(height, 34);
+                        @include vw-mo(top, 0);
+                        @include vw-mo(margin-top, 169);
+
+                        &::after {
+                            display: none;
+                        }
+                    }
+
+                    .swiper-pagination {
+                        display: none;
+                    }
+                }
+            }
+
+            .notice_toggle {
+                display: block;
+                color: #666;
+                @include vw-mo(width, 216);
+                @include vw-mo(font-size, 24);
+                @include vw-mo(line-height, 30);
+                font-weight: 400;
+                margin: 47px auto 0;
+    
+                .pt_arrow_icon {
+                    @include vw-mo(width, 9);
+                    @include vw-mo(height, 9);
+                    text-decoration: #666;
+                
+                    &::after {
+                        @include vw-mo(border-width, 2);
+                    }
+                }
+            }
+        }
+
+        // 이벤트 섹션
+        .sec_event {
+            background-color: #F7F7F7;
+            @include vw-mo(padding, 80 40 100);
+    
+            .pt_event {
+                // 이벤트 inner
+                &_wrap {
+                    display: block;
+                }
+
+                // pc 버전의 list 레이아웃 속성 초기화
+                &_item {
+                    &:last-child {
+                        @include vw-mo(margin-left, 0);
+                    }
+                }
+
+                // 이벤트 텍스트 wrapper
+                &_text_wrap {
+                    @include vw-mo(width, 466);
+                    text-align: left;
+
+                    // pc 버전 버튼 초기화
+                    .type_round {
+                        display: none;
+                    }
+
+                    .pt_btn01 {
+                        @include vw-mo(font-size, 22);
+
+                        // 대상 모델 확인하기 버튼
+                        &--01 {
+                            float: right;
+                            display: contents;
+                            @include vw-mo(width, 175);
+                            @include vw-mo(margin-left, 20);
+                            @include vw-mo(line-height, 36);
+                            font-weight: 700;
+                        }
+    
+                        .pt_arrow_icon {
+                            @include vw-mo(width, 9);
+                            @include vw-mo(height, 9);
+                        
+                            &::after {
+                                @include vw-mo(border-width, 2);
+                            }
+                        }
+                    }
+                }
+
+                // 이하 이벤트 문구 속성들
+                &_title {
+                    @include vw-mo(font-size, 50);
+                    @include vw-mo(line-height, 60);
+                    font-weight: 700;
+                }
+
+                &_desc {
+                    @include vw-mo(width, 349);
+                    @include vw-mo(margin-top, 40);
+                    @include vw-mo(line-height, 36);
+                    @include vw-mo(font-size, 24);
+                    font-weight: 400;
+
+                    &--bold {
+                        font-weight: 700;
+                    }
+
+                    &--color {
+                        font-weight: 700;
+                        color: #775247;
+                    }
+                }
+
+                &_cont {
+                    @include vw-mo(margin, 54 0 27 0);
+
+                    tr {
+                        display: flex;
+                        @include vw-mo(margin-bottom, 7);
+                    }
+
+                    th {
+                        display: inline-block;
+                        @include vw-mo(width, 136);
+                        @include vw-mo(margin-right, 32);
+                        @include vw-mo(font-size, 22);
+                        @include vw-mo(line-height, 36);
+                        @include vw-mo(letter-spacing, -1);
+                        font-weight: 700;
+                    }
+
+                    td {
+                        @include vw-mo(font-size, 22);
+                    }
+
+                    &--small {
+                        @include vw-mo(font-size, 20);
+                        font-weight: 400;
+                    }
+                }
+
+                // 요기요 이미지
+                &_bubble {
+                    display: block;
+                    position: absolute;
+                    @include vw-mo(top, 75);
+                    @include vw-mo(right, 40);
+                    @include vw-mo(width, 175);
+                    @include vw-mo(height, 175);
+                }
+
+                // 응모 방법
+                &_how {
+                    &_title {
+                        display: inline;
+                        float: left;
+                        @include vw-mo(font-size, 22);
+                        font-weight: 700;
+                        @include vw-mo(line-height, 35);
+
+                        &:after {
+                            content: "-";
+                            display: inline-block;
+                            @include vw-mo(font-size, 0);
+                            background-color: #000;
+                            opacity: .15;
+                            @include vw-mo(width, 470);
+                            @include vw-mo(height, 2);
+                            @include vw-mo(line-height, 14);
+                            @include vw-mo (margin-left, 16);
+                        }
+                    }
+
+                    // 응모 방법 01 ~ 03 wrapper
+                    &_list {
+                        display: grid;
+                        grid-template-columns: repeat(3, 1fr);
+                        @include vw-mo(width, 633);
+                        @include vw-mo(height, 400);
+                    }
+
+                    &_item {
+                        position: relative;
+                        @include vw-mo(width, 200);
+                        @include vw-mo(height, 400);
+                        @include vw-mo(border-radius, 5);
+                        box-shadow: 7px 7px 7px #ededed;
+                        @include vw-mo(padding, 29 0 40 0);
+                        text-align: center;
+                        background-color: #fff;
+
+                        &_img {
+                            display: block;
+                            margin: 0 auto;
+                            @include vw-mo(width, 120);
+                            @include vw-mo(height, 120);
+                        }
+
+                        &_text {
+                            @include vw-mo(margin-top, 17);
+                            @include vw-mo(font-size, 20);
+                            font-weight: 400;
+                            @include vw-mo(line-height, 26);
+
+                            &--bold {
+                                font-weight: 700;
+                            }
+                        }
+
+                        // 나의 상품평 ... 버튼
+                        .pt_btn01 {
+                            @include vw-mo(width, 148);
+                            @include vw-mo(height, 27);
+                            @include vw-mo(font-size, 18);
+                            @include vw-mo(line-height, 26);
+                            @include vw-mo(letter-spacing, -1.5);
+                            font-weight: 700;
+                            @include vw-mo(margin, 44 auto 0);
+
+                            .pt_arrow_icon {
+                                @include vw-mo(width, 6);
+                                @include vw-mo(height, 6);
+                                @include vw-mo(margin-bottom, 3);
+                            }
+                        }
+
+                        // 응모하기 버튼
+                        .type_round {
+                            @include vw-mo(margin, 115 auto 0);
+                            @include vw-mo(width, 162);
+                            @include vw-mo(height, 37);
+                            @include vw-mo(font-size, 18);
+                            @include vw-mo(line-height, 34);
+                            @include vw-mo(letter-spacing, -1);
+                        }
+                    }
+
+                    // 해시태그 복사 버튼
+                    &_hashtag {
+                        position: relative;
+                        @include vw-mo(height, 78);
+                        box-shadow: 7px 7px 7px #ededed;
+                        @include vw-mo(margin-top, 11.6);
+                        background-color: #fff;
+                        @include vw-mo(width, 627);
+
+                        &_text {
+                            @include vw-mo(width, 472);
+                            text-align: center;
+                            @include vw-mo(font-size, 24);
+                            font-weight: 700;
+                            @include vw-mo(line-height, 78);
+                        }
+
+                        .btn_common {
+                            position: absolute;
+                            @include vw-mo(right, 0);
+                            @include vw-mo(top, 0);
+                            @include vw-mo(width, 168);
+                            background-color: #775247;
+                            @include vw-mo(border-radius, 10);
+                            border: none;
+                            color: #fff;
+                            @include vw-mo(font-size, 20);
+                            font-weight: 700;
+                            @include vw-mo(line-height, 26);
+
+                            p {
+                                @include vw-mo(width, 68);
+                            }
+                        }
+                    }
+                }
+            }
+
+            .notice_toggle {
+                display: block;
+                @include vw-mo(font-size, 22);
+                @include vw-mo(width, 300);
+                @include vw-mo(line-height, 30);
+                margin: 50px auto 0;
+                font-weight: 700;
+
+                .pt_arrow_icon {
+                    @include vw-mo(width, 9);
+                    @include vw-mo(height, 9);
+                
+                    &::after {
+                        @include vw-mo(border-width, 2);
+                    }
+                }
+            }
+        }
+    }
+}

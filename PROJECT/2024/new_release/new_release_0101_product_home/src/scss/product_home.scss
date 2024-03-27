@@ -1,0 +1,145 @@
+@import '../../../../../../scss_global/scss-common2';
+@import 'bs_reset';
+
+.product_home {
+    .pt_title_box{
+        @include vw-max(margin-bottom, 70); @include vw-max(font-size, 56); @include vw-max(line-height, 66); text-align: center;
+
+        &.pt_title_compo {margin-bottom: 0;}
+        .pt_title_sub{display: block; @include vw-max(font-size, 24); @include vw-max(line-height, 66); font-weight: 400;}
+    }
+
+    .sec_product {
+        position: relative; @include vw-max(padding, 90 0 100); overflow: hidden;
+        
+        .pt_contents_box{
+            .pt_product{
+                position: static; @include vw-max(max-width, 1440); @include vw-max(padding-right, 0); @include vw-max(padding-bottom, 100);
+                &__list{
+                    @include vw-max(height, 565); 
+                }
+                &__item{
+                    display: flex; flex-direction: column; justify-content: flex-end; @include vw-max(width, 344); @include vw-max(padding, 0 13); transition: all 0.1s;
+                    // &.swiper-slide a{ pointer-events: none;}
+                    &.swiper-slide-active{@include vw-max(width, 434); }
+                    // &.swiper-slide-active a{pointer-events: auto;}
+                    // 배너
+                    .pt_item_banner{position: absolute; @include vw-pc(top, 24); @include vw-pc(left, 24); background-color: #2B8CFB; @include vw-pc(padding, 7 14); @include vw-pc(border-radius, 100); color: #fff; @include vw-pc(font-size, 16)}
+                    .pt_item_info{@include vw-max(margin-top, 25); @include vw-max(padding-left, 0); @include vw-max(font-size, 22); @include vw-max(line-height, 32); font-weight: 700; white-space: nowrap;}
+
+                    &--item02, &--item03 {
+                        .pt_item_info{@include vw-max(font-size, 23);}
+                    }
+                    &--item02{
+                        .pt_item_info{@include vw-max(letter-spacing, -0.57);}
+                    }
+                    &--item03{
+                        .pt_item_info{@include vw-max(letter-spacing, -0.96);}
+                    }
+                    &--item04{
+                        .pt_item_info{@include vw-max(letter-spacing, -1.76);}
+                    }
+                    &--item05{
+                        .pt_item_info{@include vw-max(letter-spacing, -1.32);}
+                    }
+                    &--item06{
+                        .pt_item_info{@include vw-max(letter-spacing, -0.55);}
+                    }
+                    &--item08{
+                        .pt_item_info{@include vw-max(letter-spacing, -1.54);}
+                    }
+                    &--item09{
+                        .pt_item_info{@include vw-max(letter-spacing, -1.32);}
+                    }
+                    &--item10{
+                        .pt_item_info{@include vw-max(letter-spacing, -0.55);}
+                    }
+
+                    a *{pointer-events: none !important;}
+                }
+
+                // .pt_product__item--item06{
+                //     .pt_product__item--banner{
+                //         position: relative;
+                //     }
+                // }
+
+                .pt_control_box{
+                    display: flex; justify-content: center; align-items: center; position:  absolute; left: 50%; @include vw-max(bottom, 100); @include vw-max(width, 250); @include vw-max(height, 30); transform: translateX(-50%); @include vw-max(border-radius, 15); border: 1px solid #999999;
+
+                    .pt_pagination {
+                        position: relative; display: flex; align-items: center; justify-content: center;  
+                    
+                        .swiper-pagination-bullet {
+                            position: relative; @include vw-max(width, 12); @include vw-max(height, 12); @include vw-max(margin,0 7); background-color: #999; opacity: 1;
+                            &:first-child {@include vw-max(margin,0 7 0 0);}
+                        }
+                        .swiper-pagination-bullet-active {background-color: #000;}
+                    }
+                    .swiper-control{ display: block; @include vw-pc(margin-left, 3); @include vw-pc(width, 14); @include vw-pc(height, 15); @include vw-pc(background-size, 14 15); background-repeat: no-repeat;}
+                    .swiper-control.pt_pause{ background-image: url('../../is/images/ph_stop.png');}
+                    .swiper-control.pt_play{ background-image: url('../../is/images/ph_play.png');}
+                }
+
+                .pt_arrow_btn{display: block; position:absolute; @include vw-max(top, 560); @include vw-max(width, 52); @include vw-max(height,52); background-size: 100%; background-repeat: no-repeat;}
+                .pt_arrow_btn::after{display: none;}
+                .swiper-button-prev {@include vw-max(left, 100); background-image: url('../../is/images/ph_arrow_left_pc.png'); }
+                .swiper-button-next {@include vw-max(right, 100); background-image: url('../../is/images/ph_arrow_right_pc.png');}
+                .swiper-button-disabled {opacity:0.3;}
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .product_home {
+        .pt_title_box {
+            @include vw-mo(margin-bottom, 36); @include vw-mo(font-size, 52); @include vw-mo(line-height, 68); text-align: center; font-weight: 700; letter-spacing: -0.025em;
+            .en {@include vw-mo(line-height, 64); font-weight: bold; letter-spacing: 0;}
+        }
+
+        .sec_product {
+            position: relative; @include vw-mo(padding, 95 0 100);
+            
+            .pt_contents_box {
+                .pt_product {
+                    position: relative; width: 100%; max-width: none; @include vw-mo(padding, 0 0 0 40);
+
+                    &__list {
+                        height: auto; @include vw-mo(margin-top, 50);
+                    }
+                    &__item {
+                        @include vw-mo(width, 600); @include vw-mo(padding, 0 0); @include vw-mo(margin-bottom, 60); @include vw-mo(margin-right, 24); transition: none;
+                        
+                        &.swiper-slide a {pointer-events: auto;}
+                        &.swiper-slide-active {@include vw-mo(width, 600);}
+                        
+                        .pt_item_info {@include vw-mo(margin-top, 20); @include vw-mo(padding-left, 0); @include vw-mo(font-size, 36); @include vw-mo(line-height, 46); letter-spacing: -0.025em; font-weight: 700;}
+                    }
+
+                    .pt_control_box {
+                        display: flex; justify-content: center; align-items: center; position: absolute; left: 50%; @include vw-mo(bottom, 0); @include vw-mo(width, 265); @include vw-mo(height, 30); transform: translateX(-50%); @include vw-mo(border-radius, 15); border: 1px solid #999999;
+    
+                        .pt_pagination {
+                            position: relative; display: flex; align-items: center; justify-content: center;  
+                        
+                            .swiper-pagination-bullet {
+                                position: relative; @include vw-mo(width, 14); @include vw-mo(height, 14); @include vw-mo(margin,0 7); background-color: #999; opacity: 1;
+                                &:first-child {@include vw-mo(margin,0 7 0 0);}
+                            }
+                            .swiper-pagination-bullet-active {background-color: #000;}
+                        }
+                        .swiper-control {display: block; @include vw-mo(margin-left, 4); @include vw-mo(width, 14); @include vw-mo(height, 15); @include vw-mo(background-size, 14 15); background-repeat: no-repeat;}
+                        .swiper-control.pt_pause {background-image: url('../../is/images/ph_stop.png');}
+                        .swiper-control.pt_play {background-image: url('../../is/images/ph_play.png');}
+                    }
+
+                    .swiper-button-prev, .swiper-button-next {position: absolute; top: 0; margin-top: 0; @include vw-mo(background-size, 60 20); @include vw-mo(width, 60);}
+                    .swiper-button-prev {background-image: url('../../is/images/ph_arrow_left_mo.png'); @include vw-mo(left, 519);}
+                    .swiper-button-next {background-image: url('../../is/images/ph_arrow_right_mo.png'); @include vw-mo(right, 40);}
+                    .swiper-button-disabled {opacity: 0.3;}
+                }
+            }
+        }
+    }
+}

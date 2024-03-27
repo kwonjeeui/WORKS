@@ -1,0 +1,341 @@
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// 모바일 퍼스트로 제작된 프로젝트에서 가져온 소스입니다. 참고해서 작업해주세요~
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+
+.galcams_event {
+
+    // 모달 공통
+    .pt_modal {
+        position: fixed; top: auto; bottom: 0; z-index: 112; display: block; @include vw-mo(width,672); height: 0; transition: height 150ms ease-in-out; @include vw-mo(border-radius,20 20 0 0); visibility: hidden;
+
+        // image lazy loading
+        &.pt_bg-image.pt_add-bg {
+            .pt_btn {
+                &--close {background-image: url("../../is/images/modal/gce_btn_close.svg");}
+            }
+        }
+
+        &.pt_modal_init {height: 50vh;}
+        &.pt_modal_on {
+            z-index: 112; width: 100vw; height: calc(100vh - 96px); visibility: initial;
+
+            .pt_modal_body {opacity: 1; transition: opacity 150ms ease 130ms;}
+        }
+
+        .pt_modal_box {position: relative; width: 100%; height: 100%; background: #fff; border-radius: inherit; overflow: hidden; overflow-y: auto;}
+        .pt_modal_header {
+            position: relative; @include vw-mo(margin-bottom,77); @include vw-mo(padding,75 24 0); @include vw-mo(height,580); background-color: #F4F4F4; background-repeat: no-repeat; background-size: contain; background-position: top left; 
+
+            .pt_title {@include vw-mo(font-size,52); font-weight: 700; @include vw-mo(line-height,62); letter-spacing: -0.05em;}
+            .pt_desc {
+                position: absolute; @include vw-mo(bottom,79); @include vw-mo(left,24); @include vw-mo(font-size,34); @include vw-mo(line-height,42); letter-spacing: -0.025em;
+                .pt_hl {
+                    position: relative; z-index: 1;
+                    &::after {
+                        content: ""; position: absolute; @include vw-mo(bottom,4); left: 0; z-index: -1; display: block; width: 100%; @include vw-mo(height,14); background: #1E81F8; opacity: 0.2;
+                    }
+                }
+            }
+        }
+        // .pt_modal_body {height: 100%; background: #fff; opacity: 0;}
+        
+        .pt_section {
+            @include vw-mo(margin-bottom,77); @include vw-mo(padding,0 24);
+            &:last-child {margin-bottom: 0;}
+            &--bottom {@include vw-mo(padding-bottom,77);}
+            &--full {
+                margin-bottom: 0; @include vw-mo(padding-top,77); background: #F4F4F4;
+            }
+
+            &__title {@include vw-mo(margin-bottom,29); @include vw-mo(font-size,34); font-weight: 700; @include vw-mo(line-height,45); letter-spacing: -0.05em;}
+            &__discbox {@include vw-mo(margin-top,18);}
+            &__disc {@include vw-mo(padding-left,18); color: #666; @include vw-mo(font-size,22); @include vw-mo(line-height,36); letter-spacing: -0.05em; @include vw-mo(text-indent,-18);}
+            &__btnarea {
+                @include vw-mo(margin-top,17);
+                &--lg {@include vw-mo(margin-top,40); text-align: center;}
+            }
+            &__eyebrow {@include vw-mo(margin, 70 auto 20); @include vw-mo(width, 528); @include vw-mo(height, 48); border: 1px solid #6967FC; @include vw-mo(border-radius, 24); @include vw-mo(font-size, 26); @include vw-mo(line-height, 48); @include vw-mo(font-size, 26); letter-spacing: -.055em; font-weight: 700; color: #6967FC; text-align: center;}
+            &__title {@include vw-mo(font-size, 48); @include vw-mo(line-height, 63); @include vw-mo(margin-bottom, 20); text-align: center;}
+        }
+        .pt_table {
+            &--row {
+                border-top: 1px solid #666; border-bottom: 1px solid #666; @include vw-mo(border-width,3);
+
+                table {width: 100%; border-collapse: collapse; background: #fff;}
+                tbody {
+                    tr {border-bottom: 1px solid rgba(0,0,0,0.2);}
+                    tr:first-child {
+                        th, td {@include vw-mo(padding-top,37);}
+                    }
+                    tr:last-child {
+                        border-bottom: none;
+                        th, td {@include vw-mo(padding-bottom,37);}
+                    }  
+                }
+                th, td {@include vw-mo(padding,28 0); @include vw-mo(font-size,24); @include vw-mo(line-height,28); text-align: left; letter-spacing: -0.025em;}
+                th {@include vw-mo(padding-left,30); font-weight: 700;}
+                td {@include vw-mo(padding-left,24);}
+
+                .pt_table__discbox {@include vw-mo(margin-top,7);}
+                .pt_table__disc {
+                    @include vw-mo(padding-left,18); color: #666; @include vw-mo(font-size,22); @include vw-mo(line-height,30); letter-spacing: -0.025em; @include vw-mo(text-indent,-18);
+                    &--purple {color: #6967FC;}
+                }
+            }
+            &--type2 {
+                border: 0;
+                tbody {
+                    tr:first-child {
+                        th, td {@include vw-mo(padding-top,0);}
+                    }
+                    tr:last-child {
+                        border-bottom: none;
+                        th, td {@include vw-mo(padding-bottom,0);}
+                    }  
+                    tr {border-bottom: 0;}
+                }
+                th, td {padding: 0;}
+                th {
+                    position: relative; @include vw-mo(padding-bottom, 60);
+                    &::after {content: ''; display: block; @include vw-mo(width, 2); @include vw-mo(height, 21); background-color: #000; position: absolute; @include vw-mo(top, 8); @include vw-mo(right, 22);}
+                }
+                td {@include vw-mo(line-height, 34);}
+            }
+        }
+        .pt_btn {
+            &--close {position: absolute; z-index: 1; left: auto; bottom: auto; @include vw-mo(top,30); @include vw-mo(right,30); @include vw-mo(width,50); @include vw-mo(height,50); background: #fff; transform: none; border-radius: 50%; box-shadow: 0 0 10px rgba(0,0,0,0.2); background-repeat: no-repeat; background-position: center; @include vw-mo(background-size,24);}
+        }
+        .btn_common {
+            &.type_arrow {
+                @include vw-mo(font-size,24); font-weight: 700; @include vw-mo(line-height,30); letter-spacing: -0.025em;
+                &::after {@include vw-mo(width,10); @include vw-mo(height,10);}
+            }
+            &.type_round {@include vw-mo(width,226); @include vw-mo(height,60); @include vw-mo(font-size,24); font-weight: 700; @include vw-mo(border-radius,30);}
+        }
+        .pt_step {
+            &--type2 {@include vw-mo(margin-bottom, 60);}
+
+            // 가로형
+            &--col {
+                display: flex; @include vw-mo(gap,24);
+
+                .pt_step__item {
+                    position: relative; flex: 1; text-align: center; background: #fff; border: 1px solid #666; @include vw-mo(border-width,2); @include vw-mo(border-radius,10);
+                    &--type2 {border: 0;}
+
+                    .pt_step__num {position: absolute; @include vw-mo(top,-2); @include vw-mo(left,-2); z-index: 1; display: flex; justify-content: center; align-items: center; @include vw-mo(width,40); @include vw-mo(height,40); color: #fff; @include vw-mo(font-size,20); font-weight: 700; background: #000; @include vw-mo(border-radius,10);}
+                    .img_box {
+                        position: absolute; left: 50%; transform: translateX(-50%);
+                        &--type2 {position: relative; @include vw-mo(margin-bottom, 22);}
+                    }
+                    .pt_step__desc {
+                        @include vw-mo(font-size,22); @include vw-mo(line-height,30); letter-spacing: -0.025em;
+                        &--type2 {@include vw-mo(margin-bottom, 10);}
+
+                        &--shorten {letter-spacing: -0.05em;}
+                        .pt_small {display: inline-block; @include vw-mo(margin-top,8); color: #666; @include vw-mo(font-size,20); @include vw-mo(line-height,26); letter-spacing: -0.025em;}
+                    }
+                    .pt_step__noti {
+                        &--type2 {@include vw-mo(font-size, 20);}
+                        &--purple {color: #6967FC;}
+                    }
+                }
+            }
+        }
+
+        .pt_tips {
+            position: relative; @include vw-mo(min-height, 56); border: 1px solid #6967FC; @include vw-mo(border-radius, 5); color: #6967FC; @include vw-mo(font-size, 22); text-align: center; @include vw-mo(line-height, 28); @include vw-mo(margin-bottom, 15); border-top-left-radius: 0; @include vw-mo(padding, 14);
+            &::before {content: '활용TIP 예시'; display: flex; justify-content: center; align-items: center; @include vw-mo(width, 120); @include vw-mo(height, 26); @include vw-mo(border-radius, 3); border-bottom-left-radius: 0; border-bottom-right-radius: 0; background: #6967FC; color: #fff; @include vw-mo(font-size, 20); font-weight: 700; position: absolute; @include vw-mo(top, -27); @include vw-mo(left, -1);}
+            &--type2 {
+                &::before {content: 'TIP'; @include vw-mo(width, 53); }
+            }
+        }
+
+        .pt_cate-box {
+            margin: 0 auto; width: 100%; @include vw-mo(margin-bottom, 15);  border: 0; padding: 0;
+            &__item {@include vw-mo(height, 50); display: flex; border: 1px solid #000; @include vw-mo(border-radius, 5); overflow: hidden; @include vw-mo(margin-bottom, 15);}
+            &__title {display: flex; justify-content: center; align-items: center; @include vw-mo(width, 203); background: #000; color: #fff; @include vw-mo(font-size, 22); font-weight: 700;}
+            &__cont {display: flex; justify-content: center; align-items: center; width: 100%; @include vw-mo(font-size, 22);}
+        }
+
+        .pt_btn-box {
+            @include vw-mo(margin, 40 0 50); text-align: center;
+            .pt_btn {
+                &--honeytip {@include vw-mo(width, 280); @include vw-mo(height, 70); @include vw-mo(font-size, 28); @include vw-mo(border-radius, 35);}
+            }
+        }
+
+        .pt_desc-npay {margin: 0 auto; @include vw-mo(width, 584 ); @include vw-mo(font-size, 18); @include vw-mo(line-height, 28); color: #666; text-align: center;}
+
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .galcams_event {
+        
+        // 모달 공통
+        .pt_modal {
+            position: absolute; top: 0; left: 50%; z-index: 112; display: block; @include vw-pc(width,864); height: calc(100vh - 10vw); @include vw-pc(border-radius,20); transform: translateX(-50%); overflow: hidden;
+    
+            // image lazy loading
+            &.pt_bg-image.pt_add-bg {
+                .pt_btn {
+                    &--close {background-image: url("../../is/images/modal/gce_btn_close.svg");}
+                }
+            }
+    
+            &.pt_modal_init {@include vw-pc(height,700);} // 기본 높이값과 동일하게 수정
+            &.pt_modal_on {display: block; @include vw-pc(width,864);}
+    
+            .pt_modal_header {
+                @include vw-pc(margin-bottom,77); @include vw-pc(padding,56 50 0); @include vw-pc(height,360); 
+    
+                .pt_title {@include vw-pc(font-size,48); @include vw-pc(line-height,55);}
+                .pt_desc {
+                    @include vw-pc(bottom,50); @include vw-pc(left,50); @include vw-pc(font-size,28); @include vw-pc(line-height,36);
+                    .pt_hl {
+                        &::after {
+                            bottom: 0; @include vw-pc(height,14);
+                        }
+                    }
+                }
+            }
+            // .pt_modal_body {height: 100%; background: #fff; opacity: 0;}
+            
+            .pt_section {
+                @include vw-pc(margin-bottom,57); @include vw-pc(padding,0 50);
+                
+                &--bottom {@include vw-pc(padding-bottom,57);}
+                &--full {
+                    margin-bottom: 0; @include vw-pc(padding-top,57);
+                }
+    
+                &__title {@include vw-pc(margin-bottom,39); @include vw-pc(font-size,24); @include vw-pc(line-height,24);}
+                &__discbox {@include vw-pc(margin-top,19);}
+                &__disc {@include vw-pc(padding-left,12); @include vw-pc(font-size,14); @include vw-pc(line-height,24); letter-spacing: -0.025em; @include vw-pc(text-indent,-12);}
+                &__btnarea {
+                    @include vw-pc(margin-top,29);
+                    &--lg {@include vw-pc(margin-top,40);}
+                }
+                &__eyebrow {@include vw-pc(margin, 50 auto 20); @include vw-pc(width, 336); @include vw-pc(height, 31); @include vw-pc(border-radius, 16); @include vw-pc(font-size, 16); @include vw-pc(line-height, 31);}
+                &__title {@include vw-pc(font-size, 32); @include vw-pc(line-height, 43); @include vw-pc(margin-bottom, 28);}
+            }
+            .pt_table {
+                &--row {
+                    @include vw-pc(border-width,2);
+    
+                    tbody {
+                        tr:first-child {
+                            th, td {@include vw-pc(padding-top,30);}
+                        }
+                        tr:last-child {
+                            border-bottom: none;
+                            th, td {@include vw-pc(padding-bottom,30);}
+                        }  
+                    }
+                    th, td {@include vw-pc(padding,25 0); @include vw-pc(font-size,18); @include vw-pc(line-height,33);}
+                    th {@include vw-pc(padding-left,40);}
+                    td {@include vw-pc(padding-left,24);}
+    
+                    .pt_table__discbox {@include vw-pc(margin-top,9);}
+                    .pt_table__disc {@include vw-pc(padding-left,12); @include vw-pc(font-size,14); @include vw-pc(line-height,22); @include vw-pc(text-indent,-12);}
+                }
+                &--type2 {
+                    border: 0;
+                    
+                    tbody {
+                        tr:first-child {
+                            th, td {@include vw-pc(padding-top,0);}
+                        }
+                        tr:last-child {
+                            border-bottom: none;
+                            th, td {@include vw-pc(padding-bottom,0);}
+                        }  
+                        tr {border-bottom: 0;}
+                    }
+                    th, td {padding: 0; @include vw-pc(font-size, 16);}
+                    th {
+                        position: relative; @include vw-pc(padding-left, 65); padding-bottom: 0; @include vw-pc(width, 100);
+                        &::after {content: ''; display: block; @include vw-pc(width, 2); @include vw-pc(height, 16); background-color: #000; position: absolute; @include vw-pc(top, 9); @include vw-pc(right, 15);}
+                    }
+                    td {@include vw-pc(line-height, 4);}
+
+                    .pt_table__discbox {@include vw-pc(margin-top, -14); @include vw-pc(padding-left, 170);}
+                }
+            }
+            .pt_btn {
+                &--close {@include vw-pc(top,30); @include vw-pc(right,35); @include vw-pc(width,45); @include vw-pc(height,45); @include vw-pc(background-size,20);}
+            }
+            .btn_common {
+                &.type_arrow {
+                    @include vw-pc(font-size,18); @include vw-pc(line-height,23);
+                    &::after {@include vw-pc(width,6); @include vw-pc(height,6);}
+                }
+                &.type_round {@include vw-pc(width,190); @include vw-pc(height,58); @include vw-pc(font-size,20); @include vw-pc(border-radius,29);}
+            }
+            .pt_step {
+
+                &--type2 {@include vw-pc(padding, 0 47); @include vw-pc(margin-bottom, 60);}
+    
+                // 가로형
+                &--col {
+                    display: flex; @include vw-pc(gap,24);
+    
+                    .pt_step__item {
+                        @include vw-pc(border-width,2); @include vw-pc(border-radius,10);
+    
+                        .pt_step__num {@include vw-pc(top,-2); @include vw-pc(left,-2); @include vw-pc(width,34); @include vw-pc(height,34); @include vw-pc(font-size,20); @include vw-pc(border-radius,5);}
+                        .img_box {
+                            position: absolute; left: 50%; transform: translateX(-50%);
+                            &--type2 {position: relative; @include vw-pc(margin-bottom, 22); @include vw-pc(width, 187);}
+                        }
+                        .pt_step__desc {
+                            @include vw-pc(font-size,18); @include vw-pc(line-height,26);
+                            &--type2 {@include vw-pc(margin-bottom, 10);}
+                            .pt_small {margin-top: 0; @include vw-pc(font-size,18); @include vw-pc(line-height,26); letter-spacing: -0.025em;}
+                        }
+                        .pt_step__noti {
+                            &--type2 {@include vw-pc(font-size, 12);}
+                        }    
+                    }
+                }
+            }
+
+            .pt_tips {
+                position: relative; margin: 0 auto; @include vw-pc(width, 644); @include vw-pc(min-height, 30); border: 1px solid #6967FC; @include vw-pc(border-radius, 5); color: #6967FC; @include vw-pc(font-size, 14); text-align: center; @include vw-pc(line-height, 28); @include vw-pc(margin-bottom, 15); border-top-left-radius: 0; @include vw-pc(padding, 6 0);
+                &::before {content: '활용TIP 예시'; display: flex; justify-content: center; align-items: center; @include vw-pc(width, 96); @include vw-pc(height, 26); @include vw-pc(border-radius, 3); border-bottom-left-radius: 0; border-bottom-right-radius: 0; background: #6967FC; color: #fff; @include vw-pc(font-size, 15); font-weight: 700; position: absolute; @include vw-pc(top, -27); @include vw-pc(left, -1);}
+                &--type2 {
+                    &::before {content: 'TIP'; @include vw-pc(width, 53); }
+                }
+            }
+    
+            .pt_cate-box {
+                display: flex; justify-content: flex-start; @include vw-pc(gap, 10);; margin: 0 auto; width: 100%; @include vw-pc(height, 30); @include vw-pc(margin-bottom, 15);  border: 0; @include vw-pc(padding, 0 51);
+                &__item {display: flex; border: 1px solid #000; @include vw-pc(border-radius, 5); overflow: hidden; @include vw-pc(height, 30);}
+                &__title {display: flex; justify-content: center; align-items: center; @include vw-pc(width, 173); background: #000; color: #fff; @include vw-pc(font-size, 14); font-weight: 700;}
+                &__cont {display: flex; justify-content: center; align-items: center; width: 100%; @include vw-pc(font-size, 14);}
+            }
+    
+            .pt_btn-box {
+                @include vw-pc(margin, 30 0 30); text-align: center;
+                .pt_btn {
+                    &--honeytip {@include vw-pc(width, 179); @include vw-pc(height, 42); @include vw-pc(font-size, 16); @include vw-pc(border-radius, 21);}
+                }
+            }
+    
+            .pt_desc-npay {margin: 0 auto; @include vw-pc(width, 600 ); @include vw-pc(font-size, 12); @include vw-pc(line-height, 20); color: #666; text-align: center;}
+    
+        }
+    }
+}
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// 모바일 퍼스트로 제작된 프로젝트입니다.
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
