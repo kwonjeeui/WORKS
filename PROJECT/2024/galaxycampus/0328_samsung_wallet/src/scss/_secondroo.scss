@@ -1,0 +1,116 @@
+.pt_samsung_wallet {
+    .sec_secondroo {
+        width: 100%; @include vw-pc(height, 2357); @include vw-pc(padding-top, 204);
+        &.pt_bg-image.pt_add-bg {position: relative; background-image: url('../../is/images/secondroo/sw_secondroo_bg_pc.jpg'); @include vw-pc(background-size, 1920 2357); background-repeat: no-repeat; background-position: center top;}
+        .pt_box_width {position: static; @include vw-pc(width, 1320); margin: 0 auto;}
+
+        .pt_title{
+            &--box {width: 100%; @include vw-pc(margin-bottom, 49); text-align: center;}
+            &--box::before {content: ''; display: inline-block; position: absolute; @include vw-pc(top, 122); left: 50%; transform: translateX(-50%); @include vw-pc(width, 265); @include vw-pc(height, 66); background: url(../../is/images/secondroo/sw_2roo_pc.png)no-repeat center/contain; background-size: 100% 100%;}
+            &--main {@include vw-pc(margin-bottom, 12); @include vw-pc(font-size, 48); @include vw-pc(line-height, 58); letter-spacing: -.05em; font-weight: 700;}
+            &--date {@include vw-pc(margin-bottom, 20); @include vw-pc(font-size,26); @include vw-pc(line-height, 40);}
+            &--sub {@include vw-pc(font-size, 30); @include vw-pc(line-height, 40); letter-spacing: -.025em;}
+        }
+
+        .pt_con--box{
+            position: relative; @include vw-pc(margin-bottom, 54);
+            &::after {content: ''; position: absolute; @include vw-pc(bottom, 60); @include vw-pc(right, -300); @include vw-pc(width, 388); @include vw-pc(height, 343); background: url(../../is/images/secondroo/sw_secondroo_bg_bat_pc_.png) no-repeat center/contain; background-size: 100% 100%;}
+            .pt_quiz{
+                &--box {position: relative; @include vw-pc(width, 841); @include vw-pc(height, 222); @include vw-pc(margin, 0 auto 40); @include vw-pc(padding-top, 31); background-color: #fff; @include vw-pc(border-radius, 15);  @include vw-pc(box-shadow, 0 6 0 0 #5978C3 ); text-align: center;}
+                &--box::after {content: ''; display: inline-block; position: absolute; @include vw-pc(top, -21); @include vw-pc(right, 108); @include vw-pc(width, 115); @include vw-pc(height, 121); background: url(../../is/images/secondroo/sw_quiz_tiger_pc.png)no-repeat center/contain; background-size: 100% 100%; }
+                &--main {@include vw-pc(margin-bottom, 11); @include vw-pc(font-size, 34); @include vw-pc(line-height, 46); color: #174FAE;}
+                &--sub {@include vw-pc(width, 769); @include vw-pc(height, 103); margin: 0 auto; @include vw-pc(padding-top, 18); background-color: #F5F6F7; @include vw-pc(border-radius, 20); @include vw-pc(font-size, 24); @include vw-pc(line-height, 33); letter-spacing: -.025em; font-weight: 700;}
+            }
+
+            .pt_hint{
+                &--box {width: 100%; @include vw-pc(height, 598); @include vw-pc(margin, 0 auto 36); @include vw-pc(padding-top, 34); background-color: #fff; @include vw-pc(border-radius, 15);  @include vw-pc(box-shadow, 0 6 0 0 #5978C3 );}
+                &--main {@include vw-pc(margin-bottom, 32); @include vw-pc(font-size, 34); @include vw-pc(line-height, 46); font-weight: 700; text-align: center; color: #174FAE;}
+                &--list {display: flex; justify-content: space-between; align-self: center; width: 100%; @include vw-pc(padding, 0 36);}
+                &--item {@include vw-pc(width, 400);}
+                &--img {@include vw-pc(margin-bottom, 29);}
+                &--text {@include vw-pc(font-size, 20); @include vw-pc(line-height, 30); letter-spacing: -.025em; font-weight: 700; text-align: center;}
+                &--desc {@include vw-pc(margin-top, 10); @include vw-pc(font-size, 16); @include vw-pc(line-height, 24); letter-spacing: -.025em; text-align: center;}
+            }
+
+            .pt_btn--apply {display: flex; @include vw-pc(width, 252); @include vw-pc(height, 50); margin: 0 auto; @include vw-pc(font-size, 18); @include vw-pc(border-radius, 25);}
+        }
+
+        .pt_benefit{
+            &--box {width: 100%; margin: 0 auto; text-align: center;}
+            &--title {position: relative; @include vw-pc(margin-bottom, 60); @include vw-pc(font-size, 34); @include vw-pc(line-height, 44); letter-spacing: -.05em; font-weight: 700;}
+            &--title::before {content: ''; position: absolute; top: 50%; transform: translateY(-50%); left: 0; @include vw-pc(width, 560); @include vw-pc(height, 1); background-color: #51A500;}
+            &--title::after {content: ''; position: absolute; top: 50%; transform: translateY(-50%); right: 0; @include vw-pc(width, 560); @include vw-pc(height, 1); background-color: #51A500;}
+            &--list {display: flex; justify-content: space-between; align-items: flex-start; width: 100%; @include vw-pc(height, 513); @include vw-pc(padding, 91 35 0); @include vw-pc(margin-bottom, 39); background-color: #fff; @include vw-pc(border-radius, 15);  @include vw-pc(box-shadow, 0 6 0 0 #5978C3 );}
+            &--item {position: relative; @include vw-pc(width, 400);}
+            &--item01::before {content: ''; display: inline-block; position: absolute; @include vw-pc(top, -45); left: 50%; transform: translateX(-50%); @include vw-pc(width, 90); @include vw-pc(height, 90); background: url(../../is/images/secondroo/sw_benefit_ball_01_pc.png)no-repeat center/contain; background-size: 100% 100%};
+            &--item02::before {content: ''; display: inline-block; position: absolute; @include vw-pc(top, -45); left: 50%; transform: translateX(-50%); @include vw-pc(width, 90); @include vw-pc(height, 90); background: url(../../is/images/secondroo/sw_benefit_ball_02_pc.png)no-repeat center/contain; background-size: 100% 100%};
+            &--item03::before {content: ''; display: inline-block; position: absolute; @include vw-pc(top, -45); left: 50%; transform: translateX(-50%); @include vw-pc(width, 90); @include vw-pc(height, 90); background: url(../../is/images/secondroo/sw_benefit_ball_03_pc.png)no-repeat center/contain; background-size: 100% 100%};
+            &--img {@include vw-pc(margin-bottom, 28);}
+            &--text {@include vw-pc(font-size, 20); @include vw-pc(line-height, 30); letter-spacing: -.025em;}
+            
+            &--desc {@include vw-pc(margin-bottom, 39); @include vw-pc(font-size, 16); @include vw-pc(line-height, 26);}
+            &--btn {@include vw-pc(font-size, 18); letter-spacing: -.025em;}
+        }
+    }
+}
+
+@media screen and (max-width:768px) {
+    .pt_samsung_wallet {
+        .sec_secondroo {
+            @include vw-mo(height, 4724); @include vw-mo(padding-top, 183);
+            &.pt_bg-image.pt_add-bg {background-image: url('../../is/images/secondroo/sw_secondroo_bg_mo.jpg'); @include vw-mo(background-size, 720 4724); background-repeat: no-repeat; background-position: center top;}
+            .pt_box_width {@include vw-mo(width, 672);}
+    
+            .pt_title{
+                &--box {@include vw-mo(margin-bottom, 64);}
+                &--box::before {content: ''; @include vw-mo(top, 100); left: 50%; transform: translateX(-50%); @include vw-mo(width, 298); @include vw-mo(height, 74); background: url(../../is/images/secondroo/sw_2roo_mo.png)no-repeat center/contain; background-size: 100% 100%;}
+                &--main {@include vw-mo(margin-bottom, 17); @include vw-mo(font-size, 62); @include vw-mo(line-height, 74);}
+                &--date {@include vw-mo(margin-bottom, 24); @include vw-mo(font-size,26); @include vw-mo(line-height, 30);}
+                &--sub {@include vw-mo(font-size, 34); @include vw-mo(line-height, 46);}
+            }
+    
+            .pt_con--box{
+                @include vw-mo(margin-bottom, 76);
+                &::after {display: none;}
+                .pt_quiz{
+                    &--box {width: 100%; @include vw-mo(height, 314); @include vw-mo(margin, 0 auto 30); @include vw-mo(padding-top, 56); @include vw-mo(border-radius, 15);  @include vw-mo(box-shadow, 0 6 0 0 #5978C3 );}
+                    &--box::after {content: ''; @include vw-mo(top, 10); @include vw-mo(right, 109); @include vw-mo(width, 121); @include vw-mo(height, 129); background: url(../../is/images/secondroo/sw_quiz_tiger_mo.png)no-repeat center/contain; background-size: 100% 100%; }
+                    &--main {@include vw-mo(margin-bottom, 24); @include vw-mo(font-size, 36); @include vw-mo(line-height, 46);}
+                    &--sub {@include vw-mo(width, 606); @include vw-mo(height, 130); @include vw-mo(padding-top, 23); @include vw-mo(border-radius, 20); @include vw-mo(font-size, 30); @include vw-mo(line-height, 42); letter-spacing: -.04em;}
+                }
+    
+                .pt_hint{
+                    &--box {width: 100%; @include vw-mo(height, 1612); @include vw-mo(margin, 0 auto 36); @include vw-mo(padding-top, 56); @include vw-mo(border-radius, 15);  @include vw-mo(box-shadow, 0 6 0 0 #5978C3);}
+                    &--main {@include vw-mo(margin-bottom, 29); @include vw-mo(font-size, 36); @include vw-mo(line-height, 46);}
+                    &--list {flex-direction: column; justify-content: center; width: 100%; @include vw-mo(padding, 0 60);}
+                    &--item {@include vw-mo(width, 552); @include vw-mo(margin-bottom, 36);}
+                    &--img {@include vw-mo(margin-bottom, 27);}
+                    &--text {@include vw-mo(font-size, 26); @include vw-mo(line-height, 38);}
+                    &--desc {@include vw-mo(margin-top, 16); @include vw-mo(font-size, 20); @include vw-mo(line-height, 30);}
+                }
+    
+                .pt_btn--apply {@include vw-mo(width, 314); @include vw-mo(height, 71); @include vw-mo(font-size, 24); @include vw-mo(border-radius, 35);}
+            }
+    
+            .pt_benefit{
+                &--box {width: 100%; margin: 0 auto; text-align: center;}
+                &--title {@include vw-mo(margin-bottom, 59); @include vw-mo(font-size, 36); @include vw-mo(line-height, 50);}
+                &--title::before {content: ''; @include vw-mo(width, 231); @include vw-mo(height, 1);}
+                &--title::after {content: ''; @include vw-mo(width, 231); @include vw-mo(height, 1);}
+                &--list {flex-direction: column; justify-content: flex-start; @include vw-mo(height, 1644); @include vw-mo(padding, 100 60 0); @include vw-mo(margin-bottom, 39); background-color: #fff; @include vw-mo(border-radius, 15);  @include vw-mo(box-shadow, 0 6 0 0 #5978C3 );}
+                &--item {@include vw-mo(width, 552); @include vw-mo(margin-bottom, 115);}
+                &--item01::before {content: ''; @include vw-mo(top, -50); @include vw-mo(width, 100); @include vw-mo(height, 100); background: url(../../is/images/secondroo/sw_benefit_ball_01_mo.png)no-repeat center/contain; background-size: 100% 100%};
+                &--item02::before {content: ''; @include vw-mo(top, -50); @include vw-mo(width, 100); @include vw-mo(height, 100); background: url(../../is/images/secondroo/sw_benefit_ball_02_mo.png)no-repeat center/contain; background-size: 100% 100%};
+                &--item03::before {content: ''; @include vw-mo(top, -50); @include vw-mo(width, 100); @include vw-mo(height, 100); background: url(../../is/images/secondroo/sw_benefit_ball_03_mo.png)no-repeat center/contain; background-size: 100% 100%};
+                &--img {@include vw-mo(margin-bottom, 27);}
+                &--text {
+                    @include vw-mo(font-size, 26); @include vw-mo(line-height, 30); letter-spacing: -.025em;
+                    strong {display: inline-block; @include vw-mo(margin-top, 8);}
+                }
+                
+                &--desc {@include vw-mo(margin-bottom, 37); @include vw-mo(font-size, 20); @include vw-mo(line-height, 30);}
+                &--btn {@include vw-mo(font-size, 26); letter-spacing: -.05em;}
+            }
+        }
+    }
+}

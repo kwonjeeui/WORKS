@@ -1,0 +1,22 @@
+.pt_samsung_wallet {
+    .sec_wallet {
+        position: relative;
+        .pt_text{
+            &--box {position: absolute; top: 50%; transform: translateY(-50%); @include vw-max(left, 300); color: #fff;}
+            &--tit {@include vw-max(margin-bottom, 17); @include vw-max(font-size, 48); @include vw-max(line-height, 58); letter-spacing: -.05em; font-weight: 700; }
+            &--desc {@include vw-max(font-size, 30); @include vw-max(line-height, 40); letter-spacing: -.05em;}
+        }
+    }
+}
+
+@media screen and (max-width:768px) {
+    .pt_samsung_wallet {
+        .sec_wallet {
+            .pt_text{
+                &--box {@include vw-mo(top, 95); left: 50%; transform: translateX(-50%); width: 100%; text-align: center;}
+                &--tit {@include vw-mo(margin-bottom, 24); @include vw-mo(font-size, 62); @include vw-mo(line-height, 74);}
+                &--desc {@include vw-mo(font-size, 34); @include vw-mo(line-height, 44);}
+            }
+        }
+    }
+}

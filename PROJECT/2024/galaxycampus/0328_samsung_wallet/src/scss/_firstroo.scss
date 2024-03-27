@@ -1,0 +1,59 @@
+.pt_samsung_wallet {
+    .sec_firstroo {
+        width: 100%; @include vw-pc(height, 1243); @include vw-pc(padding, 120 0); 
+        &.pt_bg-image.pt_add-bg {background-image: url('../../is/images/firstroo/sw_firstroo_bg_pc.jpg'); @include vw-pc(background-size, 1920 1243); background-repeat: no-repeat; background-position: center top;}
+
+        .pt_firstroo {
+            text-align: center;
+            &__badge {@include vw-pc(width, 265); @include vw-pc(margin, 0 auto 16);}
+            &__title {@include vw-pc(margin-bottom, 17); @include vw-pc(font-size, 48); @include vw-pc(line-height, 58); @include vw-pc(letter-spacing, -2); font-weight: 700;}
+            &__subtitle {@include vw-pc(margin-bottom, 61); @include vw-pc(font-size, 30); @include vw-pc(line-height, 40); @include vw-pc(letter-spacing, -1.5);}
+        }
+        
+        .pt_swiper {
+            overflow: visible; @include vw-pc(width, 1320); @include vw-pc(margin, 0 auto 38);
+            &__item {
+                display: flex; flex-direction: column; justify-content: space-between; @include vw-pc(width, 650); @include vw-pc(height, 650); @include vw-pc(padding, 10); @include vw-pc(border-radius, 20); background-color: #fff; box-shadow: 0px 6px 0px #A0A5D0;
+                &:not(:last-child) {@include vw-pc(margin-right, 30);}
+            }
+            &__img > img{@include vw-pc(border-radius, 20);}
+        }
+        
+        .pt_pagination {
+            left: 50%; transform: translateX(-50%);
+            .swiper-pagination-bullet {@include vw-pc(width, 12); @include vw-pc(height, 12); @include vw-pc(border, 3 solid #000); @include vw-pc(margin, 0 10); background: transparent; opacity: 1;}
+            .swiper-pagination-bullet-active {background: #000;}
+        }
+        .pt_desc_text {@include vw-pc(margin-top, 70); @include vw-pc(font-size, 16); @include vw-pc(line-height, 26); @include vw-pc(letter-spacing, -1); text-align: center;}
+    }
+}
+
+@media screen and (max-width:768px) {
+    .pt_samsung_wallet {
+        .sec_firstroo {
+            width: 100%; @include vw-mo(height, 1209); @include vw-mo(padding, 100 0 112);
+            &.pt_bg-image.pt_add-bg {background-image: url('../../is/images/firstroo/sw_firstroo_bg_mo.jpg'); @include vw-mo(background-size, 720 1209);}
+
+            .pt_firstroo {
+                &__badge {@include vw-mo(width, 298); @include vw-mo(margin, 0 auto 9);}
+                &__title {@include vw-mo(margin-bottom, 24); @include vw-mo(font-size, 62); @include vw-mo(line-height, 81); @include vw-mo(letter-spacing, -2);}
+                &__subtitle {@include vw-mo(margin-bottom, 39); @include vw-mo(font-size, 34); @include vw-mo(line-height, 46); @include vw-mo(letter-spacing, -2);}
+            }
+            
+            .pt_swiper {
+                @include vw-mo(margin-bottom, 26); @include vw-mo(padding, 0 24);
+                &__item {
+                    @include vw-mo(width, 511); @include vw-mo(height, 511); @include vw-mo(padding, 10); @include vw-mo(border-radius, 20);
+                    &:not(:last-child) {@include vw-mo(margin-right, 24);}
+                }
+                &__img > img{@include vw-mo(border-radius, 20);}
+            }
+
+            .pt_pagination {
+                .swiper-pagination-bullet {@include vw-mo(width, 12); @include vw-mo(height, 12); @include vw-mo(border, 3 solid #000); @include vw-mo(margin, 0 10);}
+                .swiper-pagination-bullet-active {background: #000;}
+            }
+            .pt_desc_text {@include vw-mo(margin-top, 55); @include vw-mo(font-size, 18); @include vw-mo(line-height, 25); letter-spacing: 0;}
+        }
+    }
+}

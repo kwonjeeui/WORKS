@@ -1,0 +1,145 @@
+.pt_samsung_wallet {
+    .sec_thirdroo {
+        width: 100%; @include vw-pc(height, 2804); @include vw-pc(padding, 120 0);
+        &.pt_bg-image.pt_add-bg {background-image: url('../../is/images/thirdroo/sw_thirdroo_bg_pc.jpg');} @include vw-pc(background-size, 1920 2804); background-repeat: no-repeat; background-position: center top;
+
+        .pt_tit {
+            text-align: center;
+            &__badge {@include vw-pc(width, 265); @include vw-pc(margin, 0 auto 16);}
+            &__title {@include vw-pc(margin-bottom, 12); @include vw-pc(font-size, 48); @include vw-pc(line-height, 63); @include vw-pc(letter-spacing, -2); font-weight: 700;}
+            &__date {@include vw-pc(margin-bottom, 20); @include vw-pc(font-size, 26); @include vw-pc(line-height, 33);}
+            &__subtitle {@include vw-pc(margin-bottom, 59); @include vw-pc(font-size, 30); @include vw-pc(line-height, 40); @include vw-pc(letter-spacing, -1.5);}
+            &__bill {@include vw-pc(width, 708); @include vw-pc(margin, 0 auto 54); @include vw-pc(border-radius, 15); background-color: #fff; box-shadow: 0px 6px 0px #A0A5D0;}
+        }
+
+        // 참여 방법
+        .pt_how {
+            text-align: center; @include vw-pc(width, 1320); margin: 0 auto;
+            &__title {
+                position: relative; @include vw-pc(margin-bottom, 60); @include vw-pc(font-size, 34); @include vw-pc(line-height, 44); @include vw-pc(letter-spacing, -2); font-weight: 700;
+                &::before {content: ''; display: block; @include vw-pc(width, 560); @include vw-pc(height, 1); position: absolute; left: 0; top: 50%; transform: translateY(-50%); background-color: #000; opacity: .3;}
+                &::after {content: ''; display: block; @include vw-pc(width, 560); @include vw-pc(height, 1); position: absolute; right: 0; top: 50%; transform: translateY(-50%); background-color: #000; opacity: .3;}
+            }
+            &__list {
+                position: relative; display: flex; flex-wrap: nowrap; justify-content: space-between; @include vw-pc(margin-bottom, 40);
+                &::after {content: ''; display: block; position: absolute; @include vw-pc(right, 29); @include vw-pc(top, -60); @include vw-pc(width, 62); @include vw-pc(height, 71); background-image: url('../../is/images/thirdroo/sw_thirdroo_howto_deco_pc.png'); @include vw-pc(background-size, 62 71); background-repeat: no-repeat; background-position: center top;}
+            }
+            &__item {position: relative; @include vw-pc(width, 424); @include vw-pc(border-radius, 20); background-color: #fff; box-shadow: 0px 6px 0px #A0A5D0;}
+            &__desc {position: absolute; left: 50%; transform: translateX(-50%); bottom: 0; @include vw-pc(margin-bottom, 39); @include vw-pc(font-size, 20); @include vw-pc(line-height, 30); @include vw-pc(letter-spacing, -1); font-weight: 700;}
+        }
+
+        // 해시태그
+        .pt_copy {
+            display: flex; justify-content: space-between; align-items: center; @include vw-pc(width, 1303); @include vw-pc(margin, 0 auto 39);
+            &--type01 {@include vw-pc(width, 828);}
+            &--type02 {@include vw-pc(width, 451);}
+
+            &__box {display: flex; justify-content: flex-start; position: relative; @include vw-pc(height, 66); margin: 0 auto; background-color: #fff; @include vw-pc(border-radius, 33);}
+            &__title {
+                display: flex; justify-content: center; align-items: center; @include vw-pc(width, 163); @include vw-pc(height, 66); @include vw-pc(border-radius, 33); color: #fff; @include vw-pc(font-size, 20); @include vw-pc(letter-spacing, -1); font-weight: 700; text-align: center;
+                &--type01 {background-color: #2F3EAF;}
+                &--type02 {@include vw-pc(width, 129); background-color: #4F76DE;}
+            }
+            &__inner {display: flex; align-items: center; @include vw-pc(padding-left, 30);}
+            &__text {@include vw-pc(font-size, 20); @include vw-pc(letter-spacing, -1);}
+            // &__btn {position: absolute; right: 0; @include vw-pc(padding-bottom, 2); @include vw-pc(margin-right, 30); @include vw-pc(border-bottom, 1 solid #000); @include vw-pc(font-size, 15); @include vw-pc(letter-spacing, -1); font-weight: 700;}
+        }
+        
+        //유의사항
+        .pt_notice {@include vw-pc(margin-bottom, 35); @include vw-pc(font-size, 16); @include vw-pc(line-height, 25); @include vw-pc(letter-spacing, -1);}
+
+        // 참여 혜택
+        .pt_bnf {
+            text-align: center; @include vw-pc(width, 1320); margin: 0 auto;
+            &__title {
+                position: relative; @include vw-pc(margin-bottom, 40); @include vw-pc(font-size, 34); @include vw-pc(line-height, 44); @include vw-pc(letter-spacing, -2); font-weight: 700;
+                &::before {content: ''; display: block; @include vw-pc(width, 560); @include vw-pc(height, 1); position: absolute; left: 0; top: 50%; transform: translateY(-50%); background-color: #000; opacity: .3;}
+                &::after {content: ''; display: block; @include vw-pc(width, 560); @include vw-pc(height, 1); position: absolute; right: 0; top: 50%; transform: translateY(-50%); background-color: #000; opacity: .3;}
+            }
+            &__emart {position: relative; @include vw-pc(width, 708); margin: 0 auto; @include vw-pc(border-radius, 15); background-color: #fff; box-shadow: 0px 6px 0px #A0A5D0;}
+            &__img {@include vw-pc(margin-bottom, 39);}
+            &__info {
+                position: absolute; left: 50%; transform: translateX(-50%); bottom: 0; @include vw-pc(margin-bottom, 33); @include vw-pc(font-size, 20); @include vw-pc(line-height, 32); @include vw-pc(letter-spacing, -1);
+                &--bold {font-weight: 700;}
+            }
+            &__notice {@include vw-pc(margin-bottom, 38); @include vw-pc(font-size, 16); @include vw-pc(line-height, 26); @include vw-pc(letter-spacing, -1);}
+        }
+
+        .pt_more {display: flex; justify-content: center; align-items: center;}
+
+        .pt_btn {
+            &__join {@include vw-pc(width, 176); @include vw-pc(height, 50); @include vw-pc(margin-bottom, 55); @include vw-pc(border-radius, 25); @include vw-pc(font-size, 18);}
+            &__more {@include vw-pc(font-size, 18); @include vw-pc(letter-spacing, -1); font-weight: 700;}
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .pt_samsung_wallet {
+        .sec_thirdroo {
+            @include vw-mo(height, 4194); @include vw-mo (padding, 100 0 274);
+            &.pt_bg-image.pt_add-bg {background-image: url('../../is/images/thirdroo/sw_thirdroo_bg_mo.jpg');} @include vw-mo(background-size, 720 4194);
+
+            .pt_tit {
+                &__badge {@include vw-mo(width, 298); @include vw-mo(margin, 0 auto 9);}
+                &__title {@include vw-mo(margin-bottom, 16); @include vw-mo(font-size, 62); @include vw-mo(line-height, 81); @include vw-mo(letter-spacing, -2); font-weight: 700;}
+                &__date {@include vw-mo(margin-bottom, 24); @include vw-mo(font-size, 26); @include vw-mo(line-height, 33);}
+                &__subtitle {@include vw-mo(margin-bottom, 59); @include vw-mo(font-size, 34); @include vw-mo(line-height, 45); @include vw-mo(letter-spacing, -1.5);}
+                &__bill {@include vw-mo(width, 672); @include vw-mo(margin-bottom, 56); @include vw-mo(border-radius, 15);}
+            }
+            
+            // 참여 방법
+            .pt_how {
+                @include vw-mo(width, 672); margin: 0 auto;
+                &__title {
+                    @include vw-mo(margin-bottom, 29); @include vw-mo(font-size, 36); @include vw-mo(line-height, 48); @include vw-mo(letter-spacing, -2);
+                    &::before {@include vw-mo(width, 231); @include vw-mo(height, 1);}
+                    &::after {@include vw-mo(width, 231); @include vw-mo(height, 1);}
+                }
+                &__list {
+                    display: block; @include vw-mo(margin-bottom, 40);
+                    &::after {display: none;}
+                }
+                &__item {
+                    @include vw-mo(width, 672); @include vw-mo(border-radius, 20);
+                    &:not(:last-child) {@include vw-mo(margin-bottom, 30);}
+                }
+                &__desc {width: 100%; @include vw-mo(margin-bottom, 59); @include vw-mo(font-size, 26); @include vw-mo(line-height, 38); @include vw-mo(letter-spacing, -1);}
+            }
+
+            // 해시태그
+            .pt_copy {
+                display: block; @include vw-mo(width, 626); @include vw-mo(margin, 0 auto 39);
+                &--type01, &--type02 {width: 100%;}
+                &--type01 {@include vw-mo(margin-bottom, 24);} 
+
+                &__box {@include vw-mo(height, 90); @include vw-mo(border-radius, 45);}
+                &__title {@include vw-mo(width, 173); @include vw-mo(height, 90); @include vw-mo(border-radius, 45); @include vw-mo(font-size, 24); @include vw-mo(letter-spacing, -1);}
+                &__inner {@include vw-mo(padding-left, 18);}
+                &__text {@include vw-mo(font-size, 20); @include vw-mo(line-height, 26); @include vw-mo(letter-spacing, -1); text-align: left;}
+                &__btn {@include vw-mo(padding-bottom, 2); @include vw-mo(margin-right, 48); @include vw-mo(border-bottom, 1 solid #000); @include vw-mo(font-size, 20); @include vw-mo(letter-spacing, -1);}
+            }
+
+            //유의사항
+            .pt_notice {@include vw-mo(margin-bottom, 35); @include vw-mo(font-size, 20); @include vw-mo(line-height, 30); @include vw-mo(letter-spacing, -1);}
+
+            // 참여 혜택
+            .pt_bnf {
+                &__title {
+                    @include vw-mo(margin-bottom, 59); @include vw-mo(font-size, 36); @include vw-mo(line-height, 50); @include vw-mo(letter-spacing, -2);
+                    &::before {@include vw-mo(width, 231); @include vw-mo(height, 1);}
+                    &::after {@include vw-mo(width, 231); @include vw-mo(height, 1);}
+                }
+                &__emart {@include vw-mo(width, 672); @include vw-mo(border-radius, 15);}
+                &__img {@include vw-mo(margin-bottom, 39);}
+                &__info {@include vw-mo(margin-bottom, 59); @include vw-mo(font-size, 26); @include vw-mo(line-height, 38); @include vw-mo(letter-spacing, -1);}
+                &__notice {@include vw-mo(margin-bottom, 37); @include vw-mo(font-size, 20); @include vw-mo(line-height, 26); @include vw-mo(letter-spacing, -1);}
+            }
+
+            .pt_btn {
+                &__join {@include vw-mo(width, 200); @include vw-mo(height, 71); @include vw-mo(margin-bottom, 56); @include vw-mo(border-radius, 35); @include vw-mo(font-size, 24);}
+                &__more {@include vw-mo(font-size, 26); @include vw-mo(letter-spacing, -1);}
+            }
+        }
+    }
+}

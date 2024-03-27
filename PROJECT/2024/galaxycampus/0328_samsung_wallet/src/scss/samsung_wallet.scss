@@ -1,0 +1,18 @@
+@import '../../../../../../scss_global/scss-common2';
+@import 'bs_reset';
+@import 'kv';
+@import 'nav';
+@import 'wallet';
+@import 'firstroo';
+@import 'secondroo';
+@import 'thirdroo';
+@import 'share';
+@import 'notice';
+
+.pt_samsung_wallet {
+}
+
+@media screen and (max-width: 768px) {
+    .pt_samsung_wallet {
+    }
+}

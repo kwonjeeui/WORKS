@@ -1,0 +1,29 @@
+.pt_samsung_wallet {
+    .sec_share {
+        @include vw-pc(padding, 116 0 120); background-color:#F9F9F9; text-align: center;
+        
+        .pt_title {@include vw-pc(margin-bottom, 51); @include vw-pc(font-size, 48); @include vw-pc(line-height, 63); @include vw-pc(letter-spacing, -2);}
+        .pt_btn-box {display: flex; justify-content: space-between; @include vw-pc(width, 479); margin: 0 auto;}
+        .pt_btn {
+            @include vw-pc(width, 140);
+            &__img {@include vw-pc(margin, 0 auto 17); @include vw-pc(width, 90); @include vw-pc(height, 90);}
+            &__txt {@include vw-pc(font-size, 18); @include vw-pc(line-height, 23); @include vw-pc(letter-spacing, -1); font-weight: 700; white-space: nowrap;}
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .pt_samsung_wallet {
+        .sec_share {
+            @include vw-mo(padding, 115 0 119);
+
+            .pt_title {@include vw-mo(margin-bottom, 58); @include vw-mo(font-size, 62); @include vw-mo(line-height, 80); @include vw-mo(letter-spacing, -1);}
+            .pt_btn-box {@include vw-mo(width, 473);}
+            .pt_btn {
+                @include vw-mo(width, 156);
+                &__img {@include vw-mo(margin, 0 auto 17); @include vw-mo(width, 110); @include vw-mo(height, 110);}
+                &__txt {@include vw-mo(font-size, 20); @include vw-mo(line-height, 26); @include vw-mo(letter-spacing, -1);}
+            }
+        }
+    }
+}
