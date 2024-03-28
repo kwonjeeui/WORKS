@@ -8,13 +8,13 @@
         .pt_ranking {display: flex; flex-flow:row wrap; justify-content: space-between; @include vw-pc(margin-bottom, 52);
             &__main-title {width:100%; @include vw-pc(margin-bottom,120); @include vw-pc(font-size,54); @include vw-pc(line-height,66); @include vw-pc(letter-spacing,-1.62); text-align:center;}
             &__item {position: relative; @include vw-pc(width, 420); @include vw-pc(height, 500); @include vw-pc(border-radius, 20); @include vw-pc(box-shadow, 0 5 10 #00000029);
-                &--golf {order: 2; position: relative; @include vw-pc(top, -40);}
-                &--yoga {order: 1;}
-                &--makeup {order: 3;}
+                &--01 {order: 1; position: relative;}
+                &--02 {order: 2; @include vw-pc(top, -40);}
+                &--03 {order: 3;}
                 &::before {content: ''; display: block; position: absolute; @include vw-pc(left, 20); z-index: 1; @include vw-pc(width, 80); background-repeat: no-repeat; background-position: center; background-size: contain;}
-                &--golf::before {@include vw-pc(top, -45); @include vw-pc(height, 104); background-image: url('../../is/images/program/hc_program_ranking_icon_pc01.png');}
-                &--yoga::before {@include vw-pc(top, -20); @include vw-pc(height, 80); background-image: url('../../is/images/program/hc_program_ranking_icon_pc02_v2.png');}
-                &--makeup::before {@include vw-pc(top, -20); @include vw-pc(height, 80); background-image: url('../../is/images/program/hc_program_ranking_icon_pc02_v2.png');}
+                &--01::before {@include vw-pc(top, -40); @include vw-pc(height, 80); background-image: url('../../is/images/program/hc_program_ranking_icon_pc02_v2.png');}
+                &--02::before { @include vw-pc(top, -65); @include vw-pc(height, 104); background-image: url('../../is/images/program/hc_program_ranking_icon_pc01.png');}
+                &--03::before {@include vw-pc(top, -40); @include vw-pc(height, 80); background-image: url('../../is/images/program/hc_program_ranking_icon_pc02_v2.png');}
             }
             &__tag {display: flex; position: absolute; @include vw-pc(top, 30); @include vw-pc(right, 30); 
                 .img_box {@include vw-pc(margin-right, 12);}
@@ -117,16 +117,16 @@
             .pt_contents__title-box {@include vw-mo(margin-bottom, 62);}
             .pt_contents__des {@include vw-mo(margin-bottom,20); @include vw-mo(font-size,30); font-weight:700; @include vw-mo(line-height,42);}
         
-            .pt_ranking {display: block; @include vw-mo(margin-bottom, 74);
+            .pt_ranking {display: flex; @include vw-mo(margin-bottom, 74);
                 &__main-title {width:100%; @include vw-mo(margin-bottom,48); @include vw-mo(font-size,50); @include vw-mo(line-height,70); @include vw-mo(letter-spacing,-2.5); text-align:center;}
-                &__item {width: 100%; height:auto; @include vw-mo(min-height,531); @include vw-mo(margin-bottom, 40); @include vw-mo(border-radius, 20);
-                    &--golf {order: 1; top: 0;}
-                    &--yoga {order: 2;}
-                    &--makeup {order: 3;}
+                &__item {width: 100%; height:auto; @include vw-mo(min-height,531); @include vw-mo(margin-bottom, 45); @include vw-mo(border-radius, 20);
+                    &--01 {order: 2;}
+                    &--02 {order: 1;top: 0;}
+                    &--03 {order: 3;}
                     &::before {@include vw-mo(left, 40); @include vw-mo(width, 80);}
-                    &--golf::before {@include vw-mo(top, -45); @include vw-mo(height, 104); background-image: url('../../is/images/program/hc_program_ranking_icon_mo01.png');}
-                    &--yoga::before {@include vw-mo(top, -20); @include vw-mo(height, 80); background-image: url('../../is/images/program/hc_program_ranking_icon_mo02_v2.png');}
-                    &--makeup::before {@include vw-mo(top, -20); @include vw-mo(height, 80); background-image: url('../../is/images/program/hc_program_ranking_icon_mo02_v2.png');}
+                    &--01::before {@include vw-mo(top, -20); @include vw-mo(height, 80); background-image: url('../../is/images/program/hc_program_ranking_icon_mo02_v2.png');}
+                    &--02::before { @include vw-mo(top, -45); @include vw-mo(height, 104); background-image: url('../../is/images/program/hc_program_ranking_icon_mo01.png');}
+                    &--03::before {@include vw-mo(top, -20); @include vw-mo(height, 80); background-image: url('../../is/images/program/hc_program_ranking_icon_mo02_v2.png');}
                 }
                 &__tag {@include vw-mo(top, 30); @include vw-mo(right, 30); 
                     .img_box {@include vw-mo(margin-right, 12);}

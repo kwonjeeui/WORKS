@@ -2,7 +2,7 @@
     .sec_nav {
         @include vw-pc(height, 90); background-color: #000; color: #fff;
         .pt_sticky {background-color: #000;}
-        .pt_sticky.pt_fixed {position: fixed; top: 0; left: 50%; transform: translateX(-50%); width: 100%; z-index: 10;}
+        .pt_sticky.pt_fixed {position: fixed; @include vw-pc(top, 61); left: 50%; transform: translateX(-50%); width: 100%; z-index: 10;}
         .pt_nav {
             display: flex; justify-content: space-between; align-items: center; @include vw-pc(width, 1320); @include vw-pc(height, 90); margin: 0 auto;
             .pt_nav_title {/* @include vw-pc(width,150); */ @include vw-pc(font-size, 22); font-weight: 700; @include vw-pc(letter-spacing,-.92);}
@@ -22,6 +22,7 @@
     .home_class {
         .sec_nav { overflow: hidden;
             @include vw-mo(height, 90);
+            .pt_sticky.pt_fixed {@include vw-mo(top, 200);}
             .pt_nav {
                 width: 100%; @include vw-mo(height, 90); @include vw-mo(padding,0 0 0 40);
                 .pt_nav_title {position: relative; @include vw-mo(padding-right,8); @include vw-mo(width,145); @include vw-mo(font-size, 30); flex-shrink:0;}

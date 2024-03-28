@@ -1,8 +1,10 @@
 .grande {
+  
+  .pt_c_blue {color:#1E81F8;}
+
   .sec_faq {
     @include vw-pc(padding,56 0 60);
 
-    .pt_c_blue {color:#1E81F8;}
 
     .pt_faq {
       @include vw-pc(width,1320); margin:0 auto;
@@ -52,6 +54,8 @@
 @media screen and (max-width: 768px) {
   .grande {
     .sec_faq {
+      @include vw-mo(padding-top,66);
+
       .pt_faq {
         @include vw-mo(width,580);
         

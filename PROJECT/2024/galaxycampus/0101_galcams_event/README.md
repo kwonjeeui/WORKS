@@ -309,3 +309,15 @@ event.json의 name
   - T20240325000007 / 캐서린(권제의)
   - https://www.samsungebiz.com/event/galaxycampus/display/preview/5078848/
   - 삼성월렛 이벤트 추가, 유의사항 추가, 전체 이벤트 넘버 조정
+
+* 24/03/27
+
+  - T20240325000007 / 캐서린(권제의)
+  - https://www.samsungebiz.com/event/galaxycampus/display/preview/5078848/
+  - 유의사항 수정
+
+* 24/03/28
+
+  - T20240328000004 / 캐서린(권제의)
+  - https://www.samsungebiz.com/event/galaxycampus/display/preview/5080193/
+  - 04/01 러닝체인지 작업 (KV 일정 수정 및 레시피, 래플, 신규가입 이벤트 내용 수정)

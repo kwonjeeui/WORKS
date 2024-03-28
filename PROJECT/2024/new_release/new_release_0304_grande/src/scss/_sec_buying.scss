@@ -400,6 +400,18 @@ body.pt_no_scroll {overflow-y: hidden !important; width: 100%;}
         }
         .pt_banner[data-role="btnModal"]:hover{cursor: pointer;}
     }
+
+    .sec_buying#sec_buying_combo {
+        .pt_option {
+            &__list {@include vw-mo(margin-bottom,60);}
+        }
+        .pt_btn {
+            display:inline-flex; align-items:center; justify-content:center; @include vw-mo(width,330); @include vw-mo(height,70); @include vw-mo(font-size,26); font-weight:700; @include vw-mo(letter-spacing,-.25); @include vw-mo(border-radius,100); @include vw-mo(border,1 solid #000);
+            &-box {display:flex; justify-content:space-between;}
+            &--link {background-color:#fff;}
+            &--buy {background-color:#000; color:#fff;}
+        }
+    }
     
     // 바잉툴 내 인치 변환 팝업
     .popup_content{display:none;z-index:101; @include vw-mo(width,600);@include vw-mo(border-radius,15);position:absolute;top:0;left:50%;padding:10px;background-color:#fff;background-size:100%; transform:translateX(-50%);
@@ -799,6 +811,16 @@ body.pt_no_scroll {overflow-y: hidden !important; width: 100%;}
                 &__disc { @include vw-pc(margin-top, 5);
                     li {@include vw-pc(font-size, 10); @include vw-pc(line-height, 12);}
                 }
+            }
+        }
+
+        .sec_buying#sec_buying_combo {
+            .pt_option {
+                &__list {@include vw-pc(margin-bottom,30);}
+            }
+            .pt_btn {
+                @include vw-pc(width,230); @include vw-pc(height,56); @include vw-pc(font-size,18); @include vw-pc(letter-spacing,-.25); @include vw-pc(border-radius,100); @include vw-pc(border,1 solid #000);
+                &-box {display:flex; justify-content:space-between;}
             }
         }
 

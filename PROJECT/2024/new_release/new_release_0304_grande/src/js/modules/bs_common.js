@@ -127,11 +127,11 @@ export const anchor = {
             e.preventDefault();
             const $this = $(this);
             const { target, speed = data.opt.speed, scroll = data.opt.scroll } = util.findItem(data.params, 'el', `[data-role-anchor="${$this.attr('data-role-anchor')}"]`);
-            let navHeight = $('.sec_nav').outerHeight() -2;
+            let navHeight = $('.sec_nav').outerHeight();
 
             // $('html, body').stop().animate({ scrollTop: $(target).offset().top + util.pxToVw(scroll[0], scroll[1]) }, speed);
             $(target).attr('tabindex', 0);
-            $('html, body').stop().animate({ scrollTop: $(target).offset().top + util.pxToVw(scroll[0], scroll[1]) - navHeight }, speed, function(){
+            $('html, body').stop().animate({ scrollTop: $(target).offset().top + util.pxToVw(scroll[0], scroll[1])  }, speed, function(){
                 $(target).focusout(function(){
                     $(target).removeAttr('tabindex');
                 });
@@ -170,8 +170,15 @@ export const anchor = {
 
         if (!param) return;
 
-        const { target, isCategory, speed = data.opt.speed, scroll = data.opt.scroll } = util.findItem(data.params, 'url', param);
+        const { target, isCategory, speed = data.opt.speed, scroll = data.opt.scroll, beforeScrollStart = data.opt.beforeScrollStart, tabClick = data.opt.tabClick } = util.findItem(data.params, 'url', param);
 
+        if (beforeScrollStart && typeof beforeScrollStart == 'function') {
+            beforeScrollStart();
+        }
+
+        if (tabClick && typeof tabClick == 'function') {
+            tabClick();
+        }
         $window.off('load.loadAnc').on('load.loadAnc', function () {
             try {
                 // $('html, body').stop().animate({ scrollTop: $(target).offset().top + util.pxToVw(scroll[0], scroll[1]) }, speed);

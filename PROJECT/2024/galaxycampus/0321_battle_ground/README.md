@@ -81,3 +81,8 @@
     - T20240327000002 / 션, 캐서린
     - https://www.samsungebiz.com/event/galaxycampus/display/preview/5078920/
     - 구매 이벤트 CTA 활성화 및 URL 연결
+
++ 24/03/28
+    - T20240328000003 / 션, 캐서린
+    - https://www.samsungebiz.com/event/galaxycampus/display/preview/5080188/
+    - 히든페이지 코드 복사하기 CTA 추가

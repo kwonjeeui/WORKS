@@ -16,34 +16,44 @@
 <tiles:putattribute name="popup"><div id="popupArea_Event3791"></div></tiles:putattribute>
 <input type="hidden" id="openPop" data-st-path="/sec/">
 
-<main class="sec_project_wrap grande" id="grande01">
-    @@include('./split-html/kv.html')
+<main class="sec_project_wrap grande" id="grande">
+    @@include('./split-html/kv_ai.html')
+    @@include('./split-html/kv_combo.html')
 	<!--// sec_kv -->
+    
+    @@include('./split-html/category_nav.html')
+	<!--// category_nav -->
 
-    @@include('./split-html/nav.html')
+    @@include('./split-html/nav_ai.html')
+    @@include('./split-html/nav_combo.html')
     <!--// sec_nav -->
+
+    @@include('./split-html/sticky_grande_ai.html')
+    <!-- @@include('./split-html/sticky_grande_combo.html') -->
+    <!-- // sec_sticky -->
 
     @@include('./split-html/banner_alarm.html')
     <!--// sec_banner_alarm -->
 
-    @@include('./split-html/sticky_grande.html')
-    <!--// sec_sticky -->
-
-    @@include('./split-html/buying_grande.html')
+    @@include('./split-html/buying_grande_ai.html')
+    @@include('./split-html/buying_grande_combo.html')
     <!--// sec_buying_grande -->
+
+    @@include('./split-html/tvc_video.html')
+    <!--// sec_tvc_video -->
 
     @@include('./split-html/benefit_npay_popup.html')
 
     <!-- @@include('./split-html/buying_comp.html') -->
     <!--// sec_buying_comp -->
 
-    @@include('./split-html/banner_starbucks.html')
-    <!-- // sec_banner_starbucks -->
-
     @@include('./split-html/faq.html')
     <!-- // sec_faq -->
 
-    <section class="component_tab sec_component" id="component_tap">
+    @@include('./split-html/banner_starbucks.html')
+    <!-- // sec_banner_starbucks -->
+
+    <section class="component_tab sec_component" id="component_tap" data-page-content="ai">
         <div class="tab_title">
             <h3>
                 삼성닷컴 의류케어 유형별 모아보기
@@ -82,7 +92,8 @@
     @@include('./split-html/about.html')
     <!--// sec_event -->
 
-    @@include('./split-html/notice.html')
+    @@include('./split-html/notice_ai.html')
+    @@include('./split-html/notice_combo.html')
     <!-- //sec_notice -->
 </div>
 

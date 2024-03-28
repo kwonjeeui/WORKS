@@ -2,8 +2,8 @@
     .sec_nav {
         @include vw-pc(height, 70); z-index: 10;
 
-        .pt_nav_sticky {background-color: #fff;}
-        .pt_nav_sticky.pt_fixed {position: fixed; top: 0; left: 50%; transform: translateX(-50%); width: 100%; z-index: 11;}
+        .pt_sticky {background-color: #fff;}
+        .pt_sticky.pt_fixed {position: fixed; top: 0; left: 50%; transform: translateX(-50%); @include vw-pc(width,1920); max-width:100%; z-index: 11;}
 
         .pt_nav {
             margin: 0 auto; box-shadow: 0px 1px 3px #00000016;
@@ -17,7 +17,7 @@
                 .pt_nav_item::after {content: ''; display: block; position: absolute; top: 50%; right: 0; transform: translateY(-50%); @include vw-pc(width, 1); @include vw-pc(height, 20); background-color: #DEDEDE;}
                 .pt_nav_item:last-child::after {display: none;}
                 .pt_nav_btn {
-                    display: flex; align-items: center; @include vw-pc(height, 70); @include vw-pc(margin, 0 50); @include vw-pc(font-size, 22); @include vw-pc(letter-spacing, -1); font-weight: 700; color: #888; text-align: center;
+                    display: flex; align-items: center; @include vw-pc(height, 70); @include vw-pc(margin, 0 55); @include vw-pc(font-size, 22); @include vw-pc(letter-spacing, -1); font-weight: 700; color: #888; text-align: center;
                     &.on {color: #000; @include vw-pc(border-bottom, 2 solid #000);}
 
                     .pt_nav_txt {@include vw-pc(line-height,26);}
@@ -38,7 +38,7 @@
                 .pt_nav_title {display: none;}
                 .pt_mo_swiper {width: 100%; height: 100%;}
                 .pt_nav_list {
-                    justify-content: flex-start; width: 100%; gap: 0;
+                    width: 100%; gap: 0;
 
                     .pt_nav_item {position: relative;}
                     .pt_nav_item::after {@include vw-mo(width, 2); @include vw-mo(height, 20);}

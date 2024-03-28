@@ -107,3 +107,9 @@ lnb_home_class.html : vod 페이지 nav(txt 파일 전달)
   - T20240321000012 - 박소연, 변운섭
     - https://www.samsung.com/sec/display/preview/355357/
     - 코기찾기 이벤트 다시 추가
+
+- 24/03/27
+  - T20240321000012 - 변운섭, 박소연
+    - https://www.samsung.com/sec/display/preview/355357/
+    - 베스트 강의영역 강의 리스트 수정
+    - 홈클래스 추천강의 영역 순서변경 4 <-> 3

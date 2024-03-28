@@ -212,11 +212,11 @@ export class BuyingSlide {
                 }
                 const altText = getAltText(this.alt);
                 const imgSize = checkDevice() == 'pc' ? '?$784_512_PNG$' : '?$720_360_PNG$';
-                arrMainList.push(`<li class="swiper-slide ${this.dark === 'O' ? 'pt_dark' : ''}">
+                arrMainList.push(`<li class="swiper-slide ${this.dark === 'O' ? 'pt_dark' : ''}" ${buyingSlide.buying.el === '#pt_buying_air' && `data-swiper-autoplay="5000"` }>
                                       ${idx == 0 ? tagHtml : ''}
                                       <div class="img_box">
                                           ${this.isPdImg ? `
-                                            <img src="${buyingSlide.buying.state.selected.pdImg}${imgSize}" alt="${buyingSlide.buying.state.selected.sku} 제품 이미지" loading="lazy" />
+                                            <img src="${buyingSlide.buying.state.selected.pdImg}${imgSize}" class="pd_img" alt="${buyingSlide.buying.state.selected.sku} 제품 이미지" loading="lazy" />
                                           ` : `
                                             <img src="${imgSrc}${this.image}" alt="${altText}" loading="lazy" />
                                           `}

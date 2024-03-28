@@ -1,7 +1,11 @@
 import { util as _, anchor, accordian, tab, copy, modal, countDownEvt, count } from './modules/bs_common';
+import {page_tab} from './modules/page_tab';
 import {promoCoupon} from './modules/coupon_evt';
 import {category_tab} from './modules/category_tab';
 import {sticky} from './modules/sticky';
+import {video} from './modules/video_evt';
+
+page_tab.init();
 
 $(document).ready(function(){
     
@@ -11,10 +15,23 @@ $(document).ready(function(){
         if(commentAvg === '0.0'){
             $review.hide();
         } else {
-            $review.html(commentAvg)
+            $review.html(commentAvg);
             $review.show();
         }
     });
+
+    function setPageTab() {
+        $('.sec_project_wrap').find('[data-page-tab]').eq(1).addClass('on').siblings().removeClass('on');
+        page_tab.showContent('ai');
+    }
+
+    function tabClick() {
+        setTimeout(() => {
+            const tabAi = document.querySelector('[data-page-tab="ai"]');
+            if(!tabAi) return;
+            tabAi.click();
+        }, 0)
+    }
 
     let bannerSwiper = new Swiper ('.swiper-container.pt_buying_banner__swiper',{
         slidesPerView: 'auto',
@@ -154,16 +171,16 @@ $(document).ready(function(){
         },
     });
 
-    const navMove = () => {
-        const $navList = document.querySelector('.pt_nav_list');
-        const $navMenu = document.querySelector('.pt_nav_btn.on');
-        if ($navMenu) {
-            const $index = Array.from($navList.children).indexOf($navMenu.parentNode);
-            navSwiper.slideTo($index);
-        }
-    };
+    // const navMove = () => {
+    //     const $navList = document.querySelector('.pt_nav_list');
+    //     const $navMenu = document.querySelector('.pt_nav_btn.on');
+    //     if ($navMenu) {
+    //         const $index = Array.from($navList.children).indexOf($navMenu.parentNode);
+    //         navSwiper.slideTo($index);
+    //     }
+    // };
 
-    window.addEventListener('scroll', navMove);
+    // window.addEventListener('scroll', navMove);
 
     // let btnPrev = $('.pt_bnf_swiper .swiper-button-prev.pt_bnf_prev');
     // let btnNext = $('.pt_bnf_swiper .swiper-button-next.pt_bnf_next');
@@ -176,51 +193,51 @@ $(document).ready(function(){
     // });
 
     let productSwiper =  new Swiper('#product_slide.swiper-container', {
-      slidesPerView: 'auto',
-      preloadImages: false,
-      lazy: true,
-      pagination: {
-        el: '.product_pagination_pc',
-        type: 'bullets',
-      },
-      on: {
-        breakpoint: function () {
-          var that = this;
-          setTimeout(function () {
-            that.slideTo(0, 0);
-          }, 150);
+        slidesPerView: 'auto',
+        preloadImages: false,
+        lazy: true,
+        pagination: {
+            el: '.product_pagination_pc',
+            type: 'bullets',
         },
-        init: function() {
-          const $el = $(this.$el);
+        on: {
+            breakpoint: function () {
+            var that = this;
+            setTimeout(function () {
+                that.slideTo(0, 0);
+            }, 150);
+            },
+            init: function() {
+            const $el = $(this.$el);
 
-          this.params.navigation.prevEl = $el.siblings('.pt_slide__arrow--prev');
-          this.params.navigation.nextEl = $el.siblings('.pt_slide__arrow--next');
-        }
-      },
+            this.params.navigation.prevEl = $el.siblings('.pt_slide__arrow--prev');
+            this.params.navigation.nextEl = $el.siblings('.pt_slide__arrow--next');
+            }
+        },
     });
 
     let productMoSwiper =  new Swiper('.pt_m_slide.swiper-container', {
-      slidesPerView: 'auto',
-      preloadImages: false,
-      lazy: true,
-      pagination: {
-        el: '.product_pagination_mo',
-        type: 'bullets',
-      },
-      on: {
-        breakpoint: function () {
-          var that = this;
-          setTimeout(function () {
-            that.slideTo(0, 0);
-          }, 150);
+        slidesPerView: 'auto',
+        preloadImages: false,
+        lazy: true,
+        pagination: {
+            el: '.product_pagination_mo',
+            type: 'bullets',
         },
-        init: function() {
-          const $el = $(this.$el);
+        on: {
+            breakpoint: function () {
+            var that = this;
+            setTimeout(function () {
+                that.slideTo(0, 0);
+            }, 150);
+            },
+            init: function() {
+            const $el = $(this.$el);
 
-          this.params.navigation.prevEl = $el.siblings('.pt_slide__arrow--prev');
-          this.params.navigation.nextEl = $el.siblings('.pt_slide__arrow--next');
-        }
-      },
+            this.params.navigation.prevEl = $el.siblings('.pt_slide__arrow--prev');
+            this.params.navigation.nextEl = $el.siblings('.pt_slide__arrow--next');
+            }
+        },
     });
 
     function lozadEvt(){
@@ -242,50 +259,23 @@ $(document).ready(function(){
         {
             url: 'Navi_COMBO_AI_alarm_preorder_banner',
             target: '.sec_banner',
-            scroll: [0, -88]
+            scroll: [-58,-94]
         },
         //혜택영역 앵커드
         {
             url: '_benefitzone_GrandeAI',
             target: '.pt_benefit',
-            scroll: [-50, -90]
-        },
-        //pod 원바디 제품 앵커드
-        {
-            url: 'POD_buying_Onebody',
-            target: '.sec_buying'
-        },
-        //pod 올인원 제품 앵커드
-        {
-            url: 'POD_buying_Allinone',
-            target: '.sec_buying'
-        },
-        //pod 올인원 제품 화이트 선택 앵커드
-        {
-            url: 'POD_buying_Allinone_WF24D21CWWE',
-            target: '.sec_buying'
-        },
-        //pod 화이트WF21D17CWWC 선택 앵커드
-        {
-            url: 'POD_buying_WF21D17CWWC',
-            target: '.sec_buying'
-        },
-         //pod 블랙캐비어 WF21D17CVVC 선택 앵커드
-        {
-            url: 'POD_buying_WF21D17CVVC',
-            target: '.sec_buying'
-        },
-        //특가영역으로 앵커드
-        {
-            url: 'Navi_monthly_special_deal',
-            target: '.sec_buying_comp'
+            scroll: [-58,-94],
+            // beforeScrollStart: setPageTab,
+            tabClick: tabClick
         },
         //컴포넌트영역 앵커드
         {
             url: 'grandeAI_component',
             target: '.sec_component',
-            scroll: [0, -30]
-
+            scroll: [-58,-94],
+            // beforeScrollStart: setPageTab,
+            tabClick: tabClick
         },
         //콤보 사전구매자 배너 앵커드
         {
@@ -295,36 +285,40 @@ $(document).ready(function(){
         //콤보 바잉툴로 앵커드
         {
             url: 'buying',
-            target: '.sec_buying',
-            scroll: [0, -100]
+            target: '#sec_buying_combo',
+            scroll: [-58,-94]
+        },
+        // Ai 바잉툴로 앵커드
+        {
+            url: 'buying_ai',
+            target: '#sec_buying',
+            scroll: [-58,-94],
+            // beforeScrollStart: setPageTab,
+            tabClick: tabClick
         },
         //콤보 사전구매자 유의사항 앵커드
         {
             url: 'COMBO_preorder-benefit_banner_detail',
             target: '.pt_notice_buyer',
-            scroll: [-30, -50]
+            scroll: [-58,-94]
         },
         //베스트 리뷰어 챌린지 유의사항 앵커드
         {
             url: 'bestreviewer_detail',
             target: '.pt_notice_best_common',
-            scroll: [-80, -100]
+            scroll: [-58,-94]
         },
         //신규 컬러 런칭 알림신청 배너 앵커드
         {
             url: 'Banner_new_color_pre-alram',
             target: '.sec_banner_alarm',
-            scroll: [-60, -90]
+            scroll: [-58,-94]
         },
-        {
-            url: 'top-loader-wa',
-            target: '#component_tap',
-            isCategory: true
-        },
+        // FAQ 영역 앵커드
         {
             url: 'Navi_COMBO_FAQ',
             target: '.sec_faq',
-            scroll: [-69, -94]
+            scroll: [-58,-94]
         },
     ]);
 
@@ -335,7 +329,8 @@ $(document).ready(function(){
         },
         {
             el: '[data-role-anchor="component_tab"]',
-            target: '.component_tab'
+            target: '.component_tab',
+            scroll: [-58,-94]
         },
         {
             el: '[data-role-anchor="sec_banner"]',
@@ -344,12 +339,12 @@ $(document).ready(function(){
         {
             el: '[data-role-anchor="sec_benefit"]',
             target: '.pt_benefit',
-            scroll: [-30, 0]
+            scroll: [-58,-94]
         },
         {
             el: '[data-role-anchor="pt_starbucks-banner"]',
             target: '.pt_starbucks-banner',
-            scroll: [60, 60]
+            scroll: [-58,-94]
         },
         {
             el: '[data-role-anchor="sec_review"]',
@@ -365,7 +360,9 @@ $(document).ready(function(){
         },
         {
             el: '[data-role-anchor="sec_buying"]',
-            target: '.sec_buying'
+            target: '.sec_buying',
+            scroll: [-58,-94]
+            
         },
         {
             el: '[data-role-anchor="pod_noti"]',
@@ -388,7 +385,8 @@ $(document).ready(function(){
         },
         {
             el: '[data-role-anchor="notice_alarm"]',
-            target: '.pt_notice_alarm'
+            target: '.pt_notice_alarm',
+            scroll: [-58,-94]
         },
         {
             el: '[data-role-anchor="banner_notice"]',
@@ -396,7 +394,8 @@ $(document).ready(function(){
         },
         {
             el: '[data-role-anchor="sec_faq"]',
-            target: '.sec_faq'
+            target: '.sec_faq',
+            scroll: [-58,-94]
         },
         {
             el: '[data-role-anchor="notice_buyer"]',
@@ -406,7 +405,12 @@ $(document).ready(function(){
         {
             el: '[data-role-anchor="sec_banner_alarm"]',
             target: '.sec_banner_alarm',
-            scroll: [50, 70]
+            scroll: [-58,-94]
+        },
+        {
+            el: '[data-role-anchor="sec_video"]',
+            target: '.sec_video',
+            scroll: [-58,-94]
         },
     ])
 
@@ -512,7 +516,17 @@ $(document).ready(function(){
             target: '#tab_buying_pod_new',
         },
     ]);
+    
+    video.init([
+        {
+            el: '[data-role-video="tvc_video"]',
+            target: '#tvc_video',
+            video: '../../is/images/video/gd_video_tvc.mp4'
+        },
+    ])
 
+
+    count.init('#alarm_count', '2024/04/04 16:59:59');
     copy.click();
     category_tab.init();
     sticky.init();

@@ -1,4 +1,5 @@
-import buyingData from "../data/data_grande.json";
+import buyingDataAi from "../data/data_grande_ai.json";
+import buyingDataCombo from "../data/data_grande_combo.json";
 import buyingSlide from "../data/buyingSlide.json";
 // import benefitImage from "../data/benefitImage.json";
 import {Buying} from './modules/buying_new';
@@ -10,6 +11,7 @@ import {buyingAccordian} from './modules/buyingAccordian';
 
 const $secWrap = $('.sec_project_wrap');
 let mainBuying = null;
+let comboBuying = null;
 
 /**
  * 초기변수, 얼럿 메시지, 옴니값 등 바잉툴 초기값
@@ -19,8 +21,10 @@ let mainBuying = null;
  * - slideImage: 제품 슬라이드 이미지 파일경로 및 파일명 작성
  */
 let config = {
-    isOnce: false,
-    isOpened: true,
+    isOnceAi: false,
+    isOpenedAi: true,
+    isOnceCombo: false,
+    isOpenedCombo: true,
     isDeactive: false,
     deactiveMessage: '중고 추가 보상 프로그램과 My갤럭시클럽까지<br/>모든 옵션 선택 후 구매 가능합니다.',
     telecomMessage: '통신사 선택(택1)까지<br/> 옵션 선택 후 신청 가능합니다.',
@@ -36,13 +40,21 @@ let config = {
         // present: 'b2c_promotion',
         pickup: ''
     },
-    omni: {
-        buy: 'sec:event:bespoke-grandeai:goto_POD_Onebody_buy_',
-        link: 'sec:event:bespoke-grandeai:goto_POD_Onebody_PD_URL_',
-        coupon: 'sec:event:bespoke-grandeai:button_Download_specialprice_coupon_',
-        buySticky: 'sec:event:bespoke-grandeai:goto_POD_Onebody_buy_',
-        linkSticky: 'sec:event:bespoke-grandeai:goto_POD_Onebody_PD_URL_',
-        couponSticky: 'sec:event:bespoke-grandeai:button_Download_specialprice_coupon_',
+    omniAi: {
+        buy: 'sec:event:bespoke-grandeai:goto_POD_direct_buy_',
+        link: 'sec:event:bespoke-grandeai:goto_POD_PD_URL_',
+        coupon: 'sec:event:bespoke-grandeai:button_Download_coupon_',
+        buySticky: 'sec:event:bespoke-grandeai:goto_POD_direct_buy_',
+        linkSticky: 'sec:event:bespoke-grandeai:goto_POD_PD_URL_',
+        couponSticky: 'sec:event:bespoke-grandeai:button_Download_coupon_',
+    },
+    omniCombo: {
+        buy: 'sec:event:bespoke-grandeai:goto_POD_direct_buy_',
+        link: 'sec:event:bespoke-grandeai:goto_POD_PD_URL_',
+        coupon: 'sec:event:bespoke-grandeai:button_Download_coupon_',
+        buySticky: 'sec:event:bespoke-grandeai:goto_POD_direct_buy_',
+        linkSticky: 'sec:event:bespoke-grandeai:goto_POD_PD_URL_',
+        couponSticky: 'sec:event:bespoke-grandeai:button_Download_coupon_',
     },
     slideImage: buyingSlide
 }
@@ -50,11 +62,12 @@ let config = {
 /**
  * 바잉툴 초기화
  */
-let buyingSlideTop = null;
+let buyingSlideAi = null;
+let buyingSlideCombo = null;
 
-function initBuying() {
+function initBuyingAi() {
     mainBuying = new Buying('#pt_buying', {
-        pdList: buyingData.result,
+        pdList: buyingDataAi.result,
         defaults: true,
         option: {
             type: 'hide',
@@ -71,14 +84,14 @@ function initBuying() {
                 // const slideSubTxt = document.querySelector('.pt_slide__subtxt')
 
                 // 제품 슬라이드 초기화
-                buyingSlideTop = new BuyingSlide(buying, {
-                    target: '#buying_slide',
-                    imageData: config.slideImage.buyingSlideTop,
+                buyingSlideAi = new BuyingSlide(buying, {
+                    target: '#buying_slide_ai',
+                    imageData: config.slideImage.buyingSlideAi,
                 });
 
                 // 바잉툴 슬라이드 첫번째만 아래 문구 없애기
-                // buyingSlideTop.swiper.on('slideChange', function() {
-                //     buyingSlideTop.swiper.realIndex === 0 ? 
+                // buyingSlideAi.swiper.on('slideChange', function() {
+                //     buyingSlideAi.swiper.realIndex === 0 ? 
                 //         slideSubTxt.classList.add('hide-txt') : slideSubTxt.classList.remove('hide-txt')  
                 // })
 
@@ -109,20 +122,20 @@ function initBuying() {
 
 
                 // 선택된 제품의 데이터를 html에서 출력함
-                buyingUtil.renderHtml(buying);
+                buyingUtil.renderHtml(buying, '.sec_sticky.ai');
 
                 // 각 버튼 클릭시 마다 API 실행시 사용될 data 속성값 저장 (G코드, 스큐, 회사코드 등)
-                buyingUtil.updateBtn(buying.$el, selected, selectOptEtc, config.omni);
+                buyingUtil.updateBtn(buying.$el, selected, selectOptEtc, config.omniAi, '.sec_sticky.ai');
 
                 // 매장픽업 초기화
                 // buyingPickup.reset();
 
                 // 바잉툴 상단, 하단 슬라이드 업데이트
-                buyingSlideTop.update({sku:sku, model:model}, config.isOnce);
+                buyingSlideAi.update({sku:sku, model:model}, config.isOnceAi);
 
                 // 제품 품절여부 확인 및 구매관련버튼 활성/비활성화
                 PT_STATE.service.checkSoldout(gCode, function(saleStatCd){
-                    buyingUtil.soldoutEvt(saleStatCd);
+                    buyingUtil.soldoutEvt(saleStatCd, buying.$el, '.sec_sticky.ai');
                 });
 
                 // 제품 별점 api
@@ -154,6 +167,16 @@ function initBuying() {
                 // buyingBnfSwiper.contsMove('jet02',0);
 
             },
+
+            optionEtcChangeEnd(buying, option) {
+                const selectOptEtc = buying.state.selectOptionEtc;
+                const selected = buying.state.selected;
+
+                // 각 버튼 클릭시 마다 API 실행시 사용될 data 속성값 저장 (G코드, 스큐, 회사코드 등)
+                buyingUtil.updateBtn(buying.$el, selected, selectOptEtc, config.omni, '.sec_sticky.ai');
+
+            },
+
             optionAllChangeEnd(buying) {
                 const selectOptEtc = buying.state.selectOptionEtc;
                 const selected = buying.state.selected;
@@ -167,9 +190,143 @@ function initBuying() {
                     //     buyingUtil.soldoutEvt(saleStatCd);
                     // });
                 // }
-                if (!config.isOpened) {
+                if (!config.isOpenedAi) {
                     PT_STATE.service.initBtnAll();
-                    config.isOpened = true;
+                    config.isOpenedAi = true;
+                }
+            },
+        }
+    });
+}
+
+function initBuyingCombo() {
+    comboBuying = new Buying('#pt_buying_combo', {
+        pdList: buyingDataCombo.result,
+        defaults: true,
+        option: {
+            type: 'hide',
+            scroll: {
+                use: false
+            },
+        },
+        sessionStorage: false,
+        autoScope: {
+            use: true
+        },
+        on: {
+            init(buying) {
+                // const slideSubTxt = document.querySelector('.pt_slide__subtxt')
+
+                // 제품 슬라이드 초기화
+                buyingSlideCombo = new BuyingSlide(buying, {
+                    target: '#buying_slide_combo',
+                    imageData: config.slideImage.buyingSlideCombo,
+                });
+
+                // 바잉툴 슬라이드 첫번째만 아래 문구 없애기
+                // buyingSlideCombo.swiper.on('slideChange', function() {
+                //     buyingSlideCombo.swiper.realIndex === 0 ? 
+                //         slideSubTxt.classList.add('hide-txt') : slideSubTxt.classList.remove('hide-txt')  
+                // })
+
+                
+                // 모든 옵션을 클릭하기전까지, 버튼 클릭시 얼럿창 출력 이벤트
+                buyingUtil.clickDeactiveBuy();
+
+                // 구매하기 이벤트, etc 옵션 생길 시 주석처리
+                PT_STATE.service.initBuy();
+
+                // 매장픽업 이벤트 활성화
+                // buyingUtil.pickupEvt();
+
+                //바잉툴혜택 스와이퍼
+                // buyingBnfSwiper.init();
+            },
+            // optionChangeEnd(buying, option) {
+            //     const selected = buying.state.selected;
+            //     const selectOption = buying.state.selectOption;
+                
+            // },
+            productChangeEnd(buying) {
+                const selectOptEtc = buying.state.selectOptionEtc;
+                const selected = buying.state.selected;
+                const sku = selected && selected.sku;
+                const model = selected && selected.type;
+                const gCode = selected && selected.gCode;
+
+
+                // 선택된 제품의 데이터를 html에서 출력함
+                buyingUtil.renderHtml(buying, '.sec_sticky.combo');
+
+                // 각 버튼 클릭시 마다 API 실행시 사용될 data 속성값 저장 (G코드, 스큐, 회사코드 등)
+                buyingUtil.updateBtn(buying.$el, selected, selectOptEtc, config.omniCombo, '.sec_sticky.combo');
+
+                // 매장픽업 초기화
+                // buyingPickup.reset();
+
+                // 바잉툴 상단, 하단 슬라이드 업데이트
+                buyingSlideCombo.update({sku:sku, model:model}, config.isOnceCombo);
+
+                // 제품 품절여부 확인 및 구매관련버튼 활성/비활성화
+                PT_STATE.service.checkSoldout(gCode, function(saleStatCd){
+                    buyingUtil.soldoutEvt(saleStatCd, buying.$el, '.sec_sticky.combo');
+                });
+
+                // 제품 별점 api
+                PT_STATE.service.getCommentAvg(gCode, function(commentAvg) {
+                    const $star = $('[data-comment]');
+
+                    if (commentAvg === '0.0') {
+                        $star.hide();
+                    } else {
+                        $star.html(commentAvg);
+                        $star.attr('href', selected.pdUrl + '?focus=review');
+                        $star.attr('title', selected.sku + '제품 상품평 페이지로 이동');
+                        $star.show();
+                    }
+                });
+
+                if(selected.priceC == '-') {
+                    $('.pt_sale-box--priceB .pt_sale').addClass('pt_sale--blue');
+                    $('.pt_sticky__sale-box--priceB .pt_sale').addClass('pt_sale--blue');
+                } else {
+                    $('.pt_sale-box--priceB .pt_sale').removeClass('pt_sale--blue');
+                    $('.pt_sticky__sale-box--priceB .pt_sale').removeClass('pt_sale--blue');
+                }
+
+                //바잉툴혜택 스와이퍼
+                // buyingBnfSwiper.navMove('jet01',0);
+                // buyingBnfSwiper.navMove('jet02',0);
+                // buyingBnfSwiper.contsMove('jet01',0);
+                // buyingBnfSwiper.contsMove('jet02',0);
+
+            },
+
+            optionEtcChangeEnd(buying, option) {
+                const selectOptEtc = buying.state.selectOptionEtc;
+                const selected = buying.state.selected;
+
+                // 각 버튼 클릭시 마다 API 실행시 사용될 data 속성값 저장 (G코드, 스큐, 회사코드 등)
+                buyingUtil.updateBtn(buying.$el, selected, selectOptEtc, config.omni, '.sec_sticky.combo');
+
+            },
+
+            optionAllChangeEnd(buying) {
+                const selectOptEtc = buying.state.selectOptionEtc;
+                const selected = buying.state.selected;
+
+                // 각 버튼 클릭시 사용되는 data 속성값 저장 (G코드, 스큐, 회사코드 등)
+                // buyingUtil.updateBtn(buying.$el, selected, selectOptEtc, config.omni);
+
+                // if($('[data-pickup-plazaNo]').text() === ''){
+                    // 제품 품절여부 확인 및 구매관련버튼 활성/비활성화
+                    // PT_STATE.service.checkSoldout(selected.gCode, function(saleStatCd){
+                    //     buyingUtil.soldoutEvt(saleStatCd);
+                    // });
+                // }
+                if (!config.isOpenedCombo) {
+                    PT_STATE.service.initBtnAll();
+                    config.isOpenedCombo = true;
                 }
             },
         }
@@ -183,14 +340,15 @@ const buyingUtil = {
     /**
      * 각 버튼 클릭시 마다 API 실행시 사용될 data 속성값 저장 (G코드, 스큐, 회사코드 등)
      */
-    updateBtn($el, selected, selectOptEtc, omni) {
+    updateBtn($el, selected, selectOptEtc, omni, stickyType) {
         if(!selected) return;
 
-        const $sticky = $secWrap.find('.pt_sticky');
+        const $sticky = $secWrap.find(stickyType);
 
         // 구매하기 버튼
         const $btnBuy = $el.find('[data-role=btnBuy]');
         const $btnBuySticky = $sticky.find('[data-role=btnBuy]');
+
         if(!!$btnBuy.length && selected.gCode){
             $btnBuy.attr('data-gcode', selected.gCode);
             $btnBuySticky.attr('data-gcode', selected.gCode);
@@ -335,7 +493,7 @@ const buyingUtil = {
             });
         });
     },
-    soldoutEvt(saleStatCd){
+    soldoutEvt(saleStatCd, $el, $sticky){
         const tradeInValue = $secWrap.find('[data-opt-etc="tradein"] input:checked').val();
         const galaxyClubValue = $secWrap.find('[data-opt-etc="galaxyClub"] input:checked').val();
         const btnDisabled = PT_STATE.service.getBtnDisabled({
@@ -344,14 +502,21 @@ const buyingUtil = {
             soldout: Number(saleStatCd) === 12 ? 'N' : 'Y'
         });
 
-        const $btnBuy = $secWrap.find('[data-role="btnBuy"]');
+        const $btnBuy = $el.find('[data-role="btnBuy"]');
+        const $stickBtnBuy = $sticky.find('[data-role="btnBuy"]');
         const isPickup = $btnBuy.attr('data-is-pickup');
         if(isPickup==="true"){
             $btnBuy.removeClass('pt_btn--disabled');
             $btnBuy.html('구매하기');
             $btnBuy.removeAttr('tabindex');
+            $stickBtnBuy.removeClass('pt_btn--disabled');
+            $stickBtnBuy.html('구매하기');
+            $stickBtnBuy.removeAttr('tabindex');
         } else {
             if(btnDisabled.buy){
+                $btnBuy.addClass('pt_btn--disabled');
+                $btnBuy.text('일시품절')
+                $btnBuy.attr('tabindex', -1);
                 $btnBuy.addClass('pt_btn--disabled');
                 $btnBuy.text('일시품절')
                 $btnBuy.attr('tabindex', -1);
@@ -360,6 +525,9 @@ const buyingUtil = {
                 $btnBuy.removeClass('pt_btn--disabled');
                 $btnBuy.html('구매하기');
                 $btnBuy.removeAttr('tabindex');
+                $stickBtnBuy.removeClass('pt_btn--disabled');
+                $stickBtnBuy.html('구매하기');
+                $stickBtnBuy.removeAttr('tabindex');
             }
         }
 
@@ -485,7 +653,8 @@ const buyingUtil = {
      */
     clickDeactiveBuy(){
         $secWrap.on('click', '[data-role="btnBuy"], [data-role="btnNPay"], [data-role="btnPickup"], [data-role="btnPresent"], [data-role="btnCart"]', function(e) {
-            if(config.isOpened) return;
+            if(config.isOpenedAi) return;
+            if(config.isOpenedCombo) return;
             e.preventDefault();
             PT_STATE.service.messager.alert(config.deactiveMessage, function(){
                 let offset = $('#pt_buying .pt_option').offset().top - _.pxToVw(84, 224);
@@ -504,12 +673,12 @@ const buyingUtil = {
     /**
      * 선택된 제품의 데이터를 html에서 출력함
      */
-    renderHtml(buying){
+    renderHtml(buying, stickyType){
         const selected = buying.state.selected;
 
         // 바잉툴 외부 제품 정보 text 변경
         try {
-            $secWrap.find('[data-buying-text]').each(function(){
+            $secWrap.find(stickyType).find('[data-buying-text]').each(function(){
                 const textKey = $(this).attr('data-buying-text');
                 let text = selected[textKey].trim();
                 if(/^\d+$/.test(text)) text = _.addComma(text); // 숫자이면 콤마추가
@@ -601,15 +770,22 @@ const buyingPickup = {
  */
 const buyingSticky = {
     scrollEvt: function() {
+
+        const mainTag = document.querySelector('#grande')
+        let $secBuying = null;
+
         $(window).off('scroll.buyingSticky').on('scroll.buyingSticky', function() {
             const scrollTop = $(window).scrollTop();
-            const $secBuying = $('.sec_buying');
+
+            mainTag.classList.contains('ai') ? 
+                ($secBuying = $('[data-page-content=ai].sec_buying')) : ($secBuying = $('[data-page-content=combo].sec_buying'))
+
+            
             const $sec_notice = $('.sec_notice');
             const $buyingSticky = $('[data-buying-sticky]');
             const stickyHeight = $buyingSticky.outerHeight();
-            const navHeight  = $('.sec_nav').outerHeight();
             const secTarget = $secBuying.offset().top;
-            const startPosition = _.isMobile() ? secTarget - navHeight : secTarget + _.pxToVw(-83, -485);
+            const startPosition = _.isMobile() ? secTarget - (window.innerHeight / 2) : secTarget + _.pxToVw(-83, -485);
             const endPosition = _.isMobile() ? secTarget + $secBuying.innerHeight() - (window.innerHeight / 2) : secTarget + $secBuying.innerHeight() - 100;
 
             if (scrollTop >= startPosition && scrollTop <= endPosition ) {
@@ -619,6 +795,7 @@ const buyingSticky = {
             }
 
         }).scroll();
+
     },
     accordianEvt: function() {
         let noScrollScrollY = 0;
@@ -648,7 +825,80 @@ const buyingSticky = {
 
 $(document).ready(function(){
     // 바잉툴 초기화
-    initBuying();
+    const grandeWrap = document.querySelector('#grande');
+    const tabBtnAi = document.querySelector('.pt_category_nav .pt_category_nav__btn--ai');
+    const tabBtnCombo = document.querySelector('.pt_category_nav .pt_category_nav__btn--combo');
+    let aiSwitch = false;
+    let comboSwitch = false;
+
+    // buyingBnfSwiper.init();
+
+    if(tabBtnAi.classList.contains('on') && !aiSwitch) {
+        initBuyingAi();
+        grandeWrap.classList.add('ai')
+        aiSwitch = true;
+    }
+    if(tabBtnCombo.classList.contains('on') && !comboSwitch) {
+        initBuyingCombo();
+        grandeWrap.classList.add('combo')
+        comboSwitch = true;
+    }
+    
+
+    function aiActive() {
+        grandeWrap.classList.remove('combo')
+        grandeWrap.classList.add('ai')
+
+        if(mainBuying) {
+            const selectOptEtc = mainBuying.state.selectOptionEtc;
+            const selected = mainBuying.state.selected;
+            const sku = selected && selected.sku;
+            const model = selected && selected.type;
+
+            buyingUtil.renderHtml(mainBuying, '.sec_sticky.ai');
+
+            buyingUtil.updateBtn(mainBuying.$el, selected, selectOptEtc, config.omniAi, '.sec_sticky.ai');
+
+            buyingSlideAi.update({sku:sku, model:model}, config.isOnceAi);
+        } 
+
+        if(aiSwitch) {
+            document.querySelector('#optB_2').click();
+            return;
+        };
+        initBuyingAi();
+        aiSwitch = true;
+    }
+
+    function comboActive() {
+        grandeWrap.classList.remove('ai')
+        grandeWrap.classList.add('combo')
+
+        if(comboBuying) {
+            const selectOptEtc = comboBuying.state.selectOptionEtc;
+            const selected = comboBuying.state.selected;
+            const sku = selected && selected.sku;
+            const model = selected && selected.type;
+            
+            buyingUtil.renderHtml(comboBuying, '.sec_sticky.combo');
+
+            buyingUtil.updateBtn(comboBuying.$el, selected, selectOptEtc, config.omniCombo, '.sec_sticky.combo');
+
+            buyingSlideCombo.update({sku:sku, model:model}, config.isOnceCombo);
+        } 
+
+        
+        if(comboSwitch) {
+            document.querySelector('#optBB_1').click();
+            return;
+        };
+        initBuyingCombo();
+        // $('#opt_etc_aa_4').trigger('click')
+        comboSwitch = true;
+    }
+
+    tabBtnAi.addEventListener('click', aiActive)
+    tabBtnCombo.addEventListener('click', comboActive)
     // 바잉툴 스티키 초기화
     buyingSticky.init();
     // 확대하기 버튼 초기화
@@ -659,5 +909,6 @@ $(document).ready(function(){
     // promoCoupon.init();
 
 
-    config.isOnce = true;
+    config.isOnceAi = true;
+    config.isOnceCombo = true;
 });

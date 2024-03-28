@@ -54,7 +54,3 @@
   - T20240308000006 / 션, 캐서린
     - https://www.samsungebiz.com/event/galaxycampus/display/preview/5077889/
     - 응모하기, 참여하기 cta에 갤캠스 회원이 아닐 경우 로그인 안되도록 html, js 수정
-
-+ 24/03/21
-  - 캐서린
-    - 시즌2 SB 기반 폴더 세팅, 시즌2 변경 영역 수정

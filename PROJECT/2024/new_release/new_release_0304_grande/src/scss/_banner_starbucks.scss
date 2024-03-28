@@ -1,6 +1,6 @@
 .grande {
     .pt_starbucks-banner {
-        @include vw-pc(padding, 102 0 50);
+        @include vw-pc(padding, 80 0 100);
         &__inner {@include vw-pc(width, 1200); margin: 0 auto; @include vw-pc(padding, 27 49 30 50); @include vw-pc(border-radius, 20); background-color: #F4F4F4;}
         &__wrap {display: flex; align-items: end;}
         .img_box {@include vw-pc(width, 165); @include vw-pc(margin, 0 42 14 0);}
@@ -18,7 +18,7 @@
 @media screen and (max-width: 768px) {
     .grande {
         .pt_starbucks-banner {
-            @include vw-mo(padding, 100 0 50);
+            @include vw-mo(padding, 100 0 120);
             &__inner {position: relative; @include vw-mo(width, 672); @include vw-mo(padding, 23 60 25 40); @include vw-mo(border-radius, 8);}
             &__wrap {display: block;}
             .img_box {position: absolute; @include vw-mo(top, 92); @include vw-mo(right, 61); @include vw-mo(width, 175); margin: 0;}

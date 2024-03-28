@@ -7,7 +7,6 @@ export const sticky = {
 
           if ($(window).scrollTop() >= $('.sec_nav').offset().top && $(window).scrollTop() <= $('.sec_comp').offset().top - _navHeight){
               $('.pt_sticky').addClass('pt_fixed');
-              $('.lnb_wrapper').css('top' , _navHeight)
           }
         //   else if ($(window).scrollTop() >= $('.sec_accordian').offset().top - _navHeight && $(window).scrollTop() <= $('.sec_modal').offset().top - _navHeight){
         //       $('.pt_sticky').addClass('pt_fixed');

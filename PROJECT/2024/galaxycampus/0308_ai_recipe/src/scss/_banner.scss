@@ -1,0 +1,59 @@
+.pt_ai_recipe {
+    .sec_banner {
+        &.pt_bg-image.pt_add-bg {}
+
+        .pt_txt {
+            &__slogan {}
+            &__title {}
+            &__date {}
+        }
+
+        .pt_noti {
+            &__txt {}
+        }
+
+        .pt_bnf {
+            &--top {}
+            &--bottom {}
+
+            &__txt {
+                &--blue {}
+            }
+            &__img {}
+        }
+
+        .pt_banner__img {}
+        .pt_btn__buying {}
+    }
+}
+
+@media screen and (max-width:768px) {
+    .pt_ai_recipe {
+        .sec_banner {
+            &.pt_bg-image.pt_add-bg {}
+
+            .pt_txt {
+                &__slogan {}
+                &__title {}
+                &__date {}
+            }
+    
+            .pt_noti {
+                &__txt {}
+            }
+    
+            .pt_bnf {
+                &--top {}
+                &--bottom {}
+    
+                &__txt {
+                    &--blue {}
+                }
+                &__img {}
+            }
+    
+            .pt_banner__img {}
+            .pt_btn__buying {}
+        }
+    }
+}

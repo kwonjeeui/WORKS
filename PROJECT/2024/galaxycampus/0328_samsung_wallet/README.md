@@ -13,13 +13,8 @@
     - 2024-03-28
 
 ## 페이지 경로
-+ 
++ https://www.samsungebiz.com/event/galaxycampus/gcsPromotion/2024samsungwallet/
 
-
-## html/css/js 파일 정보
-#### (라이브파일 / 연동된 파일 / 버전 설명 등 / 중요페이지 정보 작성)
-- 
-- 
 
 ## 이미지 경로
 + //images.samsung.com/kdp/event/galaxycampus/2024/0328_samsung_wallet/
@@ -32,12 +27,16 @@
 + sw_
 
 ## SB 및 시안 경로
-+ SB :
-+ 시안 : 
++ SB : 
++ 시안 : \\121.252.119.19\2023_갤럭시캠퍼스스토어\@디자인팀 공유 폴더\185. 삼성월렛 리브랜딩 이벤트\ 
 
 ## 이벤트 번호
 
 ## 앵커드
++ event01
++ event02
++ event03
+
 
 ## 히스토리
 + 24/03/26

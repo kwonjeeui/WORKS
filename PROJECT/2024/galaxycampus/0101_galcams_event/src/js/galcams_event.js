@@ -335,20 +335,12 @@ $(document).ready(function(){
             target: '.sec_recipe',
         },
         {
-            el: '[data-role-anchor="nav_gcsfestival"]',
-            target: '.sec_gcsfestival',
-        },
-        {
-            el: '[data-role-anchor="nav_friendrefers"]',
-            target: '.sec_friendrefers',
+            el: '[data-role-anchor="nav_raffle"]',
+            target: '.sec_raffle',
         },
         {
             el: '[data-role-anchor="nav_newsignup"]',
             target: '.sec_newsignup',
-        },
-        {
-            el: '[data-role-anchor="nav_raffle"]',
-            target: '.sec_raffle',
         },
 
         //인트로 앵커
@@ -365,20 +357,12 @@ $(document).ready(function(){
             target: '.sec_recipe',
         },
         {
-            el: '[data-role-anchor="intro-anchor-gcsfestival"]',
-            target: '.sec_gcsfestival',
-        },
-        {
-            el: '[data-role-anchor="intro-anchor-friendrefers"]',
-            target: '.sec_friendrefers',
+            el: '[data-role-anchor="intro-anchor-raffle"]',
+            target: '.sec_raffle',
         },
         {
             el: '[data-role-anchor="intro-anchor-newsignup"]',
             target: '.sec_newsignup',
-        },
-        {
-            el: '[data-role-anchor="intro-anchor-raffle"]',
-            target: '.sec_raffle',
         },
 
         //유의사항 앵커
@@ -395,20 +379,12 @@ $(document).ready(function(){
             target: '.pt_noti_recipe'
         },
         {
-            el: '[data-role-anchor="noti_gcsfestival"]',
-            target: '.pt_noti_gcsfestival'
-        },
-        {
-            el: '[data-role-anchor="noti_friendrefers"]',
-            target: '.pt_noti_friendrefers'
+            el: '[data-role-anchor="noti_raffle"]',
+            target: '.pt_noti_raffle'
         },
         {
             el: '[data-role-anchor="noti_newsignup"]',
             target: '.pt_noti_signup'
-        },
-        {
-            el: '[data-role-anchor="noti_raffle"]',
-            target: '.pt_noti_raffle'
         },
     ]);
 
@@ -429,16 +405,6 @@ $(document).ready(function(){
             scroll: [-0, -100],
         },
         {
-            url: 'gcsfestival',
-            target: '.sec_gcsfestival',
-            scroll: [-0, -100],
-        },
-        {
-            url: 'friendrefers',
-            target: '.sec_friendrefers',
-            scroll: [-0, -100],
-        },
-        {
             url: 'raffle',
             target: '.sec_raffle',
             scroll: [-0, -100]
@@ -453,9 +419,7 @@ $(document).ready(function(){
     sticky.init();
     sns.init();
     modal.toggle();
-
     galcams.init(); // 갤캠스 필수 기능 호출
-
 
     /** 백그라운드 이미지에 lozad 적용 시 필요 함수 */
     const observerbg = lozad('.pt_bg-image', {

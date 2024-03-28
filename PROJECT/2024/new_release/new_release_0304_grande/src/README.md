@@ -301,3 +301,8 @@
     - T20240321000011 / 김태연 황창환
     - https://www.samsung.com/sec/display/preview/355356/
     - 카드 청구할인 KB국민카드 삭제
+
+  + 24/3/25
+    - T20240325000010 / 김태연 황창환
+    - https://www.samsung.com/sec/display/preview/355999/
+    - 혜택,푸터 결제일할인 롯데카드 삭제
