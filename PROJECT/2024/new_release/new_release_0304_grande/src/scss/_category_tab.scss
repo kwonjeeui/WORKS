@@ -2,7 +2,7 @@
     .sec_component {
         .tab_title {
             text-align: center; @include vw-pc(padding-top, 80);
-            h3 {/*@include vw-pc(margin-bottom, 20);*/ @include vw-pc(margin-bottom, 30); @include vw-pc(font-size, 40); @include vw-pc(line-height, 50); text-align: center;}
+            h3 {/*@include vw-pc(margin-bottom, 20);*/ @include vw-pc(margin-bottom, 20); @include vw-pc(font-size, 40); @include vw-pc(line-height, 50); text-align: center;}
             .pt_point_color1{color: #B16F44;}
             .tab_info_txt{@include vw-pc(font-size, 14); @include vw-pc(line-height, 30);@include vw-pc(margin-bottom, 40);opacity: 0.6;}
         }
@@ -13,7 +13,7 @@
             .pt_slider_category_sticky .pt_slider_category_wrap{position:relative;}
             .pt_slider_category_sticky.fixed .pt_slider_category_wrap{position:fixed;top:0;left:0;width:100%;background-color:#fff;z-index:15; @include vw-pc(box-shadow, 0 0 10 rgba(0,0,0,0.1)); }
     
-            .pt_slider_category_wrap .swiper-container{width:100%;@include vw-pc(max-width,1100);margin:0 auto;}
+            .pt_slider_category_wrap .swiper-container{width:100%;@include vw-pc(max-width,1200);margin:0 auto;}
             .pt_slider_category_wrap .swiper-container .pt_category_title{display:none;}
             .pt_slider_category_wrap .swiper-container .pt_category_list{justify-content:center;flex-wrap:wrap;}
             .pt_slider_category_wrap .pt_category_list > li{width:auto !important;height:auto;@include vw-pc(margin,9 8);}
@@ -43,7 +43,7 @@
                 .tab_info_txt{@include vw-mo(font-size, 20); @include vw-mo(line-height, 22);@include vw-mo(margin-bottom, 40);}
             }
             .pt_category_box{
-                @include vw-mo(margin-top, 40); @include vw-mo(padding,0 0 0);
+                @include vw-mo(margin-top, 20); @include vw-mo(padding,0 0 0);
     
                 .pt_slider_category_sticky{@include vw-mo(min-height,100);}
                 .pt_slider_category_sticky .pt_slider_category_wrap{width:100%;@include vw-mo(height,100);padding:0;background-color:#fff;/*box-shadow:0 0 2.222vw rgba(0,0,0,.1);*/}
@@ -90,7 +90,7 @@
                 }
     
                 //pc 카테고리 넓이값 조절
-                // &.pt_cate0 .pt_slider_category_wrap .swiper-container{max-width: 100%;}
+                &.pt_cate0 .pt_slider_category_wrap .swiper-container{max-width:100%;}
     
             }
         }

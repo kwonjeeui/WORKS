@@ -321,3 +321,12 @@ event.json의 name
   - T20240328000004 / 캐서린(권제의)
   - https://www.samsungebiz.com/event/galaxycampus/display/preview/5080193/
   - 04/01 러닝체인지 작업 (KV 일정 수정 및 레시피, 래플, 신규가입 이벤트 내용 수정)
+
+* 24/03/29
+
+  - T20240328000004 / 캐서린(권제의)
+  - https://www.samsungebiz.com/event/galaxycampus/display/preview/5080193/
+  - 유의사항 수정
+  - 래플 글씨체 수정
+  - 카톡 공유 썸네일 이미지 수정
+  - 레시피 배너 문구 수정

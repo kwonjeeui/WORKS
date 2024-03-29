@@ -1,7 +1,7 @@
 .pt_ai_recipe {
     .sec_content {
         background-color: #D4EEBD;
-        &.pt_bg-image.pt_add-bg {background-image: url('../../is/images/content/ar_content_bg_pc.jpg'); @include vw-pc(height, 2830); @include vw-pc(background-size, 1920 2847); background-repeat: no-repeat; background-position: center top;}
+        &.pt_bg-image.pt_add-bg {background-image: url('../../is/images/content/v2/ar_content_bg_pc.jpg'); @include vw-pc(height, 2820); @include vw-pc(background-size, 1920 2820); background-repeat: no-repeat; background-position: center top;}
         .pt_con{
             @include vw-pc(width, 1320); margin: 0 auto; @include vw-pc(padding, 120 0);
             .pt_tit{
@@ -17,8 +17,8 @@
             .pt_how, .pt_benefit{
                 &__tit--box {
                     position: relative; width: 100%; @include vw-pc(margin, 0 auto 60); text-align: center;
-                    &::before {content: ''; position: absolute; top: 50%; transform: translateY(-50%); @include vw-pc(left, 0); @include vw-pc(width, 560); @include vw-pc(height, 1); background-color: #4CB06E;}
-                    &::after {content: ''; position: absolute; top: 50%; transform: translateY(-50%); @include vw-pc(right, 0); @include vw-pc(width, 560); @include vw-pc(height, 1); background-color: #4CB06E;}
+                    &::before {content: ''; position: absolute; top: 50%; transform: translateY(-50%); @include vw-pc(left, 0); @include vw-pc(width, 560); @include vw-pc(height, 1); background-color: #F8748C;}
+                    &::after {content: ''; position: absolute; top: 50%; transform: translateY(-50%); @include vw-pc(right, 0); @include vw-pc(width, 560); @include vw-pc(height, 1); background-color: #F8748C;}
                 }
                 &__tit {@include vw-pc(font-size, 34); font-weight: 700; @include vw-pc(line-height, 44);}
             }
@@ -29,11 +29,11 @@
                 // 스와이퍼기능 부분
                 &__con--box {overflow: visible; @include vw-pc(margin-bottom, 90);}
                 &__item {
-                    @include vw-pc(width, 500); @include vw-pc(height, 535); @include vw-pc(padding-top, 40); @include vw-pc(margin-right, 24); background-color: #fff; @include vw-pc(border-radius, 20); @include vw-pc(box-shadow, 0 10 0 -2 #7EAF55 ); text-align: center;
+                    @include vw-pc(width, 500); @include vw-pc(height, 535); @include vw-pc(padding-top, 40); @include vw-pc(margin-right, 24); background-color: #fff; @include vw-pc(border-radius, 20); @include vw-pc(box-shadow, 0 10 0 -2 #FEBBBA ); text-align: center;
                     &:last-child{margin-right: 0}
                     &--04 .pt_how__step::after{content: ''; position: absolute; @include vw-pc(top, -47); right: 0; @include vw-pc(width, 172); @include vw-pc(height, 172); background: url(../../is/images/content/ar_content_step_icon_pc.png) no-repeat center/contain; background-size: 100%, 100%;}
                 }
-                &__step {@include vw-pc(width, 120); @include vw-pc(height, 40); @include vw-pc(margin, 0 auto 21); background-color: #4BB06E; @include vw-pc(border-radius, 50); color: #fff; @include vw-pc(font-size, 24); @include vw-pc(line-height, 40); text-align: center;}
+                &__step {@include vw-pc(width, 120); @include vw-pc(height, 40); @include vw-pc(margin, 0 auto 21); background-color: #F8748C; @include vw-pc(border-radius, 50); color: #fff; @include vw-pc(font-size, 24); @include vw-pc(line-height, 40); text-align: center;}
                 &__text {@include vw-pc(margin-bottom, 27); @include vw-pc(font-size, 24); @include vw-pc(line-height, 34); font-weight: 700;}
                 &__img {
                     @include vw-pc(width, 380); @include vw-pc(height, 240); @include vw-pc(margin, 0 auto 19);
@@ -55,7 +55,7 @@
                 &__hash--item01 {@include vw-pc(width, 828);}
                 &__hash--item02 {@include vw-pc(width, 451);}
                 &__hash--box {display: flex; justify-content: flex-start; align-items: center; @include vw-pc(height, 66); margin: 0 auto; background-color: #fff; @include vw-pc(border-radius, 10);}
-                &__hash--tit {display: flex; justify-content: center; align-items: center; @include vw-pc(width, 163); @include vw-pc(height, 66); @include vw-pc(border-radius, 10); background-color: #4BB06E; color: #fff; @include vw-pc(font-size, 20); font-weight: 700; letter-spacing: -.025em; text-align: center;}
+                &__hash--tit {display: flex; justify-content: center; align-items: center; @include vw-pc(width, 163); @include vw-pc(height, 66); @include vw-pc(border-radius, 10); background-color: #F8748C; color: #fff; @include vw-pc(font-size, 20); font-weight: 700; letter-spacing: -.025em; text-align: center;}
                 &__hash--tit02 {@include vw-pc(width, 264);}
                 &__hash--text--box {display: flex; align-items: center; @include vw-pc(padding-left, 30);}
                 &__hash--text {@include vw-pc(font-size, 20); letter-spacing: -.025em;}
@@ -87,8 +87,10 @@
 
 
                 // 기본 혜택
-                &__normal--box {@include vw-pc(margin-bottom, 57);}
-                &__normal--list {display: flex; justify-content: center; align-items: center; @include vw-pc(gap, 120); width: 100%; background-color: #fff; @include vw-pc(border-radius, 20); @include vw-pc(box-shadow, 0 10 0 -2 #7EAF55 );}
+                &__normal--box { position: relative; @include vw-pc(margin-bottom, 57); z-index: 5;
+                    &:before { position: absolute; @include vw-pc(left,40); @include vw-pc(top, -97); @include vw-pc(width, 158); @include vw-pc(height, 193); background: url('../../is/images/content/v2/ar_girl_pc.png') no-repeat center / contain; content:''; z-index: -1 }
+                }
+                &__normal--list {display: flex; justify-content: center; align-items: center; @include vw-pc(gap, 120); width: 100%; background-color: #fff; @include vw-pc(border-radius, 20); @include vw-pc(box-shadow, 0 10 0 -2 #FEBBBA );}
                 &__normal--item {position: relative; @include vw-pc(padding, 37 0 39); @include vw-pc(width, 540); text-align: center;}
                 &__normal--item::after {content: ''; position: absolute; top: 50%; transform: translateY(-50%); @include vw-pc(right, -85);; @include vw-pc(width, 50); @include vw-pc(height, 50); background: url(../../is/images/content/ar_bnf_plus_icon_pc.png) no-repeat center/contain; background-size: 100%, 100%;}
                 &__normal--item:last-child::after {display: none;}
@@ -97,9 +99,9 @@
 
                 // 추가 혜택
                 &__add--box {@include vw-pc(margin-bottom, 39);}
-                &__add--list {display: flex; justify-content: center; align-items: center; @include vw-pc(gap, 24);}
-                &__add--item {position: relative; @include vw-pc(width, 424); @include vw-pc(height, 443); @include vw-pc(padding, 37 0 40); background-color: #fff; @include vw-pc(border-radius, 20); @include vw-pc(box-shadow, 0 10 0 -2 #7EAF55 ); text-align: center;}
-                &__add--speech--bubble {z-index: 5; position: absolute; @include vw-pc(top, 113); @include vw-pc(right, 47); @include vw-pc(font-size, 20); font-weight: 700; color: #fff;}
+                &__add--list {display: flex; justify-content: center; align-items: center; @include vw-pc(gap, 40);}
+                &__add--item {position: relative; @include vw-pc(width, 640); @include vw-pc(height, 443); @include vw-pc(padding, 37 0 40); background-color: #fff; @include vw-pc(border-radius, 20); @include vw-pc(box-shadow, 0 10 0 -2 #FEBBBA ); text-align: center;}
+                &__add--speech--bubble {z-index: 5; position: absolute; @include vw-pc(top, 115); @include vw-pc(right, 160); @include vw-pc(font-size, 20); font-weight: 700; color: #fff;}
                 &__add--speech--bubble::after {z-index: -1; content: ''; position: absolute; @include vw-pc(top, -48); @include vw-pc(right, -33); @include vw-pc(width, 124); @include vw-pc(height, 124); background: url(../../is/images/content/ar_bnf_speech_bubble_pc.png) no-repeat center/contain; background-size: 100%, 100%;}
                 &__add--img {@include vw-pc(width, 304); @include vw-pc(height, 254); @include vw-pc(margin, 0 auto 19);}
 
@@ -114,9 +116,9 @@
 @media screen and (max-width:768px) {
     .pt_ai_recipe {
         .sec_content {
-            &.pt_bg-image.pt_add-bg {background-image: url('../../is/images/content/ar_content_bg_mo.jpg'); @include vw-mo(height, 4721); @include vw-mo(background-size, 720 4721); background-repeat: no-repeat; background-position: center top;}
+            &.pt_bg-image.pt_add-bg {background-image: url('../../is/images/content/v2/ar_content_bg_mo.jpg'); @include vw-mo(height, 4326); @include vw-mo(background-size, 720 4326); background-repeat: no-repeat; background-position: center top;}
             .pt_con{
-                width: 100%; @include vw-mo(padding, 97 0 0);
+                width: 100%; @include vw-mo(padding, 150 0 0);
                 .pt_tit{
                     width: 100%; @include vw-mo(margin, 0 auto 56);
                     &__main {@include vw-mo(width, 644); @include vw-mo(height, 166); @include vw-mo(margin, 0 auto 21);}
@@ -144,7 +146,7 @@
                     // 스와이퍼기능 부분
                     &__con--box {overflow: visible; @include vw-mo(margin-bottom, 92);}
                     &__item {
-                        @include vw-mo(width, 540); @include vw-mo(height, 540); @include vw-mo(padding-top, 40); @include vw-mo(margin-right, 12);  @include vw-mo(margin-left, 12); @include vw-mo(border-radius, 20); @include vw-mo(box-shadow, 0 10 0 -2 #7EAF55 );
+                        @include vw-mo(width, 540); @include vw-mo(height, 540); @include vw-mo(padding-top, 40); @include vw-mo(margin-right, 12);  @include vw-mo(margin-left, 12); @include vw-mo(border-radius, 20); @include vw-mo(box-shadow, 0 10 0 -2 #FEBBBA );
                         &:first-child{@include vw-mo(margin-left, 24);}
                         &:last-child{@include vw-mo(margin-right, 24);}
                         &--04 .pt_how__step::after{content: ''; @include vw-mo(top, -61); @include vw-mo(width, 184); @include vw-mo(height, 184); background: url(../../is/images/content/ar_content_step_icon_mo.png) no-repeat center/contain; background-size: 100% 100%;}
@@ -176,7 +178,7 @@
                     &__hash--tit02 {@include vw-mo(width, 173);}
                     &__hash--text--box {display: flex; align-items: center; @include vw-mo(padding-left, 18);}
                     &__hash--text {@include vw-mo(font-size, 20); @include vw-mo(line-height, 26);}
-                    &__hash--btn {@include vw-mo(margin-left, 81); @include vw-mo(padding-bottom, 2); @include vw-mo(border-bottom, 2 solid #000); @include vw-mo(font-size, 20);}
+                    &__hash--btn {@include vw-mo(margin-left, 100); @include vw-mo(padding-bottom, 2); @include vw-mo(border-bottom, 2 solid #000); @include vw-mo(font-size, 20);}
                     
                     // 응모하기 버튼 영역 분기처리
                     &__chkwrap {@include vw-mo(height, 195);}
@@ -202,8 +204,10 @@
     
     
                     // 기본 혜택
-                    &__normal--box {@include vw-mo(margin-bottom, 56);}
-                    &__normal--list {flex-direction: column; @include vw-mo(gap, 145); @include vw-mo(width, 672); margin: 0 auto; @include vw-mo(padding, 56 0 59); @include vw-mo(border-radius, 20); @include vw-mo(box-shadow, 0 10 0 -2 #7EAF55 );}
+                    &__normal--box {@include vw-mo(margin-bottom, 56);
+                        &::before { display: none }
+                    }
+                    &__normal--list {flex-direction: column; @include vw-mo(gap, 145); @include vw-mo(width, 672); margin: 0 auto; @include vw-mo(padding, 56 0 59); @include vw-mo(border-radius, 20); @include vw-mo(box-shadow, 0 10 0 -2 #FEBBBA );}
                     &__normal--item {padding: 0; @include vw-mo(width, 552);}
                     &__normal--item::after {content: ''; top: inherit; transform: none; @include vw-mo(bottom, -110); right: 0; left: 50%; transform: translateX(-50%); @include vw-mo(width, 78); @include vw-mo(height, 78); background: url(../../is/images/content/ar_bnf_plus_icon_mo.png) no-repeat center/contain; background-size: 100% 100%;}
                     &__normal--img{@include vw-mo(width, 552); @include vw-mo(height, 300); @include vw-mo(margin-bottom, 21);}
@@ -211,7 +215,7 @@
                     // 추가 혜택
                     &__add--box {@include vw-mo(margin-bottom, 39);}
                     &__add--list {flex-direction: column;}
-                    &__add--item {@include vw-mo(width, 672); @include vw-mo(height, 433); @include vw-mo(margin-bottom, 30); @include vw-mo(padding, 56 0 60); @include vw-mo(border-radius, 20); @include vw-mo(box-shadow, 0 10 0 -2 #7EAF55 );}
+                    &__add--item {@include vw-mo(width, 672); @include vw-mo(height, 433); @include vw-mo(margin-bottom, 30); @include vw-mo(padding, 56 0 60); @include vw-mo(border-radius, 20); @include vw-mo(box-shadow, 0 10 0 -2 #FEBBBA );}
                     &__add--item:last-child {margin-bottom: 0;}
                     &__add--speech--bubble {@include vw-mo(top, 87); @include vw-mo(right, 70); @include vw-mo(font-size, 24);}
                     &__add--speech--bubble::after {content: ''; position: absolute; @include vw-mo(top, -61); @include vw-mo(right, -45); @include vw-mo(width, 159); @include vw-mo(height, 159); background: url(../../is/images/content/ar_bnf_speech_bubble_mo.png) no-repeat center/contain; background-size: 100%, 100%;}

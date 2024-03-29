@@ -228,7 +228,7 @@
         }
 
         .sec_video {
-            @include vw-mo(padding,66 0 70);
+            @include vw-mo(padding,120 0 70);
             .pt_title {
                 &__box {@include vw-mo(margin-bottom,40); text-align:center;}
                 @include vw-mo(font-size,46); @include vw-mo(line-height,54); @include vw-mo(letter-spacing,-.25);

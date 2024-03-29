@@ -46,7 +46,7 @@ body.pt_no_scroll {overflow-y: hidden !important; width: 100%;}
             .pt_prd-slide {
                 z-index:10; position:absolute; left:0; top:0; @include vw-mo(margin-bottom, 0); width: 100%;
                 
-                .swiper-container {@include vw-mo(padding-bottom,40);}
+                // .swiper-container {@include vw-mo(padding-bottom,40);}
                 .swiper-container .swiper-wrapper .swiper-slide {display:flex; align-items:center;@include vw-mo(height,454);}
                 .swiper-container .swiper-wrapper .swiper-slide .img_box {overflow:hidden;}
 
@@ -57,7 +57,7 @@ body.pt_no_scroll {overflow-y: hidden !important; width: 100%;}
                 // .img_box__bubble{z-index:1; position:absolute; @include vw-mo(left,312); @include vw-mo(top,70); @include vw-mo(width,236); @include vw-mo(height,52);}
                 .pt_bubble{z-index:1; position:absolute; @include vw-mo(left,190); @include vw-mo(top,29); @include vw-mo(width,82); @include vw-mo(height,40); @include vw-mo(border-radius,100); background-color: #E0F1FF;@include vw-mo(font-size, 24); @include vw-mo(line-height,40); font-weight: 700; @include vw-mo(letter-spacing,-0.8); text-align: center;}
             }
-            .pt_prd-select {z-index:9; position:relative; width:100%; margin: 0 auto; @include vw-mo(padding,494 24 0); overflow: hidden; background-color:#fff;}
+            .pt_prd-select {z-index:9; position:relative; width:100%; margin: 0 auto; @include vw-mo(padding,454 24 0); overflow: hidden; background-color:#fff;}
             .pt_app_hide, .pt_app_show {display: none;}
             .pt_info {display: flex; justify-content: space-between; align-items:center; @include vw-mo(margin,43 0 29);
 
@@ -77,7 +77,7 @@ body.pt_no_scroll {overflow-y: hidden !important; width: 100%;}
                 }
             }
             .pt_prd__title {
-                position:relative; display:flex; align-items:baseline; flex-flow:column nowrap; @include vw-mo(gap,7); @include vw-mo(margin-top,45);
+                position:relative; display:flex; align-items:baseline; flex-flow:column nowrap; @include vw-mo(gap,7); @include vw-mo(margin-top,20);
 
                 &--name {@include vw-mo(font-size,36); font-weight:700; @include vw-mo(line-height,44);}
                 &--sku {@include vw-mo(font-size,24); font-weight:700; @include vw-mo(line-height,30); color:#999;}
@@ -403,13 +403,16 @@ body.pt_no_scroll {overflow-y: hidden !important; width: 100%;}
 
     .sec_buying#sec_buying_combo {
         .pt_option {
-            &__list {@include vw-mo(margin-bottom,60);}
+            &__list {@include vw-mo(margin-bottom,30);}
         }
         .pt_btn {
             display:inline-flex; align-items:center; justify-content:center; @include vw-mo(width,330); @include vw-mo(height,70); @include vw-mo(font-size,26); font-weight:700; @include vw-mo(letter-spacing,-.25); @include vw-mo(border-radius,100); @include vw-mo(border,1 solid #000);
             &-box {display:flex; justify-content:space-between;}
             &--link {background-color:#fff;}
             &--buy {background-color:#000; color:#fff;}
+        }
+        .pt_buying {
+            .pt_sale-box--combo {display: flex; justify-content: space-between; @include vw-mo(margin-bottom,30); @include vw-mo(font-size,32); font-weight: 700; color:#1E81F8;}
         }
     }
     
@@ -821,6 +824,9 @@ body.pt_no_scroll {overflow-y: hidden !important; width: 100%;}
             .pt_btn {
                 @include vw-pc(width,230); @include vw-pc(height,56); @include vw-pc(font-size,18); @include vw-pc(letter-spacing,-.25); @include vw-pc(border-radius,100); @include vw-pc(border,1 solid #000);
                 &-box {display:flex; justify-content:space-between;}
+            }
+            .pt_buying {
+                .pt_sale-box--combo {@include vw-pc(margin-bottom,30); @include vw-pc(font-size,22);}
             }
         }
 

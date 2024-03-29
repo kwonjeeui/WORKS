@@ -6,7 +6,7 @@
                 // &:after { position: absolute; content: ''; @include vw-pc(width, 44); @include vw-pc(height, 40); background: url("../../is/images/ai_toon/ar_toon_icon.svg") no-repeat center / cover; }
             }
         }
-        .pt_toon { @include vw-pc(width, 660); @include vw-pc(left, -8); margin: 0 auto;
+        .pt_toon { @include vw-pc(width, 660); @include vw-pc(left, -4); margin: 0 auto;
             &__sup { @include vw-pc(font-size, 20); vertical-align: text-top; }
             &__img { @include vw-pc(width, 588); @include vw-pc(height, 457); @include vw-pc(margin, 0 auto 45 auto); }
             &__tag { @include vw-pc(font-size, 34); font-weight: 700; @include vw-pc(margin, 0 0 43 0); letter-spacing: -0.025em; }

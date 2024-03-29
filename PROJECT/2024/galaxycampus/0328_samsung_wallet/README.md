@@ -43,3 +43,8 @@
   - T20240321000003 / 션(홍성욱), 캐서린(권제의)
   - https://www.samsungebiz.com/event/galaxycampus/display/preview/5078806/
   - 최초 qa 등록
+
++ 24/03/29
+  - T20240329000011 / 션(홍성욱), 캐서린(권제의)
+  - https://www.samsungebiz.com/event/galaxycampus/display/preview/5080314/
+  - 유의사항 수정, 영역 내 문구 수정, 카톡 공유하기 썸네일 이미지 수정

@@ -96,3 +96,9 @@
     - T20240326000001 / 홍성욱, 권제의
     - https://www.samsungebiz.com/event/galaxycampus/display/preview/5078893/
     - KV 날짜 변경, 결제일할인 대상카드 배너 삭제, KV국민카드 & 롯데카드 결제일 할인 및 12개월 무이자할부 추가, 추가된 카드 유의사항 추가
+
+  - 24/03/29
+    - T20240326000001 / 홍성욱, 권제의
+    - https://www.samsungebiz.com/event/galaxycampus/display/preview/5078893/
+    - 무이자 혜택 카드사 추가, 유의사항 수정
+    - kb국민카드 배너 추가

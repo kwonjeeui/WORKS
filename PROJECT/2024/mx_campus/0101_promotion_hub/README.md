@@ -274,3 +274,12 @@
     - T20240326000004 / 권제의
     - https://www.samsungebiz.com/event/galaxycampus/display/preview/5078914/
     - [4/1 러닝체인지] 기존 배너 전체 삭제, 배너 4개 추가 작업
+
+  + 24/03/29
+    - T20240326000004 / 권제의
+    - https://www.samsungebiz.com/event/galaxycampus/display/preview/5078914/
+    - 버즈 배너 추가 QA 전달, 유의사항 수정, ai 폰 교육 할인율 수정, 오타 수정
+
+    - T20240329000015 / 권제의
+    - https://www.samsungebiz.com/event/galaxycampus/display/preview/5080321/
+    - 유의사항 수정

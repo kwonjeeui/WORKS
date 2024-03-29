@@ -252,8 +252,9 @@ $(document).ready(function(){
 
     anchor.load([
         {
-            url: 'kv',
-            target: '.sec_kv'
+            url: 'KV_ClothingCare',
+            target: '.sec_kv_ai',
+            tabClick: tabClick
         },
         //사전구매 알림신청 앵커드
         {
@@ -266,7 +267,6 @@ $(document).ready(function(){
             url: '_benefitzone_GrandeAI',
             target: '.pt_benefit',
             scroll: [-58,-94],
-            // beforeScrollStart: setPageTab,
             tabClick: tabClick
         },
         //컴포넌트영역 앵커드
@@ -274,32 +274,37 @@ $(document).ready(function(){
             url: 'grandeAI_component',
             target: '.sec_component',
             scroll: [-58,-94],
-            // beforeScrollStart: setPageTab,
             tabClick: tabClick
         },
         //콤보 사전구매자 배너 앵커드
         {
             url: 'COMBO_preorder-benefit_banner',
-            target: '.pt_starbucks-banner'
+            target: '.pt_starbucks-banner',
+            scroll: [-58,-94]
         },
         //콤보 바잉툴로 앵커드
         {
-            url: 'buying',
+            url: 'COMBO_2sku_buying',
             target: '#sec_buying_combo',
             scroll: [-58,-94]
         },
         // Ai 바잉툴로 앵커드
         {
-            url: 'buying_ai',
+            url: 'GrandeAI_buying',
             target: '#sec_buying',
             scroll: [-58,-94],
-            // beforeScrollStart: setPageTab,
             tabClick: tabClick
         },
         //콤보 사전구매자 유의사항 앵커드
         {
             url: 'COMBO_preorder-benefit_banner_detail',
             target: '.pt_notice_buyer',
+            scroll: [-58,-94]
+        },
+        //알림신청자 대상 혜택 유의사항
+        {
+            url: 'pre-alram_Benefit_detail',
+            target: '.pt_notice_alarm',
             scroll: [-58,-94]
         },
         //베스트 리뷰어 챌린지 유의사항 앵커드
@@ -318,6 +323,12 @@ $(document).ready(function(){
         {
             url: 'Navi_COMBO_FAQ',
             target: '.sec_faq',
+            scroll: [-58,-94]
+        },
+        // TVC 영상 영역
+        {
+            url: 'COMBO_TVC',
+            target: '.sec_video',
             scroll: [-58,-94]
         },
     ]);

@@ -306,3 +306,19 @@
     - T20240325000010 / 김태연 황창환
     - https://www.samsung.com/sec/display/preview/355999/
     - 혜택,푸터 결제일할인 롯데카드 삭제
+
+  + 24/3/28
+    - T20240328000014 / 김태연 황창환
+    - https://www.samsung.com/sec/display/preview/356993/
+    - 3/29 러닝체인지
+    - AI콤보, 의류케어기획전 탭 구분
+    - kv 수정
+    - 네비 수정
+    - 알림신청 배너 타이머 추가
+    - 콤보 바잉툴 추가
+    - 콤보 영상 추가
+
+  + 24/3/29
+    - T20240328000022 / 김태연 황창환
+    - https://www.samsung.com/sec/display/preview/357066/
+    - 콤보 탭 유의사항 수정

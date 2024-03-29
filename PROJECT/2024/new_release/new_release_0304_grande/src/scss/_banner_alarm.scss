@@ -1,6 +1,6 @@
 .grande {
     .sec_banner_alarm{
-        @include vw-pc(padding-top,76);
+        @include vw-pc(padding,76 0);
 
         .pt_title {
             @include vw-pc(margin-bottom,30); text-align:center;
@@ -99,7 +99,7 @@
 @media screen and (max-width: 768px) {
     .grande {
         .sec_banner_alarm{
-            @include vw-mo(padding,96 0 90);
+            @include vw-mo(padding,96 0 120);
 
             .pt_title {
                 @include vw-mo(margin-bottom,39);

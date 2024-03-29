@@ -8,7 +8,7 @@ export const sticky = {
             let navTab = $(".sec_nav");
             let _gnbHeight = gnbHeader.outerHeight();
             let _navHeight = navTab.outerHeight();
-            let setNavFixed = ['.pt_ongoing--s24series', '.pt_ongoing--gb4series', '.pt_ongoing--tabs9series', '.sec_banner'];
+            let setNavFixed = ['.pt_ongoing--s24series', '.pt_ongoing--gb4series', '.pt_ongoing--tabs9series', '.pt_ongoing--budsseries', '.sec_banner'];
             let scrollTop = $(this).scrollTop();
             let scrollClass =  _.pxToVw(-142, -167);
 

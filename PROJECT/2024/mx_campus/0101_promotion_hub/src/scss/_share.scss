@@ -1,13 +1,16 @@
 .promotion_hub {
     .sec_share {
-        .alert_msg{display: none;position: fixed;top: 0;left: 0;z-index: 1001;width: 100%;background: #8a51d3;color: #fff;text-align: center;height: 30px;line-height: 30px;}
+        .alert_msg {display: none;position: fixed;top: 0;left: 0;z-index: 1001;width: 100%;background: #8a51d3;color: #fff;text-align: center;height: 30px;line-height: 30px;}
         .pt_share {
             @include vw-pc(padding, 100 0 94 0); background-color:#FBFBFB; text-align: center;
+
             .pt_title {@include vw-pc(margin-bottom, 30); @include vw-pc(font-size, 38); @include vw-pc(line-height, 66); @include vw-pc(letter-spacing, -1.9); font-weight: 700;}
             .pt_link {
                 display: flex; justify-content: center; @include vw-pc(gap, 80);
 
-                &__icon {@include vw-pc(width, 90); @include vw-pc(height, 90); @include vw-pc(margin-bottom, 15);
+                &__icon {
+                    @include vw-pc(width, 90); @include vw-pc(height, 90); @include vw-pc(margin-bottom, 15);
+
                     img {mix-blend-mode:multiply;}
                 }
                 &__txt {@include vw-pc(font-size, 17); @include vw-pc(line-height, 30); @include vw-pc(letter-spacing, -1); font-weight: 700;}
@@ -20,9 +23,11 @@
     .promotion_hub {
         .sec_share {
             @include vw-mo (margin-top, 0);
-            .alert_msg{display: none;position: fixed;top: 0;left: 0;z-index: 1001;width: 100%;background: #8a51d3;color: #fff;text-align: center;height: 30px;line-height: 30px;}
+
+            .alert_msg {display: none;position: fixed;top: 0;left: 0;z-index: 1001;width: 100%;background: #8a51d3;color: #fff;text-align: center;height: 30px;line-height: 30px;}
             .pt_share {
                 @include vw-mo(padding, 80 0); text-align: center;
+
                 .pt_title {@include vw-mo(margin-bottom, 70); @include vw-mo(font-size, 50);text-align: center;@include vw-mo(line-height, 66); @include vw-mo(letter-spacing, -3);}
                 .pt_link {
                     display: flex; justify-content: center; @include vw-mo(gap, 70);

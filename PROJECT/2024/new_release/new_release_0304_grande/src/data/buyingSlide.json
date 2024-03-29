@@ -260,6 +260,72 @@
                {"image":"gd_WA14CG6441BY_02_pc_v2.jpg", "alt":"**txt14**", "blind":"**blind14**"},
                {"image":"gd_WA14CG6441BY_03_pc.jpg", "alt":"**txt15**", "blind":"**blind15**"}
             ]
+         },
+         "WF24D22CVVE":{
+            "startIdx": 0,
+            "slide": [
+               {"isPdImg": true}
+            ]
+         },
+         "WF24D22CEEE":{
+            "startIdx": 0,
+            "slide": [
+               {"isPdImg": true}
+            ]
+         },
+         "WF24D22CWWE":{
+            "startIdx": 0,
+            "slide": [
+               {"isPdImg": true}
+            ]
+         },
+         "WF2117HCVVC":{
+            "startIdx": 0,
+            "slide": [
+               {"isPdImg": true}
+            ]
+         },
+         "WF2117HCEEC":{
+            "startIdx": 0,
+            "slide": [
+               {"isPdImg": true}
+            ]
+         },
+         "WF2117HCWWC":{
+            "startIdx": 0,
+            "slide": [
+               {"isPdImg": true}
+            ]
+         },
+         "WF2422HDEEH":{
+            "startIdx": 0,
+            "slide": [
+               {"isPdImg": true}
+            ]
+         },
+         "WF25CB8890BB":{
+            "startIdx": 0,
+            "slide": [
+               {"isPdImg": true}
+            ]
+         },
+         "WF21CB6850BW":{
+            "startIdx": 0,
+            "slide": [
+               {"isPdImg": true}
+            ]
+         },
+         "DV20CB8890BV":{
+            "startIdx": 0,
+            "slide": [
+               {"isPdImg": true}
+            ]
+         },
+         "DV20CB8800BW":{
+            "startIdx": 0,
+            "slide": [
+               {"isPdImg": true}
+            ]
          }
       },
 
@@ -471,6 +537,72 @@
                {"image":"gd_WA14CG6441BY_01_mo.jpg", "alt":"**txt13**", "blind":"**blind13**"},
                {"image":"gd_WA14CG6441BY_02_mo_v2.jpg", "alt":"**txt14**", "blind":"**blind14**"},
                {"image":"gd_WA14CG6441BY_03_mo.jpg", "alt":"**txt15**", "blind":"**blind15**"}
+            ]
+         },
+         "WF24D22CVVE":{
+            "startIdx": 0,
+            "slide": [
+               {"isPdImg": true}
+            ]
+         },
+         "WF24D22CEEE":{
+            "startIdx": 0,
+            "slide": [
+               {"isPdImg": true}
+            ]
+         },
+         "WF24D22CWWE":{
+            "startIdx": 0,
+            "slide": [
+               {"isPdImg": true}
+            ]
+         },
+         "WF2117HCVVC":{
+            "startIdx": 0,
+            "slide": [
+               {"isPdImg": true}
+            ]
+         },
+         "WF2117HCEEC":{
+            "startIdx": 0,
+            "slide": [
+               {"isPdImg": true}
+            ]
+         },
+         "WF2117HCWWC":{
+            "startIdx": 0,
+            "slide": [
+               {"isPdImg": true}
+            ]
+         },
+         "WF2422HDEEH":{
+            "startIdx": 0,
+            "slide": [
+               {"isPdImg": true}
+            ]
+         },
+         "WF25CB8890BB":{
+            "startIdx": 0,
+            "slide": [
+               {"isPdImg": true}
+            ]
+         },
+         "WF21CB6850BW":{
+            "startIdx": 0,
+            "slide": [
+               {"isPdImg": true}
+            ]
+         },
+         "DV20CB8890BV":{
+            "startIdx": 0,
+            "slide": [
+               {"isPdImg": true}
+            ]
+         },
+         "DV20CB8800BW":{
+            "startIdx": 0,
+            "slide": [
+               {"isPdImg": true}
             ]
          }
       }

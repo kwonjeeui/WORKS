@@ -2,40 +2,11 @@
 import { PT_STATE, util as _ } from './modules/bs_common';
 import { anchor } from './modules/anchor';
 import { modal } from './modules/modal';
-// import { accordian } from './modules/accordian';
-// import { tab } from './modules/tab';
-// import { copy } from './modules/copy';
-// import { count } from './modules/countdown';
-// import { coupon, promoCoupon } from './modules/coupon';
-// import { sns } from './modules/sns';
-// import { video, videoKv } from './modules/video';
-// import { sticky } from './modules/sticky';
-// import { category_tab } from './modules/category_tab';
+import { accordian } from './modules/accordian';
 
 
 // ------- 갤캠스 필수 기능 start
 var galcams = {
-    /** 갤캠스 : 로그인 체크 */
-//    isSamsungLogin: function() {
-//        stPath = '/event/galaxycampus/';
-
-//        var options = {
-//            url : stPath+"xhr/member/getSession",
-//            type: "POST",
-//            done : function(data){
-//                var session = JSON.parse(data);
-    
-//                if (session.mbrNo == 0) { // 로그인이 되어 있지 않을때
-//                    console.log('로그인해주시기 바랍니다.');
-//                    var returnUrl = window.location.pathname;
-//                    window.location.href = stPath+"member/introPage/?returnUrl="+returnUrl;
-//                } 
-//            }
-//        }
-//        ajax.call(options);;
-//    },
-
-    /** 갤캠스 : 기기별 퍼블단 변경 (WEB/APP 다른 디자인일 시 사용) */ 
     isAgent: function() {
         let agent = navigator.userAgent.toLowerCase();
         let localPort1 = window.location.port == '4441';
@@ -68,9 +39,6 @@ var galcams = {
 };
 // ------- 갤캠스 필수 기능 e
 
-
-// 필요 한 부분만 남기고 제거해서 사용해주세요. 
-// 실행소스 참고는 BS스크립트 3버전을 참고해주세요. PROJECT/00_bs_script_v3
 $(document).ready(function(){
     anchor.click([
         {
@@ -105,36 +73,12 @@ $(document).ready(function(){
         }
     ]);
 
-    // anchor.load([
-    //     {
-    //         url: 'test01',
-    //         target: '.sec_anchor'
-    //     },
-    //     {
-    //         url: 'test02',
-    //         target: '.sec_accordian',
-    //         scroll: [0, -50]
-    //     },
-    // ]);
-
-    // accordian.toggle([
-    //     {
-    //         el: '[data-role-accordian="pt_card__notice"]',
-    //         target: '#pt_card__notice'
-    //     }
-    // ]);
-
-
-    // copy.click();
-    // modal.init();
-    // sticky.init();
-    // category_tab.init();
-    // coupon.init();
-    // promoCoupon.init();
-    // sns.init();
-
-    // 카운트다운 타이머 설정
-    //count.init('#count01', '2023/07/26 23:59:59');
+    accordian.toggle([
+        {
+            el: '[data-role-accordian="pt_kb__notice"]',
+            target: '#pt_kb__notice'
+        }
+    ]);
 
     galcams.init(); // 갤캠스 필수 기능 호출
 

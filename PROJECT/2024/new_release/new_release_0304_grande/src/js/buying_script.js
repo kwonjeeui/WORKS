@@ -87,6 +87,7 @@ function initBuyingAi() {
                 buyingSlideAi = new BuyingSlide(buying, {
                     target: '#buying_slide_ai',
                     imageData: config.slideImage.buyingSlideAi,
+                    autoplay: false
                 });
 
                 // 바잉툴 슬라이드 첫번째만 아래 문구 없애기
@@ -221,6 +222,7 @@ function initBuyingCombo() {
                 buyingSlideCombo = new BuyingSlide(buying, {
                     target: '#buying_slide_combo',
                     imageData: config.slideImage.buyingSlideCombo,
+                    autoplay: false
                 });
 
                 // 바잉툴 슬라이드 첫번째만 아래 문구 없애기
@@ -285,14 +287,6 @@ function initBuyingCombo() {
                         $star.show();
                     }
                 });
-
-                if(selected.priceC == '-') {
-                    $('.pt_sale-box--priceB .pt_sale').addClass('pt_sale--blue');
-                    $('.pt_sticky__sale-box--priceB .pt_sale').addClass('pt_sale--blue');
-                } else {
-                    $('.pt_sale-box--priceB .pt_sale').removeClass('pt_sale--blue');
-                    $('.pt_sticky__sale-box--priceB .pt_sale').removeClass('pt_sale--blue');
-                }
 
                 //바잉툴혜택 스와이퍼
                 // buyingBnfSwiper.navMove('jet01',0);
@@ -863,7 +857,7 @@ $(document).ready(function(){
         } 
 
         if(aiSwitch) {
-            document.querySelector('#optB_2').click();
+            document.querySelector('#optB_1').click();
             return;
         };
         initBuyingAi();
@@ -889,7 +883,7 @@ $(document).ready(function(){
 
         
         if(comboSwitch) {
-            document.querySelector('#optBB_1').click();
+            document.querySelector('#optDD_1').click();
             return;
         };
         initBuyingCombo();

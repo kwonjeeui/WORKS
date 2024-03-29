@@ -151,3 +151,10 @@
     - T20240314000017 / 이예은
     - https://www.samsung.com/sec/display/preview/353883/
     - tv 이미지 수정
+    - 
+
+  - 24/03/28
+    - T20240327000017 / 장석규
+    - https://www.samsung.com/sec/display/preview/356715/
+    - 월말 업데이트
+    - 

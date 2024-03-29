@@ -4,12 +4,16 @@
         .pt_title {@include vw-pc(margin-bottom, 54); @include vw-pc(font-size, 42); font-weight: 700; text-align: center; @include vw-pc(letter-spacing, -2.1);}
 
         .pt_banner {
-            .pt_kv {position: relative;
+            .pt_kv {
+                position: relative;
+
                 &__img {@include vw-pc(height, 400); @include vw-pc(border-radius, 10);}
                 &__text-wrap {position: absolute; top: 50%; @include vw-pc(left, 90); transform: translateY(-50%); color: #fff;}
                 &__title {@include vw-pc(margin-bottom, 17); @include vw-pc(font-size, 34); font-weight: 700; @include vw-pc(line-height, 44); @include vw-pc(letter-spacing, -1.7);}
                 &__desc {@include vw-pc(margin-bottom, 40); @include vw-pc(font-size, 20); font-weight: 700; @include vw-pc(line-height, 28); @include vw-pc(letter-spacing, -1);}
-                &__btn {display: inline-flex; @include vw-pc(height, 60); @include vw-pc(padding, 17 30); @include vw-pc(font-size, 20); font-weight: 700; letter-spacing: 0;  text-align: center; border: none; @include vw-pc(border-radius, 8);
+                &__btn {
+                    display: inline-flex; @include vw-pc(height, 60); @include vw-pc(padding, 17 30); @include vw-pc(font-size, 20); font-weight: 700; letter-spacing: 0;  text-align: center; border: none; @include vw-pc(border-radius, 8);
+
                     &--black{background-color: #000; color: #fff;}
                 }   
             }
@@ -19,11 +23,14 @@
 
 @media screen and (max-width: 768px) {
     .promotion_hub {
-        .sec_banner { @include vw-mo(padding, 100 0);
+        .sec_banner {
+            @include vw-mo(padding, 100 0);
 
             .pt_title {@include vw-mo(margin-bottom, 65); @include vw-mo(font-size, 54); @include vw-mo(line-height, 70); @include vw-mo(letter-spacing, -2.7);}
 
-            .pt_banner{@include vw-mo(width, 640); margin: 0 auto;
+            .pt_banner {
+                @include vw-mo(width, 640); margin: 0 auto;
+                
                 .pt_kv{
                     &__img {@include vw-mo(width, 640); @include vw-mo(height, 990); @include vw-mo(border-radius, 20);}
                     &__text-wrap {top: 0; left: 0; transform: translateY(0); width: 100%; height: 100%; @include vw-mo(padding-top, 100); text-align: center;}

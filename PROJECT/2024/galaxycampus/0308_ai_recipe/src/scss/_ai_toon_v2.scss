@@ -1,5 +1,5 @@
 .pt_ai_recipe {
-    .sec_ai_toon { @include vw-pc(padding, 100 0 0 0); @include vw-pc(height, 1078); text-align: center; background: url("../../is/images/ai_toon/ar_toon_bg_pc.png") no-repeat center / contain; @include vw-pc(background-size, 1920 1078);
+    .sec_ai_toon { @include vw-pc(padding, 100 0 0 0); @include vw-pc(height, 1076); text-align: center; background: url("../../is/images/ai_toon/v2/ar_toon_bg_pc.jpg") no-repeat center / contain; @include vw-pc(background-size, 1920 1076);
         .pt_titlebox { @include vw-pc(margin, 0 auto 136 auto); display:inline-block;
             &__title { @include vw-pc(width, 413); @include vw-pc(margin, 0 auto 18);}
             &__content { @include vw-pc(font-size, 30); @include vw-pc(line-height, 40);  letter-spacing: -0.05em; position: relative;
@@ -20,7 +20,7 @@
 
 @media screen and (max-width:768px) {
     .pt_ai_recipe {
-        .sec_ai_toon { @include vw-mo(padding, 100 0 0 0); @include vw-mo(height, 1120); background: url("../../is/images/ai_toon/ar_toon_bg_mo.png") no-repeat center / contain; @include vw-mo(background-size, 720 1120);
+        .sec_ai_toon { @include vw-mo(padding, 150 0 0 0); @include vw-mo(height, 1230); background: url("../../is/images/ai_toon/v2/ar_toon_bg_mo.jpg") no-repeat center / contain; @include vw-mo(background-size, 720 1230);
             .pt_titlebox { @include vw-mo(margin, 0 auto 155 auto); 
                 &__title { @include vw-mo(width, 534); @include vw-mo(margin-bottom, 25); }
                 &__content { @include vw-mo(font-size, 34); @include vw-mo(line-height, 44); 

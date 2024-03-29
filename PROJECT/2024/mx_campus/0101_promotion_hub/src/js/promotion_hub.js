@@ -79,7 +79,7 @@ var galcams = {
                         let _navHeight = navTab.outerHeight();
                         let scrollTop = $(this).scrollTop();
                         let scrollClass =  _.pxToVw(-142, -167);
-                        let setNavFixed = ['.pt_ongoing--s24series', '.pt_ongoing--gb4series', '.pt_ongoing--tabs9series', '.sec_banner'];
+                        let setNavFixed = ['.pt_ongoing--s24series', '.pt_ongoing--gb4series', '.pt_ongoing--tabs9series', '.pt_ongoing--budsseries', '.sec_banner'];
 
                         setNavFixed.forEach((fixedClass, index)=>{
                             if(($(fixedClass).offset().top - _navHeight + scrollClass) <= scrollTop){
@@ -129,6 +129,11 @@ $(document).ready(function(){
             scroll:[-70, -115]
         },
         {
+            el: '[data-role-anchor="nav_budsseries"]',
+            target: '.pt_ongoing--budsseries',
+            scroll:[-70, -115]
+        },
+        {
             el: '[data-role-anchor="nav_eventhub"]',
             target: '.sec_banner',
             scroll:[-70, -115]
@@ -144,6 +149,10 @@ $(document).ready(function(){
         {
             el: '[data-role-anchor="ongoing_anc_tabs9series"]',
             target: '.pt_noti--tabs9series',
+        },
+        {
+            el: '[data-role-anchor="ongoing_anc_budsseries"]',
+            target: '.pt_noti--budsseries',
         },
     ]);
 
@@ -161,6 +170,11 @@ $(document).ready(function(){
         {
             url: 'galaxy-tabs9-series',
             target: '.pt_ongoing--tabs9series',
+            scroll:[-70, -115]
+        },
+        {
+            url: 'galaxy-buds-series',
+            target: '.pt_ongoing--budsseries',
             scroll:[-70, -115]
         },
         {

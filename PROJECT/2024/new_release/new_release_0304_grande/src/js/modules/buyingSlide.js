@@ -64,7 +64,7 @@ export class BuyingSlide {
 
         let options = {
             slidesPerView: 'auto',
-            loop: buyingSlide.options.loop,
+            // loop: buyingSlide.options.loop,
             pagination: {
                 el: '[data-buying-pagination]',
                 clickable: true,
@@ -73,6 +73,8 @@ export class BuyingSlide {
             observer: true,
             observeParents: true,
             observeSlideChildren: true,
+            allowTouchMove: false,
+            loop: false,
             on: {
                 init: function () {
                     // autoplay play/pause
@@ -212,7 +214,7 @@ export class BuyingSlide {
                 }
                 const altText = getAltText(this.alt);
                 const imgSize = checkDevice() == 'pc' ? '?$784_512_PNG$' : '?$720_360_PNG$';
-                arrMainList.push(`<li class="swiper-slide ${this.dark === 'O' ? 'pt_dark' : ''}" ${buyingSlide.buying.el === '#pt_buying_air' && `data-swiper-autoplay="5000"` }>
+                arrMainList.push(`<li class="swiper-slide ${this.dark === 'O' ? 'pt_dark' : ''}">
                                       ${idx == 0 ? tagHtml : ''}
                                       <div class="img_box">
                                           ${this.isPdImg ? `

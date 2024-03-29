@@ -1,0 +1,56 @@
+.benefitzone {
+    .sec_banner_kb {
+        @include vw-pc(padding, 40 0 120);
+
+        .pt_kb {@include vw-pc(width, 1023); margin: 0 auto; @include vw-pc(border-radius, 20); overflow: hidden;}
+        .pt_banner {position: relative; width: 100%; @include vw-pc(height, 335); background-image: url('../../is/images/bfz_kb_banner_img_pc.png'); @include vw-pc(background-size, 1023 335); background-position: center top; background-repeat: no-repeat; background-color: #797268;}
+        .pt_btn__noti {
+            position: absolute; @include vw-pc(left, 50); @include vw-pc(bottom, 44); @include vw-pc(font-size, 18); @include vw-pc(line-height, 23); letter-spacing: -0.05em; border-bottom: 1px solid #fff; color: #fff;
+            &::after {border-bottom: 2px solid #fff; border-right: 2px solid #fff;}
+        }
+        .pt_txt {
+            position: absolute; display: flex; flex-direction: column; @include vw-pc(top, 41); @include vw-pc(left, 50); color: #fff;
+            &__eyebrow {@include vw-pc(font-size, 26); @include vw-pc(letter-spacing, -1); font-weight: 700;}
+            &__title {@include vw-pc(margin-bottom, 25); @include vw-pc(font-size, 36); @include vw-pc(line-height, 44); font-weight: 700;}
+            &__list {display: flex; flex-wrap: wrap; @include vw-pc(width, 619); @include vw-pc(margin-bottom, 27);}
+            &__info {@include vw-pc(width, 69); @include vw-pc(height, 26); @include vw-pc(font-size, 18); @include vw-pc(line-height, 26); @include vw-pc(border-radius, 6); @include vw-pc(margin-right, 14); font-weight: 700; text-align: center; color: #000; background-color: #FFD739;}
+            &__desc {@include vw-pc(width, 536); @include vw-pc(margin-bottom, 8); @include vw-pc(font-size, 18); @include vw-pc(line-height, 26); @include vw-pc(letter-spacing, -1);}
+        }
+        .pt_noti {
+            background-color: #000;
+            &__list {@include vw-pc(padding, 60 13);}
+            &__item {
+                position: relative; @include vw-pc(padding-left, 14); @include vw-pc(font-size, 16); @include vw-pc(line-height, 28); color: #A3A3A3;
+                &::before {content: ""; position: absolute; left: 0; @include vw-pc(top, 12); @include vw-pc(width, 4); @include vw-pc(height, 4); border-radius: 50%; background-color: #A3A3A3;}
+                &--point {color: #fff;}
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) { 
+    .benefitzone {
+        .sec_banner_kb {
+            @include vw-mo(padding, 0 0 220);
+
+            .pt_kb {@include vw-mo(width, 672); @include vw-mo(border-radius, 20);}
+            .pt_banner {@include vw-mo(height, 364); background-image: url('../../is/images/bfz_kb_banner_img_mo.png'); @include vw-mo(background-size, 672 364);}
+            .pt_btn__noti {@include vw-mo(left, 30); @include vw-mo(bottom, 21); @include vw-mo(font-size, 20); @include vw-mo(line-height, 22);}
+            .pt_txt {
+                @include vw-mo(top, 20); @include vw-mo(left, 26);
+                &__eyebrow {@include vw-mo(font-size, 26); @include vw-mo(line-height, 35); @include vw-mo(letter-spacing, -1);}
+                &__title {@include vw-mo(margin-bottom, 22); @include vw-mo(font-size, 34); @include vw-mo(line-height, 45); letter-spacing: -.05em;}
+                &__list {@include vw-mo(width, 430); margin-bottom: 0;}
+                &__info {@include vw-mo(width, 69); @include vw-mo(height, 26); @include vw-mo(font-size, 18); @include vw-mo(line-height, 26); @include vw-mo(border-radius, 6); @include vw-mo(margin-right, 14);}
+                &__desc {@include vw-mo(width, 340); @include vw-mo(margin-bottom, 11); @include vw-mo(font-size, 22); @include vw-mo(line-height, 32); @include vw-mo(letter-spacing, -1);}
+            }
+            .pt_noti {
+                &__list {@include vw-mo(padding, 80 30);}
+                &__item {
+                    @include vw-mo(padding-left, 14); @include vw-mo(font-size, 22); @include vw-mo(line-height, 38);
+                    &::before {@include vw-mo(top, 15); @include vw-mo(width, 5); @include vw-mo(height, 5);}
+                }
+            }
+        }
+    }
+}
