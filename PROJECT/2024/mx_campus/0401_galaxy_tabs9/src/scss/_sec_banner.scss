@@ -1,0 +1,20 @@
+// MOBILE
+.galaxy_tabs9 {
+    .sec_banner { @include vw-mo(padding, 60 0);
+        .pt_banner { @include vw-mo(width, 672); @include vw-mo(height, 180); @include vw-mo(padding, 0 0 0 250); display: flex; align-items: start; justify-content: center; flex-flow: column; background-color: #F3F3F3; @include vw-mo(border-radius, 20); @include vw-mo(background-size, 168 94); margin: 0 auto; @include vw-mo(background-position, center left 40); background-image:url('../../../is/images/banner/gt9_tab_series_mo.png'); background-repeat: no-repeat;
+            &__text { @include vw-mo(font-size, 24); @include vw-mo(margin-bottom, 10); font-weight: 700; @include vw-mo(line-height, 30); letter-spacing: -0.03em; 
+                &--blue { color: #1E81F8 }
+            }
+            &__icon { @include vw-mo(width, 65); @include vw-mo(height, 28); }
+            &__dis { color: #666666; @include vw-mo(font-size, 20); }
+        }
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .galaxy_tabs9 {
+        .sec_banner {
+            
+        }
+    }
+}

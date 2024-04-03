@@ -1,0 +1,124 @@
+<section class="sec_sticky" id="sec_sticky">
+    <!-- 매장픽업:s -->
+    <div>
+        <div class="hidden" data-pickup-plazaNo id=""></div> <!--(매장코드)-->
+        <div class="hidden" data-pickup-storeAddr id=""></div> <!--(매장주소)-->
+        <div class="hidden" data-pickup-capaDate id=""></div>  <!--(매장픽업 날짜)-->
+        <div class="hidden" data-pickup-capaTime id=""></div>  <!--(매장픽업 시간대)-->
+    </div>
+    <!-- // 매장픽업:e -->
+
+    <div class="inner_1920" data-buying-sticky>
+        <div class="pt_sticky">
+
+            <div class="pt_sticky__top">
+                <div class="pt_sticky__title-box">
+                    <div class="pt_sticky__flex-wrap pt_sticky__info-top">
+                        <div class="pt_sticky__flex-wrap pt_sticky__info-box">
+                            <p class="pt_title en" data-buying-text="pdTxt"></p>
+                            <p class="pt_sku en" data-buying-text="sku"></p>
+                            <a href="#" class="pt_link" data-role="btnPdUrl" data-omni-type="microsite" data-omni="">자세히 보기 ></a>
+                        </div>
+                    </div>
+                    <ul class="pt_sticky__sale-box">
+                        <li class="pt_sticky__flex-wrap">
+                            <span class="pt_sale pt_sale--txt">기준가</span>
+                            <div>
+                                <span class="pt_sale pt_sale--price pt_sale--blue">
+                                    <em class="en" data-buying-text="priceB"></em>원
+                                </span>
+                            </div>
+                        </li>
+                        <li class="pt_sticky__flex-wrap">
+                            <span class="pt_sale pt_sale--txt">신용카드 금액대별 결제일할인가</span>
+                            <span class="pt_sale pt_sale--price pt_sale--blue" data-login-tag>
+                                <em class="en" data-buying-text="priceA"></em>원
+                            </span>   
+                            <!-- <span class="pt_sale pt_sale--price pt_sale--blue" data-web-only>
+                                <em class="en" data-buying-text="priceA"></em>원
+                            </span>         
+                            <span class="pt_sale pt_sale--price pt_sale--blue" data-app-only>
+                                <em class="en" data-buying-text="priceA_A"></em>원
+                            </span>        -->
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="pt_sticky__inner" data-buying-btn>
+                    <div class="pt_sticky__btn-box">
+                        <!-- <a href="javascript:;" title="쿠폰받기" data-role="btnCouponPromo" data-btnType="btnCpnAll" data-cpNum="" data-omni-type="microsite" data-omni="" class="btn_common pt_btn--cpn pt_bg-image">쿠폰받기</a> -->
+
+                        <div class="pt_sticky__flex-wrap">
+                            <!-- <p class="pt_btn pt_btn--present pt_btn--disabled pt_bg-image"><span class="blind">선물하기</span></p> -->
+                            <!-- <button class="pt_btn pt_btn--present pt_bg-image" data-role="btnPresent" data-omni-type="microsite" data-omni=""><span class="blind">선물하기</span></button> -->
+                            <button class="pt_btn pt_btn--cart pt_bg-image" data-role="btnCart" data-omni-type="microsite" data-omni=""><span class="blind">장바구니</span></button>
+                            <a href="javascript:;" title="매장 선택 팝업으로 열림" class="btn_common type_round pt_btn pt_btn--store" data-role="btnPickup" data-omni-type="microsite" data-omni="">
+                                매장 픽업 선택
+                                <span class="pt_tooltip">당일 픽업 가능!</span>
+                                <!-- <span class="pt_tooltip" data-buying-show="pickupSoldout==O" style="display: none;">매장 픽업으로 구매 가능!</span> -->
+                            </a>
+                            <button class="btn_common type_round black_bg pt_btn pt_btn--buy" data-role="btnBuy" data-omni-type="microsite" data-omni="">구매하기</button>
+                            <!-- <button class="btn_common type_round black_bg pt_btn pt_btn--buy" data-role="btnAlarmPop" data-target="#alarmPopup" style="display: none;" data-omni-type="microsite" data-omni="">재입고 알림 신청하기</button> -->
+                        </div>
+
+                        <button class="pt_btn pt_btn--open pt_bg-image" data-role-buying-accordian="buyingBenefitBtn"><span class="blind">혜택 보기</span></button>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="pt_sticky__bottom" id="benefitBox" data-buying-role="buyingBenefitBox" style="display: none;">
+                <div class="pt_price-box">
+                    <!-- <div class="pt_base-price">
+                        <p class="pt_base-price--txt">기준가</p>
+                        <span class="pt_base-price--price"><em class="en" data-buying-text="priceB"></em>원</span>
+                    </div> -->
+
+                    <ul class="pt_benefit">
+                        <!-- 교육할인 -->
+                        <li class="pt_benefit__item" data-buying-show="benefitC!=0">
+                            <div class="pt_benefit__txt-box">
+                                <p class="pt_benefit__item--txt">교육할인</p>
+                            </div>
+
+                            <p class="pt_benefit__item--price" data-login-tag><span class="en">-&nbsp;<em class="en" data-buying-text="benefitC"></em></span>원</p>
+                        </li>
+                        <!-- 삼성/KB국민/롯데/하나카드 금액대별 결제일할인 -->
+                        <li class="pt_benefit__item" data-buying-show="benefitA!=0">
+                            <div class="pt_benefit__txt-box">
+                                <p class="pt_benefit__item--txt">삼성/KB국민/롯데/하나카드<br>금액대별 결제일할인</p>
+                                <p class="pt_benefit__noti">※ 카드사별 월 1회 혜택 제공</p>
+                            </div>
+    
+                            <p class="pt_benefit__item--price" data-login-tag><span class="en">-&nbsp;<em class="en" data-buying-text="benefitA"></em></span>원</p>
+                        </li>
+                        <!-- 프삼성카드 제품별 결제일할인 -->
+                        <li class="pt_benefit__item" data-buying-show="benefitB!=0">
+                            <div class="pt_benefit__txt-box">
+                                <p class="pt_benefit__item--txt">삼성카드 제품별 결제일할인</p>
+                            </div>
+
+                            <p class="pt_benefit__item--price" data-login-tag><span class="en">-&nbsp;<em class="en" data-buying-text="benefitB"></em></span>원</p>
+                            <!-- <p class="pt_benefit__item--price" data-web-only><span class="en">-&nbsp;<em class="en" data-buying-text="benefitB"></em></span>원</p>
+                            <p class="pt_benefit__item--price" data-app-only><span class="en">-&nbsp;<em class="en" data-buying-text="benefitB_A"></em></span>원</p> -->
+                        </li>
+                    </ul>
+
+                    <div class="pt_benefit__total">
+                        <p class="pt_benefit__total--txt">갤캠스에서 사면</p>
+                        <p class="pt_benefit__total--price pt_highlight" data-login-tag>
+                            <em class="en" data-buying-text="totalPrice"></em>원
+                        </p>
+                        <!-- <p class="pt_benefit__total--price pt_highlight" data-web-only>
+                            <em class="en" data-buying-text="totalPrice"></em>원
+                        </p>
+                        <p class="pt_benefit__total--price pt_highlight" data-app-only>
+                            <em class="en" data-buying-text="totalPrice_A"></em>원
+                        </p> -->
+                    </div>
+                </div>
+                <p class="pt_benefit__total--noti">+ 삼성전자 멤버십 포인트 회원 등급별 차등 적립 (0.1% ~ 최대 2.1%)</p>
+            </div>
+        </div>
+    </div>
+</section>
+

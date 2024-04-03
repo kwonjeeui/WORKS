@@ -1,0 +1,52 @@
+.galaxy_tabs9 {
+    .sec_kv {
+        @include vw-mo(height,180); overflow: hidden;
+
+        // image lazy loading
+        &.pt_bg-image.pt_add-bg {
+            .pt_kv__aitxt {background-image: url("../../is/images/kv/gt9_galaxyai_logo_mo_v2.png");} 
+        }
+
+        .pt_kv {
+            &__inner {position: relative; z-index: 1; display: flex; align-items: center; @include vw-mo(padding-left,24); height: 100%;}
+            &__eyebrow {
+                display: flex; align-items: center; @include vw-mo(font-size,22); font-weight: 700; letter-spacing: -0.05em; 
+
+                .pt_kv__aitxt {display: inline-block; position: relative; @include vw-mo(top,2); @include vw-mo(left,-9); @include vw-mo(width,230); @include vw-mo(height,46); background-repeat: no-repeat; background-position: center; background-size: contain;}
+                .pt_kv__eyetxt{@include vw-mo(margin-left,-12);}
+            }
+            &__headline {@include vw-mo(margin-bottom, 8); @include vw-mo(font-size,28); font-weight: 700; @include vw-mo(line-height,38); letter-spacing: -0.03em;}
+            &__bg {position: absolute; top: 0; left: 50%; z-index: -1; width: 100%; transform: translateX(-50%);}
+        }
+    }
+}
+
+
+
+// PC ( 769px ~ 1440px )
+@media screen and (min-width: 769px) {
+    .galaxy_tabs9 {
+        .sec_kv {
+            @include vw-pc(height,180); 
+
+            // image lazy loading
+            &.pt_bg-image.pt_add-bg {
+                .pt_kv__aitxt {background-image: url("../../is/images/kv/gt9_galaxyai_logo_pc_v2.png");} 
+            }
+
+            .pt_kv {
+                &__inner {margin: 0 auto; @include vw-pc(width,1320); @include vw-pc(padding-left,110);}
+                &__eyebrow {
+                    align-items: flex-end; @include vw-pc(margin-bottom,11); @include vw-pc(font-size,20); 
+    
+                    .pt_kv__aitxt {@include vw-pc(top,3); @include vw-pc(left,-8); @include vw-pc(width,225); @include vw-pc(height,32);}
+                    .pt_kv__eyetxt {@include vw-pc(margin-left,-6);}
+                }
+                &__headline {@include vw-pc(margin-bottom, 0); @include vw-pc(font-size,30); @include vw-pc(line-height,40);}
+                &__bg {@include vw-pc(width,1920);}
+            }
+        }
+    }
+}
+
+

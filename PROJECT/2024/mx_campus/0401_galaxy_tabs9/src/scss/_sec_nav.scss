@@ -1,0 +1,89 @@
+// MOBILE
+.galaxy_tabs9 {
+    .sec_nav {
+        display: none; @include vw-mo(height, 100); 
+
+        .pt_nav {
+            // @include vw-mo(height, 100); background: url('../../../is/images/nav/tabs9_nav_bg_mo.png') no-repeat; @include vw-mo(background-size, 720 100);
+            @include vw-mo(height, 100); background: #000;
+
+            .sticky_wrapper {
+                display: flex; max-width: 100%; height: 100%;
+
+                &.fixed_start {
+                    // position: fixed; top: 0; left: 0; width: 100%; @include vw-mo(height, 100); background: url('../../../is/images/nav/tabs9_nav_bg_mo.png') no-repeat; @include vw-mo(background-size, 720 100); z-index: 100;
+                    position: fixed; top: 0; left: 0; width: 100%; @include vw-mo(height, 100); background: #000; z-index: 100;
+                }
+
+                .pt_live {
+                    position: relative; display: flex; justify-content: center; align-items: center; flex-direction: column; @include vw-mo(width, 298); color: #fff; @include vw-mo(font-size, 24); @include vw-mo(line-height, 32); font-weight: 700; /*background: linear-gradient(225deg, #3BBFEA 0%, #1B62FF 100%);*/
+    
+                    &::after {position: absolute; @include vw-mo(top, -27); @include vw-mo(right, -32); display: block; content: ''; @include vw-mo(width, 104); @include vw-mo(height, 53); background: url('../../../is/images/nav/tabs9_icon_live_mo.png') no-repeat; @include vw-mo(background-size, 104 53);}
+                }
+                .pt_swiper {
+                    flex: 1; @include vw-mo(padding, 0 13);
+                    
+                    &__wrapper { justify-content: center; }
+
+                    &__slide {width: auto}
+                    
+                    &__item {display: flex; justify-content: center; align-items: center; height: 100%; @include vw-mo(padding, 0 33); @include vw-mo(font-size, 26); font-weight: 700; color: #fff; letter-spacing: -0.025em;
+                        &:focus {outline-offset: -1px;}
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .galaxy_tabs9 {
+        .sec_nav {
+            @include vw-max(height, 68);
+
+            .pt_nav {
+                // width: 100%; @include vw-max(height, 68); background: url('../../../is/images/nav/tabs9_nav_bg_pc.png') no-repeat; @include vw-max(background-size, 1920 68);
+                width: 100%; @include vw-max(height, 68); background: #000; @include vw-max(padding, 0 145);
+                
+                .sticky_wrapper {
+                   @include vw-max(width, 1320); margin: 0 auto;
+
+                   &.fixed_start {
+                        // position: fixed; top: 0; left: 50%; transform: translateX(-50%); @include vw-max(height, 68); background: url('../../../is/images/nav/tabs9_nav_bg_pc.png') no-repeat; @include vw-max(background-size, 1920 68); z-index: 100;
+                        position: fixed; top: 0; left: 50%; transform: translateX(-50%); width: 100%; @include vw-max(height, 68); background: #000; z-index: 100;
+
+                        .pt_live {
+                            align-items: flex-end; @include vw-max(width, 840); @include vw-max(padding-right, 115);
+
+                            &::after {position: absolute; @include vw-max(top, 0); @include vw-max(right, -32); display: block; content: ''; @include vw-max(width, 105); @include vw-max(height, 45); background: url('../../../is/images/nav/tabs9_icon_live_pc.png') no-repeat; @include vw-max(background-size, 105 45);}
+                        }
+
+                        .pt_swiper {
+                            &__wrapper {justify-content: flex-start; @include vw-max(width, 1320); margin: 0 auto;}
+                        }
+                   }
+
+                   .pt_live {
+                        position: relative; display: flex; justify-content: center; align-items: center; flex-direction: column; @include vw-max(width, 540); color: #fff; @include vw-max(font-size, 18); @include vw-max(line-height, 22); font-weight: 700; /*background: linear-gradient(225deg, #3BBFEA 0%, #1B62FF 100%);*/
+        
+                        &::after {position: absolute; @include vw-max(top, -22); @include vw-max(right, -32); display: block; content: ''; @include vw-max(width, 105); @include vw-max(height, 45); background: url('../../../is/images/nav/tabs9_icon_live_pc.png') no-repeat; @include vw-max(background-size, 105 45);}
+                    }
+
+                    .pt_swiper {
+                        flex: 1;
+
+                        &__wrapper {justify-content: flex-start; @include vw-max(padding, 0 0 0 49);}
+                        &__slide {
+                            width: auto; flex: 1;
+                        }
+                        &__item {
+                            display: flex; justify-content: center; align-items: center; height: 100%; @include vw-max(padding, 0 60); @include vw-max(font-size, 18); font-weight: 700; color: #fff; letter-spacing: -0.025em;
+
+                            &:focus {outline-offset: -1px;}
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

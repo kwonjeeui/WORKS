@@ -1,0 +1,119 @@
+// PRESRT
+@import '../../../../../../scss_global/scss-common2';
+@import 'bs_reset';
+
+// CUSTOM SETTINGS
+@import 'monospace';
+
+// 갤캠스 Only 태그
+@import './login_tag';
+
+// STYLES
+@import './photoswipe';
+@import './sec_hub';
+@import './sec_sticky';
+@import './sec_kv';
+// @import './sec_live';
+@import './sec_banner';
+@import './sec_buying';
+@import './sec_nav';
+@import './sec_benefit';
+@import './sec_inbox';
+@import './sec_review';
+@import './sec_modal';
+@import './sec_notice';
+
+// MOBILE
+body.pt_no_scroll {overflow-y: hidden !important; width: 100%;}
+//[class^="ios"] body.pt_no_scroll {touch-action: none;}
+#wrap{overflow: visible !important;}
+
+.galaxy_tabs9 {
+    // common
+    .btn_common {
+        & * {pointer-events: none !important;} // 옴니태깅 오류 수정
+        &.type_anchor {
+            padding-bottom: 0; @include vw-mo(font-size,24); line-height: 1.25em; letter-spacing: -0.025em; color: #000;
+            &::after {@include vw-mo(margin,0 0 2 10); @include vw-mo(width,20); @include vw-mo(height,12); background: url("../../is/images/common/tabs9_btn_type_anchor.svg") no-repeat center / contain; border: none; transform: none;}
+            &.active::after {@include vw-mo(margin, 0 2 4 10); transform: rotate(180deg);}
+        }
+        &.type_arrow {
+            padding-bottom: 0; @include vw-mo(font-size,24); line-height: 1.25em; letter-spacing: -0.025em;
+            &::after {@include vw-mo(margin,0 0 2 10); @include vw-mo(width,12); @include vw-mo(height,17); background: url("../../is/images/common/tabs9_btn_type_arrow.svg") no-repeat center / contain; border: none; transform: none;}
+        }
+        &.type_more {
+            @include vw-mo(font-size,24); line-height: 1.25em; letter-spacing: -0.025em;
+            &::after {display: block; content: ''; @include vw-mo(margin,0 0 -2 5); @include vw-mo(width,17); @include vw-mo(height,17); background: url("../../is/images/common/tabs9_btn_type_more.svg") no-repeat center / contain; border: none; transform: none;}
+        }
+        &:hover,
+        :active,
+        :focus{color: #000;}
+    }
+
+    // common
+    .pt_font {
+        // 기본 컬러
+        &--black {color:#000 !important;}
+        &--white {color:#fff !important;}
+        &--gray {color:#666 !important;}
+        &--blue {color:#1E81F8 !important;}
+        // eureka 추가 컬러
+        &--green {color:#01D74D !important;}
+        &--forest {color:#3F9165 !important;}
+        &--brown {color:#B97552 !important;}
+        &--purple {color:#8D2C76 !important;}
+
+        &--normal {font-weight: 400;}
+        &--bold {font-weight: 700;}
+    }
+
+    .pswp__img {@include vw-mo(border-radius, 0);}
+    .pswp__top-bar { top: 50%; @include vw-mo(margin-top, -350); }
+    .pswp__bullets-indicator { top: 50%; @include vw-mo(margin-top, -50); }
+}
+
+
+@media screen and (min-width: 769px) {
+	body.pt_no_scroll {position: fixed; overflow-y: scroll !important;}
+    .galaxy_tabs9 {
+        // common
+        .btn_common {
+            &.type_anchor {
+                @include vw-pc(font-size,18);
+                &::after {@include vw-pc(margin,0 0 0 6); @include vw-pc(width,12); @include vw-pc(height,8);}
+                &.active::after {@include vw-pc(margin, 0 2 2 6);}
+            }
+            &.type_arrow {
+                @include vw-pc(font-size,18);
+                &::after {@include vw-pc(margin,0 0 0 6); @include vw-pc(width,8); @include vw-pc(height,12);}
+            }
+            &.type_more {
+                @include vw-pc(font-size,18);
+                &::after {@include vw-pc(margin,0 0 0 6); @include vw-pc(width,17); @include vw-pc(height,17);}
+            }
+        }
+    }
+
+    // zoom modal
+    .pswp--zoom-allowed .pswp__button--zoom {display: none;}
+}
+
+// zoom modal
+@media screen and (min-width: 900px) {
+
+    // zoom modal
+    .pswp__img {@include vw-pc(border-radius, 20);}
+    .pswp__top-bar, .pswp__bullets-indicator {width: 800px; transform: translate(-50%); transition: 0.3s;}
+    .pswp__top-bar {top: calc(50% - 340px); left: 50%; }
+    .pswp__bullets-indicator { bottom: calc(50% - 340px); height: 60px; }
+
+    .pswp--zoomed-in {
+        .pswp__top-bar, .pswp__bullets-indicator {width: 1040px;}
+        .pswp__top-bar {top: calc(50% - 442px);}
+        .pswp__bullets-indicator { bottom: calc(50% - 442px); }
+    }
+
+    .pswp__button--arrow--prev {left: 50%; transform: translateX(-100%); margin-left: -400px;}
+    .pswp__button--arrow--next {left: 50%; margin-left: 400px;}
+
+}

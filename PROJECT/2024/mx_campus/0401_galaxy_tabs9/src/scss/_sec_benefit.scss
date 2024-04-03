@@ -1,0 +1,730 @@
+// MOBILE
+.galaxy_tabs9 {
+    .sec_benefit { background: #f4f4f4; @include vw-mo(padding, 120 0 60 0);
+        
+        .pt_benefit {
+            &__title { text-align: center; @include vw-mo(margin-bottom, 50);
+                &--series { @include vw-mo(font-size, 32); @include vw-mo(margin-bottom, 25); }
+                &--text { @include vw-mo(font-size, 52); }
+            }
+            &__date { @include vw-mo(font-size, 28); @include vw-mo(margin, 0 0 10 0); @include vw-mo(margin-bottom, 0); text-align: center; }
+            &__tab { display:flex; align-items: center; justify-content: center; @include vw-mo(gap, 20);
+                &--btn { background: transparent;
+                    &:hover { color: #000; }
+                    &.active { background:#000; color:#fff; }
+                    @include vw-mo(width, 160); @include vw-mo(height, 56); @include vw-mo(font-size, 24); @include vw-mo(line-height, 30); 
+                }
+            }
+            &__content { @include vw-mo(padding, 0 0 0 0); @include vw-mo(margin, 0 0 50 0); }
+            &__subtit { @include vw-mo(width, 672); @include vw-mo(margin, 57 auto 30 auto); @include vw-mo(font-size, 34); }
+
+            &__detail { text-align: center;  @include vw-mo(margin, 50 0 0 0); @include vw-mo(gap, 40); display:flex; flex-flow: column; align-items: center;
+                &--btn { @include vw-mo(font-size, 24); }
+                &--btn_confirm { @include vw-mo(font-size, 24); @include vw-mo(width, 228); @include vw-mo(height, 60); @include vw-mo(border-radius, 44); }
+            }
+        }
+
+        // 베스트 리뷰어 챌린지
+        .pt_aibest_benefit {
+            &__container { position: relative; background-color: #fff; @include vw-mo(width, 683); @include vw-mo(border-radius, 10); margin: 0 auto; @include vw-mo(padding, 47 18 198 19);}
+            &__titwrap {
+                &--title { display: block; @include vw-mo(font-size, 30); @include vw-mo(letter-spacing, -0.6); @include vw-mo(line-height, 40); text-align: center; @include vw-mo(margin-bottom, 30); }
+                &--btnwrap { 
+                    position: absolute; @include vw-mo(bottom, 30); left: 0; width: 100%; text-align: center;
+                    p { @include vw-mo(font-size, 20); @include vw-mo(letter-spacing, -0.05); @include vw-mo(line-height, 42); color: #7F7F7F; @include vw-mo(margin-bottom, 20);}
+                    .btns { display: flex; justify-content: center; align-items: center;}
+                    .btn_common.black_bg { @include vw-mo(width, 168); @include vw-mo(height, 64); @include vw-mo(margin-right, 40); @include vw-mo(font-size, 24); @include vw-mo(letter-spacing, -0.025);}
+
+                    .pt_single_benefit__item--des { @include vw-mo(margin, 36 0 20 0); }
+                    .pt_single_benefit__item--des li:first-child { @include vw-mo(margin-bottom, 12); }
+                } //모바일에서만 앱솔루트로 띄움
+            }
+
+            &__list {
+               display: flex; @include vw-mo(gap, 10);
+            }
+
+            &__item {
+                position: relative; flex: 0 0 auto; justify-content: space-between; @include vw-mo(border-radius, 8); @include vw-mo(min-height, 290); background-color: #EDF5FF;
+                &:first-child { 
+                    @include vw-mo(width, 249); @include vw-mo(padding, 22 17); border: 1px solid #D1D1D1;  background-color: #fff;
+                    .pt_aibest_benefit__item--imgwrap { @include vw-mo(width, 213); margin: auto; }
+                }
+                &.plus { @include vw-mo(width, 183); }
+                &--toptxt { display: flex; justify-content: center; align-items: center; @include vw-mo(min-height, 54); background-color: #1E81F8; color: #fff; @include vw-mo(font-size, 16); @include vw-mo(letter-spacing, 0.025); @include vw-mo(line-height, 21); text-align: center; @include vw-mo(border-top-left-radius, 8); @include vw-mo(border-top-right-radius, 8);}
+                &--imgwrap { @include vw-mo(width, 95); @include vw-mo(margin, 29 auto 20);}
+                &--bottomtxt { text-align: center; font-weight: 700; @include vw-mo(font-size, 20); @include vw-mo(letter-spacing, -0.025); @include vw-mo(line-height, 26); }
+
+                &--labelwrap { display: flex; @include vw-mo(gap, 8); align-items: center;}
+                &--star { flex: 0 0 auto; @include vw-mo(width, 129); @include vw-mo(height, 22); }
+                &--best { flex: 0 0 auto; @include vw-mo(width, 45); @include vw-mo(height, 20); }
+                &--tit { position: relative; display: inline-block; @include vw-mo(font-size, 18); @include vw-mo(letter-spacing, -0.05); @include vw-mo(line-height, 24); @include vw-mo(margin, 9 0 16);}
+                &--tit::after { content: ''; display: block; @include vw-mo(width, 21); @include vw-mo(height, 21); position: absolute; @include vw-mo(bottom, 3);; @include vw-mo(right, -10); background: url('../../is/images/benefit/gt9_benefit_best_ddabong_mo.png') no-repeat center/100%; }
+
+                &--imgwrap {  }
+                &--subtxt {  }
+                &--maintxt {  }
+                
+            }
+            // 플러스 디자인 삭제
+            // .pt_aibest_benefit__item.plus + 
+            // .pt_aibest_benefit__item.plus::before { content: ''; display: block; @include vw-mo(width, 30); @include vw-mo(height, 30); position: absolute; top: 50%; left: 0; transform: translateY(-50%) translateX(-62%);  background: url('../../is/images/benefit/gt9_benefit_best_plus_mo.png') no-repeat center/100%; } 
+        }
+
+
+        // 단독혜택 탭
+        .pt_text_blue { color:#1E81F8!important;}
+        #pt_single_benefit_swiper {
+            @include vw-mo(margin-top, -50); @include vw-mo(padding-top, 50);
+            .pt_single_benefit_swiper--prev {  @include vw-mo(width, 20); @include vw-mo(height, 32); position: absolute; top: 0; @include vw-mo(right, 60); background: url('../../is/images/benefit/gt9_benefit_best_plus_rarrow_mo.png') no-repeat center/100%; transform: rotate(180deg);}
+            .pt_single_benefit_swiper--next {  @include vw-mo(width, 20); @include vw-mo(height, 32); position: absolute; top: 0; @include vw-mo(right, 0); background: url('../../is/images/benefit/gt9_benefit_best_plus_rarrow_mo.png') no-repeat center/100%; }
+        }
+        .pt_single_benefit {
+
+            @include vw-mo(margin-bottom, 57); @include vw-mo(margin, 0 24);
+            &__list { }
+            &__item { @include vw-mo(width, 324);  @include vw-mo(height, 370); @include vw-mo(margin-right, 24); @include vw-mo(border-radius, 10); @include vw-mo(padding, 154 0 40 20); display:flex; flex-flow: column; align-items: start; 
+                background-color:#fff; background-repeat:no-repeat;
+                @include vw-mo(background-size, 100 100); /*@include vw-mo(background-position, 20 30);*/
+                background-position-x: 50%; @include vw-mo(background-position-y, 30);
+                &:last-child { margin-right: 0; }
+                &.pt_blue_heart { background-image:url('../../../is/images/benefit/gt9_blue_heart.png'); }
+                &.pt_blue_arrow { background-image:url('../../../is/images/benefit/gt9_blue_arrow.png');}
+                &.pt_orange_arrow { background-image:url('../../../is/images/benefit/gt9_orange_arrow.png');}
+                &.pt_blue_coupon { background-image:url('../../../is/images/benefit/gt9_blue_coupon.png'); }
+                &.pt_orange_coupon { background-image:url('../../../is/images/benefit/gt9_orange_coupon.png');}
+                &.pt_purple_coupon { background-image:url('../../../is/images/benefit/gt9_purple_coupon.png');}
+                &.pt_green_coupon { background-image:url('../../../is/images/benefit/gt9_green_coupon.png');}
+                &.pt_mazzzy { background-image:url('../../../is/images/benefit/gt9_black_mazzzzy_mo.png');}
+                &.pt_blue_card { background-image:url('../../../is/images/benefit/gt9_blue_card.png');}
+                &.pt_green_card { background-image:url('../../../is/images/benefit/gt9_green_card.png.png');}
+                &.pt_skyblue_card { background-image:url('../../../is/images/benefit/gt9_skyblue_card.png'); }
+                &.pt_purple_card { background-image:url('../../../is/images/benefit/gt9_purple_card.png'); }
+                &.pt_greenapp_coupon { background-image:url('../../../is/images/benefit/gt9_greenapp_card.png'); }
+                &.pt_purple_coupon2 { background-image:url('../../../is/images/benefit/gt9_purple_card2.png'); }
+
+                &--title { 
+                    @include vw-mo(font-size, 30); font-weight:700;  @include vw-mo(line-height, 36); letter-spacing: -0.08em; 
+                    .pos_text { position: absolute; @include vw-mo(right, 18); @include vw-mo(bottom, 34); }
+                    .big_text { @include vw-mo(font-size, 52); @include vw-mo(letter-spacing, -0.05); }
+                    .ggongjja { @include vw-mo(font-size, 44); }
+                    // &.letter70 { @include vw-mo(letter-spacing, -4); }
+                }
+                &--eyetitle{@include vw-mo(font-size,24);}
+                &--smtext { display:flex; flex-flow:column; flex:1; align-items: start; }
+
+                &--des { @include vw-mo(font-size, 20); color:#666; @include vw-mo(margin-top, 6); @include vw-mo(line-height, 24); letter-spacing: -0.025em;}
+                &--des li {@include vw-mo(padding-left, 13); @include vw-mo(font-size, 20); color:#666; @include vw-mo(line-height, 24); @include vw-mo(letter-spacing, -2.5); @include vw-mo(text-indent, -13);}
+                &--label { display:inline-flex; align-items: center; @include vw-mo(padding, 0 20); letter-spacing: -0.07em; @include vw-mo(height, 36); @include vw-mo(font-size, 22); @include vw-mo(border-radius, 18); @include vw-mo(margin-bottom, 10); background:#2189FF; font-weight:700; color: #fff; 
+                    &.bg-orange { background: #FA9F42; @include vw-mo(font-size, 16); }
+                }
+                &--detail.btn_common { @include vw-mo(font-size, 24); margin-top: auto; font-weight: 700; }
+
+                &.item_block { @include vw-mo(width, 672); @include vw-mo(height, auto); @include vw-mo(padding, 0 0 0 160); justify-content: center; @include vw-mo(background-position, center left 20);
+                    .pt_single_benefit__item--title { margin: 0; }
+                    .pt_single_benefit__item--label { @include vw-mo(margin-bottom, 10); }
+                }
+
+                &.item_long { @include vw-mo(height, auto);}
+                &.item_short { @include vw-mo(height, auto);}
+            }            
+        }
+
+
+        // 공통혜택 탭
+        .pt_common_benefit {
+            width: 100%; margin: 0 auto; @include vw-mo(padding, 0 24);
+
+            &__title { display: block; width: 100%; @include vw-mo(margin-bottom, 44); @include vw-mo(font-size, 51); @include vw-mo(line-height, 60); font-weight: 700; text-align: center;}
+
+            &__top {
+                .pt_common_benefit__term {
+                    @include vw-mo(margin-bottom, 27); @include vw-mo(padding, 47 0 49 24); background-color: #fff; @include vw-mo(border-radius, 20);
+
+                    .pt_common_benefit__list {
+                        display: flex; flex-direction: column;
+
+                        &--item {
+                            @include vw-mo(margin-bottom, 5);
+                            &:last-child {margin-bottom: 0;}
+
+                            &.item01 {order: 1; @include vw-mo(margin-bottom, 14);}
+                            &.item02 {order: 2; @include vw-mo(margin-bottom, 14);}
+                            &.item03 {order: 3;}
+                        }
+                        &--inner {display: flex; justify-content: flex-start;}
+                        &--title {@include vw-mo(width, 89); @include vw-mo(margin-right, 24); @include vw-mo(font-size, 26); @include vw-mo(line-height, 36); font-weight: 700; letter-spacing: -0.05em;}
+                        &--txt {
+                            @include vw-mo(width, 532); @include vw-mo(margin-bottom, 12); @include vw-mo(font-size, 26); @include vw-mo(line-height, 36); letter-spacing: -0.05em;
+
+                            &:last-child {margin-bottom: 0;}
+                        }
+                        &--disc {@include vw-mo(width, 532); @include vw-mo(margin-top, 0); color: #666; @include vw-mo(font-size, 24); @include vw-mo(line-height, 36); letter-spacing: -0.05em;}   
+                    }
+                }
+            }
+
+            &__wrap { flex-flow: column;
+                position: relative; width: 100%; margin: 0 auto;
+
+                .pt_common_benefit__content {
+                    width: 100%;
+
+                    .pt_common_benefit__title-box { 
+                        display: block; position: relative; width: 100%; height: auto; @include vw-mo(margin, 57 0 30 0);
+
+                        &--title { overflow: hidden;
+                            &:after { content:''; width: 100%; @include vw-mo(height, 1); background: #707070; position: absolute; top:50%; opacity:.4; }
+                            display: block; position: relative; @include vw-mo(font-size, 30); letter-spacing: -0.025em; font-weight: 700; color: #000; z-index: 2;
+                            &-txt {position: relative; z-index: 1; @include vw-mo(padding-right, 12); background-color: #f4f4f4;}
+                        }
+                    }
+
+                    .pt_common_benefit__item {
+                        
+
+                        .pt_common_benefit__box {
+                            position: relative; @include vw-mo(width, 672); margin: 0 auto;
+
+                            &--accessory {@include vw-mo(margin-bottom, 24);}
+                            &--spen {@include vw-mo(margin-bottom, 21);}
+
+                            .pt_common_benefit__inner {
+                                position: relative; @include vw-mo(top, 0); left: 50%; transform: translateX(-50%); display: flex; justify-content: space-between; flex-wrap: wrap; width: 100%; @include vw-mo(padding, 30 23 40); background-color: #fff; @include vw-mo(border-radius, 20);
+
+                                .pt_common_benefit__sub-title {
+                                    z-index: 1; position: relative; width: 100%; @include vw-mo(margin-bottom, 23); @include vw-mo(font-size, 27); @include vw-mo(line-height, 38); letter-spacing: -0.025em; font-weight: 700; text-align: center;
+    
+                                    .small_txt {@include vw-mo(font-size, 22); @include vw-mo(line-height, 38); letter-spacing: -0.025em;}
+                                    .txt_blue {color: #2F8FFD; @include vw-mo(font-size, 27); @include vw-mo(line-height, 38); letter-spacing: -0.025em;}
+
+                                    &.photobook { @include vw-mo(margin-bottom, 34); }
+                                }
+                                
+                                .pt_common_benefit__photobook { 
+                                    display: flex; flex-wrap: wrap; justify-content: center; @include vw-mo(gap, 12);
+                                    &--imgwrap { display: flex; @include vw-mo(gap, 12);}
+                                    &--img { @include vw-mo(width, 297); @include vw-mo(height, 193); }                                    
+                                    &--info { width: 100%; }
+                                    &--list { @include vw-mo(width, 570); @include vw-mo(margin-top, 24); }
+                                    &--item {display: flex; justify-content: flex-end; align-items: center; @include vw-mo(margin-bottom, 4);}
+                                    &--type {@include vw-mo(width, auto); @include vw-mo(font-size, 22); @include vw-mo(line-height, 30); font-weight: 700; }
+                                    &--discount {
+                                        position: relative; @include vw-mo(width, 112); color: #999; @include vw-mo(font-size, 22); @include vw-mo(line-height, 30); @include vw-mo(letter-spacing, -0.04); @include vw-mo(margin-left, 20);
+
+                                        &::after {position: absolute; top: 50%; @include vw-mo(left, -5); transform: translateY(-50%); display: block; content: ''; @include vw-mo(width, 110); @include vw-mo(height, 10); background: url('../../../is/images/benefit/tabs9_icon_discount_mo.png') center / cover no-repeat;}
+                                    }
+                                    &--price {@include vw-mo(width, auto); @include vw-mo(font-size, 22); @include vw-mo(line-height, 30); font-weight: 700; @include vw-mo(margin-left, 20);}
+                                }
+
+                                .pt_common_benefit__accessory { 
+
+                                    &--img { @include vw-mo(height, 100); display: flex; justify-content: center; @include vw-mo(margin-bottom, 25); }                                    
+
+                                    &--keyboard {
+                                        position: relative;
+
+                                        &::after {position: absolute; @include vw-mo(top, 21); @include vw-mo(right, -38); display: block; content: 'Or 텍스트가 적힌 파란색 동그라미 아이콘'; text-indent:-9999px;  @include vw-mo(width, 54); @include vw-mo(height, 54); background: url('../../../is/images/benefit/tabs9_icon_or_mo.png') center / cover no-repeat;}
+                                    }
+
+                                    &--img { }
+                                    &--name {display: block; @include vw-mo(margin-bottom, 3); @include vw-mo(font-size, 24); @include vw-mo(line-height, 30); letter-spacing: -0.025em; text-align: center;}
+                                    &--item {display: flex; flex-wrap: wrap; justify-content: center; align-items: center; @include vw-mo(margin-bottom, 4);}
+                                    &--type {@include vw-mo(width, 106); @include vw-mo(font-size, 22); @include vw-mo(line-height, 30); font-weight: 700; letter-spacing: -0.03em;}
+                                    &--discount {
+                                        position: relative; @include vw-mo(width, 112); color: #999; @include vw-mo(font-size, 22); @include vw-mo(line-height, 30); letter-spacing: -0.025em;
+
+                                        &::after {position: absolute; top: 50%; @include vw-mo(left, 0); transform: translateY(-50%); display: block; content: ''; @include vw-mo(width, 106); @include vw-mo(height, 10); background: url('../../../is/images/benefit/tabs9_icon_discount_mo.png') center / cover no-repeat;}
+                                    }
+                                    &--price {@include vw-mo(width, 88); @include vw-mo(font-size, 22); @include vw-mo(line-height, 30); font-weight: 700; letter-spacing: -0.03em; text-align: right;}
+                                }
+
+                                .pt_common_benefit__spen {
+                                    width: 100%;
+                                    
+                                    &--top {
+                                        @include vw-mo(width, 634); @include vw-mo(margin, 0 auto);
+
+                                        .pt_common_benefit__spen--list {display: flex; justify-content: space-between; width: 100%;}
+                                        .pt_common_benefit__spen--item {display: flex; flex-direction: column; @include vw-mo(width, 190); margin: 0 auto; text-align: center;}
+                                    }
+                                    &--bottom {
+                                        @include vw-mo(width, 634); margin: 0 auto;
+
+                                        .pt_common_benefit__spen--list {display: flex; justify-content: space-between; width: 100%;}
+                                        .pt_common_benefit__spen--item {display: flex; flex-direction: column; @include vw-mo(width, 190); margin: 0 auto; text-align: center;}
+                                    }
+
+                                    &--img01 {@include vw-mo(width, 84); @include vw-mo(margin, 0 auto 29);}
+                                    &--img02 {@include vw-mo(width, 36); @include vw-mo(margin, 0 auto 25);}
+                                    &--img03 {@include vw-mo(width, 7); @include vw-mo(margin, 0 auto 24);}
+                                    &--img04 {@include vw-mo(width, 38); @include vw-mo(margin, 0 auto 26);}
+                                    &--img05 {@include vw-mo(width, 9); @include vw-mo(margin, 0 auto 26);}
+                                    &--img06 {@include vw-mo(width, 8); @include vw-mo(margin, 0 auto 26);}
+
+                                    &--name {display: block; @include vw-mo(margin-bottom, 12); @include vw-mo(font-size, 24); @include vw-mo(line-height, 30); letter-spacing: -0.025em; text-align: center;}
+                                    &--item {position:relative;display: flex; justify-content: space-between; align-items: center; @include vw-mo(margin-bottom, 4);
+                                        &.item_soldout {
+                                            &:before { position:absolute; content:''; border-radius: 50%; @include vw-mo(top,-15); left:50%; transform: translateX(-50%); @include vw-mo(width, 144); @include vw-mo(height, 144); background:rgba(0,0,0,.7); z-index: 50; }
+                                            &:after { position: absolute; content:'선착순 종료'; @include vw-mo(top,48); width:100%; left:50%; transform: translateX(-50%); @include vw-mo(font-size, 20); font-weight:700; color:#fff; z-index: 51; }
+                                        }
+                                    }
+                                    &--dis { position: absolute; @include vw-mo(bottom, -22); @include vw-mo(font-size, 18); color:#666 }
+                                    &--type {@include vw-mo(width, 190); @include vw-mo(font-size, 22); @include vw-mo(line-height, 30); @include vw-mo(margin-bottom, 3); font-weight: 700; letter-spacing: -0.03em;}
+                                    &--price-box {display: flex; justify-content: space-between;}
+                                    &--discount {
+                                        position: relative; @include vw-mo(width, 104); @include vw-mo(margin-right, 6); color: #999; @include vw-mo(font-size, 22); @include vw-mo(line-height, 30); letter-spacing: -0.025em;
+
+                                        &::after {position: absolute; top: 50%; @include vw-mo(left, 0); transform: translateY(-50%); display: block; content: ''; @include vw-mo(width, 106); @include vw-mo(height, 10); background: url('../../../is/images/benefit/tabs9_icon_discount_mo.png') center / cover no-repeat;}
+                                    }
+                                    &--price {@include vw-mo(width, 82); @include vw-mo(font-size, 22); @include vw-mo(line-height, 30); font-weight: 700; letter-spacing: -0.03em;}
+                                 }
+                            }
+                        }
+                    }
+                }
+            }
+            &__item { display:flex; flex-flow: column;
+                width: 100%; @include vw-mo(margin-bottom, 21);
+                &:last-child { margin-bottom: 0;}
+
+
+                &_contentswrap { width: 100%; height: auto;}
+                &_contents {
+                    position: relative; width: 100%; @include vw-mo(margin-bottom, 0);
+                    &--be03 {
+                        @include vw-mo(height, 390); @include vw-mo(border-radius, 20); background: url('../../../is/images/benefit/gt9_fe_benefit_flexitem_spec_bg_mo_v1.png') center / cover no-repeat #fff;
+
+                        .pt_common_benefit__item_cdesc { position: absolute; @include vw-mo(top, 242); @include vw-mo(left, 24);}
+                        .pt_common_benefit__item_cdescTxt {
+                            position: relative; @include vw-mo(font-size, 22); @include vw-mo(line-height, 27); color: #666666; @include vw-mo(margin-bottom, 5); @include vw-mo(padding-left, 20);
+                            &::before { display: block; content: "*"; position: absolute; @include vw-mo(top, 3); left: 0; @include vw-mo(font-size, 22); color: #666666;}
+                        }
+                    }
+                    &--be04 {
+                        display: flex; flex-wrap: wrap; @include vw-mo(gap, 24 23);
+
+                        .pt_common_benefit__item_fcItem {
+                            position: relative; @include vw-mo(width, 324); @include vw-mo(height, 242); @include vw-mo(border-radius, 20);
+
+                            &--fci01 { background: url('../../../is/images/benefit/gt9_benefit_fci01_bg_mo_v1.png') center / cover no-repeat #fff;}
+                            &--fci02 { background: url('../../../is/images/benefit/gt9_benefit_fci02_bg_mo_v1.png') center / cover no-repeat #fff;}
+                            &--fci03 { background: url('../../../is/images/benefit/gt9_benefit_fci03_bg_mo_v1.png') center / cover no-repeat #fff;}
+                            &--fci04 { background: url('../../../is/images/benefit/gt9_benefit_fci04_bg_mo_v1.png') center / cover no-repeat #fff;}
+                            &--fci05 { background: url('../../../is/images/benefit/gt9_benefit_fci05_bg_mo_v1.png') center / cover no-repeat #fff;}
+                            &--fci06 { background: url('../../../is/images/benefit/gt9_benefit_fci06_bg_mo_v1.png') center / cover no-repeat #fff;}
+
+                            .pt_common_benefit__item_ctBox { position: absolute; width: max-content; left: 50%; transform: translateX(-50%); @include vw-mo(bottom, 36);}
+                            .pt_common_benefit__item_ctSubtit { @include vw-mo(font-size, 22); letter-spacing: -0.025em; @include vw-mo(line-height, 27); color: #666; text-align: center;}
+                            .pt_common_benefit__item_ctTit { @include vw-mo(font-size, 27); letter-spacing: -0.025em; @include vw-mo(line-height, 30); font-weight: 700; color: #000; @include vw-mo(margin-top, 7); text-align: center;}
+                        }
+                    }
+                }
+
+                &_ctit {
+                    display: inline-block; width: max-content; position: absolute; @include vw-mo(top, 28); left: 50%; transform: translateX(-50%); z-index: 2;
+                    @include vw-mo(font-size, 27); letter-spacing: -0.04em; font-weight: 700; color: #000;
+
+                    .small_txt {@include vw-mo(font-size, 22);}
+
+                    &--add_bd::before {
+                        position: relative; @include vw-mo(top, -5); @include vw-mo(left, -7); display: inline-block; vertical-align: middle; content: ""; @include vw-mo(margin-right, 0);
+                        @include vw-mo(width, 24); @include vw-mo(height, 41); background: url('../../../is/images/benefit/gt9_fe_benefit_tit_badge_ico01_mo_v1.png') center / cover no-repeat;
+                    }
+                }
+            }
+
+            &__bottom {
+                width: 100%; @include vw-mo(margin-top, 45); @include vw-mo(padding, 0 24);
+
+                .pt_common_benefit__btn {
+                    display: flex; flex-direction: column; justify-content: center; align-items: center;
+
+                    &--more {
+                        display: flex; justify-content: center; align-items: center; @include vw-mo(width, 224); @include vw-mo(height, 79); @include vw-mo(margin-bottom, 36); color: #fff; @include vw-mo(font-size, 24); font-weight: 700; letter-spacing: -0.025em;
+
+                        &:hover {background-color: #000; color: #fff;}
+                    }
+                    &--anchor {
+                        position: relative; @include vw-mo(width, 196); @include vw-mo(height, 42); border-bottom: 1px solid #000; @include vw-mo(font-size, 24); font-weight: 700; letter-spacing: -0.025em;
+
+                        &::after {position: absolute; @include vw-mo(top, 5); @include vw-mo(right, 0); display: block; content: ''; @include vw-mo(width, 19); @include vw-mo(height, 14); background: url('../../../is/images/benefit/tabs9_btn_anchor_mo.png') center / cover no-repeat;}
+                    }
+                }
+            }
+        }
+
+        .pt_hide--mo {display: none;}
+    }
+}
+
+// pc
+@media screen and (min-width: 769px) {
+    .galaxy_tabs9 {
+        .sec_benefit { @include vw-pc(padding, 120 0 60 0);
+
+            //혜택 상단 탭
+            .pt_benefit {
+                &__title { text-align: center; @include vw-pc(margin-bottom, 40);
+                    &--series { @include vw-pc(font-size, 25); @include vw-pc(margin-bottom, 15); }
+                    &--text { @include vw-pc(font-size, 50); }
+                }
+                &__tab { display:flex; align-items: center; justify-content: center; @include vw-pc(gap, 20);
+                    &--btn {
+                        @include vw-pc(width, 130); @include vw-pc(height, 44); @include vw-pc(font-size, 18); @include vw-pc(line-height, 30); @include vw-pc(border-radius, 100); @include vw-pc(border, 2 solid #000); 
+                    }
+                }
+                &__date { @include vw-pc(font-size, 20); @include vw-pc(margin-bottom, 40); }
+                &__content { @include vw-pc(padding, 0 0 60 0); @include vw-pc(margin, 0); }
+                &__subtit { width: 100%; @include vw-pc(font-size, 28); @include vw-pc(letter-spacing, -0.025); @include vw-pc(margin-top, 57); @include vw-pc(margin-bottom, 27);}
+
+                &__detail { @include vw-pc(margin, 29 0 0 0); @include vw-pc(gap, 30); flex-flow:row; justify-content: center; align-items: center;
+                    &--btn_confirm { @include vw-pc(width, 180); @include vw-pc(height, 50); @include vw-pc(border-radius, 100); @include vw-pc(font-size, 18); font-weight: 700 }
+                }
+            }
+
+            .pt_aibest_benefit {
+                &__container { position: relative; display: flex; align-items: flex-end; justify-content: space-between; background-color: #fff; @include vw-pc(width, auto); @include vw-pc(border-radius, 10); margin: 0 auto; @include vw-pc(padding, 48 65 48 70);}
+                &__titwrap {
+                    &--title { display: block; @include vw-pc(font-size, 24); @include vw-pc(letter-spacing, -0.6); @include vw-pc(line-height, 32); text-align: left; @include vw-pc(margin-bottom, 13); }
+                    &--btnwrap { 
+                        position: static; width: 100%; text-align: left;
+                        p { @include vw-pc(font-size, 14); @include vw-pc(letter-spacing, -0.05); @include vw-pc(line-height, 18); color: #7F7F7F; @include vw-pc(margin-bottom, 20); }
+                        .btns { display: flex; justify-content: flex-start; align-items: center; @include vw-pc(margin-top, 14);}
+                        .btn_common.black_bg { @include vw-pc(width, 150); @include vw-pc(height, 46); @include vw-pc(margin-right, 20); @include vw-pc(font-size, 18); @include vw-pc(letter-spacing, -0.025); @include vw-pc(border-radius, 100);}
+
+                        .pt_single_benefit__item--des { @include vw-pc(margin, 12 0 13 0); }
+                        .pt_single_benefit__item--des li:first-child { @include vw-pc(margin-bottom, 5); }
+                    } //모바일에서만 앱솔루트로 띄움
+                }
+    
+                &__list {
+                   display: flex; @include vw-pc(gap, 10);
+                }
+    
+                &__item {
+                    position: relative; flex: 0 0 auto; justify-content: space-between; @include vw-pc(border-radius, 8); @include vw-pc(min-height, auto); @include vw-pc(height, 189); background-color: #EDF5FF;
+                    &:first-child { 
+                        @include vw-pc(width, 220); @include vw-pc(padding, 14 16 16 16); border: 1px solid #D1D1D1;  background-color: #fff;
+                        .pt_aibest_benefit__item--imgwrap { 
+                            @include vw-pc(width, 188); @include vw-pc(height, auto); margin: 0 auto; 
+                            & > img { @include vw-pc(width, 188); @include vw-pc(height, 94); }
+                        }
+                    }
+                    &.plus { @include vw-pc(width, 220);  }
+                    &--toptxt { 
+                        display: flex; justify-content: center; align-items: center; @include vw-pc(min-height, 53); background-color: #1E81F8; color: #fff; @include vw-pc(font-size, 16);text-align: center; @include vw-pc(border-top-left-radius, 8); @include vw-pc(border-top-right-radius, 8);
+                        strong {  @include vw-pc(letter-spacing, -2); @include vw-pc(line-height, 21);  }
+                    }
+                    &--imgwrap { @include vw-pc(width, 72); @include vw-pc(margin, 17 auto 11);}
+                    &--bottomtxt { text-align: center; font-weight: 700; @include vw-pc(font-size, 16); @include vw-pc(letter-spacing, -0.025); @include vw-pc(line-height, 20); }
+    
+                    &--labelwrap { display: flex; @include vw-pc(gap, 8); align-items: center;}
+                    &--star { flex: 0 0 auto; @include vw-pc(width, 86); @include vw-pc(height, 15); }
+                    &--best { flex: 0 0 auto; @include vw-pc(width, 38); @include vw-pc(height, 18); }
+                    &--tit { position: relative; display: inline-block; @include vw-pc(font-size, 14); @include vw-pc(letter-spacing, -0.05); @include vw-pc(line-height, 16); @include vw-pc(margin, 6 0 10 0);}
+                    &--tit::after { content: ''; display: block; @include vw-pc(width, 15); @include vw-pc(height, 15); position: absolute; @include vw-pc(bottom, 2);; @include vw-pc(right, -8); background: url('../../is/images/benefit/gt9_benefit_best_ddabong_mo.png') no-repeat center/100%; }
+    
+                    &--imgwrap {  }
+                    &--subtxt {  }
+                    &--maintxt {  }
+                    
+                }
+                // + 디자인 삭제
+                // .pt_aibest_benefit__item.plus + 
+                // .pt_aibest_benefit__item.plus::before { content: ''; display: block; @include vw-pc(width, 36); @include vw-pc(height, 36); position: absolute; top: 50%; left: 0; transform: translateY(-50%) translateX(-65%);  background: url('../../is/images/benefit/gt9_benefit_best_plus_mo.png') no-repeat center/100%; } 
+            }
+
+
+             // 단독혜택 탭
+            .pt_single_benefit {
+                margin: 0;
+                &__list { display: flex; flex-wrap: wrap;  @include vw-pc(width, auto); @include vw-pc(gap, 23); margin:  0 auto; }
+                
+                &__item { @include vw-pc(width, 648!important); @include vw-pc(height, 160!important); @include vw-pc(border-radius, 10); @include vw-pc(padding, 0 0 0 150!important);  justify-content: center; margin-right: 0;
+                @include vw-pc(background-size, 80 80); @include vw-pc(background-position, center left 40!important);
+
+                &--04 { 
+                    .pt_single_benefit__item--detail.btn_common { @include vw-pc(margin-top, 12); }
+                }
+
+                &--title { 
+                    @include vw-pc(font-size,24); font-weight:700; @include vw-pc(margin, 0 0 0 0); @include vw-pc(line-height, 30); 
+                    .pos_text { position: absolute; @include vw-pc(right, 40); @include vw-pc(bottom, auto); top: 50%; transform: translateY(-50%); }
+                    .big_text { @include vw-pc(font-size, 52); @include vw-pc(letter-spacing, -0.05); }
+                    .ggongjja { @include vw-pc(font-size, 38); }
+                    &.letter70 { @include vw-pc(letter-spacing, 0); }
+                }
+                &--eyetitle{@include vw-pc(font-size,24);}
+                
+               
+                &--smtext { display:flex; flex:none; flex-flow: row-reverse; @include vw-pc(gap, 14); align-items: center; @include vw-pc(margin, 12 0 0 0);
+                    .pt_single_benefit__item--des { margin: 0;}
+                    .pt_single_benefit__item--detail.btn_common { margin:0; }
+                }
+                &--des {display: flex; flex-wrap: wrap; @include vw-pc(gap, 0 16); @include vw-pc(font-size, 14); color:#666; @include vw-pc(margin-top, 7); line-height:1.5; }
+                &--des li { width: 100%; padding-left: 0; @include vw-pc(font-size, 14); color:#666; margin-top: 0; line-height:1.5; text-indent: 0; letter-spacing: 0; @include vw-pc(padding-left, 12); @include vw-pc(text-indent, -12);}
+                &--label { 
+                    @include vw-pc(padding, 0 14); @include vw-pc(height, 24); @include vw-pc(font-size, 14); @include vw-pc(border-radius, 20); @include vw-pc(margin, 0 0 8 0);
+                    &.bg-orange { @include vw-pc(font-size, 14); }
+                 }
+                &--detail.btn_common { @include vw-pc(font-size, 16); @include vw-pc(margin-top, 12);  }
+                &--detail.btn_common.product_coupon {@include vw-pc(margin-top, 12); }
+
+                
+
+                &.item_long { @include vw-pc(height, 394);}
+                &.item_block {
+                    .pt_single_benefit__item--label { @include vw-pc(margin-bottom, 10); }
+                }
+
+                
+            }
+            }
+            
+            //공통혜택 탭
+            .pt_common_benefit {
+                width: 100%; margin: 0 auto; @include vw-pc(padding, 0);
+
+                &__title { display: block; width: 100%; @include vw-pc(font-size, 46); @include vw-pc(line-height, 60); @include vw-pc(margin-bottom, 46);}
+
+                &__top {
+                    .pt_common_benefit__term {
+                        @include vw-pc(margin, 0); @include vw-pc(padding, 30 0 0 0); background-color: #fff; @include vw-pc(border-radius, 20);
+    
+                        .pt_common_benefit__list {
+                            display: flex; flex-wrap: wrap; justify-content: space-between; flex-direction: row; @include vw-pc(width, 1000); @include vw-pc(margin, 0 auto);
+                            
+                            &--item {
+                                @include vw-pc(margin-bottom,0);
+                                &:last-child {margin-bottom: 0;}
+                                &.item01 {@include vw-pc(width, 500); order: 1;}
+                                &.item02 {@include vw-pc(width, 500); order: 3; @include vw-pc(margin-top, -40);}
+                                &.item03 {
+                                    @include vw-pc(width, 500); order: 2;
+                                    .pt_common_benefit__list--inner { justify-content: flex-end; }
+                                }
+                            }
+                            &--inner {display: flex; justify-content: flex-start;}
+                            &--title {@include vw-pc(width, 70); @include vw-pc(margin-bottom, 0); @include vw-pc(margin-right, 24); @include vw-pc(font-size, 20); @include vw-pc(line-height, 32); font-weight: 700; letter-spacing: -0.05em;}
+                            &--txt {@include vw-pc(width, auto); @include vw-pc(margin-bottom, 12); @include vw-pc(font-size, 20); @include vw-pc(line-height, 32); letter-spacing: -0.05em;}
+                            &--disc {@include vw-pc(width, auto); @include vw-pc(margin-top, 4); @include vw-pc(font-size, 14); @include vw-pc(line-height, 20); letter-spacing: -0.05em;}
+                        }
+                    }
+                }
+
+                &__wrap {
+                    position: relative; display: flex; flex-flow:column; width: 100%; margin: 0 auto; 
+    
+                    .pt_common_benefit__content {
+                       
+                        .pt_common_benefit__title-box { 
+                            display: block; position: relative; width: 100%; height: auto; @include vw-pc(margin, 77 0 25 0);
+
+                            &--title {
+                                
+                                &:after {display:none}
+
+                                display: block; position: relative; @include vw-pc(font-size, 30); letter-spacing: -0.025em; font-weight: 700; color: #000; z-index: 2;
+
+                                &-txt {position: relative; z-index: 1; @include vw-pc(padding-right, 12); background-color: #f4f4f4;}
+
+                               
+                            }
+                        }
+    
+                        .pt_common_benefit__item {
+                        
+    
+                            .pt_common_benefit__box {
+                                position:  relative; @include vw-pc(width, auto); margin: unset;
+                                // width 648
+                                &--accessory {@include vw-pc(margin-bottom, 0);}
+                                &--spen {@include vw-pc(margin-bottom, 0); width: 100%; }
+    
+                                .pt_common_benefit__inner {
+                                    position: relative; @include vw-pc(top, 0); @include vw-pc(padding, 24 40 42 40); left: 50%; transform: translateX(-50%); display: flex; justify-content: space-between; flex-wrap: wrap; width: 100%; background-color: #fff; @include vw-pc(border-radius, 20);
+
+
+                                    &--photobook { @include vw-pc(padding, 37 70 40); }
+                                    &--accessory { @include vw-pc(padding, 37 44 40 71); }
+                                    &--spen { @include vw-pc(padding, 37 44 40 44); }
+    
+                                    .pt_common_benefit__sub-title { 
+                                        z-index: 1; position: relative; width: 100%; @include vw-pc(line-height, 20); @include vw-pc(margin-bottom, 40); @include vw-pc(font-size, 24); letter-spacing: -0.025em; font-weight: 700; text-align: center; 
+        
+                                        .small_txt {@include vw-pc(font-size, 21); @include vw-pc(line-height, 38); letter-spacing: -0.025em;}
+                                        .txt_blue {color: #2F8FFD; @include vw-pc(font-size, 24); @include vw-pc(line-height, 38); letter-spacing: -0.025em;}
+    
+                                        &.photobook { @include vw-pc(margin-bottom, 25); @include vw-pc(font-size, 24); text-align: center; }
+                                    }
+
+                                    .pt_common_benefit__photobook { 
+                                        display: flex; flex-wrap: nowrap; @include vw-pc(width, 528); justify-content: space-between; align-items: center; @include vw-pc(gap, 12);
+                                        &--imgwrap { display: flex; @include vw-pc(gap, 20);}
+                                        &--img { @include vw-pc(width, 348); @include vw-pc(height, auto);}                                    
+                                        &--info { width: 100%; }
+                                        &--list { @include vw-pc(width, 450); @include vw-pc(margin-top, 0); }
+                                        &--item {display: flex; justify-content: flex-end; align-items: center; @include vw-pc(margin-bottom, 0);}
+                                        &--item:first-child { @include vw-pc(margin-bottom, 19); }
+                                        &--type {@include vw-pc(width, 236); @include vw-pc(font-size, 18); margin-bottom: 0; @include vw-pc(line-height, 30); font-weight: 700; }
+                                        &--discount {
+                                            position: relative; @include vw-pc(width, 68); color: #666; @include vw-pc(font-size, 18); @include vw-pc(line-height, 30); @include vw-pc(letter-spacing, -0.04); @include vw-pc(margin-left, 14);
+    
+                                            &::after {position: absolute; top: 50%; @include vw-pc(left, -2); transform: translateY(-50%); display: block; content: ''; @include vw-pc(width, 100); @include vw-pc(height, 10); background: url('../../../is/images/benefit/tabs9_icon_discount_pc.png') center / cover no-repeat;}
+                                        }
+                                        &--price {@include vw-pc(width, 90); @include vw-pc(font-size, 18); @include vw-pc(line-height, 30); font-weight: 700; @include vw-pc(margin-left, 20); text-align: right;}
+                                    }
+    
+                                    .pt_common_benefit__accessory { z-index: 1; @include vw-pc(width, 528); display:flex; @include vw-pc(height, 228); align-items: center; justify-content: space-between;
+
+                                        &--img { @include vw-pc(width, 197); display: flex; justify-content: center; @include vw-pc(height, auto);  margin:0; }
+    
+                                        &--keyboard { position: relative; /* border-right:1px solid #ccc; */
+    
+                                            &::after {position: absolute; top: 50%; @include vw-pc(bottom, -20); left:auto; @include vw-pc(right, -93); transform: translateY(-50%); display: block; content: 'Or 텍스트가 적힌 파란색 동그라미 아이콘'; text-indent:-9999px; @include vw-pc(width, 40); @include vw-pc(height, 40); background: url('../../../is/images/benefit/tabs9_icon_or_pc.png') center /100% no-repeat;}
+                                            &::before { content: ''; @include vw-pc(width, 1); height: 100%; display: block; background-color: #ddd; position: absolute; top: 0; @include vw-pc(right, -72); }
+                                        }
+                                        &--smart {  
+                                            @include vw-pc(width, 555);
+                                            .pt_common_benefit__accessory--img { @include vw-pc(width, 238); }
+                                        }
+    
+                                        &--name {display: block; @include vw-pc(margin-bottom, 15); @include vw-pc(font-size, 20); @include vw-pc(line-height, 26); letter-spacing: -0.025em; text-align: left;}
+                                        &--item {display: flex; justify-content: space-between; align-items: center; @include vw-pc(margin-bottom, 0);}
+                                        &--type {@include vw-pc(width, 86); text-align: left; @include vw-pc(margin-right, 18); @include vw-pc(font-size, 18); @include vw-pc(line-height, 30); font-weight: 700; letter-spacing: -0.03em;}
+                                        &--discount {
+                                            position: relative; @include vw-pc(width, 95); @include vw-pc(margin-right, 8); color: #666; @include vw-pc(font-size, 18); @include vw-pc(line-height, 30); letter-spacing: -0.025em; text-align: center;
+    
+                                            &::after {position: absolute; top: 50%; @include vw-pc(left, 0); transform: translateY(-50%); display: block; content: ''; @include vw-pc(width, 100); @include vw-pc(height, 10); background: url('../../../is/images/benefit/tabs9_icon_discount_pc.png') center / cover no-repeat;}
+                                        }
+                                        &--price {@include vw-pc(width, 75); @include vw-pc(font-size, 18); @include vw-pc(line-height, 30); font-weight: 700; letter-spacing: -0.03em;}
+                                    }
+    
+                                    .pt_common_benefit__spen {
+                                        width: 100%; 
+                                        
+                                        &--top {
+                                            @include vw-pc(width, 1019); @include vw-pc(margin, 0 auto);
+    
+                                            .pt_common_benefit__spen--list {display: flex; justify-content: space-between; width: 100%;}
+                                            .pt_common_benefit__spen--item {
+                                                display: flex; flex-direction: row; @include vw-pc(width, 290); text-align: center; @include vw-pc(margin, 0 50);
+                                                &:first-child { margin-left: 0; }
+                                                &:last-child { margin-right: 0; }
+                                            }
+                                        }
+                                        &--bottom {
+                                            @include vw-pc(width, 590); margin: 0 auto;
+    
+                                            .pt_common_benefit__spen--list {display: flex; justify-content: space-between; width: 100%; @include vw-pc(gap, 10);}
+                                            .pt_common_benefit__spen--item {
+                                                display: flex; flex-direction: column; @include vw-pc(width, 170); text-align: center;
+                                            }
+                                        }
+    
+                                        &--img01 {@include vw-pc(width, 81); @include vw-pc(margin, 0 47 0 0 );}
+                                        &--img02 {@include vw-pc(width, 36); @include vw-pc(margin, 0 78 0 0 );}
+                                        &--img03 {@include vw-pc(width, 7); @include vw-pc(margin, 0 100 0 0 );}
+                                        // &--img04 {@include vw-pc(width, 32); @include vw-pc(margin, 0 auto 33);}
+                                        // &--img05 {@include vw-pc(width, 13); @include vw-pc(margin, 0 auto 33);}
+                                        // &--img06 {@include vw-pc(width, 11); @include vw-pc(margin, 0 auto 33);}
+
+                                        &--name {display: block; @include vw-pc(margin-bottom, 12); @include vw-pc(font-size, 18); @include vw-pc(line-height, 22); letter-spacing: -0.025em; text-align: center;}
+                                        &--item {position:relative;display: flex;  justify-content: space-between; align-items: center; @include vw-pc(margin-bottom, 4);
+                                            &.item_soldout {
+                                                &:before { position:absolute; content:''; border-radius: 50%; @include vw-pc(top,-5); left:50%; transform: translateX(-50%); @include vw-pc(width, 140); @include vw-pc(height, 140); background:rgba(0,0,0,.7); z-index: 50; }
+                                                &:after { position: absolute; content:'선착순 종료'; @include vw-pc(top,55); width:100%; left:50%; transform: translateX(-50%); @include vw-pc(font-size, 22); font-weight:700; color:#fff; z-index: 51; }
+                                            }
+                                        }
+                                        &--dis { position: absolute; @include vw-pc(bottom, -20); @include vw-pc(font-size, 14); color: #666; letter-spacing: -.05em; }
+                                        &--type { display: inline-block; @include vw-pc(width, 170); @include vw-pc(font-size, 18); @include vw-pc(line-height, 25); font-weight: 700; letter-spacing: -0.025em; @include vw-pc(margin-bottom, 19); text-align: left; }
+                                        &--price-box {display: flex; justify-content: space-between;}
+                                        &--discount {
+                                            position: relative; @include vw-pc(width, 94); @include vw-pc(margin-right, 9); color: #999; @include vw-pc(font-size, 18); @include vw-pc(line-height, 22); letter-spacing: -0.025em; text-align: center;
+    
+                                            &::after {position: absolute; top: 50%; @include vw-pc(left, 0); transform: translateY(-50%); display: block; content: ''; @include vw-pc(width, 100); @include vw-pc(height, 10); background: url('../../../is/images/benefit/tabs9_icon_discount_pc.png') center / cover no-repeat;}
+                                        }
+                                        &--price {@include vw-pc(width, 66); @include vw-pc(font-size, 18); @include vw-pc(line-height, 22); font-weight: 700; letter-spacing: -0.03em;}
+                                     }
+                                }
+                            }
+                        }
+                    }
+                }
+                &__item {
+                    margin-bottom: 0; justify-content: space-between; flex-flow:row; flex-wrap: wrap; @include vw-pc(gap, 24);
+
+                    &--item02 { @include vw-pc(margin-bottom, 28);}
+                    &--item01 .pt_common_benefit__item_contentswrap { @include vw-pc(border-radius, 20); overflow: hidden;}
+                    &--item02 .pt_common_benefit__item_contentswrap { @include vw-pc(border-radius, 20); overflow: hidden;}
+
+                    &_titlebox { @include vw-pc(margin-bottom, 28);}
+                    &_title { @include vw-pc(font-size, 22); @include vw-pc(padding-right, 24);}
+
+                    &_contentswrap { width: 100%; height: auto;}
+                    &_contents {
+                        position: relative; width: 100%; margin-bottom: 0;
+                        &:last-child { margin-bottom: 0;}
+                        &--be03 {
+                            @include vw-pc(height, 224); border-radius: 0; background: url('../../../is/images/benefit/gt9_fe_benefit_flexitem_spec_bg_pc_v1.png') center / cover no-repeat #fff;
+
+                            .pt_common_benefit__item_cdesc { @include vw-pc(top, 161); @include vw-pc(left, 118);}
+                            .pt_common_benefit__item_cdescTxt {
+                                width: max-content; @include vw-pc(font-size, 14); @include vw-pc(line-height, 18); margin-bottom: 0; @include vw-pc(padding-left, 10);
+                                &::before { @include vw-pc(top, 3); @include vw-pc(font-size, 14);}
+                            }
+                        }
+                        &--be04 {
+                            @include vw-pc(gap, 24);
+
+                            .pt_common_benefit__item_fcItem {
+                                @include vw-pc(width, 312); @include vw-pc(height, 216); @include vw-pc(border-radius, 20);
+
+                                &--fci01 { background: url('../../../is/images/benefit/gt9_benefit_fci01_bg_pc_v1.png') center / cover no-repeat #fff;}
+                                &--fci02 { background: url('../../../is/images/benefit/gt9_benefit_fci02_bg_pc_v1.png') center / cover no-repeat #fff;}
+                                &--fci03 { background: url('../../../is/images/benefit/gt9_benefit_fci03_bg_pc_v1.png') center / cover no-repeat #fff;}
+                                &--fci04 { background: url('../../../is/images/benefit/gt9_benefit_fci04_bg_pc_v1.png') center / cover no-repeat #fff;}
+                                &--fci05 { background: url('../../../is/images/benefit/gt9_benefit_fci05_bg_pc_v1.png') center / cover no-repeat #fff;}
+                                &--fci06 { background: url('../../../is/images/benefit/gt9_benefit_fci06_bg_pc_v1.png') center / cover no-repeat #fff;}
+
+                                .pt_common_benefit__item_ctBox {@include vw-pc(bottom, 29);}
+                                .pt_common_benefit__item_ctSubtit { @include vw-pc(font-size, 18); @include vw-pc(line-height, 22);}
+                                .pt_common_benefit__item_ctTit { @include vw-pc(font-size, 24); @include vw-pc(line-height, 30); @include vw-pc(margin-top, 7);}
+                            }
+                        }
+                    }
+
+                    &_ctit {
+                        @include vw-pc(top, 31); @include vw-pc(font-size, 24);
+
+                        .small_txt {@include vw-pc(font-size, 21);}
+
+                        &--add_bd::before {
+                            @include vw-pc(top, 0); @include vw-pc(left, 0);  display: inline-block; vertical-align: middle; content: ""; @include vw-pc(margin-right, 5);
+                            @include vw-pc(width, 20); @include vw-pc(height, 35); background: url('../../../is/images/benefit/gt9_fe_benefit_tit_badge_ico01_pc_v1.png') center / cover no-repeat;
+                        }
+                    }
+
+                    &_cbitit { @include vw-pc(font-size, 18); @include vw-pc(line-height, 26);}
+                }
+
+                &__bottom {
+                    width: 100%; @include vw-pc(margin-top, 49); @include vw-pc(padding, 0 24);
+    
+                    .pt_common_benefit__btn {
+                        display: flex; flex-direction: column; justify-content: center; align-items: center;
+    
+                        &--more {display: flex; justify-content: center; align-items: center; @include vw-pc(width, 166); @include vw-pc(height, 58); @include vw-pc(margin-bottom, 36); @include vw-pc(border-radius, 29); color: #fff; @include vw-pc(font-size, 20); font-weight: 700; letter-spacing: -0.025em;}
+                        &--anchor {
+                            position: relative; @include vw-pc(width, 114); @include vw-pc(height, 18); border-bottom: 1px solid #000; @include vw-pc(font-size, 14); font-weight: 700; letter-spacing: -0.025em;
+    
+                            &::after {position: absolute; @include vw-pc(top, 5); @include vw-pc(right, 0); display: block; content: ''; @include vw-pc(width, 11); @include vw-pc(height, 7); background: url('../../../is/images/benefit/tabs9_btn_anchor_pc.png') center / cover no-repeat;}
+                        }
+                    }                    
+                }
+            }
+            .pt_hide--mo {display: inline-block;}
+        }
+    }
+}

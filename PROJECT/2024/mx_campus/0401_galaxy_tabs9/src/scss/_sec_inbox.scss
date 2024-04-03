@@ -1,0 +1,61 @@
+// MOBILE
+.galaxy_tabs9 {
+    .sec_inbox {
+        @include vw-mo(padding, 94 0 99);
+
+        .pt_inbox {
+            @include vw-mo(width, 672); margin: 0 auto;
+
+            &__title {@include vw-mo(margin-bottom, 40); @include vw-mo(font-size, 56); @include vw-mo(line-height, 70); font-weight: 700; letter-spacing: -0.025em; text-align: center;}
+            &__tab {
+                display: flex; justify-content: center; align-items: center; @include vw-mo(gap, 45); @include vw-mo(margin-bottom, 60);
+
+                &--btn {
+                    border-bottom: 4px solid #fff; @include vw-mo(border-width, 4); color: #B2B2B2; @include vw-mo(font-size, 24); @include vw-mo(line-height, 55); font-weight: 700; letter-spacing: -0.025em;
+
+                    .en {vertical-align: baseline;}
+                    &.active {border-bottom: 1px solid #000; @include vw-mo(border-width, 3); color: #000;}
+                }
+            }
+
+            &__cont {
+                position: relative;
+        
+                &--img {width: 100%; @include vw-mo(height, 526); @include vw-mo(border-radius, 20); overflow: hidden;}
+                &--list {position: absolute; @include vw-mo(top, 40); @include vw-mo(right, 40); z-index:90; }
+                &--item {position: relative; color: #666; @include vw-mo(font-size, 24); @include vw-mo(line-height, 32); letter-spacing: -0.025em; text-align: right; }
+            }
+        }
+    }
+}
+
+// pc
+@media screen and (min-width: 769px) {
+    .galaxy_tabs9 {
+        .sec_inbox {
+            @include vw-pc(padding, 116 0 104); 
+
+            .pt_inbox {
+                @include vw-pc(width, 1320); margin: 0 auto;
+                
+                &__title {@include vw-pc(margin-bottom, 75); @include vw-pc(font-size, 46); @include vw-pc(line-height, 46); letter-spacing: -0.025em;}
+                &__tab {
+                    display: flex; justify-content: center; align-items: center; @include vw-pc(gap, 158); @include vw-pc(margin-bottom, 40);
+    
+                    &--btn {
+                        @include vw-pc(border-width, 3); color: #B2B2B2; @include vw-pc(font-size, 26); @include vw-pc(padding, 0 20 25 20); @include vw-pc(line-height, 30); font-weight: 700; letter-spacing: -0.025em;
+    
+                        .en {vertical-align: baseline;}
+                        &.active {border-bottom: 1px solid #000; @include vw-pc(border-width, 3); color: #000;  }
+                    }
+                }
+
+                &__cont {    
+                    &--img {@include vw-pc(height, 600); @include vw-pc(border-radius, 20);}
+                    &--list {@include vw-pc(top, 49); @include vw-pc(right, 50); text-align: right;}
+                    &--item {@include vw-pc(font-size, 14); @include vw-pc(line-height, 22); letter-spacing: -0.025em; text-align: right; color: #666;}
+                }
+            }
+        }
+    }
+}

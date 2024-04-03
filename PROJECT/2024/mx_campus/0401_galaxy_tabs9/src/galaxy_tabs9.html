@@ -1,0 +1,72 @@
+@@include('../../../../../s-common/inc/header_ebiz_230707.html')
+
+<!-- split galaxy_tabs9.txt -->
+<link rel="stylesheet" href="./css/galaxy_tabs9.css" inline>
+
+<!-- 옴니태킹 페이지트래킹 -->
+<script type="text/javascript">
+	digitalData.page.pathIndicator.depth_2 = "galaxycampus";
+	digitalData.page.pathIndicator.depth_3 = "gcsPromotion";
+	digitalData.page.pathIndicator.depth_4 = "galaxy-tabs9-series";
+</script>
+
+<!-- event popup tem -->
+<tiles:putattribute name="tooltip"><div id="tooltipArea_Event3791"></div></tiles:putattribute>
+<tiles:putattribute name="popup"><div id="popupArea_Event3791"></div></tiles:putattribute>
+<input type="hidden" id="openPop" data-st-path="/event/galaxycampus/">
+
+<main class="sec_project_wrap galaxy_tabs9" id="galaxy_tabs9">
+    @@include('./split-html/sec_hub.html')
+    <!-- //sec_hub -->
+
+	@@include('./split-html/sec_kv.html')
+    <!-- //sec_kv -->
+
+    <!-- @@include('./split-html/sec_banner.html') -->
+    <!-- //sec_banner -->
+
+    @@include('./split-html/sec_sticky.html')
+    <!-- //sec_sticky -->
+
+    @@include('./split-html/sec_buying.html')
+    <!-- //sec_nav -->
+
+    @@include('./split-html/sec_nav.html')
+	<!--// sec_nav -->
+
+    @@include('./split-html/sec_benefit.html')
+	<!--// sec_benfit -->
+
+    @@include('./split-html/sec_inbox.html')
+	<!--// sec_inbox -->
+
+    @@include('./split-html/sec_review.html')
+    <!-- //sec_review -->
+
+    @@include('./split-html/sec_notice.html')
+    <!-- //sec_notice -->
+
+    @@include('./split-html/sec_modal.html')
+    <!-- //sec_notice -->
+</main>
+<div class="layer-pop layer-normal" id="popupLayer" tabindex="0" data-popup-layer="popupLayer" data-focus="popupLayer"></div>
+
+<script defer src="https://images.samsung.com/kdp/event/sec/assets/js/service_20240307.min.js"></script>
+<script defer src="./js/buying_launching.min.js" inline></script>
+<script defer src="./js/galaxy_tabs9.min.js" inline></script>
+<script defer src="https://www.samsung.com/sec/static/_script/lozad.min.js"></script>
+<script defer>
+	$(document).ready(function(){
+		var observer = lozad();
+		observer.observe()
+	});
+</script>
+
+<!-- <script src="./js/isqa.min.js" inline></script> -->
+<!-- 응모팝업 무한로딩 걸릴 시 주석 해제하고 사용  -->
+<!-- <script src="/sec/static/_script/jquery.form.min.js"></script> -->
+<!-- 응모팝업  내 우편번호 검색 기능 있을때 주석 해제 후 사용 -->
+<!-- <script type="text/javascript" src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js" charset="utf-8"></script> -->
+<!-- split stop -->
+
+@@include('../../../../../s-common/inc/footer_ebiz_230707.html')
