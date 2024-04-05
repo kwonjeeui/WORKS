@@ -24,7 +24,17 @@
             "**txt15**":"원통 안에 물줄기가 강하게 나오는",
             "**txt16**":"AI 이불세탁/건조가 가능한 기능설명 이미지, 겨울 이불, THINKING, 유연제 도포 개선, 양방향 회전을 거쳐서 이불세탁과 건조 가능 여름 이불은 THINKING, 탈수 강도와 헹굼 횟수이 되는 기능 설명",
             "**txt17**":"신용카드 10장의 무게만큼 미세플라스틱 배출량 감소 설명",
-            "**txt18**":"원통형 진동 감지센서 기계"
+            "**txt18**":"원통형 진동 감지센서 기계",
+            "**txt19**":"확대된 세탁기 문이 열려있는 이미지",
+            "**txt20**":"바람이 나오는 구멍에서  60도로 건조가 된다는 이미지",
+            "**txt21**":"정밀센서로 정확하고 빠르게 AI맞춤 건조",
+            "**txt22**":"AI이불 건조",
+            "**txt23**":"상단에 AI가 알아서라는 문구와 함께 원통형에 세탁물이 돌아가는 이미지",
+            "**txt24**":"이불 빨래를 위한 3가지 코스에 대한 설명, 세탁을 표현한 이미지가 좌측에 있고, 우측엔 건조를 표현한 이미지가 있음"
+
+
+
+
          },
          "blind": {
             "**blind1**":"하나로 세탁·건조하는 ONE 솔루션",
@@ -45,7 +55,17 @@
             "**blind16**":"AI 이불세탁/건조",
             "**blind17**":"미세플라스틱저감 코스",
             "**blind18**":"진동소음 저감 시스템",
-            "**blind19**":"AI 맞춤세탁/건조"
+            "**blind19**":"AI 맞춤세탁/건조",
+            "**blind20**":"AI 버블 & 자연의 좋은건조",
+            "**blind21**":"오토 오픈 도어",
+            "**blind22**":"자연의 좋은건조",
+            "**blind23**":"AI 맞춤건조",
+            "**blind24**":"AI 이불건조"
+
+
+
+
+
          }
       },
       "pc": {
@@ -59,6 +79,16 @@
                {"image":"gd_WD25DB8995BZMC_04_pc_v1.jpg", "alt":"**txt4**", "blind":"**blind4**"}
             ]
          },
+         "WD25DB8995BB":{
+            "startIdx": 0,
+            "slide": [
+               {"isPdImg": true},
+               {"image":"gd_WD25DB8995BB_01_pc.jpg", "alt":"**txt1**", "blind":"**blind1**"},
+               {"image":"gd_WD25DB8995BB_02_pc.jpg", "alt":"**txt2**", "blind":"**blind2**"},
+               {"image":"gd_WD25DB8995BB_03_pc.jpg", "alt":"**txt3**", "blind":"**blind3**"},
+               {"image":"gd_WD25DB8995BB_04_pc.jpg", "alt":"**txt4**", "blind":"**blind4**"}
+            ]
+         },
          
          "WF24D21CVVE":{
             "startIdx": 0,
@@ -66,8 +96,7 @@
                {"isPdImg": true},
                {"image":"gd_WF24D21CVVE_01_pc.jpg", "alt":"**txt5**", "blind":"**blind5**"},
                {"image":"gd_WF24D21CVVE_02_pc_v2.jpg", "alt":"**txt6**", "blind":"**blind6**"},
-               {"image":"gd_WF24D21CVVE_03_pc_v2.jpg", "alt":"**txt7**", "blind":"**blind7**"},
-               {"image":"gd_WF24D21CVVE_04_pc.jpg", "alt":"**txt8**", "blind":"**blind8**"}
+               {"image":"gd_WF24D21CVVE_03_pc_v2.jpg", "alt":"**txt7**", "blind":"**blind7**"}
             ]
          },
          "WF24D21CEEE":{
@@ -264,69 +293,115 @@
          "WF24D22CVVE":{
             "startIdx": 0,
             "slide": [
-               {"isPdImg": true}
+               {"isPdImg": true},
+               {"image":"gd_WF24D22CVVE_01_pc.jpg", "alt":"**txt23**", "blind":"**blind15**"},
+               {"image":"gd_WF24D22CVVE_02_pc.jpg", "alt":"**txt24**", "blind":"**blind112**"},
+               {"image":"gd_WF24D22CVVE_03_pc.jpg", "alt":"**txt19**", "blind":"**blind20**"},
+               {"image":"gd_WF24D22CVVE_04_pc.jpg", "alt":"**txt6**", "blind":"**blind6**"}
+
             ]
          },
          "WF24D22CEEE":{
             "startIdx": 0,
             "slide": [
-               {"isPdImg": true}
+               {"isPdImg": true},
+               {"image":"gd_WF24D22CEEE_01_pc.jpg", "alt":"**txt23**", "blind":"**blind15**"},
+               {"image":"gd_WF24D22CEEE_02_pc.jpg", "alt":"**txt24**", "blind":"**blind112**"},
+               {"image":"gd_WF24D22CEEE_03_pc.jpg", "alt":"**txt19**", "blind":"**blind20**"},
+               {"image":"gd_WF24D22CEEE_04_pc.jpg", "alt":"**txt6**", "blind":"**blind6**"}
+
             ]
          },
          "WF24D22CWWE":{
             "startIdx": 0,
             "slide": [
-               {"isPdImg": true}
+               {"isPdImg": true},
+               {"image":"gd_WF24D22CWWE_01_pc.jpg", "alt":"**txt23**", "blind":"**blind15**"},
+               {"image":"gd_WF24D22CWWE_02_pc.jpg", "alt":"**txt24**", "blind":"**blind112**"},
+               {"image":"gd_WF24D22CWWE_03_pc.jpg", "alt":"**txt19**", "blind":"**blind20**"},
+               {"image":"gd_WF24D22CWWE_04_pc.jpg", "alt":"**txt6**", "blind":"**blind6**"}
+
             ]
          },
          "WF2117HCVVC":{
             "startIdx": 0,
             "slide": [
-               {"isPdImg": true}
+               {"isPdImg": true},
+               {"image":"gd_WF2117HCVVC_01_pc.jpg", "alt":"**txt9**", "blind":"**blind9**"},
+               {"image":"gd_WF2117HCVVC_02_pc.jpg", "alt":"**txt5**", "blind":"**blind15**"},
+               {"image":"gd_WF2117HCVVC_03_pc.jpg", "alt":"**txt10**", "blind":"**blind11**"},
+               {"image":"gd_WF2117HCVVC_04_pc.jpg", "alt":"**txt16**", "blind":"**blind16**"}
             ]
          },
          "WF2117HCEEC":{
             "startIdx": 0,
             "slide": [
-               {"isPdImg": true}
+               {"isPdImg": true},
+               {"image":"gd_WF2117HCEEC_01_pc.jpg", "alt":"**txt9**", "blind":"**blind9**"},
+               {"image":"gd_WF2117HCEEC_02_pc.jpg", "alt":"**txt5**", "blind":"**blind15**"},
+               {"image":"gd_WF2117HCEEC_03_pc.jpg", "alt":"**txt10**", "blind":"**blind11**"},
+               {"image":"gd_WF2117HCEEC_04_pc.jpg", "alt":"**txt16**", "blind":"**blind16**"}
             ]
          },
          "WF2117HCWWC":{
             "startIdx": 0,
             "slide": [
-               {"isPdImg": true}
+               {"isPdImg": true},
+               {"image":"gd_WF2117HCWWC_01_pc.jpg", "alt":"**txt9**", "blind":"**blind9**"},
+               {"image":"gd_WF2117HCWWC_02_pc.jpg", "alt":"**txt5**", "blind":"**blind15**"},
+               {"image":"gd_WF2117HCWWC_03_pc.jpg", "alt":"**txt10**", "blind":"**blind11**"},
+               {"image":"gd_WF2117HCWWC_04_pc.jpg", "alt":"**txt16**", "blind":"**blind16**"}
             ]
          },
          "WF2422HDEEH":{
             "startIdx": 0,
             "slide": [
-               {"isPdImg": true}
+               {"isPdImg": true},
+               {"image":"gd_WF2422HDEEH_01_pc.jpg", "alt":"**txt10**", "blind":"**blind20**"},
+               {"image":"gd_WF2422HDEEH_02_pc.jpg", "alt":"**txt5**", "blind":"**blind15**"},
+               {"image":"gd_WF2422HDEEH_03_pc.jpg", "alt":"**txt6**", "blind":"**blind6**"},
+               {"image":"gd_WF2422HDEEH_04_pc.jpg", "alt":"**txt16**", "blind":"**blind12**"}
             ]
          },
          "WF25CB8890BB":{
             "startIdx": 0,
             "slide": [
-               {"isPdImg": true}
+               {"isPdImg": true},
+               {"image":"gd_WF25CB8890BB_01_pc.jpg", "alt":"**txt10**", "blind":"**blind11**"},
+               {"image":"gd_WF25CB8890BB_02_pc.jpg", "alt":"**txt4**", "blind":"**blind4**"},
+               {"image":"gd_WF25CB8890BB_03_pc.jpg", "alt":"**txt11**", "blind":"**blind12**"},
+               {"image":"gd_WF25CB8890BB_04_pc.jpg", "alt":"**txt7**", "blind":"**blind17**"}
             ]
          },
          "WF21CB6850BW":{
             "startIdx": 0,
             "slide": [
-               {"isPdImg": true}
+               {"isPdImg": true},
+               {"image":"gd_WF21CB6850BW_01_pc.jpg", "alt":"**txt5**", "blind":"**blind5**"},
+               {"image":"gd_WF21CB6850BW_02_pc.jpg", "alt":"**txt11**", "blind":"**blind12**"},
+               {"image":"gd_WF21CB6850BW_03_pc.jpg", "alt":"**txt12**", "blind":"**blind10**"}
             ]
          },
          "DV20CB8890BV":{
             "startIdx": 0,
             "slide": [
-               {"isPdImg": true}
+               {"isPdImg": true},
+               {"image":"gd_DV20CB8890BV_01_pc.jpg", "alt":"**txt19**", "blind":"**blind21**"},
+               {"image":"gd_DV20CB8890BV_02_pc.jpg", "alt":"**txt20**", "blind":"**blind22**"},
+               {"image":"gd_DV20CB8890BV_03_pc.jpg", "alt":"**txt6**", "blind":"**blind6**"}
             ]
          },
          "DV20CB8800BW":{
             "startIdx": 0,
             "slide": [
-               {"isPdImg": true}
+               {"isPdImg": true},
+               {"image":"gd_DV20CB8800BW_01_pc.jpg", "alt":"**txt21**", "blind":"**blind23**"},
+               {"image":"gd_DV20CB8800BW_02_pc.jpg", "alt":"**txt20**", "blind":"**blind22**"},
+               {"image":"gd_DV20CB8800BW_03_pc.jpg", "alt":"**txt22**", "blind":"**blind24**"},
+               {"image":"gd_DV20CB8800BW_04_pc.jpg", "alt":"**txt12**", "blind":"**blind10**"}
             ]
          }
+         
       },
 
       "mobile": {
@@ -340,14 +415,23 @@
                {"image":"gd_WD25DB8995BZMC_04_mo_v2.jpg", "alt":"**txt4**", "blind":"**blind4**"}
             ]
          },
+         "WD25DB8995BB":{
+            "startIdx": 0,
+            "slide": [
+               {"isPdImg": true},
+               {"image":"gd_WD25DB8995BB_01_mo.jpg", "alt":"**txt1**", "blind":"**blind1**"},
+               {"image":"gd_WD25DB8995BB_02_mo.jpg", "alt":"**txt2**", "blind":"**blind2**"},
+               {"image":"gd_WD25DB8995BB_03_mo.jpg", "alt":"**txt3**", "blind":"**blind3**"},
+               {"image":"gd_WD25DB8995BB_04_mo.jpg", "alt":"**txt4**", "blind":"**blind4**"}
+            ]
+         },
          "WF24D21CVVE":{
             "startIdx": 0,
             "slide": [
                {"isPdImg": true},
                {"image":"gd_WF24D21CVVE_01_mo.jpg", "alt":"**txt5**", "blind":"**blind5**"},
                {"image":"gd_WF24D21CVVE_02_mo_v2.jpg", "alt":"**txt6**", "blind":"**blind6**"},
-               {"image":"gd_WF24D21CVVE_03_mo_v3.jpg", "alt":"**txt7**", "blind":"**blind7**"},
-               {"image":"gd_WF24D21CVVE_04_mo.jpg", "alt":"**txt8**", "blind":"**blind8**"}
+               {"image":"gd_WF24D21CVVE_03_mo_v3.jpg", "alt":"**txt7**", "blind":"**blind7**"}
             ]
          },
          "WF24D21CEEE":{
@@ -542,69 +626,115 @@
          "WF24D22CVVE":{
             "startIdx": 0,
             "slide": [
-               {"isPdImg": true}
+               {"isPdImg": true},
+               {"image":"gd_WF24D22CVVE_01_mo.jpg", "alt":"**txt15**", "blind":"**blind15**"},
+               {"image":"gd_WF24D22CVVE_02_mo.jpg", "alt":"**txt16**", "blind":"**blind112**"},
+               {"image":"gd_WF24D22CVVE_03_mo.jpg", "alt":"**txt19**", "blind":"**blind20**"},
+               {"image":"gd_WF24D22CVVE_04_mo.jpg", "alt":"**txt6**", "blind":"**blind6**"}
+
             ]
          },
          "WF24D22CEEE":{
             "startIdx": 0,
             "slide": [
-               {"isPdImg": true}
+               {"isPdImg": true},
+               {"image":"gd_WF24D22CEEE_01_mo.jpg", "alt":"**txt15**", "blind":"**blind15**"},
+               {"image":"gd_WF24D22CEEE_02_mo.jpg", "alt":"**txt16**", "blind":"**blind112**"},
+               {"image":"gd_WF24D22CEEE_03_mo.jpg", "alt":"**txt19**", "blind":"**blind20**"},
+               {"image":"gd_WF24D22CEEE_04_mo.jpg", "alt":"**txt6**", "blind":"**blind6**"}
+
             ]
          },
          "WF24D22CWWE":{
             "startIdx": 0,
             "slide": [
-               {"isPdImg": true}
+               {"isPdImg": true},
+               {"image":"gd_WF24D22CWWE_01_mo.jpg", "alt":"**txt15**", "blind":"**blind15**"},
+               {"image":"gd_WF24D22CWWE_02_mo.jpg", "alt":"**txt16**", "blind":"**blind112**"},
+               {"image":"gd_WF24D22CWWE_03_mo.jpg", "alt":"**txt19**", "blind":"**blind20**"},
+               {"image":"gd_WF24D22CWWE_04_mo.jpg", "alt":"**txt6**", "blind":"**blind6**"}
+
             ]
          },
          "WF2117HCVVC":{
             "startIdx": 0,
             "slide": [
-               {"isPdImg": true}
+               {"isPdImg": true},
+               {"image":"gd_WF2117HCVVC_01_mo.jpg", "alt":"**txt9**", "blind":"**blind9**"},
+               {"image":"gd_WF2117HCVVC_02_mo.jpg", "alt":"**txt5**", "blind":"**blind15**"},
+               {"image":"gd_WF2117HCVVC_03_mo.jpg", "alt":"**txt10**", "blind":"**blind11**"},
+               {"image":"gd_WF2117HCVVC_04_mo.jpg", "alt":"**txt16**", "blind":"**blind16**"}
             ]
          },
          "WF2117HCEEC":{
             "startIdx": 0,
             "slide": [
-               {"isPdImg": true}
+               {"isPdImg": true},
+               {"image":"gd_WF2117HCEEC_01_mo.jpg", "alt":"**txt9**", "blind":"**blind9**"},
+               {"image":"gd_WF2117HCEEC_02_mo.jpg", "alt":"**txt5**", "blind":"**blind15**"},
+               {"image":"gd_WF2117HCEEC_03_mo.jpg", "alt":"**txt10**", "blind":"**blind11**"},
+               {"image":"gd_WF2117HCEEC_04_mo.jpg", "alt":"**txt16**", "blind":"**blind16**"}
             ]
          },
          "WF2117HCWWC":{
             "startIdx": 0,
             "slide": [
-               {"isPdImg": true}
+               {"isPdImg": true},
+               {"image":"gd_WF2117HCWWC_01_mo.jpg", "alt":"**txt9**", "blind":"**blind9**"},
+               {"image":"gd_WF2117HCWWC_02_mo.jpg", "alt":"**txt5**", "blind":"**blind15**"},
+               {"image":"gd_WF2117HCWWC_03_mo.jpg", "alt":"**txt10**", "blind":"**blind11**"},
+               {"image":"gd_WF2117HCWWC_04_mo.jpg", "alt":"**txt16**", "blind":"**blind16**"}
             ]
          },
          "WF2422HDEEH":{
             "startIdx": 0,
             "slide": [
-               {"isPdImg": true}
+               {"isPdImg": true},
+               {"image":"gd_WF2422HDEEH_01_mo.jpg", "alt":"**txt10**", "blind":"**blind20**"},
+               {"image":"gd_WF2422HDEEH_02_mo.jpg", "alt":"**txt5**", "blind":"**blind15**"},
+               {"image":"gd_WF2422HDEEH_03_mo.jpg", "alt":"**txt6**", "blind":"**blind6**"},
+               {"image":"gd_WF2422HDEEH_04_mo.jpg", "alt":"**txt16**", "blind":"**blind12**"}
             ]
          },
          "WF25CB8890BB":{
             "startIdx": 0,
             "slide": [
-               {"isPdImg": true}
+               {"isPdImg": true},
+               {"image":"gd_WF25CB8890BB_01_mo.jpg", "alt":"**txt10**", "blind":"**blind11**"},
+               {"image":"gd_WF25CB8890BB_02_mo.jpg", "alt":"**txt4**", "blind":"**blind4**"},
+               {"image":"gd_WF25CB8890BB_03_mo.jpg", "alt":"**txt11**", "blind":"**blind12**"},
+               {"image":"gd_WF25CB8890BB_04_mo.jpg", "alt":"**txt7**", "blind":"**blind17**"}
             ]
          },
          "WF21CB6850BW":{
             "startIdx": 0,
             "slide": [
-               {"isPdImg": true}
+               {"isPdImg": true},
+               {"image":"gd_WF21CB6850BW_01_mo.jpg", "alt":"**txt5**", "blind":"**blind5**"},
+               {"image":"gd_WF21CB6850BW_02_mo.jpg", "alt":"**txt11**", "blind":"**blind12**"},
+               {"image":"gd_WF21CB6850BW_03_mo.jpg", "alt":"**txt12**", "blind":"**blind10**"}
             ]
          },
          "DV20CB8890BV":{
             "startIdx": 0,
             "slide": [
-               {"isPdImg": true}
+               {"isPdImg": true},
+               {"image":"gd_DV20CB8890BV_01_mo.jpg", "alt":"**txt19**", "blind":"**blind21**"},
+               {"image":"gd_DV20CB8890BV_02_mo.jpg", "alt":"**txt20**", "blind":"**blind22**"},
+               {"image":"gd_DV20CB8890BV_03_mo.jpg", "alt":"**txt6**", "blind":"**blind6**"}
             ]
          },
          "DV20CB8800BW":{
             "startIdx": 0,
             "slide": [
-               {"isPdImg": true}
+               {"isPdImg": true},
+               {"image":"gd_DV20CB8800BW_01_mo.jpg", "alt":"**txt21**", "blind":"**blind23**"},
+               {"image":"gd_DV20CB8800BW_02_mo.jpg", "alt":"**txt20**", "blind":"**blind22**"},
+               {"image":"gd_DV20CB8800BW_03_mo.jpg", "alt":"**txt22**", "blind":"**blind24**"},
+               {"image":"gd_DV20CB8800BW_04_mo.jpg", "alt":"**txt12**", "blind":"**blind10**"}
             ]
          }
+         
       }
    },
 
@@ -616,56 +746,24 @@
             "mobile": "sku"
          },
          "alt": {
-            "**txt1**":"세탁물이 들어가있고, 세탁과 건조 코스로 99분안에 해결할수 있다는",
-            "**txt2**":"AI 맞춤코스로 세탁부터 건조까지 가능하다는",
-            "**txt3**":"음성인식 AI 허브로 세탁 건조 코스 확인하기",
-            "**txt4**":"AI 세제 자동투입이 작동되는 부품 위치 안내",
-            "**txt5**":"AI 맞춤세탁으로 세탁부터 탈수까지 알아서에 대한 설명",
-            "**txt6**":"세탁기 중앙에서 공간 제습이 가능한 환기구가 열려있는 이미지와 AI 공간제습이 50% 적정습도에서 가능하다는",
-            "**txt7**":"미세플라스틱저감 코스로 연간 약 49g 미세플라스틱 배출감소 (신용카드 약 10장 만큼 무게) AI 에너지절약 모드로 세탁기 최대 60% 건조기 최대 35% 에너지 절감",
-            "**txt8**":"살균 세탁, 살균 건조로 의류에 있는 유해 세균을 99.9% 살균하고, 무세제통세척+와 열품 내부 살균, 직접 관리형 열교환기로 기기 내부까지 구석구석 케어합니다.",
-            "**txt9**":"하나의 바디로 딱 맞춘 원바디 디자인",
-            "**txt10**":"세탁기에 버블이 있고 그위에 세탁물이 들어있는",
-            "**txt11**":"AI 이불세탁과 건조가 가능한 코스 선택 화면",
-            "**txt12**":"AI 에너지절약으로 이번달 예상 사용량 체크가 가능한 안내판 이미지, AI 절약모드로 전력 사용량을 최소화하여 코스 완료!",
-            "**txt13**":"빨랫감이 돌고있고 퍼블이 세척하는",
-            "**txt14**":"원통에서 물줄기가 나오고 세척 가능하다는",
-            "**txt15**":"원통 안에 물줄기가 강하게 나오는",
-            "**txt16**":"AI 이불세탁/건조가 가능한 기능설명 이미지, 겨울 이불, THINKING, 유연제 도포 개선, 양방향 회전을 거쳐서 이불세탁과 건조 가능 여름 이불은 THINKING, 탈수 강도와 헹굼 횟수이 되는 기능 설명",
-            "**txt17**":"신용카드 10장의 무게만큼 미세플라스틱 배출량 감소 설명",
-            "**txt18**":"원통형 진동 감지센서 기계"
+            "**txt1**":""
+
          },
          "blind": {
-            "**blind1**":"하나로 세탁·건조하는 ONE 솔루션",
-            "**blind2**":"AI 맞춤 코스",
-            "**blind3**":"음성인식 AI 허브",
-            "**blind4**":"AI 세제자동투입",
-            "**blind5**":"AI 맞춤세탁",
-            "**blind6**":"AI 공간제습",
-            "**blind7**":"미세플라스틱저감 코스 & AI 에너지 절약",
-            "**blind8**":"의류 99.9% 살균, 기기 내부 케어",
-            "**blind9**":"원바디 디자인",
-            "**blind10**":"AI 에너지 절약",
-            "**blind11**":"에코버블",
-            "**blind12**":"AI 이불세탁",
-            "**blind13**":"버블폭포",
-            "**blind14**":"입체돌풍세탁",
-            "**blind15**":"무세제통세척",
-            "**blind16**":"AI 이불세탁/건조",
-            "**blind17**":"미세플라스틱저감 코스",
-            "**blind18**":"진동소음 저감 시스템",
-            "**blind19**":"AI 맞춤세탁/건조"
+            "**blind1**":""
          }
       },
       "pc": {
          "WD25DB8995BZ":{
             "startIdx": 0,
             "slide": [
-               {"isPdImg": true},
-               {"image":"gd_WD25DB8995BZMC_01_pc.jpg", "alt":"**txt1**", "blind":"**blind1**"},
-               {"image":"gd_WD25DB8995BZMC_02_pc_v1.jpg", "alt":"**txt2**", "blind":"**blind2**"},
-               {"image":"gd_WD25DB8995BZMC_03_pc.jpg", "alt":"**txt3**", "blind":"**blind3**"},
-               {"image":"gd_WD25DB8995BZMC_04_pc_v1.jpg", "alt":"**txt4**", "blind":"**blind4**"}
+               {"isPdImg": true}
+            ]
+         },
+         "WD25DB8995BB":{
+            "startIdx": 0,
+            "slide": [
+               {"isPdImg": true}
             ]
          }
       },
@@ -674,11 +772,13 @@
          "WD25DB8995BZ":{
             "startIdx": 0,
             "slide": [
-               {"isPdImg": true},
-               {"image":"gd_WD25DB8995BZMC_01_mo.jpg", "alt":"**txt1**", "blind":"**blind1**"},
-               {"image":"gd_WD25DB8995BZMC_02_mo_v1.jpg", "alt":"**txt2**", "blind":"**blind2**"},
-               {"image":"gd_WD25DB8995BZMC_03_mo_v2.jpg", "alt":"**txt3**", "blind":"**blind3**"},
-               {"image":"gd_WD25DB8995BZMC_04_mo_v2.jpg", "alt":"**txt4**", "blind":"**blind4**"}
+               {"isPdImg": true}
+            ]
+         },
+         "WD25DB8995BB":{
+            "startIdx": 0,
+            "slide": [
+               {"isPdImg": true}
             ]
          }
       }

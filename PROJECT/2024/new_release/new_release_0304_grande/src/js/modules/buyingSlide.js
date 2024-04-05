@@ -64,7 +64,7 @@ export class BuyingSlide {
 
         let options = {
             slidesPerView: 'auto',
-            // loop: buyingSlide.options.loop,
+            loop: buyingSlide.options.loop,
             pagination: {
                 el: '[data-buying-pagination]',
                 clickable: true,
@@ -73,8 +73,8 @@ export class BuyingSlide {
             observer: true,
             observeParents: true,
             observeSlideChildren: true,
-            allowTouchMove: false,
-            loop: false,
+            // allowTouchMove: true,
+            // loop: true,
             on: {
                 init: function () {
                     // autoplay play/pause
@@ -159,6 +159,15 @@ export class BuyingSlide {
         Object.keys(productAll).forEach(function(item){
             if(item === buyingSlide.slideId[slideKey]){
                 arrImg = productAll[item].slide;
+                const $control =  document.querySelector('#buying_slide_ai .pt_prd-slide__control');
+                const $wrapper = document.querySelector('.pt_buying .swiper-wrapper');
+                if(arrImg.length == 1) {
+                    $control.style.display = 'none'; 
+                    $wrapper.classList.add('disabled');
+                } else {
+                    $control.style.display = 'flex';
+                    $wrapper.classList.remove('disabled');
+                }
                 if(isOnce){
                     startIdx = productAll[item].startIdx ? productAll[item].startIdx : 0;
                 }

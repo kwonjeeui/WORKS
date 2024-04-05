@@ -86,8 +86,7 @@ function initBuyingAi() {
                 // 제품 슬라이드 초기화
                 buyingSlideAi = new BuyingSlide(buying, {
                     target: '#buying_slide_ai',
-                    imageData: config.slideImage.buyingSlideAi,
-                    autoplay: false
+                    imageData: config.slideImage.buyingSlideAi
                 });
 
                 // 바잉툴 슬라이드 첫번째만 아래 문구 없애기
@@ -221,8 +220,7 @@ function initBuyingCombo() {
                 // 제품 슬라이드 초기화
                 buyingSlideCombo = new BuyingSlide(buying, {
                     target: '#buying_slide_combo',
-                    imageData: config.slideImage.buyingSlideCombo,
-                    autoplay: false
+                    imageData: config.slideImage.buyingSlideCombo
                 });
 
                 // 바잉툴 슬라이드 첫번째만 아래 문구 없애기

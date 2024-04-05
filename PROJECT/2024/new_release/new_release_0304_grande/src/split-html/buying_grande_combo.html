@@ -6,7 +6,7 @@
         <div class="pt_buying combo" id="pt_buying_combo">
             <div class="pt_prd-slide" id="pt_prd-slide">
                 <div class="swiper-container" id="buying_slide_combo" data-buying-sticky-thumnail>
-                    <ul class="swiper-wrapper"></ul>
+                    <ul class="swiper-wrapper disabled"></ul>
 
                     <!-- <div class="swiper-button-prev pt_buying-prev pt_bg-image"></div>
                     <div class="swiper-button-next pt_buying-next pt_bg-image"></div> -->
@@ -221,20 +221,20 @@
                                 색상
                             </p>
                         </div>
-                        <ul class="pt_option__list pt_option__list--grid03" data-opt-key="optCdDD">
-                            <li class="pt_option__item pt_option__item--model" data-opt-btn>
-                                <input type="radio" name="optCdDD" id="optDD_1" value="optDD_1" autocomplete="off" data-opt-sku="" />
-                                <label for="optDD_1" class="pt_option__label">
+                        <ul class="pt_option__list pt_option__list--grid02 pt_flex_nowrap" data-opt-key="optCdDD">
+                            <li class="pt_option__item pt_option__item--model pt_option__item--new" data-opt-btn>
+                                <input type="radio" name="optCdDD" id="optDD_2" value="optDD_2" autocomplete="off" data-opt-sku="" />
+                                <label for="optDD_2" class="pt_option__label">
                                     <p class="pt_option__desc">
-                                        <span>다크실버스틸</span>
+                                        <span>새틴 라이트베이지</span>
                                     </p>
                                 </label>
                             </li>
-                            <li class="pt_option__item pt_option__item--model" style="pointer-events:none;">
-                                <input type="radio" autocomplete="off" data-opt-sku="" />
-                                <label class="pt_option__label">
+                            <li class="pt_option__item pt_option__item--model" data-opt-btn>
+                                <input type="radio"  name="optCdDD" id="optDD_1" value="optDD_1" autocomplete="off" data-opt-sku="" />
+                                <label for="optDD_1" class="pt_option__label">
                                     <p class="pt_option__desc">
-                                        <span>새틴 라이트베이지 <br />(예정)</span>
+                                        <span>다크실버스틸</span>
                                     </p>
                                 </label>
                             </li>
@@ -255,7 +255,34 @@
                     <a href="javascript:;" class="pt_btn pt_btn--link" data-role="btnPdUrl" data-omni-type="microsite" data-omni="" target="_blank">자세히 보기</a>
                     <a href="javascript:;" class="pt_btn pt_btn--buy" data-role="btnBuy" data-omni-type="microsite" data-omni="">구매하기</a>                        
                 </div>
+                <div class="pt_banner-combo " data-buying-show="optCdDD!=optDD_1">
+                    <div class="pt_banner-combo__text-box">
+                        <div class="pt_banner-combo__text-top">
+                            <p class="pt_banner-combo__title">알림신청자 대상 <span class="en">5</span>만원 할인 쿠폰 사용 안내</p>
+                            <p class="pt_banner-combo__desc">
+                                구매하기 창에서 쿠폰명 선택 필수<br>
+                                ‘BESPOKE AI 콤보 새틴 라이트베이지 사전알림신청 쿠폰’
+                            </p>
+                            <p class="pt_banner-combo__noti">*할인 쿠폰은 2024년 4월 30일까지 사용 가능</p>
+                        </div>
+                        <div class="">
+                            <p class="pt_banner-combo__title pt_banner-combo__title--bottom">
+                                베스트 리뷰어 챌린지 참여 시<br>
+                                스타벅스 모바일 상품권 <span class="en">3</span>만원 지급</p>
+                            <p class="pt_banner-combo__noti">* 기간 내 구매 후 참여/응모 조건</p>
+                        </div>
+                    </div>
+                    <div class="img_box pt_banner-combo__img">
+                        <img src="../../is/images/unpack_buying/gd_buying_combo_banner_pc_v1.png" alt="50,000원 쿠폰, 스타벅스 카드" class="m_hide" loading=lazy /> 
+                        <img src="../../is/images/unpack_buying/gd_buying_combo_banner_mo_v1.png" alt="50,000원 쿠폰, 스타벅스카드" class="m_show" loading=lazy /> 
+                    </div>
+                </div>
             </div>
+        </div>
+        <div class="pt_buying_notice" data-buying-show="optCdDD!=optDD_1">
+            <a href="javascript:;" class="btn_common btn_toggle pt_buying_notice_btn" data-role-anchor="notice_bnf_single"  title="유의사항 영역으로 이동">
+                새틴 라이트베이지 혜택 유의사항 보기
+            </a>
         </div>
     </div>
 </section>

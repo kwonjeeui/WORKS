@@ -74,33 +74,55 @@ $(document).ready(function(){
         {
             url: 'hcevent12',
             target: '.sec_open_banner',
-            scroll: [-90, -90]
+            scroll: [-150, -150]
         },
         {
             url: 'bestprogram',
             target: '.sec_program',
-            scroll: [-90, -90]
+            scroll: [-150, -150]
         },
         {
             url: 'recommandvod',
             target: '.sec_class',
-            scroll: [-90, -90]
+            scroll: [-150, -150]
         },
         {
             url: 'homeclassevent01',
             target: '.sec_contest',
-            scroll: [-90, -90]
+            scroll: [-150, -150]
         },
         {
             url: 'recommand',
             target: '.sec_event',
-            scroll: [-90, -90]
+            scroll: [-150, -150]
         },
         {
             url: 'homclassvod2',
             target: '.sec_comp',
-            scroll: [-90, -90]
+            scroll: [-150, -150]
+        },
+        {
+            url: 'freeclass',
+            target: '.sec_class',
+            scroll: [-150, -200]
+        },
+        {
+            url: 'healthclass',
+            target: '.pt_link__item--health',
+            scroll: [-230, -530]
+        },
+        {
+            url: 'makeupstyling',
+            target: '.pt_link__item--beauty',
+            scroll: [-230, -530]
+        },
+        {
+            url: 'childedu',
+            target: '.pt_link__item--education',
+            scroll: [-230, -530]
         }
+        
+
         // e: url 명칭 고정 *삭제, 수정하지마세요*
     ]);
 

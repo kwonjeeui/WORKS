@@ -21,7 +21,7 @@
         <div class="inner_1440">
             <div class="pt_txt_box">
                 <h2 class="pt_title">삼성닷컴 회원 혜택</h2>
-                <p class="pt_date en">2024.03.01 <span class="ko">~</span> 2024.03.31</p>
+                <p class="pt_date en">2024.04.01 <span class="ko">~</span> 2024.04.30</p>
                 <p class="pt_des">
                     카드 혜택과 삼성전자 멤버십 포인트까지 <br>
                     삼성닷컴 회원을 위한 특별함을 만나보세요
@@ -37,12 +37,12 @@
         <div class="inner_1440">
             <ul class="pt_nav_list">
                 <!-- 7/1 러닝 체인지로 삭제 -->
-                <!-- <li class="on">
+                <li class="on pt_month">
                     <a href="javascript:;" data-omni-type="microsite" data-omni="sec:eventList:benefitzone:anc_benefit-month" title="이달의 혜택 영역으로 앵커드" class="btn_common" data-role-anchor="benefit_month">
                         이달의 혜택
                     </a>
-                </li> -->
-                <li class="on pt_sale">
+                </li>
+                <li class="pt_sale">
                     <a href="javascript:;" data-omni-type="microsite" data-omni="sec:eventList:benefitzone:anc_billing-discount" title="결제일할인 영역으로 앵커드" class="btn_common" data-role-anchor="billing_discount">
                         결제일할인
                     </a>
@@ -59,7 +59,7 @@
                 </li>
                 <li class="pt_benefit">
                     <a href="javascript:;" data-omni-type="microsite" data-omni="sec:eventList:benefitzone:anc_exclusive-service" title="닷컴 단독 서비스 영역으로 앵커드" class="btn_common" data-role-anchor="exclusive_service">
-                        SPECIAL BENEFIT
+                        닷컴 단독 서비스
                     </a>
                 </li>
             </ul>
@@ -68,29 +68,27 @@
     <!-- // sec_nav -->
 
     <!-- sec_month -->
-    <!-- @@include('./split-html/month.html') -->
+    @@include('./split-html/month.html')
     <!-- //sec_month -->
-    
-    
 
     <!-- sec_samsung_card -->
     @@include('./split-html/samsung_card.html')
     <!-- //sec_samsung_card -->
 
     <!-- 결제일할인 카드 배너 -->
-    @@include('./split-html/banner.html')
+    <!-- @@include('./split-html/banner.html') -->
     <!-- //결제일할인 카드  배너 -->
 
     <!-- sec_card_benefit -->
     @@include('./split-html/card_benefit.html')
     <!-- //sec_card_benefit -->
+    
+    <!-- banner slide -->
+    @@include('./split-html/banner_slide.html')
+     <!-- //sec_banslide -->
 
     <!-- sec_point -->
     @@include('./split-html/point.html')
-    <!-- //sec_point -->
-
-    <!-- sec_point -->
-    <!-- @@include('./split-html/samsung_banner.html') -->
     <!-- //sec_point -->
 
     <!-- sec_special_banner -->
@@ -115,12 +113,18 @@
     </section>
     <!-- //sec_banner -->
     
+    <!-- samsung_banner -->
+    <!-- @@include('./split-html/samsung_banner.html') -->
+    <!-- //samsung_banner -->
+
     <!-- sec_notice -->
     @@include('./split-html/notice.html')
     <!-- //sec_notice -->
+
     <!-- sec_model_popup -->
     @@include('./split-html/model_popup.html')
     <!-- //sec_model_popup -->
+    
     <!-- sec_popup -->
     <!-- @@include('./split-html/popup.html') -->
     <!-- //sec_popup -->

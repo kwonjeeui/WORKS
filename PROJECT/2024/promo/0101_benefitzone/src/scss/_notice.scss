@@ -7,7 +7,9 @@
     .sec_area { @include vw-pc(width, 1390); margin: 0 auto; text-align: left;}
     .notice_area { position: relative; @include vw-pc(padding, 40 0);
         &:last-child { border-bottom:none; }
-        .notice_tit { display: block; position: absolute; @include vw-pc(top, 40);  left: 0;line-height: 1.5; font-weight: 700; color: #ffffff; @include vw-pc(font-size, 16);}
+        &--nopt {@include vw-pc(padding, 0 0 40 0);}
+        &--nopb {@include vw-pc(padding, 40 0 10 0);}
+        .notice_tit {display: block; position: absolute; @include vw-pc(top, 40);  left: 0;line-height: 1.5; font-weight: 700; color: #ffffff; @include vw-pc(font-size, 16);}
         .notice_sub_tit:nth-of-type(2) { @include vw-pc(margin,0 0 20); }
         .notice_list { @include vw-pc(padding-left, 295); color: #a3a3a3;
             li {  position:relative; @include vw-pc(padding, 0 0 10 15); line-height: 1.5; @include vw-pc(word-spacing, -0.2); @include vw-pc(font-size, 16);
@@ -27,6 +29,7 @@
                     &:before { display: none; }
                 }
             }
+            &--top {@include vw-pc(margin-bottom, 8);}
         }
         .pt_table_wrap{position: relative; @include vw-pc(width, 608); @include vw-pc(height, 80);}
         .pt_table_wrap1{position: relative; @include vw-pc(width, 608); @include vw-pc(height, 50);}
@@ -42,6 +45,8 @@
     .sec_notice { @include vw-mo(padding, 45 0);  @include vw-mo(font-size, 24);
         .sec_area { @include vw-mo(width, 610); }
         .notice_area { @include vw-mo(padding, 45 0);
+            &--nopt {@include vw-mo(padding, 0 0 45 0);}
+            &--nopb {@include vw-mo(padding, 45 0 20 0);}
             .notice_tit { position: static; @include vw-mo(top, 50); left: 0;  @include vw-mo(padding-bottom, 20); @include vw-mo(font-size, 24); }
             .notice_sub_tit { @include vw-mo(margin, 20 0); @include vw-mo(padding-left, 0); color: rgba(255, 255, 255, 0.4);}
             .notice_sub_tit:nth-of-type(2) { @include vw-mo(margin,0 0 20); }

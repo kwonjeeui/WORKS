@@ -2,6 +2,7 @@
 @import 'bs_reset';
 @import 'month';
 @import 'banner';
+@import 'banner_slide';
 @import 'samsung_card';
 @import 'card_benefit';
 @import 'special_benefit';
@@ -61,9 +62,10 @@
         .pt_nav_list > li {display: table-cell;
             > a {width: 100%; @include vw-pc(height, 90); @include vw-pc(font-size, 20);}
             > a::before {display: block; content: ""; @include vw-pc(width, 39); @include vw-pc(height, 40); @include vw-pc(margin-right, 12); background-size: contain; background-repeat: no-repeat;}
-            &.pt_sale > a::before {background-image: url("../../is/images/bfz_nav_icon01_pc.png");}
+            &.pt_month > a::before {background-image: url("../../is/images/bfz_nav_icon01_pc.png");}
+            &.pt_sale > a::before {background-image: url("../../is/images/bfz_nav_icon03_pc.png");}
             // &:nth-child(2) > a::before {background-image: url("../../is/images/bfz_nav_icon02_pc.png");}
-            &.pt_install > a::before {background-image: url("../../is/images/bfz_nav_icon03_pc.png");}
+            &.pt_install > a::before {background-image: url("../../is/images/bfz_nav_icon04_pc.png");}
             &.pt_membership > a::before {background-image: url("../../is/images/bfz_nav_icon05_pc.png");}
             &.pt_benefit > a::before {background-image: url("../../is/images/bfz_nav_icon05_pc_v3.png");}
             // &:nth-child(5) > a::before {background-image: url("../../is/images/bfz_nav_icon06_pc.png");}
@@ -124,11 +126,12 @@
                 > a[data-role-anchor="membership_points"],
                 > a[data-role-anchor="exclusive_service"] {letter-spacing: -.1em;}
                 > a::before {@include vw-mo(width, 52); @include vw-mo(height, 50); @include vw-mo(margin-bottom, 7); margin-right: 0;}
-                &.pt_sale > a::before {background-image: url("../../is/images/bfz_nav_icon01_mo.png");}
+                &.pt_month > a::before {background-image: url("../../is/images/bfz_nav_icon01_pc.png");}
+                &.pt_sale > a::before {background-image: url("../../is/images/bfz_nav_icon03_mo.png");}
                 // &:nth-child(2) > a::before {background-image: url("../../is/images/bfz_nav_icon02_mo.png");}
-                &.pt_install > a::before {background-image: url("../../is/images/bfz_nav_icon03_mo.png");}
+                &.pt_install > a::before {background-image: url("../../is/images/bfz_nav_icon04_mo.png");}
                 &.pt_membership > a::before {background-image: url("../../is/images/bfz_nav_icon05_mo.png");}
-                &.pt_benefit > a::before {@include vw-mo(margin-bottom, 4); background-image: url("../../is/images/bfz_nav_icon05_mo_v2.png");}
+                &.pt_benefit > a::before {@include vw-mo(margin-bottom, 4); background-image: url("../../is/images/bfz_nav_icon05_pc_v3.png");}
                 // &:nth-child(5) > a::before {background-image: url("../../is/images/bfz_nav_icon06_mo.png");}
     
                 &.on {position: relative; border-radius: 0;}

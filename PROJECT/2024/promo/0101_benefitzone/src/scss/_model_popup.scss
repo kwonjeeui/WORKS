@@ -3,6 +3,7 @@
         .pt_popup_wrap {position: fixed; top: 48%; left: 50%; transform: translate(-50%, -50%); z-index: 10; @include vw-pc(width, 650); height: 85%; @include vw-pc(padding, 60 12 0); background: #fff; text-align: center;
             .pt_title {@include vw-pc(margin-bottom, 30); @include vw-pc(font-size, 28); @include vw-pc(line-height, 28); font-weight: 700;}   
             .pt_popup_con {overflow-y: scroll; height: 88%;}
+            .pt_popup_con .pt_popup_table {width: 100%;}
             .pt_popup_con .pt_popup_table th,
             .pt_popup_con .pt_popup_table td {border: 1px solid #D5D9DD; vertical-align: middle;}
             .pt_popup_con .pt_popup_table th:nth-child(1),

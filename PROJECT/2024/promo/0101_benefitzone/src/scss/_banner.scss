@@ -13,9 +13,16 @@
                 &--title {@include vw-pc(margin-bottom, 13); @include vw-pc(font-size, 34); @include vw-pc(line-height, 40);}
                 &--date {@include vw-pc(font-size, 18); @include vw-pc(line-height, 18);}
             }
+            .pt_common_notice {
+                text-align: left;
+                .pt_notice_btn {
+                    @include vw-pc(padding, 0 16 0 0); @include vw-pc(font-size, 18); @include vw-pc(line-height, 23); font-weight: 400;
+                    &::after {@include vw-pc(top, 5); border-right: 1px solid #000; border-bottom: 1px solid #000;}
+                }
+            }
         }
 
-        .pt_back_green {background: #4bd57b;} 
+        // .pt_back_green {background: #4bd57b;} 
 
         // banner accordian area
         .pt_accordian {text-align: left;
@@ -54,6 +61,13 @@
                     &--desc {@include vw-mo(margin-bottom, 2); @include vw-mo(font-size, 24); @include vw-mo(line-height, 32); letter-spacing: -.028em}
                     &--title {@include vw-mo(margin-bottom, 9); @include vw-mo(font-size, 30); @include vw-mo(line-height, 36); letter-spacing: -.06em;}
                     &--date {@include vw-mo(font-size, 22); @include vw-mo(line-height, 22);}
+                }
+                .pt_common_notice {
+                    @include vw-mo(margin-top, 12);
+                    .pt_notice_btn {
+                        @include vw-mo(padding, 0 20 0 0); @include vw-mo(font-size, 20); @include vw-mo(line-height, 22);
+                        &::after {@include vw-mo(top, 3);}
+                    }
                 }
             }
 

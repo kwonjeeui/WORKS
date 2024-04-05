@@ -1,4 +1,5 @@
 import modelData from "../data/modelData.json";
+import premium from "../data/premiumData.json";
 import { PT_STATE, util as _ } from './modules/bs_common';
 import { anchor } from './modules/anchor';
 import { modal } from './modules/modal';
@@ -6,10 +7,11 @@ import { accordian } from './modules/accordian';
 
 
 anchor.click([
-    // {
-    //     el: '[data-role-anchor="benefit_month"]',
-    //     target: '.sec_month',
-    // },
+    {
+        el: '[data-role-anchor="benefit_month"]',
+        target: '.sec_month',
+        scroll: [-50, 0],
+    },
     {
         el: '[data-role-anchor="billing_discount"]',
         target: '.sec_samsung_card',
@@ -35,6 +37,10 @@ anchor.click([
         el: '[data-role-anchor="samsungcard_notice"]',
         target: '.sec_samsungcard_notice',
     },
+    // {
+    //     el: '[data-role-anchor="paymentcard_notice"]',
+    //     target: '.sec_paymentcard_notice',
+    // },
     {
         el: '[data-role-anchor="card_benefit_notice"]',
         target: '.sec_benefit_notice',
@@ -43,6 +49,10 @@ anchor.click([
         el: '[data-role-anchor="membership_notice"]',
         target: '.sec_membership_notice',
     },
+    {
+        el: '[data-role-anchor="sec_kb_notice"]',
+        target: '.sec_kb_notice',
+    },
 ]);
 
 anchor.load([
@@ -50,10 +60,10 @@ anchor.load([
         url: 'kv',
         target: '.sec_kv'
     },
-    // {
-    //     url: 'monthlybenefit',
-    //     target: '.sec_month'
-    // },
+    {
+        url: 'monthlybenefit',
+        target: '.sec_month'
+    },
     {
         url: 'Paydiscount',
         target: '.sec_samsung_card',
@@ -90,8 +100,8 @@ modal.init();
 
 accordian.toggle([
     {
-        el: '[data-role-accordian="pt_hana__notice"]',
-        target: '#pt_hana__notice',
+        el: '[data-role-accordian="pt_kbcard__notice"]',
+        target: '#pt_kbcard__notice',
         speed: 300
     },
 ]);
@@ -109,7 +119,7 @@ accordian.toggle([
             let scrollClass =  _.pxToVw(-0, 70);
             let scroll =  _.pxToVw(-0, 120);
 
-            let setNavFixed = ['.sec_samsung_card', '.sec_card_benefit', '.sec_point', '.sec_special_benefit'];
+            let setNavFixed = ['.sec_month', '.sec_samsung_card', '.sec_card_benefit', '.sec_point', '.sec_special_benefit'];
 
 			$(window).on('scroll', function() {
               
@@ -138,6 +148,57 @@ accordian.toggle([
 			}
 		},
         slideEvt: function() {
+            // let banSwiper = new Swiper(".pt_banslide", {
+            //     slidesPerView: 'auto',
+            //     // effect: "fade",
+            //     observer:true,
+            //     observeParents:true,
+            //     lazy:true,
+            //     preloadImages:false,
+            //     loop: true,
+            //     autoplay: {
+            //         delay: 2500,
+            //         disableOnInteraction: false,
+            //     },
+            //     pagination: {
+            //         el: '.pt_banslide__page',
+            //         clickable: true,
+            //         bulletElement: 'button'
+            //     },
+            //     // navigation: {
+            //     //     nextEl: ".pt_banslide__next",
+            //     //     prevEl: ".pt_banslide__prev",
+            //     // },
+            //     loop: true,
+            //     on: {
+            //         breakpoint: function() {
+            //             const that = this;
+            //             setTimeout(function() {
+            //                 that.slideTo(0, 0);
+            //             }, 150);
+            //         },
+            //         init: function() {
+            //             $('.swiper-control').on('click', function(){
+            //                 $(this).toggleClass("pt_pause pt_play");
+            //                 if($(this).hasClass("pt_pause")) {
+            //                     banSwiper.autoplay.start();
+            //                     $('.swiper-control').html('일시정지');
+            //                     $(this).attr('data-omni', '');
+            //                 } else {
+            //                     banSwiper.autoplay.stop();
+            //                     $('.swiper-control').html('시작');
+            //                     $(this).attr('data-omni', '');
+            //                 }
+            //             })
+            //         }
+            //     },
+            //     breakpoints: {
+            //         769: {
+            //             loop: true
+            //         },
+            //     },
+            // });
+
             var specialSwiper = new Swiper('.swiper-container.pt_special_container', {
 				// freeMode: true,
 				allowTouchMove: true,
@@ -180,13 +241,27 @@ accordian.toggle([
             
         },
 
-        
-        
+        modelPopup1: function(){
+            const list1 = premium.result;
+            const listTable = $("#pt_popup_model1");
+            let _html = ``;
+            list1.forEach((item)=>{
+                _html += `
+                    <tr>
+                        <td>${item.category}</td>
+                        <td>${item.sku}</td>
+                    </tr>
+                `
+            })
+            listTable.html(_html);
+            
+        },    
 
         init: function() {
             this.stickyEvt();
             this.slideEvt();
             this.modelPopup();
+            this.modelPopup1();
             viewportChange(); // fold 해상도 대응
         }
     };

@@ -1,0 +1,170 @@
+.benefitzone {
+    .sec_banslide {
+        @include vw-pc(width, 1024); @include vw-pc(margin, 0 auto 80);
+
+        .pt_banslide {
+            &__item {
+                position: relative; width: 100%; @include vw-pc(border-radius, 20);
+                &--kbcard {
+                    background: #797268;
+                    .pt_banslide__txt {@include vw-pc(top, 29);}
+                    .pt_banslide__maintit {@include vw-pc(margin-bottom, 14);}
+                    .pt_banslide__subtit {font-weight: 700;}
+                    .pt_banslide__title {background-color: #FFD739; color: #000;}
+                }
+                &--sscard {
+                    background: #F2F1F2;
+                    .pt_banslide__txt {@include vw-pc(top, 58);}
+                    .pt_banslide__subtit {@include vw-pc(margin-bottom, 5);}
+                    .pt_banslide__txt {color: #000;}
+                }
+            }
+            &__txt {position: absolute; @include vw-pc(top, 40); @include vw-pc(left, 50); text-align: left; color: #fff;}
+            &__subtit {@include vw-pc(font-size, 24); @include vw-pc(line-height, 40); font-weight: 700; letter-spacing: -0.025em;}
+            &__maintit {@include vw-pc(font-size, 34); @include vw-pc(line-height, 40); letter-spacing: -0.05em;}
+            &__date {@include vw-pc(font-size, 18); @include vw-pc(line-height, 18);}
+            &__list {@include vw-pc(margin-bottom, 13);}
+            &__list-wrap {display: flex; align-items: center; @include vw-pc(margin-bottom, 8);}
+            &__title {display: flex; align-items: center; justify-content: center; @include vw-pc(width, 69); @include vw-pc(height, 26);@include vw-pc(margin-right, 14); @include vw-pc(font-size, 18); font-weight: 700; @include vw-pc(border-radius, 6); background-color: #FFD739; color: #000;}
+            &__desc {@include vw-pc(font-size, 18);}
+            &__ul {@include vw-pc(padding-left, 14);}
+            &__li {
+                position: relative; @include vw-pc(font-size, 16); @include vw-pc(line-height, 28); color: #666;
+                &:before {content: ''; position: absolute; top: 50%; @include vw-pc(left, -14); transform: translateY(-50%); @include vw-pc(width, 4); @include vw-pc(height, 4); border-radius: 50%; background-color: #666;}
+            }
+            &__control {
+                z-index: 1; display: flex; justify-content: center; align-items: center; @include vw-pc(gap, 14); position: absolute; left: 50%; @include vw-pc(bottom, 25); transform: translateX(-50%); @include vw-pc(width, 62);
+                .swiper-pagination-bullet {@include vw-pc(width, 12); @include vw-pc(height, 12); border: 1px solid #000; background-color: transparent; opacity: 1;}
+                .swiper-pagination-bullet.swiper-pagination-bullet-active {background-color: #000;}
+                .swiper-control {@include vw-pc(width, 14); @include vw-pc(height, 14); font-size: 1px; color: transparent;
+                    &.pt_pause {background: url('../../is/images/banslide/bfz_banner_slide_stop.svg') no-repeat center / cover;}
+                    &.pt_play {background: url('../../is/images/banslide/bfz_banner_slide_play.svg') no-repeat center / cover;}
+                }
+            }
+            &__page {display: flex; @include vw-pc(gap, 14); position: unset;}
+
+            .pt_common_notice {
+                text-align: left;
+
+                .pt_notice_btn {
+                    @include vw-pc(padding, 0 16 0 0); @include vw-pc(font-size, 18); @include vw-pc(line-height, 23); font-weight: 400;
+                    &::after {@include vw-pc(top, 5); border-right: 1px solid #000; border-bottom: 1px solid #000;}
+                }
+            }
+        }
+
+        // banner accordian area
+        .pt_accordian {text-align: left;
+            &__link {@include vw-pc(margin-top, 13);
+                .btn_common.btn_toggle {
+                    @include vw-pc(padding, 0 16 0 0); @include vw-pc(font-size, 18); @include vw-pc(line-height, 23); font-weight: 400; border-color: #fff;
+                    &::after {@include vw-pc(top, 5); border-right: 1px solid #fff; border-bottom: 1px solid #fff;}
+                    &.active {
+                        &::after {@include vw-pc(top, 8); transform: rotate(225deg);}
+                    }
+                }
+            }
+            &__con {@include vw-pc(border-bottom-left-radius, 20); @include vw-pc(border-bottom-right-radius, 20); background-color: #000;}
+            .notice_area { position: relative; @include vw-pc(padding, 59 14 59 0);
+                .notice_list {@include vw-pc(padding-left, 23); color: #fff;
+                    li {position:relative; @include vw-pc(padding, 0 0 0 14); line-height: 1.5; @include vw-pc(word-spacing, -0.2); @include vw-pc(font-size, 16); @include vw-pc(line-height, 28); color: #A3A3A3;
+                        &.pt_bold {color: #fff;}
+                        &.pt_underline {text-decoration: underline;}
+                    }
+                    &.list_1depth li:before { content: ''; position: absolute; left: 0; @include vw-pc(top, 12); @include vw-pc(width, 4); @include vw-pc(height, 4);  border-radius: 50%; background-color:#fff;}
+                }
+            }
+
+            &__link {
+                &.pt_black {
+                    .btn_common.btn_toggle {
+                        border-color: #000;
+                        &::after {border-right: 1px solid #000; border-bottom: 1px solid #000;}
+                    }
+                }
+                .btn_common.btn_toggle {
+                    @include vw-pc(padding, 0 16 0 0); @include vw-pc(font-size, 18); @include vw-pc(line-height, 23); font-weight: 400; border-color: #fff;
+                    &::after {@include vw-pc(top, 5); border-right: 1px solid #fff; border-bottom: 1px solid #fff;}
+                    &.active {
+                        &::after {@include vw-pc(top, 8); transform: rotate(225deg);}
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .benefitzone {
+        .sec_banslide {
+            @include vw-mo(width, 672); @include vw-mo(margin, 0 auto 50);
+
+            .pt_banslide {
+                &__item {
+                    position: relative; width: 100%; @include vw-mo(border-radius, 20);
+                    &--kbcard {
+                        background: #797268;
+                        .pt_banslide__txt {@include vw-mo(top, 29);}
+                        .pt_banslide__maintit {@include vw-mo(margin-bottom, 14);}
+                        .pt_banslide__title {background-color: #FFD739; color: #000000;}
+                    }
+                    &--sscard {
+                        .pt_banslide__txt {@include vw-mo(top, 62);}
+                        .pt_banslide__maintit {@include vw-mo(margin-bottom, 3);}
+                        .pt_banslide__subtit {@include vw-mo(margin-bottom, 14);}
+                        .pt_banslide__txt {color: #000;}
+                    }
+                }
+                &__txt {position: absolute; @include vw-mo(top, 20); @include vw-mo(left, 26); text-align: left;}
+                &__subtit {@include vw-mo(margin-bottom, 2); @include vw-mo(font-size, 26); @include vw-mo(line-height, 35); letter-spacing: -.025em;}
+                &__maintit {@include vw-mo(font-size, 34); @include vw-mo(line-height, 36); letter-spacing: -.064em;}
+                &__date {@include vw-mo(font-size, 22); @include vw-mo(line-height, 22);}
+                &__list {@include vw-mo(margin-bottom, 13);}
+                &__list-wrap {display: flex; align-items: baseline; @include vw-mo(margin-bottom, 8);}
+                &__title {display: flex; align-items: center; justify-content: center; @include vw-mo(width, 69); @include vw-mo(height, 26);@include vw-mo(margin-right, 14); @include vw-mo(font-size, 18); font-weight: 700; @include vw-mo(border-radius, 6); background-color: #FFD739; color: #000;}
+                &__desc {@include vw-mo(font-size, 18);@include vw-mo(line-height, 22);}
+                &__ul {@include vw-mo(padding-left, 14); @include vw-mo(margin-bottom, 31);}
+                &__li {
+                    position: relative; @include vw-mo(font-size, 18); @include vw-mo(line-height, 26); color: #666;
+                    &:before {content: ''; position: absolute; @include vw-mo(top, 11); @include vw-mo(left, -14); transform: unset; @include vw-mo(width, 4); @include vw-mo(height, 4); border-radius: 50%; background-color: #666;}
+                }
+                &__control {
+                    z-index: 1; display: flex; justify-content: center; align-items: center; @include vw-mo(gap, 14); position: absolute; left: 50%; @include vw-mo(bottom, 25); transform: translateX(-50%); @include vw-mo(width, 62);
+                    .swiper-pagination-bullet {@include vw-mo(width, 12); @include vw-mo(height, 12); border: 1px solid #000; background-color: transparent; opacity: 1;}
+                    .swiper-pagination-bullet.swiper-pagination-bullet-active {background-color: #000;}
+                    .swiper-control {@include vw-mo(width, 14); @include vw-mo(height, 14); font-size: 1px; color: transparent;}
+                }
+                &__page {display: flex; @include vw-mo(gap, 14); position: unset;}
+    
+                .pt_common_notice {
+                    @include vw-mo(margin-top, 12);
+                    .pt_notice_btn {
+                        @include vw-mo(padding, 0 20 0 0); @include vw-mo(font-size, 20); @include vw-mo(line-height, 22);
+                        &::after {@include vw-mo(top, 3);}
+                    }
+                }
+            }
+            
+            // banner accordian area
+            .pt_accordian {
+                &__link {
+                    .btn_common.btn_toggle {
+                        @include vw-mo(padding, 0 20 0 0); @include vw-mo(font-size, 20); @include vw-mo(line-height, 22);
+                        &::after {@include vw-mo(top, 3);}
+                        &.active {
+                            &::after {@include vw-mo(top, 8);}
+                        }
+                    }
+                }
+                &__con {@include vw-mo(border-bottom-left-radius, 20); @include vw-mo(border-bottom-right-radius, 20);}
+                .notice_area {@include vw-pc(padding, 80 53 80 0);
+                    .notice_list {@include vw-mo(padding-left, 30);
+                        li {@include vw-mo(padding, 0 0 0 14); @include vw-mo(font-size, 22); @include vw-mo(line-height, 38);}
+                        &.list_1depth li:before {@include vw-mo(top, 15); @include vw-mo(width, 5); @include vw-mo(height, 5);}
+                    }
+                }
+            }
+        }
+
+    }
+}

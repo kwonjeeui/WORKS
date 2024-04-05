@@ -46,7 +46,7 @@
         &-box {display:flex; justify-content:center;}
         &--review {@include vw-pc(height,58); @include vw-pc(padding,0 34); @include vw-pc(font-size,26); @include vw-pc(letter-spacing,-.3); @include vw-pc(border-radius,50); background-color:#000; color:#fff;}
       }
-      .pt_combo_star {@include vw-pc(margin-right,14); @include vw-pc(padding-left, 31); background-image: url("../../../is/images/gd_ico_star.svg"); @include vw-pc(background-size, 26 24); background-repeat: no-repeat; background-position: left center; text-decoration: underline; @include vw-pc(text-underline-offset, 6); @include vw-pc(text-decoration-thickness,1); text-decoration-color: #fff;}
+      .pt_combo_star {content: ''; @include vw-pc(margin-right,14); @include vw-pc(padding-left, 31); background-image: url("../../../is/images/gd_ico_star.svg"); @include vw-pc(background-size, 26 24); background-repeat: no-repeat; background-position: left center; text-decoration: underline; @include vw-pc(text-underline-offset, 6); @include vw-pc(text-decoration-thickness,1); text-decoration-color: #fff;}
     }
   }
 }

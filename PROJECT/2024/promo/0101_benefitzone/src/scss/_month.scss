@@ -1,17 +1,17 @@
 .benefitzone {
-    .sec_month {@include vw-pc(padding, 110 0 80); z-index: 2;
+    .sec_month {@include vw-pc(padding, 110 0 80); z-index: 2; background-color: #EBF1F1;
         .pt_common_txt_box {
             .pt_subject,
-            .pt_subject::after {background-color: #3D7ABA;}
+            .pt_subject::after {background-color: #92BAE6;}
         }
         .pt_contents {position: relative; @include vw-pc(width, 1240); @include vw-pc(margin, 0 auto 39);
-            .pt_bg_img {@include vw-pc(height, 437);}
-            .pt_txt_box {position: absolute; top: 0; left: 0; width: 100%; height: 100%; @include vw-pc(padding, 80 60 80); color: #fff;
-                .pt_title {@include vw-pc(margin-bottom, 7); @include vw-pc(font-size, 42); @include vw-pc(line-height, 52); letter-spacing: -0.025em;}
-                .pt_des {@include vw-pc(margin-bottom, 45); @include vw-pc(font-size, 20); @include vw-pc(line-height, 30); letter-spacing: -0.025em;}
-                .pt_month_btn {position: relative; @include vw-pc(width, 188); @include vw-pc(height, 48); /*@include vw-pc(padding-right, 24);*/ background: #fff; color: #000; @include vw-pc(font-size, 18); letter-spacing: -0.05em; font-weight: 700; @include vw-pc(border-radius, 24);}
-                // .pt_month_btn::after {content: ''; display: block; position: absolute; top: 50%; transform: translateY(-50%); @include vw-pc(right, 24); @include vw-pc(width, 16); @include vw-pc(height, 16); background: url('../../is/images/bfz_kb_btn_icon_pc.png') no-repeat 80% 50% / cover;}
-                .pt_dis {position: absolute; @include vw-pc(right, 65); @include vw-pc(bottom, 20); @include vw-pc(font-size, 16); @include vw-pc(line-height, 22); letter-spacing: -0.05em; color: rgba(0, 0, 0, 0.6);}
+            .pt_bg_img {@include vw-pc(height, 436);}
+            .pt_txt_box {display: flex; flex-direction: column; position: absolute; top: 0; left: 0; width: 100%; height: 100%; @include vw-pc(padding, 79 58 41 56);
+                .pt_title {@include vw-pc(margin-bottom, 4); @include vw-pc(font-size, 42); @include vw-pc(line-height, 54); letter-spacing: -0.025em;}
+                .pt_des {@include vw-pc(margin-bottom, 74); @include vw-pc(font-size, 20); @include vw-pc(line-height, 28); letter-spacing: -0.025em;}
+                .pt_month_btn {@include vw-pc(gap, 5); position: relative; @include vw-pc(width, 188); @include vw-pc(height, 48); /*@include vw-pc(padding-right, 24);*/ background: #000; color: #fff; @include vw-pc(font-size, 18); letter-spacing: -0.05em; font-weight: 700; @include vw-pc(border-radius, 24);}
+                .pt_month_btn::after {content: ''; @include vw-pc(width, 14); @include vw-pc(height, 22); background: url('../../is/images/bfz_kb_btn_icon_pc_v1.png') no-repeat center center / contain;}
+                .pt_dis {align-self: flex-end; @include vw-pc(margin-top, 5); @include vw-pc(bottom, 20); @include vw-pc(font-size, 16); @include vw-pc(line-height, 22); letter-spacing: -0.05em; color: rgba(0, 0, 0, 0.6);}
             }
         }
     }
@@ -19,15 +19,15 @@
 
 @media screen and (max-width: 768px) {
     .benefitzone {
-        .sec_month {@include vw-mo(padding, 200 0 120); z-index: 6; background-color: #fff;
-            .pt_contents {@include vw-mo(width, 670); @include vw-mo(margin, 0 auto 50);
+        .sec_month {@include vw-mo(padding, 220 0 100); z-index: 6;
+            .pt_contents {@include vw-mo(width, 672); @include vw-mo(margin, 0 auto 54);
                 .pt_bg_img {@include vw-mo(height, 851);}
-                .pt_txt_box {@include vw-mo(padding, 50 0 0); text-align: center;
-                    .pt_title {@include vw-mo(margin-bottom, 20); @include vw-mo(font-size, 50); @include vw-mo(line-height, 60); letter-spacing: -0.025em;}
-                    .pt_des {@include vw-mo(margin-bottom, 460); @include vw-mo(font-size, 26); @include vw-mo(line-height, 30); letter-spacing: -0.04em;}
-                    .pt_month_btn {@include vw-mo(width, 303); @include vw-mo(height, 80); /*@include vw-mo(padding-right, 35);*/ @include vw-mo(font-size, 28); letter-spacing: -0.025em; @include vw-mo(border-radius, 40);}
-                    // .pt_month_btn::after {@include vw-mo(right, 45); @include vw-mo(width, 24); @include vw-mo(height, 24); background-image: url('../../is/images/bfz_kb_btn_icon_mo.png');}
-                    .pt_dis {right: 50%; transform: translateX(50%); @include vw-mo(bottom, 168); @include vw-mo(font-size, 20); @include vw-mo(line-height, 28); letter-spacing: -0.01em;}
+                .pt_txt_box {@include vw-mo(padding, 47 66 60); text-align: center;
+                    .pt_title {order:0; @include vw-mo(margin-bottom, 13); @include vw-mo(font-size, 50); @include vw-mo(line-height, 63); letter-spacing: -0.025em;}
+                    .pt_des {order:0; @include vw-mo(margin-bottom, 416); @include vw-mo(font-size, 26); @include vw-mo(line-height, 35); letter-spacing: -0.04em;}
+                    .pt_month_btn {order:1; align-self: center; @include vw-mo(gap, 8); @include vw-mo(width, 303); @include vw-mo(height, 80); /*@include vw-mo(padding-right, 35);*/ @include vw-mo(font-size, 28); letter-spacing: -0.025em; @include vw-mo(border-radius, 40);}
+                    .pt_month_btn::after {@include vw-mo(width, 22); @include vw-mo(height, 37); background-image: url('../../is/images/bfz_kb_btn_icon_mo_v1.png');}
+                    .pt_dis {order:0; align-self: center; @include vw-mo(margin, 0 0 13); @include vw-mo(font-size, 20); @include vw-mo(line-height, 28); letter-spacing: -0.01em;}
                 }
             }
         }

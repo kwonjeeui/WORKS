@@ -65,7 +65,7 @@
                 // }
 
                 .pt_control_box{
-                    display: flex; justify-content: center; align-items: center; position:  absolute; left: 50%; @include vw-max(bottom, 100); @include vw-max(width, 250); @include vw-max(height, 30); transform: translateX(-50%); @include vw-max(border-radius, 15); border: 1px solid #999999;
+                    display: flex; justify-content: center; align-items: center; position:  absolute; left: 50%; @include vw-max(bottom, 100); @include vw-max(width, 280); @include vw-max(height, 30); transform: translateX(-50%); @include vw-max(border-radius, 15); border: 1px solid #999999;
 
                     .pt_pagination {
                         position: relative; display: flex; align-items: center; justify-content: center;  
@@ -118,7 +118,7 @@
                     }
 
                     .pt_control_box {
-                        display: flex; justify-content: center; align-items: center; position: absolute; left: 50%; @include vw-mo(bottom, 0); @include vw-mo(width, 265); @include vw-mo(height, 30); transform: translateX(-50%); @include vw-mo(border-radius, 15); border: 1px solid #999999;
+                        display: flex; justify-content: center; align-items: center; position: absolute; left: 50%; @include vw-mo(bottom, 0); @include vw-mo(width, 300); @include vw-mo(height, 30); transform: translateX(-50%); @include vw-mo(border-radius, 15); border: 1px solid #999999;
     
                         .pt_pagination {
                             position: relative; display: flex; align-items: center; justify-content: center;  

@@ -1,5 +1,5 @@
 .benefitzone {
-    .sec_card_benefit {@include vw-pc(padding, 120 0); z-index: 2;
+    .sec_card_benefit {@include vw-pc(padding, 120 0 80); z-index: 2;
         .pt_common_txt_box {@include vw-pc(margin-bottom, 42);
             .pt_subject,
             .pt_subject::after {background-color: #5c8fcf;}
@@ -50,7 +50,7 @@
 
 @media screen and (max-width: 768px) {
     .benefitzone {
-        .sec_card_benefit {@include vw-mo(padding, 195 0 120); @include vw-mo(margin-top, 0); z-index: 4; background-color: #fff;
+        .sec_card_benefit {@include vw-mo(padding, 195 0 100); @include vw-mo(margin-top, 0); z-index: 4; background-color: #fff;
             .pt_common_txt_box {@include vw-mo(margin-bottom, 48);
                 .pt_title {@include vw-mo(margin-bottom, 20);}
                 .pt_des {@include vw-mo(font-size, 28);}

@@ -10,11 +10,11 @@
 
                     <!-- <div class="swiper-button-prev pt_buying-prev pt_bg-image"></div>
                     <div class="swiper-button-next pt_buying-next pt_bg-image"></div> -->
-                    <!-- <div class="pt_prd-slide__control">
+                    <div class="pt_prd-slide__control">
                         <div class="pt_prd-slide__pagi" data-buying-pagination></div>
                         <button class="pt_btn-play pt_pause pt_bg-image"></button>
                         <button class="pt_btn-zoom pt_bg-image" data-role="btnZoom"></button>
-                    </div> -->
+                    </div>
                 </div>
             </div>
             
@@ -103,7 +103,7 @@
                                         <span class="pt_option__desc--tit">BESPOKE 그랑데 <em class="en">AI</em></span>
                                         <span class="pt_option__desc--txt">
                                             세탁기+건조기 독립형 <br />
-                                            세탁기 컨트롤 패널로 건조기 조작 가능
+                                            각각의 컨트롤 패널로 조작
                                         </span>
                                     </p>
                                 </label>
@@ -213,6 +213,14 @@
                                 </label>
                             </li>
                             <li class="pt_option__item pt_option__item--model" data-opt-btn>
+                                <input type="radio" name="optCdC" id="optC_12" value="optC_12" autocomplete="off" data-opt-sku="" />
+                                <label for="optC_12" class="pt_option__label">
+                                    <p class="pt_option__desc">
+                                        <span>세탁 <em class="en">19kg</em></span>
+                                    </p>
+                                </label>
+                            </li>
+                            <li class="pt_option__item pt_option__item--model" data-opt-btn>
                                 <input type="radio" name="optCdC" id="optC_9" value="optC_9" autocomplete="off" data-opt-sku="" />
                                 <label for="optC_9" class="pt_option__label">
                                     <p class="pt_option__desc">
@@ -233,14 +241,6 @@
                                 <label for="optC_11" class="pt_option__label">
                                     <p class="pt_option__desc">
                                         <span>건조 <em class="en">20kg</em></span>
-                                    </p>
-                                </label>
-                            </li>
-                            <li class="pt_option__item pt_option__item--model" data-opt-btn>
-                                <input type="radio" name="optCdC" id="optC_12" value="optC_12" autocomplete="off" data-opt-sku="" />
-                                <label for="optC_12" class="pt_option__label">
-                                    <p class="pt_option__desc">
-                                        <span>세탁 <em class="en">19kg</em></span>
                                     </p>
                                 </label>
                             </li>
@@ -305,7 +305,7 @@
                             <div class="pt_sale-box pt_sale-box--priceA" data-buying-show="priceA!=-">
                                 <span class="pt_sale pt_sale--txt">기준가</span>
                                 <div class="pt_sale--wrap">
-                                    <span class="pt_sale pt_sale--price pt_sale--price-line">
+                                    <span class="pt_sale pt_sale--price">
                                         <em class="en" data-opt-text="priceA"></em>원
                                     </span>
                                 </div>
@@ -320,7 +320,7 @@
                             </div>
                             <div class="pt_sale-box pt_sale-box--priceC" data-buying-show="priceC!=-">
                                 <div class="pt_sale-box--price">
-                                    <span class="pt_sale pt_sale--txt pt_sale--blue">쿠폰 적용가</span>
+                                    <span class="pt_sale pt_sale--txt pt_sale--black">쿠폰 적용가</span>
                                     <a href="javascript:;" class="pt_btn pt_btn--coupon pt_bg-image" data-role="btnCouponPromo" data-buying-role="btnCoupon" data-omni-type="microsite" data-omni="">쿠폰 받기</a>
                                 </div>
                                 <div class="pt_sale--wrap">
@@ -333,23 +333,23 @@
 
                         <ul class="pt_bnf">
                             <li class="pt_bnf--tit">추가 혜택</li>
-                            <li class="pt_bnf__item" data-buying-show="benefitA!=-">
+                            <!-- <li class="pt_bnf__item" data-buying-show="benefitA!=-">
                                 <div class="pt_bnf__txt-box">
                                     <p class="pt_bnf__item--txt">쿠폰 할인</p>
                                 </div>
                                 <span class="pt_bnf__item--price"><em class="en" data-opt-text="benefitA"></em>원</span>
-                            </li>
+                            </li> -->
                             <li class="pt_bnf__item" data-buying-show="benefitB!=-">
                                 <div class="pt_bnf__txt-box">
-                                    <p class="pt_bnf__item--txt">삼성/하나카드 금액대별 결제일할인</p>
+                                    <p class="pt_bnf__item--txt">카드사 금액대별 결제일할인</p>
                                 </div>
                                 <span class="pt_bnf__item--price"><em class="en" data-opt-text="benefitB"></em>원</span>
                             </li>
                             <li class="pt_bnf__item" data-buying-show="benefitD!=-">
                                 <div class="pt_bnf__txt-box">
-                                    <p class="pt_bnf__item--txt">N-Pay 포인트 쿠폰</p>
+                                    <p class="pt_bnf__item--txt"><em class="en">200</em>만원이상 결제시</p>
                                 </div>
-                                <span class="pt_bnf__item--price"><em class="en" data-opt-text="benefitD"></em><em class="en">P</em></span>
+                                <span class="pt_bnf__item--price">온라인 문화상품권 교환권 <em class="en" data-opt-text="benefitD"></em>만원</span>
                             </li>
                             <li class="pt_bnf__item" data-buying-show="benefitC!=-">
                                 <div class="pt_bnf__txt-box">

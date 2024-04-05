@@ -158,3 +158,19 @@
     - https://www.samsung.com/sec/display/preview/356715/
     - 월말 업데이트
     - 
+
+  - 24/04/02
+    - T20240402000004 / 이예은
+    - https://www.samsung.com/sec/display/preview/357701/
+    - [4/2 오후 중 러닝체인지]모니터 배너 추가
+    - T20240402000035 / 이예은
+    - https://www.samsung.com/sec/display/preview/357830/
+    - [4/3 8:30 러닝체인지]냉장고 이미지, 카피 수정
+    - T20240402000039 / 이예은
+    - https://www.samsung.com/sec/display/preview/357876/
+    - [4/3 10:00 러닝체인지]제트봇 카피 수정
+
+  - 24/04/03
+    - T20240403000049 / 이예은
+    - https://www.samsung.com/sec/display/preview/358137/
+    - [4/4 러닝체인지] AI 콤보 카피 교체

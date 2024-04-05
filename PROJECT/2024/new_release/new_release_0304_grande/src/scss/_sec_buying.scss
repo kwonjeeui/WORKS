@@ -3,6 +3,7 @@ body.pt_no_scroll {overflow-y: hidden !important; width: 100%;}
 
 .grande {
     .sec_buying {@include vw-mo(padding,0); background-color: #fff; z-index: 0;
+        .pt_flex_nowrap{flex-wrap: nowrap !important;}
         .pt_buying_title {
             @include vw-mo(margin-bottom,19); @include vw-mo(font-size,46); font-weight:700; @include vw-mo(line-height,62); text-align:center;
             &--blue{color: #2b82e2;}
@@ -46,8 +47,9 @@ body.pt_no_scroll {overflow-y: hidden !important; width: 100%;}
             .pt_prd-slide {
                 z-index:10; position:absolute; left:0; top:0; @include vw-mo(margin-bottom, 0); width: 100%;
                 
-                // .swiper-container {@include vw-mo(padding-bottom,40);}
-                .swiper-container .swiper-wrapper .swiper-slide {display:flex; align-items:center;@include vw-mo(height,454);}
+                .swiper-container {@include vw-mo(padding-bottom,20);}
+                .swiper-container .swiper-wrapper.disabled {transform:none !important;}
+                .swiper-container .swiper-wrapper .swiper-slide {display:flex; align-items:center;@include vw-mo(height,474);}
                 .swiper-container .swiper-wrapper .swiper-slide .img_box {overflow:hidden;}
 
                 .pt_pod-txt {@include vw-mo(font-size,32); font-weight:700; @include vw-mo(line-height,99); text-align:center; background-color:#FAFAFA;}
@@ -57,7 +59,7 @@ body.pt_no_scroll {overflow-y: hidden !important; width: 100%;}
                 // .img_box__bubble{z-index:1; position:absolute; @include vw-mo(left,312); @include vw-mo(top,70); @include vw-mo(width,236); @include vw-mo(height,52);}
                 .pt_bubble{z-index:1; position:absolute; @include vw-mo(left,190); @include vw-mo(top,29); @include vw-mo(width,82); @include vw-mo(height,40); @include vw-mo(border-radius,100); background-color: #E0F1FF;@include vw-mo(font-size, 24); @include vw-mo(line-height,40); font-weight: 700; @include vw-mo(letter-spacing,-0.8); text-align: center;}
             }
-            .pt_prd-select {z-index:9; position:relative; width:100%; margin: 0 auto; @include vw-mo(padding,454 24 0); overflow: hidden; background-color:#fff;}
+            .pt_prd-select {z-index:9; position:relative; width:100%; margin: 0 auto; @include vw-mo(padding,494 24 0); overflow: hidden; background-color:#fff;}
             .pt_app_hide, .pt_app_show {display: none;}
             .pt_info {display: flex; justify-content: space-between; align-items:center; @include vw-mo(margin,43 0 29);
 
@@ -399,6 +401,17 @@ body.pt_no_scroll {overflow-y: hidden !important; width: 100%;}
             .pt_blue {color:#0045FF;}
         }
         .pt_banner[data-role="btnModal"]:hover{cursor: pointer;}
+
+        .pt_banner-combo{
+            position: relative; @include vw-mo(margin-top,60);
+            &__text-box{position: absolute; z-index: 1; inset: 0; @include vw-mo(padding,16 0 0 38);}
+            &__text-top{@include vw-mo(margin-bottom,27);}
+            &__title{@include vw-mo(margin-bottom,4); @include vw-mo(font-size,26); @include vw-mo(line-height,32); letter-spacing: -0.025em; font-weight:700;}
+            &__title--bottom{@include vw-mo(margin-bottom,14);}
+            &__desc{@include vw-mo(margin-bottom,8); @include vw-mo(font-size,18); @include vw-mo(line-height,24);  letter-spacing: -0.025em;}
+            &__noti{@include vw-mo(font-size,14); color: #666666;}
+
+        }
     }
 
     .sec_buying#sec_buying_combo {
@@ -537,10 +550,10 @@ body.pt_no_scroll {overflow-y: hidden !important; width: 100%;}
                             .pt_option__item {@include vw-pc(width,472); @include vw-pc(height, 70);}
                         }
                         &--grid02 {
-                            .pt_option__item {@include vw-pc(width, 180); @include vw-pc(height, 76);}
+                            .pt_option__item {@include vw-pc(width, 230); @include vw-pc(height, 85);}
                         }
                         &--grid03 {
-                            .pt_option__item{@include vw-pc(width, 152); @include vw-pc(height, 70);}
+                            .pt_option__item{@include vw-pc(width, 150); @include vw-pc(height, 70);}
                             // .pt_option__img{@include vw-pc(width, 92); @include vw-pc(height,72);}
                         }
                         &--grid04 {
@@ -710,6 +723,7 @@ body.pt_no_scroll {overflow-y: hidden !important; width: 100%;}
                             &-line::before {content:""; position:absolute; left:0; top:50%; transform:translateY(-50%); width:100%; @include vw-pc(height,1); background-color:#666;}
                         }
                         &--blue {@include vw-pc(font-size,22); @include vw-pc(line-height,33); color:#2B82E2;}
+                        &--black {color: #000;}
                     }
                 }
                 .pt_btn {
@@ -814,6 +828,16 @@ body.pt_no_scroll {overflow-y: hidden !important; width: 100%;}
                 &__disc { @include vw-pc(margin-top, 5);
                     li {@include vw-pc(font-size, 10); @include vw-pc(line-height, 12);}
                 }
+            }
+
+            .pt_banner-combo{
+                @include vw-pc(margin-top,30);
+                &__text-box{@include vw-pc(padding,14 0 0 24);}
+                &__text-top{@include vw-pc(margin-bottom,22);}
+                &__title{@include vw-pc(margin-bottom,2); @include vw-pc(font-size,18); @include vw-pc(line-height,24);}
+                &__title--bottom{@include vw-pc(margin-bottom,10);}
+                &__desc{@include vw-pc(margin-bottom,8); @include vw-pc(font-size,14); @include vw-pc(line-height,20);}
+                &__noti{@include vw-pc(font-size,12);}
             }
         }
 

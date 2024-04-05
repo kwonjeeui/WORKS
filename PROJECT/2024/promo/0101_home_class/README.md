@@ -68,6 +68,11 @@ lnb_home_class.html : vod 페이지 nav(txt 파일 전달)
 추천 제품 : http://www.samsung.com/sec/homeclass/?anc=recommand3
 <!-- e: 23.09.06 betty: 해당 영역은 기획자 요청건 아님/lnb_home_class.html 소스 때문에 임의로 만들었습니다 -->
 
+홈클래스 추천 강의 ?anc=freeclass
+헬스반 ?anc=healthclass
+뷰티반 ?anc=makeupstyling
+유아교육반 ?anc=childedu
+
 
 ## 히스토리 ( 일시, 작업번호, QA URL, 내용, 작업자 순으로 기입)
 
@@ -113,3 +118,22 @@ lnb_home_class.html : vod 페이지 nav(txt 파일 전달)
     - https://www.samsung.com/sec/display/preview/355357/
     - 베스트 강의영역 강의 리스트 수정
     - 홈클래스 추천강의 영역 순서변경 4 <-> 3
+
+- 24/03/29
+  - T20240321000012 - 변운섭, 박소연
+    - https://www.samsung.com/sec/display/preview/355357/
+    - 앵커드 url 삽입
+    - 홈클래스 추천 강의 ?anc=freeclass
+    - 헬스반 ?anc=healthclass
+    - 뷰티반 ?anc=makeupstyling
+    - 유아교육반 ?anc=childedu
+
+- 24/04/02
+  - T20240402000040 - 변운섭, 박소연
+    - https://www.samsung.com/sec/display/preview/357877/
+    - 첫번째 KV 삭제
+
+- 24/04/03
+  - T20240403000035 - 변운섭, 박소연
+    - https://www.samsung.com/sec/display/preview/358109/
+    - 컴포넌트 탭 추가(유아) 및 스티키 위치 조정
